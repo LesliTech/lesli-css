@@ -1,0 +1,141 @@
+/*
+ *  Reset
+ *  ~     ~     ~     ~     ~
+ */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    list-style: none;                
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: inherit;
+}
+
+/*
+ *  Inicializa
+ *  ~     ~     ~     ~     ~
+ */
+body{ 
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    line-height: 150%;    
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
+
+
+/*
+ *  Estilo de titulos
+ *  ~     ~     ~     ~     ~
+ */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+    margin-top: 0.2rem;
+    font-style: inherit;
+    font-weight: inherit;
+    margin-bottom: 0.5rem;
+    text-rendering: optimizelegibility;
+}
+
+/*
+ *  Grids
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Contenedor de columnas
+ */
+.rgrid{ 
+    width: 100%;
+    display: block;
+}
+
+/*
+ *  Estilo generico de columnas
+ */
+.rgrid > *{
+    float: left;
+    vertical-align: top;
+    display: inline-block;
+}
+
+/*
+ *  Ancho de columnas
+ */
+.row-2 > *{ width: 50%; }
+.row-3 > *{ width: 33.33% }
+
+/*
+ *  Responsive images
+ *  ~     ~     ~     ~     ~
+ */
+img{
+    height: auto;
+    max-width: 99%;
+}
+
+
+/*
+ *  Navegacion
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Menus horizontales
+ */
+.navbar{
+    width: 100%;
+}
+
+/*
+ *  Contenedor de enlaces
+ */
+.navbar li{
+    display: inline-block;
+}
+
+/*
+ *  Enlaces
+ */
+.navbar a{
+    display: block;
+    font-size: 0.9rem;
+}
+
+/*
+ *  Helpers
+ *  ~     ~     ~     ~     ~
+ */
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/*
+ *  Media Queries
+ *  ~     ~     ~     ~     ~
+ */
+@media screen and (max-width : 480px){
+    /*
+     *  Responsive images
+     *  ~     ~     ~     ~     ~
+     */
+    img{
+        height: auto;
+        max-width: 50%;
+    }
+    
+    /*
+     *  Estilo generico de columnas
+     */
+    .rgrid > *{
+        width: 100%;
+    }
+}
