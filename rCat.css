@@ -2,16 +2,30 @@
  *  Reset
  *  ~     ~     ~     ~     ~
  */
-
 *
 {
     margin: 0;
+    border: 0;
     padding: 0;
+    outline: 0;
     color: inherit;
     list-style: none;                
     text-decoration: none;
-    box-sizing: border-box;
+    vertical-align: baseline;
     background-color: inherit;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 /*
@@ -21,13 +35,23 @@
 body{ 
     margin: 0px;
     padding: 0px;
-    font-size: 100%;
+    font-size: 100%;    
     line-height: 150%;    
     font-style: normal;
     font-weight: normal;
     font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 }
 
+/*
+ *  Tipo de letra
+ */
+body {
+    font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.65rem;
+    background: #ffffff;
+    color: #222222;
+}
 
 
 /*
@@ -109,14 +133,89 @@ img{
 }
 
 /*
+ *  Formularios
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Formulario estandar
+ */
+.forms{    
+}
+
+.forms > input[type="text"],
+.forms > input[type="password"]{
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    border: 1px solid #CCC;
+    padding: 0.3rem 0.35rem;    
+}
+
+/*
+ * Campo del formulario activo
+ */
+.forms > input[type="text"]:focus,
+.forms > input[type="password"]:focus,    
+.forms > input[type="email"]:focus,
+.forms > input[type="url"]:focus,
+.forms > input[type="phone"]:focus,
+.forms > input[type="tel"]:focus,
+.forms > input[type="number"]:focus,
+.forms > input[type="datetime"]:focus,
+.forms > input[type="date"]:focus,
+.forms > input[type="month"]:focus,
+.forms > input[type="color"]:focus,
+.forms > input[type="time"]:focus,
+.forms > input[type="search"]:focus,
+.forms > textarea:focus {
+    outline: none;    
+    border-color: #129FEA;
+    box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
+}
+
+/*
  *  Helpers
  *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Centrado total
  */
 .center{
     margin: 0 auto;
     text-align: center;
 }
 
+/*
+ *  Ancho al 50%
+ */
+.width-50{
+    width: 50%;
+}
+
+/*
+ *  Botones
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ * Boton estandar
+ */
+.button{
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #000;
+    background-color: #E6E6E6;
+    border: 0px none transparent;
+}
+.button:hover{
+    color: #000;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+.button:active{
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 6px rgba(0, 0, 0, 0.2) inset;
+}
 
 /*
  *  Media Queries
