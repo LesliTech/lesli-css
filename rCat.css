@@ -143,9 +143,26 @@ img{
 .forms{    
 }
 
+.forms > textarea,
+.forms > input[type="tel"],
+.forms > input[type="url"],
 .forms > input[type="text"],
-.forms > input[type="password"]{
+.forms > input[type="date"],
+.forms > input[type="time"],
+.forms > input[type="email"],
+.forms > input[type="phone"],
+.forms > input[type="month"],
+.forms > input[type="color"],
+.forms > input[type="number"],
+.forms > input[type="search"],
+.forms > input[type="password"],
+.forms > input[type="datetime"]
+{
+    width: 75%;
+    display: block;
+    margin: 10px auto;    
     font-size: 0.9rem;
+    border-radius: 2px;
     line-height: 1.65rem;
     border: 1px solid #CCC;
     padding: 0.3rem 0.35rem;    
@@ -154,20 +171,20 @@ img{
 /*
  * Campo del formulario activo
  */
-.forms > input[type="text"]:focus,
-.forms > input[type="password"]:focus,    
-.forms > input[type="email"]:focus,
-.forms > input[type="url"]:focus,
-.forms > input[type="phone"]:focus,
+.forms > textarea:focus,
 .forms > input[type="tel"]:focus,
-.forms > input[type="number"]:focus,
-.forms > input[type="datetime"]:focus,
+.forms > input[type="url"]:focus,
+.forms > input[type="text"]:focus,
 .forms > input[type="date"]:focus,
+.forms > input[type="time"]:focus,
+.forms > input[type="email"]:focus,
+.forms > input[type="phone"]:focus,
 .forms > input[type="month"]:focus,
 .forms > input[type="color"]:focus,
-.forms > input[type="time"]:focus,
+.forms > input[type="number"]:focus,
 .forms > input[type="search"]:focus,
-.forms > textarea:focus {
+.forms > input[type="password"]:focus,
+.forms > input[type="datetime"]:focus{ 
     outline: none;    
     border-color: #129FEA;
     box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
@@ -201,21 +218,42 @@ img{
 /*
  * Boton estandar
  */
-.button{
-    padding: 0.5em 1em;
-    border-radius: 2px;
-    text-decoration: none;
+[class ^= "button"],
+[class *= " button"]{
     color: #000;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 2px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;        
+    -moz-user-select: none;
+    padding: 0.6rem 0.15rem;
+    vertical-align: baseline;            
     background-color: #E6E6E6;
     border: 0px none transparent;
+    
 }
 .button:hover{
     color: #000;
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
 }
+
 .button:active{
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 6px rgba(0, 0, 0, 0.2) inset;
 }
+
+/*
+ * Boton normal
+ */
+.button-normal{
+    color: #FAFAFA;
+    background-color:  #0078E7;
+}
+
+
+
+
 
 /*
  *  Media Queries
