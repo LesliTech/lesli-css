@@ -196,6 +196,53 @@ img{
  */
 
 /*
+ *  Mensajes y alertas
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Titulo del mensaje
+ */
+.msg_flash #msg_titulo
+{
+    max-height: 30px;
+    display: block;    
+    padding: 2px;    
+    font-size: 1.1rem;
+    font-style: italic;    
+    text-align: center;
+}
+
+/*
+ *  texto del mensaje
+ */
+.msg_flash #msg_msg
+{
+    max-height: 39px;
+    padding: 8px;
+    display: block;
+    font-size: 1.2rem;    
+    text-align: center;
+}
+
+.msg_infor{background-color: #2ECC71;}
+.msg_error{background-color: #E74C3C;}
+.msg_alert{background-color: #F1C40F;}
+
+
+.msg_flash #msg_cerrar     /*X de cerrar mensaje*/
+{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    margin: 4px 0;    
+}
+
+.msg_flash #msg_cerrar:hover
+{cursor: pointer; color: red;}
+
+
+/*
  *  Centrado total
  */
 .center{
