@@ -14,7 +14,7 @@
     vertical-align: baseline;
     background-color: inherit;
 }
-
+*,
 *:before,
 *:after {
     -webkit-box-sizing: border-box;
@@ -77,16 +77,14 @@ h1, h2, h3, h4, h5, h6 {
  */
 .rgrid{ 
     width: 100%;
-    display: block;
+    display: table;
 }
 
 /*
  *  Estilo generico de columnas
  */
 .rgrid > *{
-    float: left;
-    vertical-align: top;
-    display: inline-block;
+    display: table-cell;
 }
 
 /*
@@ -131,6 +129,24 @@ img{
     display: block;
     font-size: 0.9rem;
 }
+/*
+ *  Menu vertical
+ */
+.nav{
+}
+
+.nav ul > li:first-child{    
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.nav ul li:not(:first-child):hover,
+.nav ul li:not(:first-child) a:hover{
+    cursor: pointer
+}
+
 
 /*
  *  Formularios
