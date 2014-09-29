@@ -14,6 +14,7 @@
     vertical-align: baseline;
     background-color: inherit;
 }
+
 *,
 *:before,
 *:after {
@@ -73,25 +74,40 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 /*
- *  Contenedor de columnas
+ *  Contenedor de columnas automaticas y manuales
  */
-.rgrid{ 
+.agrid,
+.mgrid > .row{ 
     width: 100%;
     display: table;
 }
 
 /*
  *  Estilo generico de columnas
+ *  agrid = automatic grid system
+ *  mgrid = manual grid system
  */
-.rgrid > *{
+
+.agrid > *,
+.mgrid > .row > * {    
     display: table-cell;
 }
 
 /*
- *  Ancho de columnas
+ *  Ancho de columnas automaticas
+ *  .col-n > * -> columnas automaticas 
  */
-.row-2 > *{ width: 50%; }
-.row-3 > *{ width: 33.33% }
+.col-2 > * { width: 50%; }
+.col-3 > * { width: 33.33%; }
+
+/*
+ *  Ancho de columnas automaticas
+ *  col-1 = 4.166666667%
+ */
+.mgrid .row .col-4  { width: 16.66%; }
+.mgrid .row .col-6  { width: 25.00%; }
+.mgrid .row .col-18 { width: 75.00%; }
+.mgrid .row .col-20 { width: 80.33%; }
 
 /*
  *  Responsive images
@@ -133,6 +149,12 @@ img{
  *  Menu vertical
  */
 .nav{
+}
+
+/*
+ *  Titulo de lista o menu
+ */
+.nav li:first-child{    
 }
 
 .nav ul > li:first-child{    
