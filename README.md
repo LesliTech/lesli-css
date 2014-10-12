@@ -52,4 +52,4 @@ Responsive Cat es completamente libre y de codigo abierto
 Licencia
 ----------------
 
-Este software es distribuido bajo la licencia *General Public License v 3.0* puedes leer la licencia completa [aqui](https://github.com/ldonis/ResponsiveCat/blob/master/LICENSE)
+Software desarrollado en Guatemala distribuido bajo la licencia *General Public License v 3.0* puedes leer la licencia completa [aqui](https://github.com/ldonis/ResponsiveCat/blob/master/LICENSE)
