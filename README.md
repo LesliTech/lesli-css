@@ -1,9 +1,11 @@
+![''](http://tools.ldonis.net/rcat/rcat.png "Responsive cat")
+
 ResponsiveCat
 -----
 
 Framework CSS
 
-![Responsive Cat](http:http://tools.ldonis.net/rcat/rcat.png)
+
 
 **Usar desde CDN:**
 
@@ -44,7 +46,7 @@ Responsive Cat es completamente libre y de codigo abierto
 
 * Sitio web: [http://ldonis.com/rcat/](http://ldonis.com/rcat/)
 
-* Bug tracker: [http://ldonis.com/rcat/](http://ldonis.com/rcat/)
+* Bug tracker: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
  
 
 Licencia
