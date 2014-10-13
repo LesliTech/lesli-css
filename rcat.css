@@ -361,6 +361,8 @@ img{
 /*
  *  Codigo
  */
+pre{
+}
 .rcode,
 code{
     display: block;
@@ -374,8 +376,16 @@ code{
     font-family: Consolas,"Liberation Mono",Courier,monospace;
 }
 
+/*
+ *  Separadores
+ */
+hr{
+    height: 2px;
+}
 
-
+hr.gray{
+    background-color: #CCC;
+}
 
 
 
