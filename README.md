@@ -44,9 +44,11 @@ Sitio web y documentación
 
 Responsive Cat es completamente libre y de codigo abierto
 
-* Sitio web: [http://ldonis.com/projects/rcat/](http://ldonis.com/projects/rcat/)
+* Website: [http://ldonis.com/projects/rcat/](http://ldonis.com/projects/rcat/)
 
-* Bug tracker: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
+* Project: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
+
+* Issue tracker: [https://github.com/ldonis/ResponsiveCat/issues](https://github.com/ldonis/ResponsiveCat/issues)
  
 
 Licencia
