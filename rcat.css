@@ -1,0 +1,439 @@
+/*
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <ldonis.emc2@gmail.com>
+ * @link http://ldonis.com 
+ * @version 0.5 alpha
+ */
+
+/*
+ *  Reset
+ *  ~     ~     ~     ~     ~
+ */
+*
+{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    color: inherit;
+    list-style: none;                
+    text-decoration: none;
+    vertical-align: baseline;
+    background-color: inherit;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*
+ *  Inicializa
+ *  ~     ~     ~     ~     ~
+ */
+body{ 
+    margin: 0px;
+    padding: 0px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*
+ *  Tipo de letra
+ */
+body {
+    font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+    font-size: 100%;
+    line-height: 1.65rem;
+    background: #ffffff;
+    color: #222222;
+}
+
+
+/*
+ *  Estilo de titulos
+ *  ~     ~     ~     ~     ~
+ */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+    margin-top: 0.2rem;
+    font-style: inherit;
+    font-weight: inherit;
+    margin-bottom: 0.5rem;
+    text-rendering: optimizelegibility;
+}
+
+h1{font-size: 2.38rem;}
+h2{font-size: 2.15rem;}
+h3{font-size: 1.92rem;}
+h4{font-size: 1.69rem;}
+h5{font-size: 1.46rem;}
+h6{font-size: 1.23rem;}
+
+
+/*
+ *  Grids
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Contenedor de columnas automaticas y manuales
+ */
+.agrid,
+.mgrid > .row{ 
+    width: 100%;
+    display: table;
+}
+
+/*
+ *  Estilo generico de columnas
+ *  agrid = automatic grid system
+ *  mgrid = manual grid system
+ */
+
+.agrid > *,
+.mgrid > .row > * {    
+    display: table-cell;
+}
+
+/*
+ *  Ancho de columnas automaticas
+ *  .col-n > * -> columnas automaticas 
+ */
+.col-2 > * { width: 50%; }
+.col-3 > * { width: 33.33%; }
+
+/*
+ *  Ancho de columnas automaticas
+ *  col-1 = 4.166666667%
+ */
+.mgrid .row .col-4  { width: 16.66%; }
+.mgrid .row .col-6  { width: 25.00%; }
+.mgrid .row .col-5  { width: 20.83%; }
+.mgrid .row .col-8  { width: 33.33%; }
+.mgrid .row .col-16 { width: 66.66%; }
+.mgrid .row .col-17 { width: 70.83%; }
+.mgrid .row .col-18 { width: 75.00%; }
+.mgrid .row .col-20 { width: 80.33%; }
+
+/*
+ *  Responsive images
+ *  ~     ~     ~     ~     ~
+ */
+img{
+    height: auto;
+    max-width: 99%;
+}
+
+
+/*
+ *  Navegacion
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Menus horizontales
+ */
+.navbar{
+    width: 100%;
+}
+
+/*
+ *  Contenedor de enlaces
+ */
+.navbar li{
+    display: inline-block;
+}
+
+/*
+ *  Enlaces
+ */
+.navbar a{
+    display: block;
+    font-size: 0.9rem;
+}
+/*
+ *  Menu vertical
+ */
+.nav{
+}
+
+/*
+ *  Titulo de lista o menu
+ */
+.nav li:first-child{    
+}
+
+.nav ul > li:first-child{    
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.nav ul li:not(:first-child):hover,
+.nav ul li:not(:first-child) a:hover{
+    cursor: pointer
+}
+
+
+/*
+ *  Formularios
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Formulario estandar
+ */
+.forms{    
+}
+
+.forms > textarea,
+.forms > input[type="tel"],
+.forms > input[type="url"],
+.forms > input[type="text"],
+.forms > input[type="date"],
+.forms > input[type="time"],
+.forms > input[type="email"],
+.forms > input[type="phone"],
+.forms > input[type="month"],
+.forms > input[type="color"],
+.forms > input[type="number"],
+.forms > input[type="search"],
+.forms > input[type="password"],
+.forms > input[type="datetime"]
+{
+    width: 75%;
+    display: block;
+    margin: 10px auto;    
+    font-size: 0.9rem;
+    border-radius: 2px;
+    line-height: 1.65rem;
+    border: 1px solid #CCC;
+    padding: 0.3rem 0.35rem;    
+}
+
+/*
+ * Campo del formulario activo
+ */
+.forms > textarea:focus,
+.forms > input[type="tel"]:focus,
+.forms > input[type="url"]:focus,
+.forms > input[type="text"]:focus,
+.forms > input[type="date"]:focus,
+.forms > input[type="time"]:focus,
+.forms > input[type="email"]:focus,
+.forms > input[type="phone"]:focus,
+.forms > input[type="month"]:focus,
+.forms > input[type="color"]:focus,
+.forms > input[type="number"]:focus,
+.forms > input[type="search"]:focus,
+.forms > input[type="password"]:focus,
+.forms > input[type="datetime"]:focus{ 
+    outline: none;    
+    border-color: #129FEA;
+    box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
+}
+
+/*
+ *  Helpers
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Mensajes y alertas
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ *  Titulo del mensaje
+ */
+.msg_flash #msg_titulo
+{
+    max-height: 30px;
+    display: block;    
+    padding: 2px;    
+    font-size: 1.1rem;
+    font-style: italic;    
+    text-align: center;
+}
+
+/*
+ *  texto del mensaje
+ */
+.msg_flash #msg_msg
+{
+    max-height: 39px;
+    padding: 8px;
+    display: block;
+    font-size: 1.2rem;    
+    text-align: center;
+}
+
+.msg_infor{background-color: #2ECC71;}
+.msg_error{background-color: #E74C3C;}
+.msg_alert{background-color: #F1C40F;}
+
+
+.msg_flash #msg_cerrar     /*X de cerrar mensaje*/
+{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    margin: 4px 0;    
+}
+
+.msg_flash #msg_cerrar:hover
+{cursor: pointer; color: red;}
+
+
+/*
+ *  Centrado total
+ */
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*
+ *  Ancho al 50%
+ */
+.width-50{
+    width: 50%;
+}
+
+/*
+ *  Botones
+ *  ~     ~     ~     ~     ~
+ */
+
+/*
+ * Boton estandar
+ */
+[class ^= "button"],
+[class *= " button"]{
+    color: #000;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 2px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;        
+    -moz-user-select: none;
+    padding: 0.6rem 0.15rem;
+    vertical-align: baseline;            
+    background-color: #E6E6E6;
+    border: 0px none transparent;
+    
+}
+.button:hover{
+    color: #000;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+
+.button:active{
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 6px rgba(0, 0, 0, 0.2) inset;
+}
+
+/*
+ * Boton normal
+ */
+.button-normal{
+    color: #FAFAFA;
+    background-color:  #0078E7;
+}
+
+/*
+ *  Codigo
+ */
+
+code{
+    display: block;
+    width: 100%;
+    color: #333;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    border-style: solid;
+    background: #eeeeee;
+    border-color: #b4b4b4;
+    border-width: 1px 0px;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+}
+
+/*
+ *  Separadores
+ */
+hr{
+    height: 2px;
+}
+
+hr.gray{
+    background-color: #CCC;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ *  Media Queries
+ *  ~     ~     ~     ~     ~
+ */
+@media screen and (max-width : 480px){
+    html{ 
+        font-size: 14px;
+    }
+    
+    /*
+     *  Responsive images
+     *  ~     ~     ~     ~     ~
+     */
+    img{
+        height: auto;
+        max-width: 50%;
+    }
+    
+    /*
+     *  Estilo generico de columnas
+     */
+    .rgrid > *{
+        width: 100%;
+    }
+}
