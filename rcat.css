@@ -86,6 +86,14 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
 }
 
+h1{font-size: 2.38rem;}
+h2{font-size: 2.15rem;}
+h3{font-size: 1.92rem;}
+h4{font-size: 1.69rem;}
+h5{font-size: 1.46rem;}
+h6{font-size: 1.23rem;}
+
+
 /*
  *  Grids
  *  ~     ~     ~     ~     ~
@@ -361,17 +369,16 @@ img{
 /*
  *  Codigo
  */
-pre{
-}
-.rcode,
+
 code{
     display: block;
     width: 100%;
     color: #333;
     padding: 1rem;
-    border-color: #b4b4b4;
+    padding-left: 2.5rem;
     border-style: solid;
     background: #eeeeee;
+    border-color: #b4b4b4;
     border-width: 1px 0px;
     font-family: Consolas,"Liberation Mono",Courier,monospace;
 }
