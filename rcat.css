@@ -120,32 +120,33 @@ h6{font-size: 1.23rem;}
 }
 
 /*
+ *  .agrid
  *  Ancho de columnas automaticas
  *  .col-n > * -> columnas automaticas 
  */
-.agrid .col-2 > * { width: 50.00%; }
-.agrid .col-3 > * { width: 33.33%; }
-.agrid .col-4 > * { width: 25.00%; }
-.agrid .col-5 > * { width: 20.00%; }
-.agrid .col-6 > * { width: 16.66%; }
-.agrid .col-7 > * { width: 14.28%; }
-.agrid .col-8 > * { width: 12.50%; }
-.agrid .col-9 > * { width: 11.11%; }
-.agrid .col-10 > * { width: 10.00%; }
-.agrid .col-11 > * { width: 09.09%; }
-.agrid .col-12 > * { width: 08.33%; }
-.agrid .col-13 > * { width: 07.69%; }
-.agrid .col-14 > * { width: 07.14%; }
-.agrid .col-15 > * { width: 06.66%; }
-.agrid .col-16 > * { width: 06.25%; }
-.agrid .col-17 > * { width: 05.88%; }
-.agrid .col-18 > * { width: 05.55%; }
-.agrid .col-19 > * { width: 05.26%; }
-.agrid .col-20 > * { width: 05.00%; }
-.agrid .col-21 > * { width: 04.76%; }
-.agrid .col-22 > * { width: 04.54%; }
-.agrid .col-23 > * { width: 04.34%; }
-.agrid .col-24 > * { width: 04.16%; }
+.col-2 > * { width: 50.00%; }
+.col-3 > * { width: 33.33%; }
+.col-4 > * { width: 25.00%; }
+.col-5 > * { width: 20.00%; }
+.col-6 > * { width: 16.66%; }
+.col-7 > * { width: 14.28%; }
+.col-8 > * { width: 12.50%; }
+.col-9 > * { width: 11.11%; }
+.col-10 > * { width: 10.00%; }
+.col-11 > * { width: 09.09%; }
+.col-12 > div { width: 08.33%; }
+.col-13 > * { width: 07.69%; }
+.col-14 > * { width: 07.14%; }
+.col-15 > * { width: 06.66%; }
+.col-16 > * { width: 06.25%; }
+.col-17 > * { width: 05.88%; }
+.col-18 > * { width: 05.55%; }
+.col-19 > * { width: 05.26%; }
+.col-20 > * { width: 05.00%; }
+.col-21 > * { width: 04.76%; }
+.col-22 > * { width: 04.54%; }
+.col-23 > * { width: 04.34%; }
+.col-24 > * { width: 04.16%; }
 
 /*
  *  Ancho de columnas manuales
