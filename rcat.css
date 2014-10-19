@@ -175,6 +175,17 @@ h6{font-size: 1.23rem;}
 .mgrid .row .col-23 { width: 95.83%; }
 .mgrid .row .col-24 { width: 100.0%;}
 
+
+/*
+ *  Estilo de tablas
+ *  ~     ~     ~     ~     ~
+ */
+.rtable{
+    max-width: 100%;
+    width: 100%;
+    empty-cells: show;
+}
+
 /*
  *  Responsive images
  *  ~     ~     ~     ~     ~
@@ -407,14 +418,16 @@ img{
  */
 
 code{
-    display: block;
+    line-height: 1.4;
     width: 100%;
     color: #333;
     padding: 1rem;
-    padding-left: 2.5rem;
+    display: block;
     border-style: solid;
     background: #eeeeee;
+    padding-left: 2.5rem;
     border-color: #b4b4b4;
+    white-space: pre-wrap;
     border-width: 1px 0px;
     font-family: Consolas,"Liberation Mono",Courier,monospace;
 }
