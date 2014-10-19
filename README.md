@@ -14,7 +14,8 @@ Framework CSS
 ```
 
 **Descargar**
-[https://github.com/ldonis/ResponsiveCat/archive/v0.5.alpha.zip](v0.5.alpha)
+
+Versión: [https://github.com/ldonis/ResponsiveCat/archive/v0.5.alpha.zip](v0.5.alpha)
 
 Caracteristicas
 ---------------
