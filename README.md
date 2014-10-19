@@ -28,7 +28,7 @@ Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptat
 
 * Extras (Botones)
 
-* Archivo extremadamente pequeño 3.7kb
+* Archivo extremadamente pequeño 5.7kb
 
 
 Navegadores soportados
