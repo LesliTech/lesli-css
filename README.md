@@ -28,7 +28,7 @@ Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptat
 
 * Extras (Botones)
 
-* Archivo extremadamente pequeño 3.7kb
+* Archivo extremadamente pequeño 5.7kb
 
 
 Navegadores soportados
@@ -44,9 +44,11 @@ Sitio web y documentación
 
 Responsive Cat es completamente libre y de codigo abierto
 
-* Website: [http://ldonis.com/projects/rcat/](http://ldonis.com/projects/rcat/)
+* Sitio web: [http://ldonis.com/projects/rcat/](http://ldonis.com/projects/rcat/)
 
-* Project: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
+* Proyecto: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
+
+* Documentacion: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
 
 * Issue tracker: [https://github.com/ldonis/ResponsiveCat/issues](https://github.com/ldonis/ResponsiveCat/issues)
  

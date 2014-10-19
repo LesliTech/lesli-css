@@ -96,12 +96,12 @@ section.doc code{
 section.doc div.example{
     max-width: 800px;
     margin:10px auto;
-    background-color: #ececec;
+    /*background-color: #ececec;*/
     transition: all linear 0.5s;
 }
 
 section.doc div.example:hover{
-    max-width: 320px;
+    /*max-width: 320px;*/
 }
 
 
