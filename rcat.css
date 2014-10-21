@@ -124,6 +124,11 @@ h6{font-size: 1.23rem;}
  *  Ancho de columnas automaticas
  *  .col-n > * -> columnas automaticas 
  */
+/*
+[class^="agrid col-"],
+[class*="agrid col-"]{
+    background-color: blue !important;
+}
 .col-2 > * { width: 50.00%; }
 .col-3 > * { width: 33.33%; }
 .col-4 > * { width: 25.00%; }
