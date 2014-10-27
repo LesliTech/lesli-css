@@ -59,12 +59,9 @@ body{
     padding: 0px;
     font-style: normal;
     font-weight: normal;
-}
-
-/*
- *  Tipo de letra
- */
-body {
+    /*
+     *  Tipo de letra
+     */
     font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
     font-size: 100%;
     line-height: 1.65rem;
@@ -413,15 +410,15 @@ img{
     white-space: nowrap;
     text-decoration: none;        
     -moz-user-select: none;
-    padding: 0.6rem 0.15rem;
+    padding: 0.5rem 0.15rem;
     vertical-align: baseline;            
-    background-color: #E6E6E6;
+    /*background-color: #E6E6E6;*/
     border: 0px none transparent;
     
 }
 .button:hover{
     color: #000;
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+    /*background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));*/
 }
 
 .button:active{
