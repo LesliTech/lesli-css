@@ -1,4 +1,4 @@
-/*
+    /*
  * Responsive Cat
  *
  * This program is free software: you can redistribute it and/or modify
@@ -201,10 +201,42 @@ h6{font-size: 1.23rem;}
  *  ~     ~     ~     ~     ~
  */
 .rtable{
-    max-width: 100%;
     width: 100%;
-    empty-cells: show;
+    max-width: 100%;
+    empty-cells: show;  
+    border-spacing: 0px;
+      
 }
+
+/*
+ *  Encabezado de tablas
+ */
+.rtable thead{
+    color: #000;
+    background: #E0E0E0;
+            vertical-align: bottom;
+}
+/*
+ *  Celdas del encabezado
+ */
+.rtable thead tr th{
+    padding: 0.5rem;
+    border-width: 0px 0px 1px;
+}
+
+/*
+ *  Cuerpo de la tabla
+ */
+.rtable tbody tr td{
+    color: #777;
+    padding: 4px 0;
+    line-height: 1.6;
+}
+table.gray{
+    
+    border: 1px solid #CBCBCB;
+}
+
 
 /*
  *  Responsive images
