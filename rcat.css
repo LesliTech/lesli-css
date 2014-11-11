@@ -204,11 +204,63 @@ h6{font-size: 1.23rem;}
  *  ~     ~     ~     ~     ~
  */
 .rtable{
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;    
+    line-height: 1.6;
     empty-cells: show;
+    border-spacing: 0px;
 }
 
+/*
+ *  Celdas
+ */
+.rtable td,
+.rtable th{
+    padding: 0.5em 1em;
+}
+
+/*
+ *  Celdas de encabezado
+ */
+.rtable th{
+}
+
+    /*
+     *  Estilos predefinidos de tablas
+     *
+     *  Tabla Gris
+     */
+    table.gray{
+        border: 1px solid #CBCBCB;
+        border-left: none;
+    }
+    
+    /*
+     *  Encabezado de tabla
+     */
+    table.gray thead{
+        background: none repeat scroll 0% 0% #E0E0E0;
+        color: #000;
+        text-align: left;
+        vertical-align: bottom;
+    }
+    
+    /*
+     *  Estilo generico de celdas
+     */
+    table.gray td,
+    table.gray th{
+        border-left: 1px solid #CBCBCB;
+    }
+    
+    /*
+     *  Estilos de celdas impares
+     */
+    table.gray tbody.impar tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    
 /*
  *  Responsive images
  *  ~     ~     ~     ~     ~
