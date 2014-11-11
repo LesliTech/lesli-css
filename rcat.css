@@ -1,4 +1,4 @@
-    /*
+/*
  * Responsive Cat
  *
  * This program is free software: you can redistribute it and/or modify
@@ -59,9 +59,12 @@ body{
     padding: 0px;
     font-style: normal;
     font-weight: normal;
-    /*
-     *  Tipo de letra
-     */
+}
+
+/*
+ *  Tipo de letra
+ */
+body {
     font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
     font-size: 100%;
     line-height: 1.65rem;
@@ -202,7 +205,6 @@ h6{font-size: 1.23rem;}
  */
 .rtable{
     width: 100%;
-<<<<<<< HEAD
     max-width: 100%;    
     line-height: 1.6;
     empty-cells: show;
@@ -259,44 +261,6 @@ h6{font-size: 1.23rem;}
     }
     
     
-=======
-    max-width: 100%;
-    empty-cells: show;  
-    border-spacing: 0px;
-      
-}
-
-/*
- *  Encabezado de tablas
- */
-.rtable thead{
-    color: #000;
-    background: #E0E0E0;
-            vertical-align: bottom;
-}
-/*
- *  Celdas del encabezado
- */
-.rtable thead tr th{
-    padding: 0.5rem;
-    border-width: 0px 0px 1px;
-}
-
-/*
- *  Cuerpo de la tabla
- */
-.rtable tbody tr td{
-    color: #777;
-    padding: 4px 0;
-    line-height: 1.6;
-}
-table.gray{
-    
-    border: 1px solid #CBCBCB;
-}
-
-
->>>>>>> 0d88a6699a60b4e444565113a3ebfeeadf1abbeb
 /*
  *  Responsive images
  *  ~     ~     ~     ~     ~
@@ -501,15 +465,15 @@ img{
     white-space: nowrap;
     text-decoration: none;        
     -moz-user-select: none;
-    padding: 0.5rem 0.15rem;
+    padding: 0.6rem 0.15rem;
     vertical-align: baseline;            
-    /*background-color: #E6E6E6;*/
+    background-color: #E6E6E6;
     border: 0px none transparent;
     
 }
 .button:hover{
     color: #000;
-    /*background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));*/
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
 }
 
 .button:active{
