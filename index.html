@@ -14,13 +14,13 @@
             <h1>Responsive Cat</h1>
             <h2>La forma facil y profesional de construir la web</h2>
         </header>
-        <code>
+        <div id="menu">
             <a href="http://github.com/ldonis/responsivecat/">Code github</a>
             |
             <a href="http://project.ldonis.net/projects/rcat">Project</a>
             |
             <a href="https://github.com/ldonis/ResponsiveCat/issues">Issue Tracker</a>
-        </code>
+        </div>
     </section>
     <section class="doc center">
         
@@ -51,12 +51,12 @@
             <div>
                 <p>
                     Responsive cat utiliza dos tipos diferentes de grids
-                    <br>1.- agrid - grid automatico
-                    <br>2.- mgrid - grid manual
+                    <br>1.- rgrid - grid automatico
+                    <br>2.- rgrid - grid manual
                 </p>
                 <h3 class="ejemplo">Ejemplo de grid automatico:</h3>
                 <code>
-&lt;div class="mgrid col-3"&gt;
+&lt;div class="rgrid col-3"&gt;
 &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 1&lt;/div&gt;
 &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 2&lt;/div&gt;
 &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 3&lt;/div&gt;
@@ -65,13 +65,13 @@
             </div>
             <h3 class="ejemplo">Resultado final:</h3>
             <div class="example">
-                <div class="agrid col-3">
+                <div class="rgrid col-3">
                     <div>columna 1</div>
                     <div>columna 2</div>
                     <div>columna 3</div>
                 </div>
                 <br><br>
-                <div class="agrid col-6">
+                <div class="rgrid col-6">
                     <div>1</div>
                     <div>2</div>
                     <div>3</div>
@@ -80,7 +80,7 @@
                     <div>6</div>
                 </div>
                 <br><br>
-                <div class="agrid col-12">
+                <div class="rgrid col-12">
                     <div>1</div>
                     <div>2</div>
                     <div>3</div>
@@ -93,6 +93,13 @@
                     <div>10</div>
                     <div>11</div>
                     <div>12</div>
+                </div>
+                
+                <div class="rgrid">
+                    <div class="col-04">4</div>
+                    <div class="col-03">3</div>
+                    <div class="col-02">2</div>
+                    <div class="col-01">1</div>
                 </div>
             </div>
         </article>

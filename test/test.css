@@ -30,11 +30,21 @@ section.doc header,
 }
 
 /*
+ * Menu contact
+ */
+#menu{
+    padding: 40px;
+    background: #eee;
+    border:1px solid #b4b4b4;
+}
+
+/*
  *  Enlaces
  */
 a{
-    color: #4291C4;
+    color: #2165a6;
     border-bottom: 1px solid transparent;
+    transition: all linear 0.3s;
 }
 
 a:hover{
@@ -114,7 +124,7 @@ section.doc div.example:hover{
 /*
  *  Grids
  */
-.agrid div{
+.rgrid div{
     padding: 25px 0;
     border: 1px solid #CCC;
     background-color: #7E9EC7;
