@@ -102,102 +102,83 @@ h6{font-size: 1.23rem;}
 /*
  *  Contenedor de columnas automaticas y manuales
  */
-.agrid,
-.mgrid > .row{ 
+.rgrid{ 
     width: 100%;
     display: table;
 }
 
 /*
  *  Estilo generico de columnas
- *  agrid = automatic grid system
- *  mgrid = manual grid system
  */
-
-.agrid > *,
-.mgrid > .row > * {    
+.rgrid > *{    
     display: table-cell;
 }
 
 /*
- *  .agrid
+ *  .rgrid
  *  Ancho de columnas automaticas
  *  .col-n > * -> columnas automaticas 
- */
-[class^= "agrid col-2"] > *,
-[class*=" agrid col-2"] > * { width: 50.00%; }
-[class^= "agrid col-3"] > *,
-[class*=" agrid col-3"] > * { width: 33.33%; }
-[class^= "agrid col-4"] > *,
-[class*=" agrid col-4"] > * { width: 25.00%; }
-[class^= "agrid col-5"] > *,
-[class*=" agrid col-5"] > * { width: 20.00%; }
-[class^= "agrid col-6"] > *,
-[class*=" agrid col-6"] > * { width: 16.66%; }
-[class^= "agrid col-7"] > *,
-[class*=" agrid col-7"] > * { width: 14.28%; }
-[class^= "agrid col-8"] > *,
-[class*=" agrid col-8"] > * { width: 12.50%; }
-[class^= "agrid col-9"] > *,
-[class*=" agrid col-9"] > * { width: 11.11%; }
-[class^= "agrid col-10"] > *,
-[class*=" agrid col-10"] > * { width: 10.00%; }
-[class^= "agrid col-11"] > *,
-[class*=" agrid col-11"] > * { width: 09.09%; }
-[class^= "agrid col-12"] > *,
-[class*=" agrid col-12"] > * { width: 08.33%; }
-[class^= "agrid col-13"] > *,
-[class*=" agrid col-13"] > * { width: 07.69%; }
-[class^= "agrid col-14"] > *,
-[class*=" agrid col-14"] > * { width: 07.14%; }
-[class^= "agrid col-15"] > *,
-[class*=" agrid col-15"] > * { width: 06.66%; }
-[class^= "agrid col-16"] > *,
-[class*=" agrid col-16"] > * { width: 06.25%; }
-[class^= "agrid col-17"] > *,
-[class*=" agrid col-17"] > * { width: 05.88%; }
-[class^= "agrid col-18"] > *,
-[class*=" agrid col-18"] > * { width: 05.55%; }
-[class^= "agrid col-19"] > *,
-[class*=" agrid col-19"] > * { width: 05.26%; }
-[class^= "agrid col-20"] > *,
-[class*=" agrid col-20"] > * { width: 05.00%; }
-[class^= "agrid col-21"] > *,
-[class*=" agrid col-21"] > * { width: 04.76%; }
-[class^= "agrid col-22"] > *,
-[class*=" agrid col-22"] > * { width: 04.54%; }
-[class^= "agrid col-23"] > *,
-[class*=" agrid col-23"] > * { width: 04.34%; }
-[class^= "agrid col-24"] > *,
-[class*=" agrid col-24"] > * { width: 04.16%; }
-
-/*
- *  Ancho de columnas manuales
  *  col-1 = 4.166666667%
  */
-.mgrid .row .col-2  { width: 08.33%; }
-.mgrid .row .col-3  { width: 12.50%; }
-.mgrid .row .col-4  { width: 16.66%; }
-.mgrid .row .col-5  { width: 20.83%; }
-.mgrid .row .col-6  { width: 25.00%; }
-.mgrid .row .col-7  { width: 29.16%; }
-.mgrid .row .col-8  { width: 33.33%; }
-.mgrid .row .col-9  { width: 27.50%; }
-.mgrid .row .col-10 { width: 41.66%; }
-.mgrid .row .col-11 { width: 45.83%; }
-.mgrid .row .col-12 { width: 50.00%; }
-.mgrid .row .col-13 { width: 54.16%; }
-.mgrid .row .col-14 { width: 58.33%; }
-.mgrid .row .col-15 { width: 62.50%; }
-.mgrid .row .col-16 { width: 66.66%; }
-.mgrid .row .col-17 { width: 70.83%; }
-.mgrid .row .col-18 { width: 75.00%; }
-.mgrid .row .col-20 { width: 80.33%; }
-.mgrid .row .col-21 { width: 87.50%; }
-.mgrid .row .col-22 { width: 91.66%; }
-.mgrid .row .col-23 { width: 95.83%; }
-.mgrid .row .col-24 { width: 100.0%;}
-
+[class^= "rgrid col-2"] > *,
+[class*=" rgrid col-2"] > * { width: 50.00%; }
+[class^= "rgrid col-3"] > *,
+[class*=" rgrid col-3"] > * { width: 33.33%; }
+[class^= "rgrid col-4"] > *,
+[class*=" rgrid col-4"] > * { width: 25.00%; }
+[class^= "rgrid col-5"] > *,
+[class*=" rgrid col-5"] > * { width: 20.00%; }
+[class^= "rgrid col-6"] > *,
+[class*=" rgrid col-6"] > * { width: 16.66%; }
+[class^= "rgrid col-7"] > *,
+[class*=" rgrid col-7"] > * { width: 14.28%; }
+[class^= "rgrid col-8"] > *,
+[class*=" rgrid col-8"] > * { width: 12.50%; }
+[class^= "rgrid col-9"] > *,
+[class*=" rgrid col-9"] > * { width: 11.11%; }
+[class^= "rgrid col-10"] > *,
+[class*=" rgrid col-10"] > * { width: 10.00%; }
+[class^= "rgrid col-11"] > *,
+[class*=" rgrid col-11"] > * { width: 09.09%; }
+[class^= "rgrid col-12"] > *,
+[class*=" rgrid col-12"] > * { width: 08.33%; }
+[class^= "rgrid col-13"] > *,
+[class*=" rgrid col-13"] > * { width: 07.69%; }
+[class^= "rgrid col-14"] > *,
+[class*=" rgrid col-14"] > * { width: 07.14%; }
+[class^= "rgrid col-15"] > *,
+[class*=" rgrid col-15"] > * { width: 06.66%; }
+[class^= "rgrid col-16"] > *,
+[class*=" rgrid col-16"] > * { width: 06.25%; }
+[class^= "rgrid col-17"] > *,
+[class*=" rgrid col-17"] > * { width: 05.88%; }
+[class^= "rgrid col-18"] > *,
+[class*=" rgrid col-18"] > * { width: 05.55%; }
+[class^= "rgrid col-19"] > *,
+[class*=" rgrid col-19"] > * { width: 05.26%; }
+[class^= "rgrid col-20"] > *,
+[class*=" rgrid col-20"] > * { width: 05.00%; }
+[class^= "rgrid col-21"] > *,
+[class*=" rgrid col-21"] > * { width: 04.76%; }
+[class^= "rgrid col-22"] > *,
+[class*=" rgrid col-22"] > * { width: 04.54%; }
+[class^= "rgrid col-23"] > *,
+[class*=" rgrid col-23"] > * { width: 04.34%; }
+[class^= "rgrid col-24"] > *,
+[class*=" rgrid col-24"] > * { width: 04.16%; }
+/*
+ *  ancho de columnas manuales
+ *  .col-1 = 10
+ */
+.rgrid > .col-01  { width: 10.00%; }
+.rgrid > .col-02  { width: 20.00%; }
+.rgrid > .col-03  { width: 30.00%; }
+.rgrid > .col-04  { width: 40.00%; }
+.rgrid > .col-05  { width: 50.00%; }
+.rgrid > .col-06  { width: 60.00%; }
+.rgrid > .col-07  { width: 70.00%; }
+.rgrid > .col-08  { width: 80.00%; }
+.rgrid > .col-09  { width: 90.00%; }
 
 /*
  *  Estilo de tablas
