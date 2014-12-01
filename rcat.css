@@ -55,7 +55,6 @@ html{
  *  ~     ~     ~     ~     ~
  */
 body{ 
-    margin: 0px;
     padding: 0px;
     font-style: normal;
     font-weight: normal;
@@ -113,6 +112,7 @@ h6{font-size: 1.23rem;}
     font-size: 1rem;
     vertical-align: top;
     display: inline-block;
+    white-space: initial;
 }
 
 /*
@@ -345,59 +345,108 @@ img{
 /*
  *  Formulario estandar
  */
-.forms{    
+.rform{    
 }
 
-.forms > textarea,
-.forms > input[type="tel"],
-.forms > input[type="url"],
-.forms > input[type="text"],
-.forms > input[type="date"],
-.forms > input[type="time"],
-.forms > input[type="email"],
-.forms > input[type="phone"],
-.forms > input[type="month"],
-.forms > input[type="color"],
-.forms > input[type="number"],
-.forms > input[type="search"],
-.forms > input[type="password"],
-.forms > input[type="datetime"]
+
+.rform select,
+.rform textarea,
+.rform input[type="tel"],
+.rform input[type="url"],
+.rform input[type="text"],
+.rform input[type="date"],
+.rform input[type="time"],
+.rform input[type="email"],
+.rform input[type="phone"],
+.rform input[type="month"],
+.rform input[type="color"],
+.rform input[type="number"],
+.rform input[type="search"],
+.rform input[type="password"],
+.rform input[type="datetime"]
 {
-    width: 75%;
-    display: block;
-    margin: 10px auto;    
+    display: inherit;
+    margin: inherit;
     font-size: 0.9rem;
-    border-radius: 2px;
+    border-radius: 3px;
     line-height: 1.65rem;
     border: 1px solid #CCC;
     padding: 0.3rem 0.35rem;    
+    box-shadow: inset 0 1px 3px #ddd;
+    font-weight: 100;
+}
+
+/*
+ *  Estilo de etiquetas
+ */
+.rform > label{
+    display: inherit;
+    margin: inherit;
 }
 
 /*
  * Campo del formulario activo
  */
-.forms > textarea:focus,
-.forms > input[type="tel"]:focus,
-.forms > input[type="url"]:focus,
-.forms > input[type="text"]:focus,
-.forms > input[type="date"]:focus,
-.forms > input[type="time"]:focus,
-.forms > input[type="email"]:focus,
-.forms > input[type="phone"]:focus,
-.forms > input[type="month"]:focus,
-.forms > input[type="color"]:focus,
-.forms > input[type="number"]:focus,
-.forms > input[type="search"]:focus,
-.forms > input[type="password"]:focus,
-.forms > input[type="datetime"]:focus{ 
+.rform select:focus,
+.rform textarea:focus,
+.rform input[type="tel"]:focus,
+.rform input[type="url"]:focus,
+.rform input[type="text"]:focus,
+.rform input[type="date"]:focus,
+.rform input[type="time"]:focus,
+.rform input[type="email"]:focus,
+.rform input[type="phone"]:focus,
+.rform input[type="month"]:focus,
+.rform input[type="color"]:focus,
+.rform input[type="number"]:focus,
+.rform input[type="search"]:focus,
+.rform input[type="password"]:focus,
+.rform input[type="datetime"]:focus{ 
     outline: none;    
     border-color: #129FEA;
     box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
 }
 
 /*
+ *  Estilo de formulario: lineal
+ */
+form.inline{
+    display: inline-block;
+}
+
+/*
+ *  Estilo de formulario: bloque
+ */
+form.block{
+    text-align: left;
+    display: block;
+    margin: 0.25em 0;
+}
+
+form.align{
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form.align > div{
+    width: 100%;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+form.align > div label{
+    width: 10em;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 1em 0px 0px;
+}
+
+/*
  *  Helpers
- *  ~     ~     ~     ~     ~
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 
 /*

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!Doctype html>
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <title>Responsive Cat</title>
@@ -8,186 +8,360 @@
     <link href="test/test.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <section id="contact" class="center header">
-        <header class="center">
-            <img alt="Responsive Cat" src="test/logo.png" />
-            <h1>Responsive Cat</h1>
-            <h2>La forma facil y profesional de construir la web</h2>
-        </header>
-        <div id="menu">
-            <a href="http://github.com/ldonis/responsivecat/">Code github</a>
-            |
-            <a href="http://project.ldonis.net/projects/rcat">Project</a>
-            |
-            <a href="https://github.com/ldonis/ResponsiveCat/issues">Issue Tracker</a>
+<section id="doc">
+    <header class="rgrid col-3 center">
+        <div>
+            <img alt="responsive cat" id="logo"  src="http://localhost/ldonis.com/Website/Rcat/img/rcat.png"/>        </div>
+        <div>
+            <div class="vertical middle">
+                <div>
+                    <a class="icon-github"></a>
+                    <a class="icon-twitter"></a>
+                </div>
+            </div>
+
         </div>
-    </section>
-    <section class="doc center">
-        
-        <!--    ~     ~     ~     ~     ~     ~     ~    -->
-        
-        <article id="titulo">
-            <header class="center">
-                <h1>Tipografia</h1>
-                <h2>Titulos, parrafos, citas, listas y otros elementos necesarios</h2>
-            </header>
-            <div>
-                <h1>&lt;h1&gt;Titulo&lt;/h1&gt;</h1>
-                <h2>&lt;h2&gt;Titulo&lt;/h2&gt;</h2>
-                <h3>&lt;h3&gt;Titulo&lt;/h3&gt;</h3>
-                <h4>&lt;h4&gt;Titulo&lt;/h4&gt;</h4>
-                <h5>&lt;h5&gt;Titulo&lt;/h5&gt;</h5>
-                <h6>&lt;h6&gt;Titulo&lt;/h6&gt;</h6>
-            </div>
-        </article>
-        
-        <!--    ~     ~     ~     ~     ~     ~     ~    -->
-        
-        <article id="grid">
-            <header class="center">
-                <h1>Grids</h1>
-                <!--h2>Adaptativo y flexible sistema de grid</h2-->
-            </header>
-            <div>
-                <p>
-                    Responsive cat utiliza dos tipos diferentes de grids
-                    <br>1.- rgrid - grid automatico
-                    <br>2.- rgrid col-n - grid manual
-                </p>
-                <h3 class="ejemplo">Ejemplo de grid automatico:</h3>
-                <code>
-&lt;div class="rgrid col-3"&gt;
-&nbsp;&nbsp;&nbsp;&lt;div&gt;columna 1&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&lt;div&gt;columna 2&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&lt;div&gt;columna 3&lt;/div&gt;
-&lt;/div&gt;
-                </code>
-            </div>
-            <h3 class="ejemplo">Resultado final:</h3>
-            <div class="example">
-                <div class="rgrid col-3">
-                    <div>columna 1</div>
-                    <div>columna 2</div>
-                    <div>columna 3</div>
-                </div>
-                <br><br>
-                <div class="rgrid col-6">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                </div>
-                <br><br>
-                <div class="rgrid col-12">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-                    <div>11</div>
-                    <div>12</div>
-                </div>
-                <br><br>
-                <div class="rgrid">
-                    <div class="col-04">4</div>
-                    <div class="col-03">3</div>
-                    <div class="col-02">2</div>
-                    <div class="col-01">1</div>
-                </div>
-            </div>
-        </article>
-        
-        
-<!--    ~     ~     ~     ~     ~     ~     ~    -->
-        
-        <article id="grid">
-            <header class="center">
-                <h1>Tablas</h1>
-                <h2>Simples y atractivos estilos para tablas html</h2>
-            </header>
-            <div>
-                <p>
-                    Responsive cat utiliza dos tipos diferentes de grids
-                </p>
-                <h3 class="ejemplo">Ejemplo de grid automatico:</h3>
-                <code>
-&lt;table class="rtable"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;...&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;...&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-    &lt;tfoot&gt;
-        &lt;tr&gt;
-            &lt;td&gt;...&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tfoot&gt;
-&lt;/table&gt;
-                </code>
-            </div>
-            <h3 class="ejemplo">Resultado final:</h3>
-            <div class="example center">
-<table class="rtable center">
-    <thead>
-        <tr>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>content 1</td>
-            <td>content 1</td>
-            <td>content 1</td>
-            <td>content 1</td>
-        </tr>
-        <tr>
-            <td>content 2</td>
-            <td>content 2</td>
-            <td>content 2</td>
-            <td>content 2</td>
-        </tr>
-        <tr>
-            <td>content 3</td>
-            <td>content 3</td>
-            <td>content 3</td>
-            <td>content 3</td>
-        </tr>
-        <tr>
-            <td>content 4</td>
-            <td>content 4</td>
-            <td>content 4</td>
-            <td>content 4</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td>Footer</td>
-            <td>Footer</td>
-            <td>Footer</td>
-            <td>Footer</td>
-        </tr>
-    </tfoot>
-</table>
-            </div>
-        </article>
-        <!--    ~     ~     ~     ~     ~     ~     ~    -->
-        
-        <br><br><br><br><br>
-    </section>
+        <div>
+            <h1>Responsive Cat</h1>
+        </div>
+    </header>
+</section>
+
+<section class="rgrid col-3 center doc" style="padding: 50px 0;">
+<a href="https://github.com/ldonis/responsivecat">github</a>
+<a href="http://localhost/ldonis.com/project//">otros proyectos</a><a href="https://github.com/ldonis/responsivecat/issues" id="middle">issues</a>
+</section>
+<!--
+    TIPOGRAFIA
+-->
+<section class="doc">
+    <header>
+        <h3>Tipografia</h3>
+        <p>Titulos, parrafos, citas, listas y otros elementos necesarios</p>
+    </header>
+    <hr>
+    <div>
+        <h1>&lt;h1&gt;Titulo&lt;/h1&gt;</h1>
+        <h2>&lt;h2&gt;Titulo&lt;/h2&gt;</h2>
+        <h3>&lt;h3&gt;Titulo&lt;/h3&gt;</h3>
+        <h4>&lt;h4&gt;Titulo&lt;/h4&gt;</h4>
+        <h5>&lt;h5&gt;Titulo&lt;/h5&gt;</h5>
+        <h6>&lt;h6&gt;Titulo&lt;/h6&gt;</h6>
+    </div>
+</section>
+<!--
+    GRID
+-->
+<section id="grid" class="doc">
+    <header>
+        <h3>Grids</h3>
+        <p>Completo y flexible sistema de grids</p>
+    </header>
+    <hr>
+    <div>
+<code>
+        &lt;div class="rgrid col-3"&gt;
+        &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 1&lt;/div&gt;
+        &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 2&lt;/div&gt;
+        &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 3&lt;/div&gt;
+        &lt;/div&gt;
+</code>
+    </div>
+    <br>
+    <div class="rgrid col-3 demo">
+        <div>col-1</div>
+        <div>col-2</div>
+        <div>col-3</div>
+    </div>
+    <div class="rgrid col-6 demo">
+        <div>col-1</div>
+        <div>col-2</div>
+        <div>col-3</div>
+        <div>col-4</div>
+        <div>col-5</div>
+        <div>col-6</div>
+    </div>
+    <div class="rgrid col-12 demo">
+        <div>col-1</div>
+        <div>col-2</div>
+        <div>col-3</div>
+        <div>col-4</div>
+        <div>col-5</div>
+        <div>col-6</div>
+        <div>col-7</div>
+        <div>col-8</div>
+        <div>col-9</div>
+        <div>col-10</div>
+        <div>cpl-11</div>
+        <div>cpl-12</div>
+    </div>
+    <div class="rgrid col-24 demo">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+    </div>
+    <br><br>
+    <div>
+        <code>
+            &lt;div class="rgrid"&gt;
+                &lt;div class="col-01"&gt;&lt;/div&gt;
+                &lt;div class="col-02"&gt;&lt;/div&gt;
+                &lt;div class="col-03"&gt;&lt;/div&gt;
+                &lt;div class="col-04"&gt;&lt;/div&gt;
+                &lt;div class="col-0n"&gt;&lt;/div&gt;
+                &lt;div class="col-09"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        </code>
+    </div>
+    <br>
+    <div class="rgrid demo">
+        <div class="col-09">col-09</div>
+        <div class="col-01">col-01</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-08">col-08</div>
+        <div class="col-02">col-02</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-07">col-07</div>
+        <div class="col-03">col-03</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-06">col-06</div>
+        <div class="col-04">col-04</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-05">col-05</div>
+        <div class="col-05">col-05</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-04">col-04</div>
+        <div class="col-06">col-06</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-03">col-04</div>
+        <div class="col-07">col-07</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-02">col-03</div>
+        <div class="col-08">col-08</div>
+    </div>
+    <div class="rgrid demo">
+        <div class="col-01">col-01</div>        
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+        <div class="col-01">col-01</div>
+    </div>
+</section>
+<!--
+    Tablas
+-->
+<section id="tablas" class="doc">
+    <header>
+        <h3>Tablas</h3>
+        <p></p>
+    </header>
+    <hr>
+    <div>
+<code>
+        &lt;table class='rtable gray'&gt;
+            &lt;thead&gt;
+               &lt;tr&gt;
+                   &lt;th&gt;titulo 1&lt;/th&gt;
+                   &lt;th&gt;titulo 2&lt;/th&gt;
+                   &lt;th&gt;titulo 3&lt;/th&gt;
+                   &lt;th&gt;titulo 4&lt;/th&gt;
+                   &lt;th&gt;titulo 5&lt;/th&gt;
+               &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody class='impar'&gt;
+               &lt;tr&gt;
+                   &lt;td&gt;row 1 col 1&lt;/td&gt;
+                   &lt;td&gt;row 1 col 2&lt;/td&gt;
+                   &lt;td&gt;row 1 col 3&lt;/td&gt;
+                   &lt;td&gt;row 1 col 4&lt;/td&gt;
+                   &lt;td&gt;row 1 col 5&lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+</code>
+    </div>
+    <br>
+    <table class='rtable gray'>
+        <thead>
+           <tr>
+               <th>titulo 1</th>
+               <th>titulo 2</th>
+               <th>titulo 3</th>
+               <th>titulo 4</th>
+               <th>titulo 5</th>
+           </tr>
+        </thead>
+        <tbody class='impar'>
+           <tr>
+               <td>row 1 col 1</td>
+               <td>row 1 col 2</td>
+               <td>row 1 col 3</td>
+               <td>row 1 col 4</td>
+               <td>row 1 col 5</td>
+           </tr>
+           <tr>
+               <td>row 2 col 1</td>
+               <td>row 2 col 2</td>
+               <td>row 2 col 3</td>
+               <td>row 2 col 4</td>
+               <td>row 2 col 5</td>
+           </tr>
+           <tr>
+               <td>row 3 col 1</td>
+               <td>row 3 col 2</td>
+               <td>row 3 col 3</td>
+               <td>row 3 col 4</td>
+               <td>row 3 col 5</td>
+           </tr>
+            <tr>
+               <td>row 4 col 1</td>
+               <td>row 4 col 2</td>
+               <td>row 4 col 3</td>
+               <td>row 4 col 4</td>
+               <td>row 4 col 5</td>
+           </tr>
+        </tbody>
+    </table>
+</section>
+
+<!--
+    Formularios
+-->
+<section id="grid" class="doc">
+    <header>
+        <h3>Formularios</h3>
+        <p></p>
+    </header>
+    <hr>
+    <div>
+        <code>
+            &lt;form class="rform inline"&gt;
+                &lt;input type="email" placeholder="Email"&gt;
+                &lt;input type="password" placeholder="Password"&gt;
+                &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </div>
+    <br>
+    <form class="rform inline">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit" class="button-normal">aceptar</button>
+    </form>
+    <br><br>
+    <div>
+        <code>
+            &lt;form class="rform inline"&gt;
+                &lt;input type="email" placeholder="Email"&gt;
+                &lt;input type="password" placeholder="Password"&gt;
+                &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </div>
+    <br>
+    <form class="rform block">
+        <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Email">
+        <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+        <label for="state">Pais</label>
+            <select id="state">
+                <option>Guatemala</option>
+                <option>Mexico</option>
+                <option>Etc...</option>
+            </select>
+        <button type="submit" class="button-normal">aceptar</button>
+    </form>
+    <br><br>
+    <div>
+        <code>
+            &lt;form class="rform align"&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Nombre:&lt;/label&gt;
+                    &lt;input type="text" placeholder="Nombre"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Apellidos:&lt;/label&gt;
+                    &lt;input type="text" placeholder="Apellidos"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Edad:&lt;/label&gt;        
+                    &lt;input type="number"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Aceptar&lt;/label&gt;
+                    &lt;input type="button" value="aceptar" class="button-normal"&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        </code>
+    </div>
+    <br>
+<form class="rform align">
+    <div>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Nombre">
+    </div>
+    <div>
+        <label>Apellidos:</label>
+        <input type="text" placeholder="Apellidos">
+    </div>
+    <div>
+        <label>Edad:</label>        
+        <input type="number">
+    </div>
+    <div>
+        <label>Aceptar</label>
+        <input type="button" value="aceptar" class="button-normal">
+    </div>
+</form>
+    <br><br>
+</section><!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ldonis.net/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.ldonis.net/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 </body>
 </html>
