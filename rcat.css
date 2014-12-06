@@ -57,7 +57,7 @@ html{
 body{ 
     padding: 0px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 100;
     /*
      *  Tipografia
      */
@@ -92,7 +92,7 @@ h6{font-size: 1.23rem;}
 
 /*
  *  Grids
- *  ~     ~     ~     ~     ~
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
  */
 
 /*
@@ -184,39 +184,8 @@ h6{font-size: 1.23rem;}
 
 
 /*
- *  Alineacion vertical
- *  ~     ~     ~     ~     ~
- */
-
-/*
- *  Contenedor principal
- */
-.vertical{
-    width: 100%;
-    height: 100%;
-    display: table;
-    vertical-align: middle;
-}
-/*
- *  Contenedor secundario
- */
-.vertical > *{
-    display: table-cell;
-}
-
-[class^= "vertical top"] > *,
-[class*=" vertical top"] > * { vertical-align: top; }
-
-[class^= "vertical middle"] > *,
-[class*=" vertical middle"] > * { vertical-align: middle; }
-
-[class^= "vertical bottom"] > *,
-[class*=" vertical bottom"] > * { vertical-align: bottom; }
-
-
-/*
  *  Estilo de tablas
- *  ~     ~     ~     ~     ~
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
  */
 .rtable{
     width: 100%;
@@ -226,23 +195,26 @@ h6{font-size: 1.23rem;}
     border-spacing: 0px;
 }
 
-/*
- *  Celdas
- */
-.rtable td,
-.rtable th{
-    padding: 0.5em 1em;
-}
+    /*
+     *  Celdas
+     */
+    .rtable td,
+    .rtable th{
+        padding: 0.5em 1em;
+    }
 
-/*
- *  Celdas de encabezado
- */
-.rtable th{
-}
+        /*
+         *  Celdas de encabezado
+         */
+        .rtable th{
+        }
 
     /*
      *  Estilos predefinidos de tablas
-     *
+     *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     */
+    
+    /*
      *  Tabla Gris
      */
     table.gray{
@@ -250,42 +222,187 @@ h6{font-size: 1.23rem;}
         border-left: none;
     }
     
-    /*
-     *  Encabezado de tabla
-     */
-    table.gray thead{
-        background: none repeat scroll 0% 0% #E0E0E0;
-        color: #000;
-        text-align: left;
-        vertical-align: bottom;
-    }
+        /*
+         *  Encabezado de tabla
+         */
+        table.gray thead{
+            background: none repeat scroll 0% 0% #E0E0E0;
+            color: #000;
+            text-align: left;
+            vertical-align: bottom;
+        }
     
-    /*
-     *  Estilo generico de celdas
-     */
-    table.gray td,
-    table.gray th{
-        border-left: 1px solid #CBCBCB;
-    }
+        /*
+         *  Estilo generico de celdas
+         */
+        table.gray td,
+        table.gray th{
+            border-left: 1px solid #CBCBCB;
+        }
     
-    /*
-     *  Estilos de celdas impares
-     */
-    table.gray tbody.impar tr:nth-child(even) {
-        background-color: #ececec;
-    }
-    
-    
+        /*
+         *  Estilos de celdas impares
+         */
+        table.gray tbody.impar tr:nth-child(even) {
+            background-color: #ececec;
+        }
+
 /*
- *  Responsive images
- *  ~     ~     ~     ~     ~
+ *  Formularios
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
  */
-img{
-    height: auto;
-    max-width: 99%;
+
+/*
+ *  Formulario estandar
+ */
+.rform{    
 }
 
+    /*
+     *  Controles de formularios
+     */
+    .rform select,
+    .rform textarea,
+    .rform input[type="tel"],
+    .rform input[type="url"],
+    .rform input[type="text"],
+    .rform input[type="date"],
+    .rform input[type="time"],
+    .rform input[type="email"],
+    .rform input[type="phone"],
+    .rform input[type="month"],
+    .rform input[type="color"],
+    .rform input[type="number"],
+    .rform input[type="search"],
+    .rform input[type="password"],
+    .rform input[type="datetime"]
+    {
+        /*display: inherit;
+        margin: inherit;*/
+        font-weight: 100;
+        font-size: 1rem;
+        border-radius: 3px;
+        line-height: 1.65rem;
+        border: 1px solid #CCC;
+        letter-spacing: 0.01rem;
+        padding: 0.35rem 0.40rem;    
+        box-shadow: inset 0 1px 3px #ddd;
+    }
 
+    /*
+     *  Estilo de etiquetas
+     */
+    .rform > label{
+        display: inherit;
+        margin: inherit;
+    }
+
+    /*
+     * Campo del formulario activo
+     */
+    .rform select:focus,
+    .rform textarea:focus,
+    .rform input[type="tel"]:focus,
+    .rform input[type="url"]:focus,
+    .rform input[type="text"]:focus,
+    .rform input[type="date"]:focus,
+    .rform input[type="time"]:focus,
+    .rform input[type="email"]:focus,
+    .rform input[type="phone"]:focus,
+    .rform input[type="month"]:focus,
+    .rform input[type="color"]:focus,
+    .rform input[type="number"]:focus,
+    .rform input[type="search"]:focus,
+    .rform input[type="password"]:focus,
+    .rform input[type="datetime"]:focus{ 
+        outline: none;    
+        border-color: #129FEA;
+        box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
+    }
+
+/*
+ *  Estilos de formularios
+ *  ~·~  ~·~  ~·~  ~·~  ~·~
+ */
+
+    /*
+     *  Lineal
+     */
+    form.inline{
+        display: inline-block;
+    }
+
+    /*
+     *  Bloque
+     */
+    form.block{
+        width: 500px;
+        text-align: left;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    form.block input,
+    form.block select{
+        margin-left: 0 !important;
+    }
+    
+    /*
+     *  Alineado
+     */
+    form.align{
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    form.align > div{
+        width: 100%;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    form.align > div label{
+        width: 10em;
+        text-align: right;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0px 1em 0px 0px;
+    }
+
+    /*
+     *  Grupal
+     */
+    form.group{
+        width: 350px;
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+    }
+    
+    /*
+     *  Contenedor de controles
+     */
+    form.group > div{
+        margin: 20px 0;
+    }
+    
+    form.group > div input,
+    form.group > div select{
+        margin: 0px;
+        width: 100%;
+        border-radius: 0px !important;
+    }
+    
+    /**/
+    form.group > div input:first-child{
+        border-radius: 5px 5px 0 0 !important;
+    }
+    form.group > div input:last-child{
+        border-radius: 0 0 5px 5px !important;
+    }
+    
 /*
  *  Navegacion
  *  ~     ~     ~     ~     ~
@@ -338,116 +455,48 @@ img{
 
 
 /*
- *  Formularios
+ *  Alineacion vertical
  *  ~     ~     ~     ~     ~
  */
 
 /*
- *  Formulario estandar
+ *  Contenedor principal
  */
-.rform{    
-}
-
-
-.rform select,
-.rform textarea,
-.rform input[type="tel"],
-.rform input[type="url"],
-.rform input[type="text"],
-.rform input[type="date"],
-.rform input[type="time"],
-.rform input[type="email"],
-.rform input[type="phone"],
-.rform input[type="month"],
-.rform input[type="color"],
-.rform input[type="number"],
-.rform input[type="search"],
-.rform input[type="password"],
-.rform input[type="datetime"]
-{
-    display: inherit;
-    margin: inherit;
-    font-size: 0.9rem;
-    border-radius: 3px;
-    line-height: 1.65rem;
-    border: 1px solid #CCC;
-    padding: 0.3rem 0.35rem;    
-    box-shadow: inset 0 1px 3px #ddd;
-    font-weight: 100;
-}
-
-/*
- *  Estilo de etiquetas
- */
-.rform > label{
-    display: inherit;
-    margin: inherit;
-}
-
-/*
- * Campo del formulario activo
- */
-.rform select:focus,
-.rform textarea:focus,
-.rform input[type="tel"]:focus,
-.rform input[type="url"]:focus,
-.rform input[type="text"]:focus,
-.rform input[type="date"]:focus,
-.rform input[type="time"]:focus,
-.rform input[type="email"]:focus,
-.rform input[type="phone"]:focus,
-.rform input[type="month"]:focus,
-.rform input[type="color"]:focus,
-.rform input[type="number"]:focus,
-.rform input[type="search"]:focus,
-.rform input[type="password"]:focus,
-.rform input[type="datetime"]:focus{ 
-    outline: none;    
-    border-color: #129FEA;
-    box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
-}
-
-/*
- *  Estilo de formulario: lineal
- */
-form.inline{
-    display: inline-block;
-}
-
-/*
- *  Estilo de formulario: bloque
- */
-form.block{
-    text-align: left;
-    display: block;
-    margin: 0.25em 0;
-}
-
-form.align{
-    width: 500px;
-    display: block;
-    margin: 0 auto;
-    text-align: left;
-}
-
-form.align > div{
+.vertical{
     width: 100%;
-    margin-bottom: 5px;
-    display: inline-block;
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+}
+/*
+ *  Contenedor secundario
+ */
+.vertical > *{
+    display: table-cell;
 }
 
-form.align > div label{
-    width: 10em;
-    text-align: right;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0px 1em 0px 0px;
-}
+[class^= "vertical top"] > *,
+[class*=" vertical top"] > * { vertical-align: top; }
+
+[class^= "vertical middle"] > *,
+[class*=" vertical middle"] > * { vertical-align: middle; }
+
+[class^= "vertical bottom"] > *,
+[class*=" vertical bottom"] > * { vertical-align: bottom; }
 
 /*
  *  Helpers
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
+
+/*
+ *  Responsive images
+ *  ~     ~     ~     ~     ~
+ */
+img{
+    height: auto;
+    max-width: 99%;
+}
 
 /*
  *  Mensajes y alertas
