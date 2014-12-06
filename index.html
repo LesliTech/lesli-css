@@ -8,29 +8,18 @@
     <link href="test/test.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<section id="doc">
-    <header class="rgrid col-3 center"> 
-        <div>
-            <img alt="responsive cat" id="logo"  src="http://localhost/ldonis.com/Website/Rcat/img/rcat.png"/>        </div>
-        <div>
-            <div class="vertical middle">
-                <div>
-                    <a class="icon-github"></a>
-                    <a class="icon-twitter"></a>
-                </div>
-            </div>
-
-        </div>
-        <div>
-            <h1>Responsive Cat</h1>
-        </div>
-    </header>
-</section>
-
-<section class="rgrid col-3 center doc" style="padding: 50px 0;">
-<a href="https://github.com/ldonis/responsivecat">github</a>
-<a href="http://localhost/ldonis.com/project//">otros proyectos</a><a href="https://github.com/ldonis/responsivecat/issues" id="middle">issues</a>
-</section>
+<header class="center">
+    <img alt="rcat" src="test/logo.png" />
+    <h1>Responsive Cat</h1>
+    <nav class="navbar center">
+        <ul>
+            <li><a href="https://github.com/ldonis/responsivecat">github</a></li>
+            <li><a href="http://ldonis.com/">ldonis.com</a></li>
+            <li><a href="https://github.com/ldonis/responsivecat/issues" id="middle">issues</a></li>
+        </ul>
+    </nav>
+</header>
+<br><br>
 <!--
     TIPOGRAFIA
 -->
@@ -284,11 +273,19 @@
     <br><br>
     <div>
         <code>
-            &lt;form class="rform inline"&gt;
-                &lt;input type="email" placeholder="Email"&gt;
-                &lt;input type="password" placeholder="Password"&gt;
-                &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
-            &lt;/form&gt;
+    &lt;form class="rform block"&gt;
+        &lt;label for="email"&gt;Email&lt;/label&gt;
+            &lt;input id="email" type="email" placeholder="Email"&gt;
+        &lt;label for="password"&gt;Password&lt;/label&gt;
+            &lt;input id="password" type="password" placeholder="Password"&gt;
+        &lt;label for="state"&gt;Pais&lt;/label&gt;
+            &lt;select id="state"&gt;
+                &lt;option&gt;Guatemala&lt;/option&gt;
+                &lt;option&gt;Mexico&lt;/option&gt;
+                &lt;option&gt;Etc...&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
+    &lt;/form&gt;
         </code>
     </div>
     <br>
@@ -347,8 +344,38 @@
         <input type="button" value="aceptar" class="button-normal">
     </div>
 </form>
-    <br><br>
-</section><!-- Piwik -->
+<br><br>
+    <div>
+        <code>
+            &lt;form class="rform group"&gt;
+                &lt;div&gt;
+                    &lt;input type="text" placeholder="Nombres"&gt;
+                    &lt;input type="text" placeholder="Apellidos"&gt;
+                    &lt;input type="text" placeholder="E-mail"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;input type="text" placeholder="Usuario"&gt;
+                    &lt;input type="password" placeholder="Contraseña"&gt;
+                    &lt;input type="button" value="aceptar" class="button-normal"&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        </code>
+    </div>
+    <br>
+<form class="rform group">
+    <div>
+        <input type="text" placeholder="Nombres">
+        <input type="text" placeholder="Apellidos">
+        <input type="text" placeholder="E-mail">
+    </div>
+    <div>
+        <input type="text" placeholder="Usuario">
+        <input type="password" placeholder="Contraseña">
+        <input type="button" value="aceptar" class="button-normal">
+    </div>
+</form>
+</section>
+<!-- Piwik -- >
 <script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
