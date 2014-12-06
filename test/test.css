@@ -1,7 +1,27 @@
+/*
+ *  Fuentes
+ */
+@font-face{
+    font-family: 'roboto100';
+    src: url('roboto100.woff') format('woff');
+    font-weight: 100;
+}
 
+/*
+ *  
+ */
+html, body {    
+  font-family: 'roboto100';  
+  /*background-color: #f5f5f5;*/
+  background-color: #fff;
+  color: #222;
+}
 
-header{
-    padding: 20px 0;
+/*
+ *  Encabezado
+ */
+body > header{
+    background-color: #f5f5f5;
     color: #4291C4;
 }
 
@@ -10,28 +30,28 @@ header{
  */
 header h1{
     font-size: 5.5rem;
-    font-weight: 100;
 }
 
-section > nav{
+/*
+ *  Menu de navegacion
+ */
+nav{
     padding: 40px;
     border: 1px solid #B4B4B4;
     background-color: #eee;
 }
 
-section > nav li{
+/*
+ *  Contenedores de enlaces
+ */
+nav li{
     min-width: 200px;
 }
 
-section > nav #middle{
-    /*
-    border-left: 1px solid #222;
-    border-right: 1px solid #222;
-    */
-}
-
-section > a,
-section > nav a{
+/*
+ *  Enlaces
+ */
+nav a{
     color: #2165A6;    
     font-weight: 100;
     font-family: sans-serif;
@@ -40,8 +60,7 @@ section > nav a{
     border-bottom: 1px solid transparent;
 }
 
-section > a:hover,
-section > nav a:hover{
+nav a:hover{
     color: #222;
     border-bottom-color: #E74C3C;
 }
@@ -49,68 +68,17 @@ section > nav a:hover{
 /*
  *  Descripcion del framework
  */
-section > p{
+#framework > p{
     font-size: 2rem;
-    padding: 4.5rem 3rem;
     text-align: center;
+    padding: 2rem 3rem;
     line-height: 2.5rem;
-}
-
-
-#body{
-    padding: 75px 0;
-}
-
-#body img{    
-    max-width: 50%;
-}
-
-#body .icon-download{
-    font-size: 16rem;
-    transition: all linear 0.1s;
-}
-
-#body .icon-download:hover{
-    color:#2165A6;
 }
 
 /*
  *  Documentacion
  *  ~·~  ~·~  ~·~  ~·~  
  */
-
-/*
- *  Encabezado de documentacion
- */
-#doc header{
-    padding: 0;
-    width: 100%;
-    height: 60px;
-    margin-top: -3px;
-    text-align: center;
-    background-color: #d5d5d5;
-}
-
-/*
- *  Logo
- */
-#doc header #logo{
-    height: 55px;
-}
-
-/*
- *  menu
- */
-#doc header a{
-    font-size: 2.5rem;
-    color: #222;    
-}
-/*
- *  Titulo
- */
-#doc header h1{
-    font-size: 2.4rem;
-}
 
 /*
  *  Contenedores de especificacion de funcionalidad
@@ -127,14 +95,14 @@ section > p{
      *  Titulo de documentacion
      */
     .doc header h3{
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     
     /*
      *  Descripcion de funcionalidad
      */
     .doc header p{
-        color: #343434;
+        color: #222;
         font-size: 1.5rem;
     }
     
