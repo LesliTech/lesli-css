@@ -11,7 +11,7 @@
 <header class="center">
     <img alt="rcat" src="test/logo.png" />
     <h1>Responsive Cat</h1>
-    <nav class="navbar center">
+    <nav class="rnavbar center">
         <ul>
             <li><a href="https://github.com/ldonis/responsivecat">github</a></li>
             <li><a href="http://ldonis.com/">ldonis.com</a></li>
@@ -48,13 +48,14 @@
     </header>
     <hr>
     <div>
-<code>
-        &lt;div class="rgrid col-3"&gt;
-        &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 1&lt;/div&gt;
-        &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 2&lt;/div&gt;
-        &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 3&lt;/div&gt;
-        &lt;/div&gt;
-</code>
+        <span>Grid automatico</span>
+        <code>
+            &lt;div class="rgrid col-3"&gt;
+            &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 1&lt;/div&gt;
+            &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 2&lt;/div&gt;
+            &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 3&lt;/div&gt;
+            &lt;/div&gt;
+        </code>
     </div>
     <br>
     <div class="rgrid col-3 demo">
@@ -111,7 +112,9 @@
         <div>24</div>
     </div>
     <br><br>
+    <!---->
     <div>
+        <span>Grid manual</span>
         <code>
             &lt;div class="rgrid"&gt;
                 &lt;div class="col-01"&gt;&lt;/div&gt;
@@ -179,73 +182,74 @@
     </header>
     <hr>
     <div>
-<code>
-        &lt;table class='rtable gray'&gt;
-            &lt;thead&gt;
-               &lt;tr&gt;
-                   &lt;th&gt;titulo 1&lt;/th&gt;
-                   &lt;th&gt;titulo 2&lt;/th&gt;
-                   &lt;th&gt;titulo 3&lt;/th&gt;
-                   &lt;th&gt;titulo 4&lt;/th&gt;
-                   &lt;th&gt;titulo 5&lt;/th&gt;
-               &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody class='impar'&gt;
-               &lt;tr&gt;
-                   &lt;td&gt;row 1 col 1&lt;/td&gt;
-                   &lt;td&gt;row 1 col 2&lt;/td&gt;
-                   &lt;td&gt;row 1 col 3&lt;/td&gt;
-                   &lt;td&gt;row 1 col 4&lt;/td&gt;
-                   &lt;td&gt;row 1 col 5&lt;/td&gt;
-               &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-</code>
+        <code>
+            &lt;table class='rtable gray'&gt;
+                &lt;thead&gt;
+                   &lt;tr&gt;
+                       &lt;th&gt;titulo 1&lt;/th&gt;
+                       &lt;th&gt;titulo 2&lt;/th&gt;
+                       &lt;th&gt;titulo 3&lt;/th&gt;
+                       &lt;th&gt;titulo 4&lt;/th&gt;
+                       &lt;th&gt;titulo 5&lt;/th&gt;
+                   &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody class='impar'&gt;
+                   &lt;tr&gt;
+                       &lt;td&gt;row 1 col 1&lt;/td&gt;
+                       &lt;td&gt;row 1 col 2&lt;/td&gt;
+                       &lt;td&gt;row 1 col 3&lt;/td&gt;
+                       &lt;td&gt;row 1 col 4&lt;/td&gt;
+                       &lt;td&gt;row 1 col 5&lt;/td&gt;
+                   &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        </code>
     </div>
     <br>
-    <table class='rtable gray'>
-        <thead>
-           <tr>
-               <th>titulo 1</th>
-               <th>titulo 2</th>
-               <th>titulo 3</th>
-               <th>titulo 4</th>
-               <th>titulo 5</th>
-           </tr>
-        </thead>
-        <tbody class='impar'>
-           <tr>
-               <td>row 1 col 1</td>
-               <td>row 1 col 2</td>
-               <td>row 1 col 3</td>
-               <td>row 1 col 4</td>
-               <td>row 1 col 5</td>
-           </tr>
-           <tr>
-               <td>row 2 col 1</td>
-               <td>row 2 col 2</td>
-               <td>row 2 col 3</td>
-               <td>row 2 col 4</td>
-               <td>row 2 col 5</td>
-           </tr>
-           <tr>
-               <td>row 3 col 1</td>
-               <td>row 3 col 2</td>
-               <td>row 3 col 3</td>
-               <td>row 3 col 4</td>
-               <td>row 3 col 5</td>
-           </tr>
-            <tr>
-               <td>row 4 col 1</td>
-               <td>row 4 col 2</td>
-               <td>row 4 col 3</td>
-               <td>row 4 col 4</td>
-               <td>row 4 col 5</td>
-           </tr>
-        </tbody>
-    </table>
+    <div>
+        <table class='rtable gray'>
+            <thead>
+               <tr>
+                   <th>titulo 1</th>
+                   <th>titulo 2</th>
+                   <th>titulo 3</th>
+                   <th>titulo 4</th>
+                   <th>titulo 5</th>
+               </tr>
+            </thead>
+            <tbody class='impar'>
+               <tr>
+                   <td>row 1 col 1</td>
+                   <td>row 1 col 2</td>
+                   <td>row 1 col 3</td>
+                   <td>row 1 col 4</td>
+                   <td>row 1 col 5</td>
+               </tr>
+               <tr>
+                   <td>row 2 col 1</td>
+                   <td>row 2 col 2</td>
+                   <td>row 2 col 3</td>
+                   <td>row 2 col 4</td>
+                   <td>row 2 col 5</td>
+               </tr>
+               <tr>
+                   <td>row 3 col 1</td>
+                   <td>row 3 col 2</td>
+                   <td>row 3 col 3</td>
+                   <td>row 3 col 4</td>
+                   <td>row 3 col 5</td>
+               </tr>
+                <tr>
+                   <td>row 4 col 1</td>
+                   <td>row 4 col 2</td>
+                   <td>row 4 col 3</td>
+                   <td>row 4 col 4</td>
+                   <td>row 4 col 5</td>
+               </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
-
 <!--
     Formularios
 -->
@@ -256,6 +260,49 @@
     </header>
     <hr>
     <div>
+        <span>Formularios individuales</span>
+        <code>
+                &lt;form class="rform individual prefix"&gt;
+                    &lt;div&gt;
+                        &lt;span&gt;
+                            http://
+                        &lt;/span&gt;
+                        &lt;input type="text" placeholder="Ingrese url..."&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+                
+                &lt;form class="rform individual go"&gt;
+                    &lt;div&gt;
+                        &lt;input type="text" placeholder="click me!"&gt;
+                        &lt;input type="button" class="button-normal" value="Go"&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+        </code>
+    </div>
+    <br>
+    <div class="doc-50">
+        <form class="rform individual prefix">
+            <div>
+                <span>
+                    http://
+                </span>
+                <input type="text" placeholder="Ingrese url...">
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="doc-50">
+        <form class="rform individual go">
+            <div>
+                <input type="text" placeholder="click me!">
+                <input type="button" class="button-normal" value="Go">
+            </div>
+        </form>
+    </div>
+    <br><br>
+    <!---->
+    <div>
+        <span>Formulario en linea</span>
         <code>
             &lt;form class="rform inline"&gt;
                 &lt;input type="email" placeholder="Email"&gt;
@@ -265,45 +312,54 @@
         </code>
     </div>
     <br>
-    <form class="rform inline">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button type="submit" class="button-normal">aceptar</button>
-    </form>
-    <br><br>
     <div>
+        <form class="rform inline">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button type="submit" class="button-normal">aceptar</button>
+        </form>
+    </div>
+    <br>
+    <br><br>
+    <!---->
+    <div>
+        <span>Formulario en bloque</span>
         <code>
-    &lt;form class="rform block"&gt;
-        &lt;label for="email"&gt;Email&lt;/label&gt;
-            &lt;input id="email" type="email" placeholder="Email"&gt;
-        &lt;label for="password"&gt;Password&lt;/label&gt;
-            &lt;input id="password" type="password" placeholder="Password"&gt;
-        &lt;label for="state"&gt;Pais&lt;/label&gt;
-            &lt;select id="state"&gt;
-                &lt;option&gt;Guatemala&lt;/option&gt;
-                &lt;option&gt;Mexico&lt;/option&gt;
-                &lt;option&gt;Etc...&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
-    &lt;/form&gt;
+            &lt;form class="rform block"&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                    &lt;input id="email" type="email" placeholder="Email"&gt;
+                &lt;label for="password"&gt;Password&lt;/label&gt;
+                    &lt;input id="password" type="password" placeholder="Password"&gt;
+                &lt;label for="state"&gt;Pais&lt;/label&gt;
+                    &lt;select id="state"&gt;
+                        &lt;option&gt;Guatemala&lt;/option&gt;
+                        &lt;option&gt;Mexico&lt;/option&gt;
+                        &lt;option&gt;Etc...&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
+            &lt;/form&gt;
         </code>
     </div>
     <br>
-    <form class="rform block">
-        <label for="email">Email</label>
-            <input id="email" type="email" placeholder="Email">
-        <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Password">
-        <label for="state">Pais</label>
-            <select id="state">
-                <option>Guatemala</option>
-                <option>Mexico</option>
-                <option>Etc...</option>
-            </select>
-        <button type="submit" class="button-normal">aceptar</button>
-    </form>
-    <br><br>
     <div>
+        <form class="rform block">
+            <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Email">
+            <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password">
+            <label for="state">Pais</label>
+                <select id="state">
+                    <option>Guatemala</option>
+                    <option>Mexico</option>
+                    <option>Etc...</option>
+                </select>
+            <button type="submit" class="button-normal">aceptar</button>
+        </form>
+    </div>
+    <br><br>
+    <!---->
+    <div>
+        <span>Formulario alineado</span>
         <code>
             &lt;form class="rform align"&gt;
                 &lt;div&gt;
@@ -326,26 +382,29 @@
         </code>
     </div>
     <br>
-<form class="rform align">
     <div>
-        <label>Nombre:</label>
-        <input type="text" placeholder="Nombre">
+        <form class="rform align">
+            <div>
+                <label>Nombre:</label>
+                <input type="text" placeholder="Nombre">
+            </div>
+            <div>
+                <label>Apellidos:</label>
+                <input type="text" placeholder="Apellidos">
+            </div>
+            <div>
+                <label>Edad:</label>        
+                <input type="number">
+            </div>
+            <div>
+                <label>Aceptar</label>
+                <input type="button" value="aceptar" class="button-normal">
+            </div>
+        </form>
     </div>
+    <br><br>
     <div>
-        <label>Apellidos:</label>
-        <input type="text" placeholder="Apellidos">
-    </div>
-    <div>
-        <label>Edad:</label>        
-        <input type="number">
-    </div>
-    <div>
-        <label>Aceptar</label>
-        <input type="button" value="aceptar" class="button-normal">
-    </div>
-</form>
-<br><br>
-    <div>
+        <span>Formulario grupal</span>
         <code>
             &lt;form class="rform group"&gt;
                 &lt;div&gt;
@@ -362,18 +421,89 @@
         </code>
     </div>
     <br>
-<form class="rform group">
     <div>
-        <input type="text" placeholder="Nombres">
-        <input type="text" placeholder="Apellidos">
-        <input type="text" placeholder="E-mail">
+        <form class="rform group">
+            <div>
+                <input type="text" placeholder="Nombres">
+                <input type="text" placeholder="Apellidos">
+                <input type="text" placeholder="E-mail">
+            </div>
+            <div>
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <input type="button" value="aceptar" class="button-normal">
+            </div>
+        </form>
     </div>
+</section>
+<!--
+    Navegacion
+-->
+<section id="grid" class="doc">
+    <header>
+        <h3>Navegación</h3>
+        <p>Menus y enlaces</p>
+    </header>
+    <hr>
+    <!---->
     <div>
-        <input type="text" placeholder="Usuario">
-        <input type="password" placeholder="Contraseña">
-        <input type="button" value="aceptar" class="button-normal">
+        <span>Menu estandar</span>
+        <code>
+            &lt;nav class="rnavbar"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        </code>
     </div>
-</form>
+    <br>
+    <div>
+        <nav class="rnavbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br>
+    <!---->
+    <div>
+        <span>Menu doble</span>
+        <code>
+            &lt;nav class="rnavbar doble"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Sign In&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;LogIn&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        </code>
+    </div>
+    <br>
+    <div>
+        <nav class="rnavbar doble">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">LogIn</a></li>
+            </ul>
+        </nav>
+    </div>
 </section>
 <!-- Piwik -- >
 <script type="text/javascript">

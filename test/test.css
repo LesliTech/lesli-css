@@ -35,7 +35,7 @@ header h1{
 /*
  *  Menu de navegacion
  */
-nav{
+header nav{
     padding: 40px;
     border: 1px solid #B4B4B4;
     background-color: #eee;
@@ -44,14 +44,14 @@ nav{
 /*
  *  Contenedores de enlaces
  */
-nav li{
+header nav li{
     min-width: 200px;
 }
 
 /*
  *  Enlaces
  */
-nav a{
+header nav a{
     color: #2165A6;    
     font-weight: 100;
     font-family: sans-serif;
@@ -60,7 +60,7 @@ nav a{
     border-bottom: 1px solid transparent;
 }
 
-nav a:hover{
+header nav a:hover{
     color: #222;
     border-bottom-color: #E74C3C;
 }
@@ -125,3 +125,7 @@ nav a:hover{
 /*
  *  Ajustes par documentacion
  */
+.doc-50{
+    width: 50%;
+    margin: 0 auto;
+}

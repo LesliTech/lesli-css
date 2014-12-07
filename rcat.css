@@ -16,12 +16,12 @@
  *
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
- * @version 0.5.1 alpha
+ * @version 0.5.1 beta
  */
 
 /*
  *  Reset
- *  ~     ~     ~     ~     ~
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 *
 {
@@ -52,7 +52,7 @@ html{
 
 /*
  *  Inicializa
- *  ~     ~     ~     ~     ~
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 body{ 
     padding: 0px;
@@ -71,7 +71,7 @@ body{
 
 /*
  *  Estilo de titulos
- *  ~     ~     ~     ~     ~
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
@@ -326,6 +326,65 @@ h6{font-size: 1.23rem;}
  */
 
     /*
+     *  Individual con prefijo
+     */
+    form.individual{
+    }
+    
+    form[class^="rform individual"] > div{
+        width: 100%;
+        font-size: 0;
+        white-space: nowrap;
+    }
+    
+    form[class^="rform individual prefix"] > div > span,
+    form[class^="rform individual prefix"] > div > input{
+        font-size: 1rem;
+        padding: 0.2rem !important;
+        white-space: initial;
+        display: inline-block;
+    }
+    
+    
+    form[class^= "rform individual prefix"] > div > span{
+        width: 25%;
+        background: #F2F2F2;
+        border: solid 1px #ccc;
+        border-right: medium none #CCC;
+    }
+    
+    form[class^= "rform individual prefix"] > div > input{
+        width: 75%;
+        border-radius: 0px !important;
+    }
+    
+    /*
+     *  Individual con boton
+     */
+    form[class^="rform individual go"] > div > input{
+        font-size: 1rem;
+        padding: 0.2rem !important;
+        white-space: initial;
+        display: inline-block;
+        border-radius: 0px !important;
+    }
+    
+        /*
+         *  Campo de texto
+         */
+        form[class^= "rform individual go"] > div > input:first-child{
+            width: 85%;
+        }
+
+        /*
+         *  boton
+         */
+        form[class^= "rform individual go"] > div > input:last-child{
+            width: 15%;
+            height: 2.2rem;
+        }
+    
+    /*
      *  Lineal
      */
     form.inline{
@@ -404,31 +463,69 @@ h6{font-size: 1.23rem;}
     }
     
 /*
- *  Navegacion
- *  ~     ~     ~     ~     ~
+ *  Navegacion | Menus horizontales
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 
 /*
- *  Menus horizontales
+ *  Menu estandar
+ *  ~·~  ~·~  ~·~  ~·~
  */
-.navbar{
+.rrnavbar{
     width: 100%;
 }
 
-/*
- *  Contenedor de enlaces
- */
-.navbar li{
-    display: inline-block;
-}
+    /*
+     *  Contenedor de enlaces
+     */
+    .rnavbar li{
+        display: inline-block;
+    }
 
+    /*
+     *  Enlaces
+     */
+    .rnavbar a{
+        display: block;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .rnavbar a:hover{
+        background-color: #ececec;
+    }
+    
 /*
- *  Enlaces
+ *  Menu doble
+ *  ~·~  ~·~  ~·~  ~·~
  */
-.navbar a{
-    display: block;
-    font-size: 0.9rem;
-}
+    nav.doble{
+        width: 100%;
+        font-size: 0;
+        white-space: nowrap;
+    }
+    
+    nav.doble > ul{
+        width: 50%;
+        font-size: 1rem;
+        white-space: initial;
+        display: inline-block;
+    } 
+
+    /*
+     *  Menu izquierdo
+     */
+    nav.doble > ul:first-child{
+        text-align: left;
+    }
+    
+    /*
+     *  Menu derecho
+     */
+    nav.doble > ul:last-child{
+        text-align: right;
+    }
+    
+    
 /*
  *  Menu vertical
  */
@@ -624,9 +721,7 @@ img{
 /*
  *  Codigo
  */
-
 code{
-    
     width: 100%;
     color: #333;
     padding: 1rem;
@@ -639,6 +734,7 @@ code{
     border-color: #b4b4b4;
     white-space: pre-wrap;
     border-width: 1px 0px;
+    font-size: 1.0rem;
     font-family: Consolas,"Liberation Mono",Courier,monospace;
 }
 
