@@ -16,7 +16,7 @@
  *
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
- * @version 0.5.1 beta
+ * @version 0.6.0 beta
  */
 
 /*
@@ -31,8 +31,7 @@
     outline: 0;
     color: inherit;
     list-style: none;                
-    text-decoration: none;
-    vertical-align: baseline;
+    text-decoration: none;    
     background-color: inherit;
 }
 
@@ -107,8 +106,7 @@ h6{font-size: 1.23rem;}
 /*
  *  Filas del grid
  */
-.rgrid > *{
-    height: 100%;
+.rgrid > *{    
     font-size: 1rem;
     vertical-align: top;
     display: inline-block;
@@ -403,7 +401,8 @@ h6{font-size: 1.23rem;}
     
     form.block input,
     form.block select{
-        margin-left: 0 !important;
+        margin: 10px 0 !important;
+        display: block;
     }
     
     /*
@@ -525,6 +524,40 @@ h6{font-size: 1.23rem;}
         text-align: right;
     }
     
+    
+    /*
+     *  Menu multinivel
+     *  ~·~  ~·~  ~·~  ~·~
+     */
+    
+    /*
+     *  Contenedor principal de menu
+     */
+    nav.multi > ul{
+        position: relative;
+    }
+
+    /*
+     *  Oculta el submenu
+     */
+    nav.multi > ul li ul{
+        display: none;
+        position: absolute;
+    }
+    
+    /*
+     *  Muestra el submenu
+     */
+    nav.multi > ul li:hover ul{
+        display: block;
+    }
+    
+    /*
+     *  Contenedor de etiquetas de submenu
+     */
+    nav.multi > ul ul li{
+        display: block;
+    }
     
 /*
  *  Menu vertical
