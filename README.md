@@ -14,7 +14,7 @@ Framework CSS
 ```
 
 **Descargar**
-[Versión 0.5.alpha](https://github.com/ldonis/ResponsiveCat/archive/v0.5.alpha.zip)
+[Versión 0.2.0 beta](https://github.com/ldonis/ResponsiveCat/archive/v0.5.alpha.zip)
 
 Caracteristicas
 ---------------
@@ -37,7 +37,7 @@ Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptat
 Navegadores soportados
 ----------------------
 
-* IE 9+
+* IE 8+
 * Ultimas versiones estables: Firefox, Chrome, Safari 
 * Android 4.x
  
@@ -47,7 +47,7 @@ Sitio web y documentación
 
 Responsive Cat es completamente libre y de codigo abierto
 
-* Sitio web: [http://ldonis.com/project/rcat/](http://ldonis.com/project/rcat/)
+* Sitio web: [http://ldonis.com/rcat/](http://ldonis.com/rcat/)
 
 * Proyecto: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
 
