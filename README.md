@@ -37,7 +37,7 @@ Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptat
 Navegadores soportados
 ----------------------
 
-* IE 8+
+* IE 8+ con [https://github.com/aFarkas/html5shiv](html5shiv.js)
 * Ultimas versiones estables: Firefox, Chrome, Safari 
 * Android 4.x
  
