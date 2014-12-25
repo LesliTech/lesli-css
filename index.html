@@ -2,564 +2,569 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Responsive Cat</title>
+    <title>Responsive Cat</title>    
+    <!--[if lt IE 9]>
+        <script src="test/html5shiv.js"></script>    
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="rcat.css" rel="stylesheet" type="text/css"/>
     <link href="test/test.css" rel="stylesheet" type="text/css"/>
+    <script>
+        function script(){
+            var h = window.innerHeight;            
+            document.getElementById('aside').style.height = h+'px';
+        }
+    </script>
 </head>
-<body>
-<header class="center">
-    <img alt="rcat" src="test/logo.png" />
-    <h1>Responsive Cat</h1>
-    <nav class="rnavbar center">
-        <ul>
-            <li><a href="https://github.com/ldonis/responsivecat">github</a></li>
-            <li><a href="http://ldonis.com/">ldonis.com</a></li>
-            <li><a href="https://github.com/ldonis/responsivecat/issues" id="middle">issues</a></li>
-        </ul>
-    </nav>
-</header>
-<br><br>
-<!--
-    TIPOGRAFIA
--->
-<section class="doc">
+<body onload="script()">
+    <section id="aside" onClick="document.getElementById('aside').style.height = '800px';">
+        afkj
+    </section>
     <header>
-        <h3>Tipografia</h3>
-        <p>Titulos, parrafos, citas, listas y otros elementos necesarios</p>
+        <img alt="ResponsiveCat" src="test/logo.png" class="center">
+        <h1 class="center">Responsive Cat</h1>
+        <nav class="rnavbar center">
+            <ul>
+                <li><a>github</a></li>
+                <li><a>ldonis</a></li>
+                <li><a>issues</a></li>
+            </ul>
+        </nav>
     </header>
-    <hr>
-    <div>
-        <h1>&lt;h1&gt;Titulo&lt;/h1&gt;</h1>
-        <h2>&lt;h2&gt;Titulo&lt;/h2&gt;</h2>
-        <h3>&lt;h3&gt;Titulo&lt;/h3&gt;</h3>
-        <h4>&lt;h4&gt;Titulo&lt;/h4&gt;</h4>
-        <h5>&lt;h5&gt;Titulo&lt;/h5&gt;</h5>
-        <h6>&lt;h6&gt;Titulo&lt;/h6&gt;</h6>
-    </div>
-</section>
-<!--
-    GRID
--->
-<section id="grid" class="doc">
-    <header>
-        <h3>Grids</h3>
-        <p>Completo y flexible sistema de grids</p>
-    </header>
-    <hr>
-    <div>
-        <span>Grid automatico</span>
-        <code>
-            &lt;div class="rgrid col-3"&gt;
-            &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 1&lt;/div&gt;
-            &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 2&lt;/div&gt;
-            &nbsp;&nbsp;&nbsp;&lt;div&gt;columna 3&lt;/div&gt;
-            &lt;/div&gt;
-        </code>
-    </div>
-    <br>
-    <div class="rgrid col-3 demo">
-        <div>col-1</div>
-        <div>col-2</div>
-        <div>col-3</div>
-    </div>
-    <div class="rgrid col-6 demo">
-        <div>col-1</div>
-        <div>col-2</div>
-        <div>col-3</div>
-        <div>col-4</div>
-        <div>col-5</div>
-        <div>col-6</div>
-    </div>
-    <div class="rgrid col-12 demo">
-        <div>col-1</div>
-        <div>col-2</div>
-        <div>col-3</div>
-        <div>col-4</div>
-        <div>col-5</div>
-        <div>col-6</div>
-        <div>col-7</div>
-        <div>col-8</div>
-        <div>col-9</div>
-        <div>col-10</div>
-        <div>cpl-11</div>
-        <div>cpl-12</div>
-    </div>
-    <div class="rgrid col-24 demo">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
-        <div>13</div>
-        <div>14</div>
-        <div>15</div>
-        <div>16</div>
-        <div>17</div>
-        <div>18</div>
-        <div>19</div>
-        <div>20</div>
-        <div>21</div>
-        <div>22</div>
-        <div>23</div>
-        <div>24</div>
-    </div>
-    <br><br>
-    <!---->
-    <div>
-        <span>Grid manual</span>
-        <code>
-            &lt;div class="rgrid"&gt;
-                &lt;div class="col-01"&gt;&lt;/div&gt;
-                &lt;div class="col-02"&gt;&lt;/div&gt;
-                &lt;div class="col-03"&gt;&lt;/div&gt;
-                &lt;div class="col-04"&gt;&lt;/div&gt;
-                &lt;div class="col-0n"&gt;&lt;/div&gt;
-                &lt;div class="col-09"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        </code>
-    </div>
-    <br>
-    <div class="rgrid demo">
-        <div class="col-09">col-09</div>
-        <div class="col-01">col-01</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-08">col-08</div>
-        <div class="col-02">col-02</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-07">col-07</div>
-        <div class="col-03">col-03</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-06">col-06</div>
-        <div class="col-04">col-04</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-05">col-05</div>
-        <div class="col-05">col-05</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-04">col-04</div>
-        <div class="col-06">col-06</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-03">col-04</div>
-        <div class="col-07">col-07</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-02">col-03</div>
-        <div class="col-08">col-08</div>
-    </div>
-    <div class="rgrid demo">
-        <div class="col-01">col-01</div>        
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-        <div class="col-01">col-01</div>
-    </div>
-</section>
-<!--
-    Tablas
--->
-<section id="tablas" class="doc">
-    <header>
-        <h3>Tablas</h3>
-        <p></p>
-    </header>
-    <hr>
-    <div>
-        <code>
-            &lt;table class='rtable gray'&gt;
-                &lt;thead&gt;
-                   &lt;tr&gt;
-                       &lt;th&gt;titulo 1&lt;/th&gt;
-                       &lt;th&gt;titulo 2&lt;/th&gt;
-                       &lt;th&gt;titulo 3&lt;/th&gt;
-                       &lt;th&gt;titulo 4&lt;/th&gt;
-                       &lt;th&gt;titulo 5&lt;/th&gt;
-                   &lt;/tr&gt;
-                &lt;/thead&gt;
-                &lt;tbody class='impar'&gt;
-                   &lt;tr&gt;
-                       &lt;td&gt;row 1 col 1&lt;/td&gt;
-                       &lt;td&gt;row 1 col 2&lt;/td&gt;
-                       &lt;td&gt;row 1 col 3&lt;/td&gt;
-                       &lt;td&gt;row 1 col 4&lt;/td&gt;
-                       &lt;td&gt;row 1 col 5&lt;/td&gt;
-                   &lt;/tr&gt;
-                &lt;/tbody&gt;
-            &lt;/table&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <table class='rtable gray'>
-            <thead>
-               <tr>
-                   <th>titulo 1</th>
-                   <th>titulo 2</th>
-                   <th>titulo 3</th>
-                   <th>titulo 4</th>
-                   <th>titulo 5</th>
-               </tr>
-            </thead>
-            <tbody class='impar'>
-               <tr>
-                   <td>row 1 col 1</td>
-                   <td>row 1 col 2</td>
-                   <td>row 1 col 3</td>
-                   <td>row 1 col 4</td>
-                   <td>row 1 col 5</td>
-               </tr>
-               <tr>
-                   <td>row 2 col 1</td>
-                   <td>row 2 col 2</td>
-                   <td>row 2 col 3</td>
-                   <td>row 2 col 4</td>
-                   <td>row 2 col 5</td>
-               </tr>
-               <tr>
-                   <td>row 3 col 1</td>
-                   <td>row 3 col 2</td>
-                   <td>row 3 col 3</td>
-                   <td>row 3 col 4</td>
-                   <td>row 3 col 5</td>
-               </tr>
-                <tr>
-                   <td>row 4 col 1</td>
-                   <td>row 4 col 2</td>
-                   <td>row 4 col 3</td>
-                   <td>row 4 col 4</td>
-                   <td>row 4 col 5</td>
-               </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-<!--
-    Formularios
--->
-<section id="grid" class="doc">
-    <header>
-        <h3>Formularios</h3>
-        <p></p>
-    </header>
-    <hr>
-    <div>
-        <span>Formularios individuales</span>
-        <code>
-                &lt;form class="rform individual prefix"&gt;
-                    &lt;div&gt;
-                        &lt;span&gt;
-                            http://
-                        &lt;/span&gt;
-                        &lt;input type="text" placeholder="Ingrese url..."&gt;
-                    &lt;/div&gt;
-                &lt;/form&gt;
+    <!--
+        Tipografia
+    -->
+    <section>
+        <article>
+            <h2>Tipografia</h2>
+            <p>Titulos, parrafos, citas, listas y otros elementos necesarios</p>
+            <hr>
+        </article>
+        <article>
+            <div class="center">
+                <h1>&lt;h1&gt;Titulo&lt;/h1&gt;</h1>
+                <h2>&lt;h2&gt;Titulo&lt;/h2&gt;</h2>
+                <h3>&lt;h3&gt;Titulo&lt;/h3&gt;</h3>
+                <h4>&lt;h4&gt;Titulo&lt;/h4&gt;</h4>
+                <h5>&lt;h5&gt;Titulo&lt;/h5&gt;</h5>
+                <h6>&lt;h6&gt;Titulo&lt;/h6&gt;</h6>
+            </div>
+        </article>
+    </section>
+    <!--
+        Grid system
+    -->
+    <section>
+        <article>
+            <h2>Grids</h2>
+            <p>Completo y flexible sistema de grids</p>
+            <hr>
+        </article>
+        
+        <article>
+            <h6>Grid automatico</h6>
+            <code>
+                        &lt;div class="rgrid col-3"&gt;
+                            &lt;div&gt;columna 1&lt;/div&gt;
+                            &lt;div&gt;columna 2&lt;/div&gt;
+                            &lt;div&gt;columna 3&lt;/div&gt;
+                        &lt;/div&gt;
+            </code>            
+            <div class="demo">
+                <div class="rgrid col-3 center">
+                    <div>columna 1</div>
+                    <div>columna 2</div>
+                    <div>columna 3</div>
+                </div>                
+            
+                <div class="rgrid col-6 center">
+                    <div>col-1</div>
+                    <div>col-2</div>
+                    <div>col-3</div>
+                    <div>col-4</div>
+                    <div>col-5</div>
+                    <div>col-6</div>
+                </div>
                 
-                &lt;form class="rform individual go"&gt;
-                    &lt;div&gt;
-                        &lt;input type="text" placeholder="click me!"&gt;
-                        &lt;input type="button" class="button-normal" value="Go"&gt;
-                    &lt;/div&gt;
-                &lt;/form&gt;
-        </code>
-    </div>
-    <br>
-    <div class="doc-50">
-        <form class="rform individual prefix">
-            <div>
-                <span>
-                    http://
-                </span>
-                <input type="text" placeholder="Ingrese url...">
+                <div class="rgrid col-12 center">
+                    <div>col-1</div>
+                    <div>col-2</div>
+                    <div>col-3</div>
+                    <div>col-4</div>
+                    <div>col-5</div>
+                    <div>col-6</div>
+                    <div>col-7</div>
+                    <div>col-8</div>
+                    <div>col-9</div>
+                    <div>col-10</div>
+                    <div>cpl-11</div>
+                    <div>cpl-12</div>
+                </div>
+                <div class="rgrid col-24 center">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div>
+                    <div>13</div>
+                    <div>14</div>
+                    <div>15</div>
+                    <div>16</div>
+                    <div>17</div>
+                    <div>18</div>
+                    <div>19</div>
+                    <div>20</div>
+                    <div>21</div>
+                    <div>22</div>
+                    <div>23</div>
+                    <div>24</div>
+                </div>
             </div>
-        </form>
-    </div>
-    <br>
-    <div class="doc-50">
-        <form class="rform individual go">
-            <div>
-                <input type="text" placeholder="click me!">
-                <input type="button" class="button-normal" value="Go">
+        </article>
+        <br><br>
+        <article>
+            <h6>Grid manual</h6>
+            <code>
+                        &lt;div class="rgrid"&gt;
+                            &lt;div class="col-01"&gt;&lt;/div&gt;
+                            &lt;div class="col-02"&gt;&lt;/div&gt;
+                            &lt;div class="col-03"&gt;&lt;/div&gt;
+                            &lt;div class="col-04"&gt;&lt;/div&gt;
+                            &lt;div class="col-0n"&gt;&lt;/div&gt;
+                            &lt;div class="col-09"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+            </code>
+            <div class="demo">
+                <div class="rgrid center">
+                    <div class="col-09">col-09</div>
+                    <div class="col-01">col-01</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-08">col-08</div>
+                    <div class="col-02">col-02</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-07">col-07</div>
+                    <div class="col-03">col-03</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-06">col-06</div>
+                    <div class="col-04">col-04</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-05">col-05</div>
+                    <div class="col-05">col-05</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-04">col-04</div>
+                    <div class="col-06">col-06</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-03">col-03</div>
+                    <div class="col-07">col-07</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-02">col-02</div>
+                    <div class="col-08">col-08</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-01">col-01</div>
+                    <div class="col-09">col-09</div>
+                </div>
+                
+                <div class="rgrid center">
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                    <div class="col-01">col-01</div>
+                </div>
             </div>
-        </form>
-    </div>
-    <br><br>
-    <!---->
-    <div>
-        <span>Formulario en linea</span>
-        <code>
-            &lt;form class="rform inline"&gt;
-                &lt;input type="email" placeholder="Email"&gt;
-                &lt;input type="password" placeholder="Password"&gt;
-                &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
-            &lt;/form&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <form class="rform inline">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button type="submit" class="button-normal">aceptar</button>
-        </form>
-    </div>
-    <br>
-    <br><br>
-    <!---->
-    <div>
-        <span>Formulario en bloque</span>
-        <code>
-            &lt;form class="rform block"&gt;
-                &lt;label for="email"&gt;Email&lt;/label&gt;
-                    &lt;input id="email" type="email" placeholder="Email"&gt;
-                &lt;label for="password"&gt;Password&lt;/label&gt;
-                    &lt;input id="password" type="password" placeholder="Password"&gt;
-                &lt;label for="state"&gt;Pais&lt;/label&gt;
-                    &lt;select id="state"&gt;
-                        &lt;option&gt;Guatemala&lt;/option&gt;
-                        &lt;option&gt;Mexico&lt;/option&gt;
-                        &lt;option&gt;Etc...&lt;/option&gt;
-                    &lt;/select&gt;
-                &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
-            &lt;/form&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <form class="rform block">
-            <label for="email">Email</label>
-                <input id="email" type="email" placeholder="Email">
-            <label for="password">Password</label>
-                <input id="password" type="password" placeholder="Password">
-            <label for="state">Pais</label>
-                <select id="state">
-                    <option>Guatemala</option>
-                    <option>Mexico</option>
-                    <option>Etc...</option>
-                </select>
-            <button type="submit" class="button-normal">aceptar</button>
-        </form>
-    </div>
-    <br><br>
-    <!---->
-    <div>
-        <span>Formulario alineado</span>
-        <code>
-            &lt;form class="rform align"&gt;
-                &lt;div&gt;
-                    &lt;label&gt;Nombre:&lt;/label&gt;
-                    &lt;input type="text" placeholder="Nombre"&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;label&gt;Apellidos:&lt;/label&gt;
-                    &lt;input type="text" placeholder="Apellidos"&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;label&gt;Edad:&lt;/label&gt;        
-                    &lt;input type="number"&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;label&gt;Aceptar&lt;/label&gt;
-                    &lt;input type="button" value="aceptar" class="button-normal"&gt;
-                &lt;/div&gt;
-            &lt;/form&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <form class="rform align">
-            <div>
-                <label>Nombre:</label>
-                <input type="text" placeholder="Nombre">
+        </article>
+    </section>
+    
+    <!-- 
+        Tablas
+    -->
+    <section>
+        <article>
+            <h2>Tablas</h2>
+            <p>Tabla con estilo</p>
+            <hr>
+        </article>
+        
+        <article>
+            <h6>Grid automatico</h6>
+            <code>
+                        &lt;table class='rtable gray'&gt;
+                            &lt;thead&gt;
+                                &lt;tr&gt;
+                                    &lt;th&gt;titulo 1&lt;/th&gt;
+                                    &lt;th&gt;titulo 2&lt;/th&gt;
+                                    &lt;th&gt;titulo 3&lt;/th&gt;
+                                    &lt;th&gt;titulo 4&lt;/th&gt;
+                                    &lt;th&gt;titulo 5&lt;/th&gt;
+                                &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody class='impar'&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;row 1 col 1&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 2&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 3&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 4&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 5&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+            </code>            
+            <div class="demo">        
+                <table class='rtable gray'>
+                    <thead>
+                        <tr>
+                            <th>titulo 1</th>
+                            <th>titulo 2</th>
+                            <th>titulo 3</th>
+                            <th>titulo 4</th>
+                            <th>titulo 5</th>
+                        </tr>
+                    </thead>
+                    <tbody class='impar'>
+                        <tr>
+                            <td>row 1 col 1</td>
+                            <td>row 1 col 2</td>
+                            <td>row 1 col 3</td>
+                            <td>row 1 col 4</td>
+                            <td>row 1 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 2 col 1</td>
+                            <td>row 2 col 2</td>
+                            <td>row 2 col 3</td>
+                            <td>row 2 col 4</td>
+                            <td>row 2 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 3 col 1</td>
+                            <td>row 3 col 2</td>
+                            <td>row 3 col 3</td>
+                            <td>row 3 col 4</td>
+                            <td>row 3 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 4 col 1</td>
+                            <td>row 4 col 2</td>
+                            <td>row 4 col 3</td>
+                            <td>row 4 col 4</td>
+                            <td>row 4 col 5</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div>
-                <label>Apellidos:</label>
-                <input type="text" placeholder="Apellidos">
+        </article>
+    </section>
+    
+    <!-- 
+        Formularios
+    -->
+    <section>
+        <article>
+            <h2>Formularios</h2>
+            <p>Set de formularios</p>
+            <hr>
+        </article>
+        
+        <article>
+            <h6>Formularios individuales</h6>
+            <code>
+                        &lt;form class="rform individual prefix"&gt;
+                            &lt;div&gt;
+                                &lt;span&gt;
+                                    http://
+                                &lt;/span&gt;
+                                &lt;input type="text" placeholder="Ingrese url..."&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                        
+                        &lt;form class="rform individual go"&gt;
+                            &lt;div&gt;
+                                &lt;input type="text" placeholder="click me!"&gt;
+                                &lt;input type="button" class="button-normal" value="Go"&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+            </code>            
+            <div class="demo">        
+                <form class="rform individual prefix">
+                    <div>
+                        <span>
+                            http://
+                        </span>
+                        <input type="text" placeholder="Ingrese url...">
+                    </div>
+                </form>
+                <br>
+                <form class="rform individual go">
+                    <div>
+                        <input type="text" placeholder="click me!">
+                        <input type="button" class="button-normal" value="Go">
+                    </div>
+                </form>
             </div>
-            <div>
-                <label>Edad:</label>        
-                <input type="number">
+        </article>
+        <br><br>
+        <article>
+            <h6>Formularios en linea</h6>
+            <code>
+                        &lt;form class="rform inline"&gt;
+                            &lt;input type="email" placeholder="Email"&gt;
+                            &lt;input type="password" placeholder="Password"&gt;
+                            &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
+                        &lt;/form&gt;
+            </code>            
+            <div class="demo">        
+                <form class="rform inline">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" class="button-normal" value="aceptar">
+                </form>
             </div>
-            <div>
-                <label>Aceptar</label>
-                <input type="button" value="aceptar" class="button-normal">
+        </article>
+        <br><br>
+        <article>
+            <h6>Formularios en bloque</h6>
+            <code>
+                        &lt;form class="rform block"&gt;
+                            &lt;label for="email"&gt;Email&lt;/label&gt;
+                                &lt;input id="email" type="email" placeholder="Email"&gt;
+                            &lt;label for="password"&gt;Password&lt;/label&gt;
+                                &lt;input id="password" type="password" placeholder="Password"&gt;
+                            &lt;label for="state"&gt;Pais&lt;/label&gt;
+                                &lt;select id="state"&gt;
+                                    &lt;option&gt;Guatemala&lt;/option&gt;
+                                    &lt;option&gt;Mexico&lt;/option&gt;
+                                    &lt;option&gt;Etc...&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;input type="submit" class="button-normal" value="aceptar"&gt;
+                        &lt;/form&gt;
+            </code>            
+            <div class="demo">        
+                <form class="rform block">
+                    <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="Email">
+                    <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Password">
+                    <label for="state">Pais</label>
+                        <select id="state">
+                            <option>Guatemala</option>
+                            <option>Mexico</option>
+                            <option>Etc...</option>
+                        </select>
+                    <input type="submit" class="button-normal" value="aceptar">
+                </form>
             </div>
-        </form>
-    </div>
-    <br><br>
-    <div>
-        <span>Formulario grupal</span>
-        <code>
-            &lt;form class="rform group"&gt;
-                &lt;div&gt;
-                    &lt;input type="text" placeholder="Nombres"&gt;
-                    &lt;input type="text" placeholder="Apellidos"&gt;
-                    &lt;input type="text" placeholder="E-mail"&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;input type="text" placeholder="Usuario"&gt;
-                    &lt;input type="password" placeholder="Contraseña"&gt;
-                    &lt;input type="button" value="aceptar" class="button-normal"&gt;
-                &lt;/div&gt;
-            &lt;/form&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <form class="rform group">
-            <div>
-                <input type="text" placeholder="Nombres">
-                <input type="text" placeholder="Apellidos">
-                <input type="text" placeholder="E-mail">
+        </article>
+        <br><br>
+        <article>
+            <h6>Formulario alineado</h6>
+            <code>
+                        &lt;form class="rform align"&gt;
+                            &lt;div&gt;
+                                &lt;label&gt;Nombre:&lt;/label&gt;
+                                &lt;input type="text" placeholder="Nombre"&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;label&gt;Apellidos:&lt;/label&gt;
+                                &lt;input type="text" placeholder="Apellidos"&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;label&gt;Edad:&lt;/label&gt;
+                                &lt;input type="number"&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;label&gt;Aceptar&lt;/label&gt;
+                                &lt;input type="button" value="aceptar" class="button-normal"&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+            </code>            
+            <div class="demo">        
+                <form class="rform align">
+                    <div>
+                        <label>Nombre:</label>
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                    <div>
+                        <label>Apellidos:</label>
+                        <input type="text" placeholder="Apellidos">
+                    </div>
+                    <div>
+                        <label>Edad:</label>
+                        <input type="number">
+                    </div>
+                    <div>
+                        <label>Aceptar</label>
+                        <input type="button" value="aceptar" class="button-normal">
+                    </div>
+                </form>
             </div>
-            <div>
-                <input type="text" placeholder="Usuario">
-                <input type="password" placeholder="Contraseña">
-                <input type="button" value="aceptar" class="button-normal">
+        </article>
+        <br><br>
+        <article>
+            <h6>Formulario grupal</h6>
+            <code>
+                        &lt;form class="rform group"&gt;
+                            &lt;div&gt;
+                                &lt;input type="text" placeholder="Nombres"&gt;
+                                &lt;input type="text" placeholder="Apellidos"&gt;
+                                &lt;input type="text" placeholder="E-mail"&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                                &lt;input type="text" placeholder="Usuario"&gt;
+                                &lt;input type="password" placeholder="Contraseña"&gt;
+                                &lt;input type="button" value="aceptar" class="button-normal"&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+            </code>            
+            <div class="demo">        
+                <form class="rform group">
+                    <div>
+                        <input type="text" placeholder="Nombres">
+                        <input type="text" placeholder="Apellidos">
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Usuario">
+                        <input type="password" placeholder="Contraseña">
+                        <input type="button" value="aceptar" class="button-normal">
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-</section>
-<!--
-    Navegacion
--->
-<section id="grid" class="doc">
-    <header>
-        <h3>Navegación</h3>
-        <p>Menus y enlaces</p>
-    </header>
-    <hr>
-    <!---->
-    <div>
-        <span>Menu estandar</span>
-        <code>
-            &lt;nav class="rnavbar"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/nav&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <nav class="rnavbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    <br><br>
-    <!---->
-    <div>
-        <span>Menu doble</span>
-        <code>
-            &lt;nav class="rnavbar doble"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Sign In&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;LogIn&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/nav&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <nav class="rnavbar doble">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">LogIn</a></li>
-            </ul>
-        </nav>
-    </div>
-    <br><br>
-    <!---->
-    <div>
-        <span>Menu multi-nivel</span>
-        <code>
-            &lt;nav class="rnavbar multi"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;
-                        &lt;ul&gt;
-                            &lt;li&gt;&lt;a&gt;Product 01&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a&gt;Product 02&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a&gt;Product 03&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a&gt;Product 04&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/nav&gt;
-        </code>
-    </div>
-    <br>
-    <div>
-        <nav class="rnavbar multi">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a>
+        </article>
+    </section>
+    
+    <!-- 
+        Formularios
+    -->
+    <section>
+        <article>
+            <h2>Navegación</h2>
+            <p>Set de menus y estilo para enlaces</p>
+            <hr>
+        </article>
+        
+        <article>
+            <h6>Menu estandar</h6>
+            <code>
+                        &lt;nav class="rnavbar"&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/nav&gt;
+            </code>            
+            <div class="demo">     
+                <nav class="rnavbar">
                     <ul>
-                        <li><a>Product 01</a></li>
-                        <li><a>Product 02</a></li>
-                        <li><a>Product 03</a></li>
-                        <li><a>Product 04</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
-                </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    <br><br>
-</section>
-<!-- Piwik -- >
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//analytics.ldonis.net/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//analytics.ldonis.net/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+                </nav>
+            </div>
+        </article>
+        
+        <br><br>
+        <article>
+            <h6>Menu estandar</h6>
+            <code>
+                        &lt;nav class="rnavbar doble"&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Sign In&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;LogIn&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/nav&gt;
+            </code>            
+            <div class="demo">     
+                <nav class="rnavbar doble">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">LogIn</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </article>
+        
+        <br><br>
+        <article>
+            <h6>Menu multi nivel</h6>
+            <code>
+                &lt;nav class="rnavbar multi"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a&gt;Product 01&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a&gt;Product 02&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a&gt;Product 03&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a&gt;Product 04&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+            </code>            
+            <div class="demo">     
+                <nav class="rnavbar multi">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a>
+                            <ul>
+                                <li><a>Product 01</a></li>
+                                <li><a>Product 02</a></li>
+                                <li><a>Product 03</a></li>
+                                <li><a>Product 04</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </article>
+    </section>
 </body>
 </html>
