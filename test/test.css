@@ -18,114 +18,137 @@ html, body {
 }
 
 /*
+ *  Aside
+ */
+#aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 175px;    
+    background-color: #2c2c2c; 
+}
+
+body{
+    padding-left: 175px;
+}
+/*
  *  Encabezado
  */
-body > header{
-    background-color: #f5f5f5;
+header{
+    background-color: #F5F5F5;
     color: #4291C4;
 }
 
-/*
- *  Titulo
- */
-header h1{
-    font-size: 5.5rem;
-}
-
-/*
- *  Menu de navegacion
- */
-header nav{
-    padding: 40px;
-    border: 1px solid #B4B4B4;
-    background-color: #eee;
-}
-
-/*
- *  Contenedores de enlaces
- */
-header nav li{
-    min-width: 200px;
-}
-
-/*
- *  Enlaces
- */
-header nav a{
-    color: #2165A6;    
-    font-weight: 100;
-    font-family: sans-serif;
-    font-size: 1.5rem !important;
-    transition: all 0.2s linear 0s;
-    border-bottom: 1px solid transparent;
-}
-
-header nav a:hover{
-    color: #222;
-    border-bottom-color: #E74C3C;
-}
-
-/*
- *  Descripcion del framework
- */
-#framework > p{
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem 3rem;
-    line-height: 2.5rem;
-}
-
-/*
- *  Documentacion
- *  ~·~  ~·~  ~·~  ~·~  
- */
-
-/*
- *  Contenedores de especificacion de funcionalidad
- */
-.doc{
-    color: #222;    
-    margin: 0px auto 150px;
-    max-width: 1200px;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
     /*
-     *  Titulo de documentacion
+     *  Logo
      */
-    .doc header h3{
+    header img{
+        padding: 20px 0 10px;
+    }
+    
+    /*
+     *  Titulo
+     */
+    header h1{
+        
+        font-size: 5.4em; /* IE8 */
+        font-size: 5.4rem;
+        
+    }
+    
+    /*
+     *  Menu de navegacion
+     */
+    header nav{        
+        padding: 40px;
+        border: 1px solid #B4B4B4;
+        background-color: #EEE;
+    }
+
+    header nav a {
+        width: 180px;
+        color: #2165A6;
+        font-weight: 100;        
+        font-family: sans-serif;
+        font-size: 1.5rem !important;
+        font-size: 1.5em !important;    /* IE8 */
+        transition: all 0.2s linear 0s;
+        border-bottom: 1px solid transparent;
+    }
+
+    header nav a:hover {
+        color: #222;
+        border-bottom-color: #E74C3C;
+    }
+    
+/*
+ *  Seccion de documentacion
+ *  ~·~   ~·~   ~·~   ~·~   ~·~   ~·~   ~·~   ~·~
+ */ 
+section{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 100px 0 20px 0;
+}
+
+    
+    /*
+     *  Titulo
+     */
+    section article > h2{
+        text-align: center;
         font-size: 3rem;
     }
     
     /*
-     *  Descripcion de funcionalidad
+     *  Descripcion
      */
-    .doc header p{
+    section article > p{
         color: #222;
         font-size: 1.5rem;
+        text-align: center;
     }
     
-    .doc hr{
-        margin: 50px 0;
+    /*
+     *  Separador
+     */
+    section article > hr{
         height: 1px;
-        background-color: #6d6d6d;
+        width: 85%;
+        margin: 50px auto;
+        background-color: #6D6D6D;
     }
     
-/*
- *  Grids
- */
-#grid .demo div{
-    padding: 25px 0px;
-    border: 1px solid #CCC;
-    background-color: #7E9EC7;
-    color: #FFF;
-}
-
-/*
- *  Ajustes par documentacion
- */
-.doc-50{
-    width: 50%;
-    margin: 0 auto;
-}
+    /*
+     *  Descripcion de codigo
+     */
+    section article > h6{
+        text-align: center;
+    }
+    
+    /*
+     *  Resultado de demos
+     */
+    .demo{
+        margin: 20px 0;
+    }
+    /*grids*/
+    .demo .rgrid div{
+        padding: 25px 0px;
+        border: 1px solid #CCC;
+        background-color: #7E9EC7;
+        color: #FFF;
+    }
+    /*formularios*/
+    .demo .rform{
+        margin: 0 auto;
+        width: 600px;        
+    }
+    
+    .demo form.block{
+        width: 250px;
+    }
+    
+    .demo form.group{
+        width: 350px;
+    }
