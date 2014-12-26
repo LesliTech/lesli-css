@@ -14,7 +14,7 @@ Framework CSS
 ```
 
 **Descargar**
-[Versión 0.2.0 beta](https://github.com/ldonis/ResponsiveCat/archive/v0.5.alpha.zip)
+[Versión 0.2.0 beta](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
 
 Caracteristicas
 ---------------
@@ -37,7 +37,7 @@ Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptat
 Navegadores soportados
 ----------------------
 
-* IE 8+ con [https://github.com/aFarkas/html5shiv](html5shiv.js)
+* IE 8+ con [html5shiv.js](https://github.com/aFarkas/html5shiv)
 * Ultimas versiones estables: Firefox, Chrome, Safari 
 * Android 4.x
  
