@@ -16,7 +16,7 @@
  *
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
- * @version 0.6.0 beta
+ * @version 0.6.1 beta
  */
 
 /*
@@ -125,11 +125,12 @@ h1, h2, h3, h4, h5, h6 {
  *  Filas del grid
  */
 .rgrid > *{    
+    height: 100%;
     font-size: 1rem;
     font-size: 16px; /* IE8 */
     vertical-align: top;
     display: inline-block;
-    white-space: initial;
+    white-space: initial;    
 }
 
 /*
@@ -498,9 +499,9 @@ h1, h2, h3, h4, h5, h6 {
      *  Enlaces
      */
     .rnavbar a{
-        display: block;
-        padding: 0.3rem 0.8rem; /* IE8 */
-        padding: 0.3em 0.8em;
+        display: block;        
+        padding: 0.3em 0.8em;    /* IE8 */
+        padding: 0.3rem 0.8rem;
     }
     
     .rnavbar a:hover{
@@ -607,35 +608,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*
- *  Alineacion vertical
- *  ~     ~     ~     ~     ~
- */
-
-/*
- *  Contenedor principal
- */
-.vertical{
-    width: 100%;
-    height: 100%;
-    display: table;
-    vertical-align: middle;
-}
-/*
- *  Contenedor secundario
- */
-.vertical > *{
-    display: table-cell;
-}
-
-[class^= "vertical top"] > *,
-[class*=" vertical top"] > * { vertical-align: top; }
-
-[class^= "vertical middle"] > *,
-[class*=" vertical middle"] > * { vertical-align: middle; }
-
-[class^= "vertical bottom"] > *,
-[class*=" vertical bottom"] > * { vertical-align: bottom; }
 
 /*
  *  Helpers
@@ -652,57 +624,39 @@ img{
 }
 
 /*
- *  Mensajes y alertas
+ *  Alineacion horizontal/vertical
  *  ~     ~     ~     ~     ~
  */
+    /*
+     *  Alineacion Vertical
+     */
 
-/*
- *  Titulo del mensaje
- */
-.msg_flash #msg_titulo
-{
-    max-height: 30px;
-    display: block;    
-    padding: 2px;    
-    font-size: 1.1rem;
-    font-style: italic;    
-    text-align: center;
+    /*
+     *  Contenedor principal
+     */
+    .vertical{
+        width: 100%;
+        height: 100%;
+        display: table;        
 }
 
-/*
- *  texto del mensaje
- */
-.msg_flash #msg_msg
-{
-    max-height: 39px;
-    padding: 8px;
-    display: block;
-    font-size: 1.2rem;    
-    text-align: center;
+    /*
+     *  Contenedor secundario
+     */
+    .top,
+    .middle,
+    .bottom{
+        display: table-cell;
 }
-
-.msg_infor{background-color: #2ECC71;}
-.msg_error{background-color: #E74C3C;}
-.msg_alert{background-color: #F1C40F;}
-
-
-.msg_flash #msg_cerrar     /*X de cerrar mensaje*/
-{
-    font-size: 1.5rem;
-    position: absolute;
-    right: 0;
-    margin: 4px 0;    
-}
-
-.msg_flash #msg_cerrar:hover
-{cursor: pointer; color: red;}
-
+    .top{ vertical-align: top; }
+    .middle{ vertical-align: middle; }
+    .bottom{ vertical-align: bottom; }
 
 /*
  *  Centrado horizontal total
  */
 .center{
-    display: block; /* IE8 */
+    *display: block; /* IE8 */
     margin: 0 auto;
     text-align: center;
 }
