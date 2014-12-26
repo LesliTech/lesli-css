@@ -17,20 +17,67 @@ html, body {
   color: #222;
 }
 
-/*
- *  Aside
- */
-#aside{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 175px;    
-    background-color: #2c2c2c; 
-}
-
 body{
     padding-left: 175px;
 }
+
+/*
+ *  Barra lateral
+ */
+.aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px 0;
+    width: 175px;    
+    color: #eee;
+    background-color: #2c2c2c;
+}
+
+/*
+ *  Menu lateral
+ */
+.aside ul{
+    line-height: 42px;
+    margin-top: 25px;
+}
+
+/*
+ *  Contenedores de enlaces
+ */
+.aside ul li{
+    box-shadow: 4px 0 rgba(255, 255, 255, 0.2) inset;
+    padding-left: 10px;    
+    transition: all linear 0.3s
+}
+
+    .aside ul li:hover{
+        box-shadow: 175px 0 rgba(255, 255, 255, 0.2) inset;
+    }
+
+/*
+ *  Enlaces
+ */
+.aside ul li a{
+    display: block;
+    padding-left: 10px;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+.aside hr{
+    height: 1px;
+    width: 95%;
+    background-color: #6D6D6D;
+}
+
+/*
+ */
+ .aside a img{     
+     width: 100px;
+ }
+
+
 /*
  *  Encabezado
  */
