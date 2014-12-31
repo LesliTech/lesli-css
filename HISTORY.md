@@ -1,6 +1,12 @@
 RCat - Historial de cambios
 ===================
 
+0.3.0 beta (24/12/2014)
+------------------
+### Nuevas funcionalidades
+* Botones
+
+
 0.2.0 beta (24/12/2014)
 ------------------
 

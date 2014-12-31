@@ -18,7 +18,7 @@
 </head>
 <body onload="script()">
     
-    <section id="aside" class="aside" onClick="document.getElementById('aside').style.height = '800px';">
+    <section id="aside" class="aside center">
         <a href="http://ldonis.com" target="blank"><img alt="ldonis" src="test/ldonis.svg" class="center"></a>
         <ul>
             <li><a href="#rcat">rcat</a></li>
@@ -29,12 +29,14 @@
             <li><a href="#formularios">formularios</a></li>
             <li><a href="#navegacion">navegacion</a></li>
             <li><hr></li>
+            <li><a href="#botones">botones</a></li>
+            <li><hr></li>
             <li><a href="http://blog.ldonis.net/" target="blank">blog</a></li>
             <li><a href="#contribuir">contribuir</a></li>
         </ul>
     </section>
     
-    <header>
+    <header class="center">
         <a name="rcat"></a>
         <img alt="ResponsiveCat" src="test/logo.png" class="center">
         <h1 class="center">Responsive Cat</h1>
@@ -46,9 +48,11 @@
             </ul>
         </nav>
     </header>
+    
     <!--
         Tipografia
     -->
+    
     <section>
         <article>
             <a name="tipografia"></a>
@@ -67,9 +71,11 @@
             </div>
         </article>
     </section>
+    
     <!--
         Grid system
     -->
+    
     <section>
         <article>
             <a name="grids"></a>
@@ -305,6 +311,7 @@
     <!-- 
         Formularios
     -->
+    
     <section>
         <article>
             <a name="formularios"></a>
@@ -328,7 +335,7 @@
                         &lt;form class="rform individual go"&gt;
                             &lt;div&gt;
                                 &lt;input type="text" placeholder="click me!"&gt;
-                                &lt;input type="button" class="button-normal" value="Go"&gt;
+                                &lt;input type="button" class="btn btn-primary" value="Go"&gt;
                             &lt;/div&gt;
                         &lt;/form&gt;
             </code>            
@@ -345,7 +352,7 @@
                 <form class="rform individual go">
                     <div>
                         <input type="text" placeholder="click me!">
-                        <input type="button" class="button-normal" value="Go">
+                        <input type="button" class="btn btn-primary" value="Go">
                     </div>
                 </form>
             </div>
@@ -357,14 +364,14 @@
                         &lt;form class="rform inline"&gt;
                             &lt;input type="email" placeholder="Email"&gt;
                             &lt;input type="password" placeholder="Password"&gt;
-                            &lt;button type="submit" class="button-normal"&gt;aceptar&lt;/button&gt;
+                            &lt;button type="submit" class="btn btn-primary"&gt;aceptar&lt;/button&gt;
                         &lt;/form&gt;
             </code>            
             <div class="demo">        
                 <form class="rform inline">
                     <input type="email" placeholder="Email">
                     <input type="password" placeholder="Password">
-                    <input type="submit" class="button-normal" value="aceptar">
+                    <input type="submit" class="btn btn-primary" value="Aceptar">
                 </form>
             </div>
         </article>
@@ -383,7 +390,7 @@
                                     &lt;option&gt;Mexico&lt;/option&gt;
                                     &lt;option&gt;Etc...&lt;/option&gt;
                                 &lt;/select&gt;
-                            &lt;input type="submit" class="button-normal" value="aceptar"&gt;
+                            &lt;input type="submit" class="btn btn-primary" value="aceptar"&gt;
                         &lt;/form&gt;
             </code>            
             <div class="demo">        
@@ -398,7 +405,7 @@
                             <option>Mexico</option>
                             <option>Etc...</option>
                         </select>
-                    <input type="submit" class="button-normal" value="aceptar">
+                    <input type="submit" class="btn btn-primary" value="aceptar">
                 </form>
             </div>
         </article>
@@ -421,7 +428,7 @@
                             &lt;/div&gt;
                             &lt;div&gt;
                                 &lt;label&gt;Aceptar&lt;/label&gt;
-                                &lt;input type="button" value="aceptar" class="button-normal"&gt;
+                                &lt;input type="button" value="aceptar" class="btn btn-primary"&gt;
                             &lt;/div&gt;
                         &lt;/form&gt;
             </code>            
@@ -441,7 +448,7 @@
                     </div>
                     <div>
                         <label>Aceptar</label>
-                        <input type="button" value="aceptar" class="button-normal">
+                        <input type="button" value="aceptar" class="btn btn-primary">
                     </div>
                 </form>
             </div>
@@ -459,7 +466,7 @@
                             &lt;div&gt;
                                 &lt;input type="text" placeholder="Usuario"&gt;
                                 &lt;input type="password" placeholder="Contraseña"&gt;
-                                &lt;input type="button" value="aceptar" class="button-normal"&gt;
+                                &lt;input type="button" value="aceptar" class="btn btn-primary"&gt;
                             &lt;/div&gt;
                         &lt;/form&gt;
             </code>            
@@ -473,7 +480,7 @@
                     <div>
                         <input type="text" placeholder="Usuario">
                         <input type="password" placeholder="Contraseña">
-                        <input type="button" value="aceptar" class="button-normal">
+                        <input type="button" value="aceptar" class="btn btn-primary">
                     </div>
                 </form>
             </div>
@@ -483,6 +490,7 @@
     <!-- 
         Formularios
     -->
+   
     <section>
         <article>
             <a name="navegacion"></a>
@@ -504,7 +512,7 @@
                         &lt;/nav&gt;
             </code>            
             <div class="demo">     
-                <nav class="rnavbar">
+                <nav class="rnavbar center">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Products</a></li>
@@ -569,7 +577,7 @@
                 &lt;/nav&gt;
             </code>            
             <div class="demo">     
-                <nav class="rnavbar multi">
+                <nav class="rnavbar multi center">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Products</a>
@@ -584,6 +592,59 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
+            </div>
+        </article>
+    </section>
+    
+    <!-- 
+        Botones
+    -->
+   
+    <section>
+        <article>
+            <a name="botones"></a>
+            <h2>Estilo de botones</h2>
+            <p></p>
+            <hr>
+        </article>
+        
+        <article>
+            <h6>Botones estandar</h6>
+            <code>
+                        &lt;button class="btn"&gt;Aceptar&lt;/button&gt;
+                        &lt;button class="btn btn-primary"&gt;Aceptar&lt;/button&gt;
+                        &lt;button class="btn btn-success"&gt;Aceptar&lt;/button&gt;
+                        &lt;button class="btn btn-info"&gt;Aceptar&lt;/button&gt;
+                        &lt;button class="btn btn-warning"&gt;Aceptar&lt;/button&gt;
+                        &lt;button class="btn btn-error"&gt;Aceptar&lt;/button&gt;
+            </code>            
+            <div class="demo center">
+                <button class="btn">Aceptar</button>
+                <button class="btn btn-primary">Aceptar</button>
+                <button class="btn btn-success">Aceptar</button>
+                <button class="btn btn-info">Aceptar</button>
+                <button class="btn btn-warning">Aceptar</button>
+                <button class="btn btn-error">Aceptar</button>
+            </div>
+        </article>
+        <br><br>
+        <article>
+            <h6>Botones grupales</h6>
+            <code>
+                        &lt;div class="btn-group"&gt;
+                            &lt;button class="btn"&gt;Aceptar&lt;/button&gt;
+                            &lt;button class="btn"&gt;Aceptar&lt;/button&gt;
+                            &lt;button class="btn"&gt;Aceptar&lt;/button&gt;
+                            &lt;button class="btn"&gt;Aceptar&lt;/button&gt;
+                        &lt;/div&gt;
+            </code>            
+            <div class="demo center">
+                <div class="btn-group">
+                    <button class="btn">Aceptar</button>
+                    <button class="btn">Aceptar</button>
+                    <button class="btn">Aceptar</button>
+                    <button class="btn">Aceptar</button>
+                </div>
             </div>
         </article>
     </section>

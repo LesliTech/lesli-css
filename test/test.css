@@ -46,9 +46,10 @@ body{
  *  Contenedores de enlaces
  */
 .aside ul li{
-    box-shadow: 4px 0 rgba(255, 255, 255, 0.2) inset;
+    text-align: left;
     padding-left: 10px;    
-    transition: all linear 0.3s
+    transition: all linear 0.3s;
+    box-shadow: 4px 0 rgba(255, 255, 255, 0.2) inset;
 }
 
     .aside ul li:hover{
@@ -178,6 +179,7 @@ section{
      */
     .demo{
         margin: 20px 0;
+        font-family: sans-serif !important;
     }
     /*grids*/
     .demo .rgrid div{
