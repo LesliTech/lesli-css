@@ -1,4 +1,4 @@
-![''](http://tools.ldonis.net/rcat/rcat.png "Responsive cat")
+![''](http://rcat.ldonis.com/Website/WebTemplate//img/rcat.png "Responsive cat")
 
 ResponsiveCat
 -----
@@ -14,7 +14,7 @@ Framework CSS
 ```
 
 **Descargar**
-[Versión 0.2.0 beta](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
+[Versión 0.3.0 beta](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
 
 Caracteristicas
 ---------------
@@ -29,9 +29,9 @@ Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptat
 
 * Cajas de mensajes
 
-* Extras (Botones)
+* Variedad de estilos de botones
 
-* Archivo extremadamente pequeño 5.7kb
+* Archivo extremadamente pequeño 9.0kb
 
 
 Navegadores soportados
@@ -47,11 +47,11 @@ Sitio web y documentación
 
 Responsive Cat es completamente libre y de codigo abierto
 
-* Sitio web: [http://ldonis.com/rcat/](http://ldonis.com/rcat/)
+* Sitio web: [http://rcat.ldonis.com/](http://rcat.ldonis.com/)
 
 * Proyecto: [http://project.ldonis.net/projects/rcat](http://project.ldonis.net/projects/rcat)
 
-* Documentacion: [http://ldonis.github.io/ResponsiveCat/](http://ldonis.github.io/ResponsiveCat/)
+* Documentacion: [http://rcat.ldonis.com/docs/](http://rcat.ldonis.com/docs/)
 
 * Issue tracker: [https://github.com/ldonis/ResponsiveCat/issues](https://github.com/ldonis/ResponsiveCat/issues)
  
@@ -59,4 +59,4 @@ Responsive Cat es completamente libre y de codigo abierto
 Licencia
 ----------------
 
-Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ldonis/ResponsiveCat/blob/master/LICENSE)
+Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ldonis/ResponsiveCat/blob/master/LICENSE).
