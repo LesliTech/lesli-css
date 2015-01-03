@@ -1,0 +1,91 @@
+/*
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <ldonis.emc2@gmail.com>
+ * @link http://ldonis.com 
+ * @license GNU GENERAL PUBLIC LICENSE
+ * @version 0.3.1 beta
+ */
+
+/*
+ *  Grids
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
+ */
+
+/*
+ *  Contenedor de columnas automaticas y manuales
+ */
+.rgrid{ 
+    width: 100%;
+    font-size: 0;
+    /*white-space: nowrap;*/
+}
+
+/*
+ *  Filas del grid
+ */
+.rgrid > *{    
+    height: 100%;
+    font-size: 1rem;
+    font-size: 16px; /* IE8 */
+    vertical-align: top;
+    display: inline-block;
+    white-space: initial;    
+}
+
+/*
+ *  .rgrid
+ *  Ancho de columnas automaticas
+ *  .col-n > * -> columnas automaticas 
+ *  col-n = width/n
+ */
+[class^= "rgrid col-2"] > * { width: 50.00%; }
+[class^= "rgrid col-3"] > * { width: 33.33%; }
+[class^= "rgrid col-4"] > * { width: 25.00%; }
+[class^= "rgrid col-5"] > * { width: 20.00%; }
+[class^= "rgrid col-6"] > * { width: 16.66%; }
+[class^= "rgrid col-7"] > * { width: 14.28%; }
+[class^= "rgrid col-8"] > * { width: 12.50%; }
+[class^= "rgrid col-9"] > * { width: 11.11%; }
+[class^= "rgrid col-10"] > * { width: 10.00%; }
+[class^= "rgrid col-11"] > * { width: 09.09%; }
+[class^= "rgrid col-12"] > * { width: 08.33%; }
+[class^= "rgrid col-13"] > * { width: 07.69%; }
+[class^= "rgrid col-14"] > * { width: 07.14%; }
+[class^= "rgrid col-15"] > * { width: 06.66%; }
+[class^= "rgrid col-16"] > * { width: 06.25%; }
+[class^= "rgrid col-17"] > * { width: 05.88%; }
+[class^= "rgrid col-18"] > * { width: 05.55%; }
+[class^= "rgrid col-19"] > * { width: 05.26%; }
+[class^= "rgrid col-20"] > * { width: 05.00%; }
+[class^= "rgrid col-21"] > * { width: 04.76%; }
+[class^= "rgrid col-22"] > * { width: 04.54%; }
+[class^= "rgrid col-23"] > * { width: 04.34%; }
+[class^= "rgrid col-24"] > * { width: 04.16%; }
+
+/*
+ *  ancho de columnas manuales
+ *  .col-n = (100%/10) * n
+ */
+.rgrid > .col-01  { width: 10.00%; }
+.rgrid > .col-02  { width: 20.00%; }
+.rgrid > .col-03  { width: 30.00%; }
+.rgrid > .col-04  { width: 40.00%; }
+.rgrid > .col-05  { width: 50.00%; }
+.rgrid > .col-06  { width: 60.00%; }
+.rgrid > .col-07  { width: 70.00%; }
+.rgrid > .col-08  { width: 80.00%; }
+.rgrid > .col-09  { width: 90.00%; }

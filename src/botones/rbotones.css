@@ -1,0 +1,151 @@
+/*
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <ldonis.emc2@gmail.com>
+ * @link http://ldonis.com 
+ * @license GNU GENERAL PUBLIC LICENSE
+ * @version 0.3.1 beta
+ */
+
+/*
+ *  Botones
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
+ */
+
+/*
+ * Boton estandar
+ */
+.btn{
+    padding: 6px 12px;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    border-color: #ADADAD;
+    background-color: #E6E6E6;
+}
+
+.btn:active{
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 6px rgba(0, 0, 0, 0.2) inset;
+}
+
+/*
+ *  Hack para simular <button> con <a>
+ */
+a.btn{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    font-family: Sans;
+}
+
+    /*
+     * Boton primario
+     */
+    .btn-primary{
+        color: #FFF;
+        border-color: #2E6DA4;
+        background-color: #337AB7;
+    }
+    .btn-primary:hover{
+        color: #FFF;
+        border-color: #204D74;
+        background-color: #286090;
+    }
+
+    /*
+     * Boton de exito
+     */
+    .btn-success{
+        color: #FFF;
+        border-color: #4CAE4C;
+        background-color: #5CB85C;
+    }
+    .btn-success:hover{
+	background-color:#449d44;
+	border-color:#398439
+    }
+
+    /*
+     * Boton de información
+     */
+    .btn-info{
+	background-color:#5bc0de;
+	border-color:#46b8da        
+    }
+    .btn-info:hover{
+	background-color:#31b0d5;
+	border-color:#269abc
+    }
+
+    /*
+     * Boton de advertencia
+     */
+    .btn-warning{
+	background-color:#f0ad4e;
+	border-color:#eea236
+    }
+    .btn-warning:hover{
+	background-color:#ec971f;
+	border-color:#d58512
+    }
+
+    /*
+     * Boton de error
+     */
+    .btn-error{
+        background-color:#d9534f;
+	border-color:#d43f3a
+    }
+    .btn-error:hover{
+	background-color:#c9302c;
+	border-color:#ac2925
+    }
+    
+    /*
+     *  Botones grupales
+     */
+    .btn-group{
+        font-size: 0;
+    }
+    
+    /*
+     *  Estilo generico para botones grupales
+     */
+    .btn-group .btn{
+        border-radius: 0;
+        border-right-width: 0;
+    }
+    
+    /*
+     *  Primer boton grupal - izquierda a derecha
+     */
+    .btn-group .btn:first-child{
+        border-radius: 3px 0 0 3px !important;
+        border-right: 0;
+    }
+    
+    /*
+     *  Primer boton grupal - izquierda a derecha
+     */
+    .btn-group .btn:last-child{
+        border-radius: 0 3px 3px 0 !important;
+        border-right-width: 1px;
+        
+    }
