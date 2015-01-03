@@ -99,8 +99,8 @@ header{
      */
     header h1{
         
-        font-size: 5.4em; /* IE8 */
-        font-size: 5.4rem;
+        font-size: 100%;
+        
         
     }
     
@@ -136,7 +136,7 @@ header{
 section{
     margin: 0 auto;
     max-width: 1200px;
-    padding: 100px 0 20px 0;
+    padding: 100px 0;
 }
 
     
