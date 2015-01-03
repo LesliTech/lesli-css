@@ -1,9 +1,5 @@
 # Contributing to Responsive Cat
 
-## Before You Start
-
-Anyone wishing to contribute to the **[Discourse/Discourse](https://github.com/discourse/discourse)** project **MUST read & sign the [Electronic Discourse Forums Contribution License Agreement](http://www.discourse.org/cla)**. The Discourse team is legally prevented from accepting any pull requests from users who have not signed the CLA first.
-
 ## Reporting Bugs
 
 1. Always update to the most recent master release; the bug may already be resolved.
