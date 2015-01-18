@@ -14,7 +14,7 @@ Framework CSS
 ```
 
 **Descargar**
-[Versión 0.3.0 beta](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
+[Versión 0.3 beta](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
 
 Caracteristicas
 ---------------
