@@ -1,6 +1,12 @@
 Responsive Cat - Historial de cambios
 ===================
 
+0.3.2 beta (17/01/2014)
+------------------
+### Tipografía
+* Cambio a "Sans" como fuente principal
+* Estilos para paginadores
+
 0.3.1 beta (03/01/2014)
 ------------------
 ### Mejoras en documentacion
