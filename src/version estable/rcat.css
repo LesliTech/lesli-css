@@ -54,16 +54,16 @@ html{
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 body{ 
-    font-style: normal;
-    font-weight: 100;
+    background: #ffffff;
+    color: #222222;
     /*
      *  Tipografia
      */
     font-family: Sans, sans-serif, Helvetica;
     font-size: 100%;
+    font-style: normal;
+    font-weight: 100;
     line-height: 1.65rem;
-    background: #ffffff;
-    color: #222222;
 }
 
 
@@ -136,29 +136,29 @@ h1, h2, h3, h4, h5, h6 {
  *  Ancho de columnas automaticas
  *  col-n = width/n
  */
-[class^= "rgrid col-02"] > * { width: 50.00%; }
-[class^= "rgrid col-03"] > * { width: 33.33%; }
-[class^= "rgrid col-04"] > * { width: 25.00%; }
-[class^= "rgrid col-05"] > * { width: 20.00%; }
-[class^= "rgrid col-06"] > * { width: 16.66%; }
-[class^= "rgrid col-07"] > * { width: 14.28%; }
-[class^= "rgrid col-08"] > * { width: 12.50%; }
-[class^= "rgrid col-09"] > * { width: 11.11%; }
-[class^= "rgrid col-10"] > * { width: 10.00%; }
-[class^= "rgrid col-11"] > * { width: 09.09%; }
-[class^= "rgrid col-12"] > * { width: 08.33%; }
-[class^= "rgrid col-13"] > * { width: 07.69%; }
-[class^= "rgrid col-14"] > * { width: 07.14%; }
-[class^= "rgrid col-15"] > * { width: 06.66%; }
-[class^= "rgrid col-16"] > * { width: 06.25%; }
-[class^= "rgrid col-17"] > * { width: 05.88%; }
-[class^= "rgrid col-18"] > * { width: 05.55%; }
-[class^= "rgrid col-19"] > * { width: 05.26%; }
-[class^= "rgrid col-20"] > * { width: 05.00%; }
-[class^= "rgrid col-21"] > * { width: 04.76%; }
-[class^= "rgrid col-22"] > * { width: 04.54%; }
-[class^= "rgrid col-23"] > * { width: 04.34%; }
-[class^= "rgrid col-24"] > * { width: 04.16%; }
+[class^="rgrid col-02"] > * { width: 50.00%; }
+[class^="rgrid col-03"] > * { width: 33.33%; }
+[class^="rgrid col-04"] > * { width: 25.00%; }
+[class^="rgrid col-05"] > * { width: 20.00%; }
+[class^="rgrid col-06"] > * { width: 16.66%; }
+[class^="rgrid col-07"] > * { width: 14.28%; }
+[class^="rgrid col-08"] > * { width: 12.50%; }
+[class^="rgrid col-09"] > * { width: 11.11%; }
+[class^="rgrid col-10"] > * { width: 10.00%; }
+[class^="rgrid col-11"] > * { width: 09.09%; }
+[class^="rgrid col-12"] > * { width: 08.33%; }
+[class^="rgrid col-13"] > * { width: 07.69%; }
+[class^="rgrid col-14"] > * { width: 07.14%; }
+[class^="rgrid col-15"] > * { width: 06.66%; }
+[class^="rgrid col-16"] > * { width: 06.25%; }
+[class^="rgrid col-17"] > * { width: 05.88%; }
+[class^="rgrid col-18"] > * { width: 05.55%; }
+[class^="rgrid col-19"] > * { width: 05.26%; }
+[class^="rgrid col-20"] > * { width: 05.00%; }
+[class^="rgrid col-21"] > * { width: 04.76%; }
+[class^="rgrid col-22"] > * { width: 04.54%; }
+[class^="rgrid col-23"] > * { width: 04.34%; }
+[class^="rgrid col-24"] > * { width: 04.16%; }
 
 /*
  *  ancho de columnas manuales
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
  *  Estilo de tablas
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
  */
-    .rtable{
+.rtable{
     width: 100%;
     max-width: 100%;    
     line-height: 1.6;
@@ -188,18 +188,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
     /*
+     *  Encabezado de tabla
+     */
+    .rtable thead{
+        text-align: left;
+        vertical-align: bottom;
+    }
+    
+    /*
      *  Celdas
      */
     .rtable td,
     .rtable th{
         padding: 0.5em 1em;
     }
-
-        /*
-         *  Celdas de encabezado
-         */
-        .rtable th{
-        }
 
     /*
      *  Estilos predefinidos de tablas
@@ -218,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
          *  Encabezado de tabla
          */
         table.gray thead{
-            background: none repeat scroll 0% 0% #E0E0E0;
+            background: #E0E0E0;
             color: #000;
             text-align: left;
             vertical-align: bottom;
@@ -235,8 +237,41 @@ h1, h2, h3, h4, h5, h6 {
         /*
          *  Estilos de celdas impares
          */
-        table.gray tbody.impar tr:nth-child(even) {
+        table.gray tbody tr:nth-child(even) {
             background-color: #ececec;
+        }
+        
+    /*
+     *  Tabla Gris
+     */
+    table.blue{
+        border: 1px solid #59aee2;
+        border-left: none;
+    }
+    
+        /*
+         *  Encabezado de tabla
+         */
+        table.blue thead{
+            background:  #70c0f2;
+            color: #000;
+            text-align: left;
+            vertical-align: bottom;
+        }
+    
+        /*
+         *  Estilo generico de celdas
+         */
+        table.blue td,
+        table.blue th{
+            border-left: 1px solid #59aee2;
+        }
+    
+        /*
+         *  Estilos de celdas impares
+         */
+        table.blue tbody tr:nth-child(even) {
+            background-color: #a9ddfe;
         }
 
 /*
@@ -406,15 +441,15 @@ h1, h2, h3, h4, h5, h6 {
             display: block;
         }
     
-        /*
-         *  Alineado
-         */
-        form.align{
-            width: 500px;
-            display: block;
-            margin: 0 auto;
-            text-align: left;
-        }
+    /*
+     *  Alineado
+     */
+    form.align{
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+    }
 
         /*
          *  Contenedor de controles
@@ -462,7 +497,9 @@ h1, h2, h3, h4, h5, h6 {
         form.group > div select{
             margin: 0px;
             width: 100%;
-            border-radius: 0px !important;
+            border-bottom-width: 0px !important;
+            box-shadow: none !important;
+            border-radius: 0px !important;            
         }
 
         /**/
@@ -471,8 +508,9 @@ h1, h2, h3, h4, h5, h6 {
         }
         form.group > div input:last-child{
             border-radius: 0 0 5px 5px !important;
+            border-bottom-width: 1px !important;
         }
-
+        
 /*
  *  Navegacion
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
@@ -636,32 +674,20 @@ h1, h2, h3, h4, h5, h6 {
     .navigation > li{
         display: inline-block;
     }
-    
-/*
- *  Helpers
- *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- */
 
 /*
  *  Botones
- *  ~·~  ~·~
- */
-
-/*
- * Boton estandar
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 
 .btn{
     padding: 6px 12px;
-    background-color: #FFF;
-    border: 1px solid #CCC;
     border-radius: 3px;
+    border: 1px solid transparent;
 }
 
 .btn:hover{
     cursor: pointer;
-    border-color: #ADADAD;
-    background-color: #E6E6E6;
 }
 
 .btn:active{
@@ -677,6 +703,20 @@ a.btn{
     line-height: 15px;
     font-family: Sans;
 }
+
+    /*
+     * Boton estandar
+     */
+
+    .btn-standar{
+        background-color: #FFF;
+        border-color: #CCC;
+    }
+    
+    .btn-standar:hover{
+        border-color: #ADADAD;
+        background-color: #E6E6E6;
+    }
 
     /*
      * Boton primario
@@ -773,6 +813,41 @@ a.btn{
         
     }
     
+    
+/*
+ *  Extras
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ */
+
+/*
+ *  Responsive Videos 
+ *  ~·~  ~·~  ~·~  ~·~
+ */
+
+[class^="rvideo"]{
+    height: 0;
+    /*proporcion 16x9*/
+    padding-top: 25px;
+    
+    width: 50%;
+    padding-bottom: 28.125%;
+    
+    /*
+    width: 100%;
+    padding-bottom: 56.25%;
+    */
+    position: relative;
+    margin: 0 auto;
+}
+
+    [class^="rvideo"] > iframe{
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+    }
+   
 
 /*
  *  Responsive images
@@ -928,3 +1003,4 @@ Mobile first queries * /
 /* Larger than Desktop HD * /
 @media (min-width: 1200px) {}
 */
+

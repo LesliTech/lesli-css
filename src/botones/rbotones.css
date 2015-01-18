@@ -17,7 +17,7 @@
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
  * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.3.1 beta
+ * @version 0.3.2 beta
  */
 
 /*
@@ -30,15 +30,12 @@
  */
 .btn{
     padding: 6px 12px;
-    background-color: #FFF;
-    border: 1px solid #CCC;
     border-radius: 3px;
+    border: 1px solid transparent;
 }
 
 .btn:hover{
     cursor: pointer;
-    border-color: #ADADAD;
-    background-color: #E6E6E6;
 }
 
 .btn:active{
@@ -54,6 +51,20 @@ a.btn{
     line-height: 15px;
     font-family: Sans;
 }
+
+    /*
+     * Boton estandar
+     */
+
+    .btn-standar{
+        background-color: #FFF;
+        border-color: #CCC;
+    }
+    
+    .btn-standar:hover{
+        border-color: #ADADAD;
+        background-color: #E6E6E6;
+    }
 
     /*
      * Boton primario

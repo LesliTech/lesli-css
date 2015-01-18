@@ -5,7 +5,11 @@ Responsive Cat - Historial de cambios
 ------------------
 ### Tipografía
 * Cambio a "Sans" como fuente principal
+
+### Nuevas funcionalidades
 * Estilos para paginadores
+* Responsive videos (YouTube Vimeo)
+* Estilo base para tablas, menus, botones, etc.
 
 0.3.1 beta (03/01/2014)
 ------------------
