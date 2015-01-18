@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <title>Responsive Cat</title>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/version estable/rcat.css" rel="stylesheet" type="text/css"/>    
-    <link href="src/iconos/riconos.css" rel="stylesheet" type="text/css"/>    
+    <link rel="stylesheet" href="src/version estable/rcat.css" type="text/css">
+    
     <script>
+        /* Aside hight 100% */
         function script(){
             var h = window.innerHeight;            
             document.getElementById('aside').style.height = h+'px';
@@ -199,10 +200,10 @@
 <body onload="script()">
     
     <section id="aside" class="aside center">
-        <span class="icon-menu"></span>
+        <span class="icon-menu">&Assign;</span>
         <a href="http://ldonis.com" target="blank"><img alt="ldonis" src="http://ldonis.com/Website/WebTemplate/img/ldonis2.svg" class="center"></a>
         <ul>
-            <li><a href="index.html">rcat</a></li>
+            <li><a href="http://rcat.ldonis.com">rcat</a></li>
             <li><hr></li>
             <li><a href="#tipografia">tipografia</a></li>
             <li><a href="#grids">grids</a></li>
@@ -210,10 +211,11 @@
             <li><a href="#formularios">formularios</a></li>
             <li><a href="#navegacion">navegacion</a></li>
             <li><a href="#paginadores">paginadores</a></li>
-            <li><hr></li>
             <li><a href="#botones">botones</a></li>
             <li><hr></li>
-            <li><a href="http://blog.ldonis.net/" target="blank">blog</a></li>
+            <li><a href="#r-videos">R-Videos</a></li>
+            <li><hr></li>
+            <li><a href="http://blog.ldonis.com/" target="blank">blog</a></li>
             <li><a href="#contribuir">contribuir</a></li>
         </ul>
     </section>
@@ -420,9 +422,78 @@
         </article>
         
         <article>
-            <h6>Grid automatico</h6>
+            <h6>Tabla estandar</h6>
             <code>
                         &lt;table class='rtable gray'&gt;
+                            &lt;thead&gt;
+                                &lt;tr&gt;
+                                    &lt;th&gt;titulo 1&lt;/th&gt;
+                                    &lt;th&gt;titulo 2&lt;/th&gt;
+                                    &lt;th&gt;titulo 3&lt;/th&gt;
+                                    &lt;th&gt;titulo 4&lt;/th&gt;
+                                    &lt;th&gt;titulo 5&lt;/th&gt;
+                                &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody class='impar'&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;row 1 col 1&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 2&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 3&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 4&lt;/td&gt;
+                                    &lt;td&gt;row 1 col 5&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+            </code>            
+            <div class="demo">        
+                <table class='rtable'>
+                    <thead>
+                        <tr>
+                            <th>titulo 1</th>
+                            <th>titulo 2</th>
+                            <th>titulo 3</th>
+                            <th>titulo 4</th>
+                            <th>titulo 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>row 1 col 1</td>
+                            <td>row 1 col 2</td>
+                            <td>row 1 col 3</td>
+                            <td>row 1 col 4</td>
+                            <td>row 1 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 2 col 1</td>
+                            <td>row 2 col 2</td>
+                            <td>row 2 col 3</td>
+                            <td>row 2 col 4</td>
+                            <td>row 2 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 3 col 1</td>
+                            <td>row 3 col 2</td>
+                            <td>row 3 col 3</td>
+                            <td>row 3 col 4</td>
+                            <td>row 3 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 4 col 1</td>
+                            <td>row 4 col 2</td>
+                            <td>row 4 col 3</td>
+                            <td>row 4 col 4</td>
+                            <td>row 4 col 5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+        <br><br>
+        <article>
+            <h6>Tabla color</h6>
+            <code>
+                        &lt;table class='rtable [gray][blue]'&gt;
                             &lt;thead&gt;
                                 &lt;tr&gt;
                                     &lt;th&gt;titulo 1&lt;/th&gt;
@@ -454,7 +525,7 @@
                             <th>titulo 5</th>
                         </tr>
                     </thead>
-                    <tbody class='impar'>
+                    <tbody>
                         <tr>
                             <td>row 1 col 1</td>
                             <td>row 1 col 2</td>
@@ -485,6 +556,49 @@
                         </tr>
                     </tbody>
                 </table>
+                <br>
+                <table class='rtable blue'>
+                    <thead>
+                        <tr>
+                            <th>titulo 1</th>
+                            <th>titulo 2</th>
+                            <th>titulo 3</th>
+                            <th>titulo 4</th>
+                            <th>titulo 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>row 1 col 1</td>
+                            <td>row 1 col 2</td>
+                            <td>row 1 col 3</td>
+                            <td>row 1 col 4</td>
+                            <td>row 1 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 2 col 1</td>
+                            <td>row 2 col 2</td>
+                            <td>row 2 col 3</td>
+                            <td>row 2 col 4</td>
+                            <td>row 2 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 3 col 1</td>
+                            <td>row 3 col 2</td>
+                            <td>row 3 col 3</td>
+                            <td>row 3 col 4</td>
+                            <td>row 3 col 5</td>
+                        </tr>
+                        <tr>
+                            <td>row 4 col 1</td>
+                            <td>row 4 col 2</td>
+                            <td>row 4 col 3</td>
+                            <td>row 4 col 4</td>
+                            <td>row 4 col 5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
             </div>
         </article>
     </section>
@@ -856,6 +970,7 @@
             <h6>Botones estandar</h6>
             <code>
                         &lt;button class="btn"&gt;Aceptar&lt;/button&gt;
+                        &lt;button class="btn btn-standar"&gt;Aceptar&lt;/button&gt;
                         &lt;button class="btn btn-primary"&gt;Aceptar&lt;/button&gt;
                         &lt;button class="btn btn-success"&gt;Aceptar&lt;/button&gt;
                         &lt;button class="btn btn-info"&gt;Aceptar&lt;/button&gt;
@@ -864,6 +979,7 @@
             </code>            
             <div class="demo center">
                 <button class="btn">Aceptar</button>
+                <button class="btn btn-standar">Aceptar</button>
                 <button class="btn btn-primary">Aceptar</button>
                 <button class="btn btn-success">Aceptar</button>
                 <button class="btn btn-info">Aceptar</button>
@@ -884,13 +1000,77 @@
             </code>            
             <div class="demo center">
                 <div class="btn-group">
-                    <button class="btn">Aceptar</button>
-                    <button class="btn">Aceptar</button>
-                    <button class="btn">Aceptar</button>
-                    <button class="btn">Aceptar</button>
+                    <button class="btn btn-standar">Aceptar</button>
+                    <button class="btn btn-standar">Aceptar</button>
+                    <button class="btn btn-standar">Aceptar</button>
+                    <button class="btn btn-standar">Aceptar</button>
                 </div>
             </div>
         </article>
     </section>
+    
+    <!-- 
+        Responsive Videos
+    -->
+   
+    <section>
+        <article>
+            <a name="r-videos"></a>
+            <h2>Responsive Videos</h2>
+            <p></p>
+            <hr>
+        </article>
+        
+        <article>
+            <h6>Videos de YouTube</h6>
+            <code>
+                
+                        &lt;div class="rvideo-50"&gt;
+                            &lt;iframe src="//www.youtube.com/"&gt;
+                            &lt;/iframe&gt;
+                        &lt;/div&gt;
+                
+            </code>            
+            <div class="demo center">
+                
+                <div class="rvideo-50">
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/4qxi-sYUT9s" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                
+            </div>
+        </article>
+        <br><br>
+        <article>
+            <h6>Videos de Vimeo</h6>
+            <code>
+                
+                    &lt;div class="rvideo-60"&gt;
+                        &lt;iframe src="//player.vimeo.com/&gt;
+                        &lt;/iframe&gt;
+                    &lt;/div&gt;
+                    
+            </code>            
+            <div class="demo center">
+                
+                <div class="rvideo-60">
+                    <iframe src="//player.vimeo.com/video/34038294?byline=0&amp;portrait=0" width="500" height="281" frameborder="0">
+                    </iframe>
+                </div>
+                
+            </div>
+        </article>
+        <br><br>
+        <article>
+            <h6>Videos de Vine</h6>
+            <code>
+                        
+            </code>            
+            <div class="demo center">
+                
+            </div>
+        </article>
+    </section>
+    <br><br>
 </body>
 </html>
