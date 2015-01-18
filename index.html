@@ -5,6 +5,7 @@
     <title>Responsive Cat</title>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="src/version estable/rcat.css" rel="stylesheet" type="text/css"/>    
+    <link href="src/iconos/riconos.css" rel="stylesheet" type="text/css"/>    
     <script>
         function script(){
             var h = window.innerHeight;            
@@ -13,13 +14,192 @@
     </script>
     <style>
 
-        html,body{font-family:sans,sans-serif;background-color:#fff;color:#222}body{padding-left:175px}.aside{position:fixed;top:0;left:0;padding:5px 0;width:175px;color:#eee;background-color:#2c2c2c}.aside ul{line-height:42px;margin-top:25px}.aside ul li{text-align:left;padding-left:10px;transition:all linear .3s;box-shadow:4px 0 rgba(255,255,255,0.2) inset}.aside ul li:hover{box-shadow:175px 0 rgba(255,255,255,0.2) inset}.aside ul li a{display:block;padding-left:10px;background:transparent;text-transform:uppercase}.aside hr{height:1px;width:95%;background-color:#6d6d6d}.aside a img{width:100px}header{background-color:#f5f5f5;color:#4291c4}header img{padding:20px 0 10px}header h1{font-size:4rem}header nav{padding:40px;border:1px solid #b4b4b4;background-color:#EEE}header nav a{width:180px;color:#2165a6;font-weight:100;font-family:sans-serif;font-size:1.5rem!important;font-size:1.5em!important;transition:all .2s linear 0s;border-bottom:1px solid transparent}header nav a:hover{color:#222;border-bottom-color:#e74c3c}section{margin:0 auto;max-width:1200px;padding:100px 0}section article>h2{text-align:center;font-size:3rem}section article>p{color:#222;font-size:1.5rem;text-align:center}section article>hr{height:1px;width:85%;margin:50px auto;background-color:#6d6d6d}section article>h6{text-align:center}.demo{margin:20px 0;font-family:sans-serif!important}.demo .rgrid div{padding:25px 0;border:1px solid #CCC;background-color:#7e9ec7;color:#FFF}.demo .rform{margin:0 auto;width:600px}.demo form.block{width:250px}.demo form.group{width:350px}
+        body{            
+            background-color:#fff;
+            color:#222;
+        }
+        
+        /*
+         *  Barra lateral
+         */
+        .aside{
+            position:fixed;
+            top:0;
+            left: -175px;
+            padding: 5px 0;
+            width:175px;
+            color:#eee;
+            background-color:#2c2c2c;
+            transition: all linear 0.4s;
+        }
+        .aside:hover{
+            left: -0px;
+        }
+
+        /*
+         *  Icono de menu
+         */
+        .aside span.icon-menu{
+            display: block;
+            position: absolute;
+            width: 230px;
+            color:  #313131;
+            font-size: 2.5rem;
+            text-align: right;
+            background-color: transparent;
+            transition: all linear 0.4s;
+        }
+        .aside:hover span.icon-menu{
+            color: transparent;
+        }
+
+        .aside ul{
+            line-height:42px;
+            margin-top:25px;
+        }
+        
+        /*
+         *  Contenedor de enlaces
+         */
+        .aside ul li{
+            text-align:left;
+            padding-left:10px;
+            transition:all linear .3s;
+            box-shadow:4px 0 rgba(255,255,255,0.2) inset;
+        }
+        .aside ul li:hover{
+            box-shadow:175px 0 rgba(255,255,255,0.2) inset;
+        }
+        
+        /*
+         *  Enlaces del menu
+         */
+        .aside ul li a{
+            display:block;
+            padding-left:10px;
+            background:transparent;
+            text-transform:uppercase;
+        }
+        
+        /* 
+         *  Separador de menus
+         */
+        .aside hr{
+            height:1px;
+            width:95%;
+            background-color:#6d6d6d
+        }
+        
+        /*
+         *  Logo de menu
+         */
+        .aside a img{
+            width:100px;
+        }
+        
+        /*
+         *  Encabezado
+         */
+        header{
+            background-color:#f5f5f5;
+            color:#4291c4;
+        }
+        
+        /*
+         *  Logo rCat
+         */
+        header img{
+            padding:20px 0 10px;
+        }
+        
+        /*
+         *  Titulo
+         */
+        header h1{
+            font-size:4rem;
+        }
+        
+        /*
+         *  Menu principal (encabezado)
+         */
+        header nav{
+            padding:40px;
+            border:1px solid #b4b4b4;
+            background-color:#EEE;
+        }
+        
+            /*
+             *  Enlaces
+             */
+            header nav a{
+                width:180px;
+                color:#2165a6;
+                font-weight:100;
+                font-family:sans-serif;
+                font-size:1.5rem!important;
+                font-size:1.5em!important;
+                transition:all .2s linear 0s;
+                border-bottom:1px solid transparent;
+            }            
+            header nav a:hover{
+                color:#222;border-bottom-color:#e74c3c;
+            }
+            
+            /*
+             *  Contenedor principal de documentacion
+             */
+            section{
+                margin:0 auto;
+                max-width:1200px;
+                padding:100px 0;
+            }
+            
+            /*
+             *  Titulo de funcionalidad
+             */
+            section article > h2{
+                text-align:center;
+                font-size:3rem;
+            }
+            
+            /*
+             *  Descripcion de funcionalidad
+             */
+            section article > p{
+                color:#222;
+                font-size:1.5rem;
+                text-align:center;
+            }
+            
+            section article>hr{
+                height:1px;
+                width:85%;
+                margin:50px auto;
+                background-color:#6d6d6d;
+            }
+            
+            section article>h6{text-align:center}
+            
+            /*
+             *  Resultado de funcionalidad
+             */
+            .demo{
+                margin:20px 0;
+                font-family:sans-serif!important;
+            }
+            
+            /*
+             *  Hacks!
+             */
+            .demo .rgrid div{padding:25px 0;border:1px solid #CCC;background-color:#7e9ec7;color:#FFF}
+            .demo .rform{margin:0 auto;width:600px}.demo form.block{width:250px}.demo form.group{width:350px}            
 
     </style>
 </head>
 <body onload="script()">
     
     <section id="aside" class="aside center">
+        <span class="icon-menu"></span>
         <a href="http://ldonis.com" target="blank"><img alt="ldonis" src="http://ldonis.com/Website/WebTemplate/img/ldonis2.svg" class="center"></a>
         <ul>
             <li><a href="index.html">rcat</a></li>
@@ -29,6 +209,7 @@
             <li><a href="#tablas">tablas</a></li>
             <li><a href="#formularios">formularios</a></li>
             <li><a href="#navegacion">navegacion</a></li>
+            <li><a href="#paginadores">paginadores</a></li>
             <li><hr></li>
             <li><a href="#botones">botones</a></li>
             <li><hr></li>
@@ -52,8 +233,7 @@
     
     <!--
         Tipografia
-    -->
-    
+    -->    
     <section>
         <article>
             <a name="tipografia"></a>
@@ -89,19 +269,19 @@
             <h6>Grid automatico</h6>
             <code>
                         &lt;div class="rgrid col-3"&gt;
-                            &lt;div&gt;columna 1&lt;/div&gt;
-                            &lt;div&gt;columna 2&lt;/div&gt;
-                            &lt;div&gt;columna 3&lt;/div&gt;
+                            &lt;div&gt;columna 01&lt;/div&gt;
+                            &lt;div&gt;columna 02&lt;/div&gt;
+                            &lt;div&gt;columna 03&lt;/div&gt;
                         &lt;/div&gt;
             </code>            
             <div class="demo">
-                <div class="rgrid col-3 center">
+                <div class="rgrid col-03 center">
                     <div>columna 1</div>
                     <div>columna 2</div>
                     <div>columna 3</div>
                 </div>                
             
-                <div class="rgrid col-6 center">
+                <div class="rgrid col-06 center">
                     <div>col-1</div>
                     <div>col-2</div>
                     <div>col-3</div>
@@ -157,71 +337,71 @@
             <h6>Grid manual</h6>
             <code>
                         &lt;div class="rgrid"&gt;
-                            &lt;div class="col-01"&gt;&lt;/div&gt;
-                            &lt;div class="col-02"&gt;&lt;/div&gt;
-                            &lt;div class="col-03"&gt;&lt;/div&gt;
-                            &lt;div class="col-04"&gt;&lt;/div&gt;
-                            &lt;div class="col-0n"&gt;&lt;/div&gt;
-                            &lt;div class="col-09"&gt;&lt;/div&gt;
+                            &lt;div class="col-1"&gt;&lt;/div&gt;
+                            &lt;div class="col-2"&gt;&lt;/div&gt;
+                            &lt;div class="col-3"&gt;&lt;/div&gt;
+                            &lt;div class="col-4"&gt;&lt;/div&gt;
+                            &lt;div class="col-n"&gt;&lt;/div&gt;
+                            &lt;div class="col-9"&gt;&lt;/div&gt;
                         &lt;/div&gt;
             </code>
             <div class="demo">
                 <div class="rgrid center">
-                    <div class="col-09">col-09</div>
-                    <div class="col-01">col-01</div>
+                    <div class="col-9">col-9</div>
+                    <div class="col-1">col-1</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-08">col-08</div>
-                    <div class="col-02">col-02</div>
+                    <div class="col-8">col-8</div>
+                    <div class="col-2">col-2</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-07">col-07</div>
-                    <div class="col-03">col-03</div>
+                    <div class="col-7">col-7</div>
+                    <div class="col-3">col-3</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-06">col-06</div>
-                    <div class="col-04">col-04</div>
+                    <div class="col-6">col-6</div>
+                    <div class="col-4">col-4</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-05">col-05</div>
-                    <div class="col-05">col-05</div>
+                    <div class="col-5">col-5</div>
+                    <div class="col-5">col-5</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-04">col-04</div>
-                    <div class="col-06">col-06</div>
+                    <div class="col-4">col-4</div>
+                    <div class="col-6">col-6</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-03">col-03</div>
-                    <div class="col-07">col-07</div>
+                    <div class="col-3">col-3</div>
+                    <div class="col-7">col-7</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-02">col-02</div>
-                    <div class="col-08">col-08</div>
+                    <div class="col-2">col-2</div>
+                    <div class="col-8">col-8</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-01">col-01</div>
-                    <div class="col-09">col-09</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-9">col-9</div>
                 </div>
                 
                 <div class="rgrid center">
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
-                    <div class="col-01">col-01</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
+                    <div class="col-1">col-1</div>
                 </div>
             </div>
         </article>
@@ -489,7 +669,7 @@
     </section>
     
     <!-- 
-        Formularios
+        Menus de navegacion
     -->
    
     <section>
@@ -578,7 +758,8 @@
                 &lt;/nav&gt;
             </code>            
             <div class="demo">     
-                <nav class="rnavbar multi center">
+                
+                <nav class="rnavbar multi  center">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Products</a>
@@ -593,9 +774,71 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
+
             </div>
         </article>
     </section>
+    
+    <!-- 
+        Paginadores
+    -->
+   
+    <section>
+        <article>
+            <a name="paginadores"></a>
+            <h2>Paginadores</h2>
+            <p>Estilos de paginadores personalizados y wordpress</p>
+            <hr>
+        </article>
+        
+        <article>
+            <h6>Estandar</h6>
+            <code>
+                
+                        Personalizado
+                        
+                        &lt;ul class="navigation"&gt;
+                            &lt;li&gt;&lt;span&gt;Página 1 de 2&lt;/span&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;« Anterior&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Siguiente »&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                
+                        
+                        Estandar WordPress
+                        
+                        &lt;div class="navigation"&gt;
+                            &lt;span class="pages"&gt;Página 1 de 2&lt;/span&gt;
+                            &lt;span class="page-numbers current"&gt;1&lt;/span&gt;
+                            &lt;a class="page-numbers" href="#"&gt;2&lt;/a&gt;
+                            &lt;a class="next page-numbers" href="#"&gt;Siguiente »&lt;/a&gt;
+                        &lt;/div&gt;
+                        
+            </code>            
+            <div class="demo">
+                
+                <!--div class="navigation">
+                    <span class="pages">Página 1 de 2</span>
+                    <span class="page-numbers current">1</span>
+                    <a class="page-numbers" href="#">2</a>
+                    <a class="next page-numbers" href="#">Siguiente »</a>
+                </div -->
+                
+                <ul class="navigation">
+                    <li><span>Página 1 de 2</span></li>
+                    <li><a href="#">« Anterior</a></li>
+                    <li><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">Siguiente »</a></li>
+                </ul>
+                
+            </div>
+        </article>
+        
+    </section>    
     
     <!-- 
         Botones
