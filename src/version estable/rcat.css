@@ -475,7 +475,30 @@ h1, h2, h3, h4, h5, h6 {
             vertical-align: middle;
             margin: 0px 1em 0px 0px;
         }
-
+        
+        /*
+         *  Controles independientes
+         */
+        [class^="rinfo label"] label{
+            display: inline-block;                        
+            margin: 0px 1em 0px 0px;
+            min-width: 200px;            
+            text-align: right;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        
+        [class^="rinfo label"] label p{
+            display: inline-block;            
+            min-width: 75%;
+            text-align: left;            
+            border-radius: 2px;            
+            border: 1px solid #CCC;
+            letter-spacing: 0.01rem;
+            padding: 0.10em 0.40em; /* IE8 */
+            padding: 0.10rem 0.40rem;            
+        }
+        
     /*
      *  Grupal
      */
