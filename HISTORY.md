@@ -1,6 +1,14 @@
 Responsive Cat - Historial de cambios
 ===================
 
+0.4.0 beta (12/02/2014)
+------------------
+### Formularios
+* Campos de informacion independientes
+
+### Paginadores
+* Estilos basicos
+
 0.3.2 beta (17/01/2014)
 ------------------
 ### Tipografía
