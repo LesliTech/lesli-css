@@ -1,6 +1,6 @@
 /*
  * Responsive Cat
- *
+ *  
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -17,6 +17,7 @@
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
  * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.3.1 beta
+ * @version 0.4.0 beta
  */
-.rrnavbar{width:100%}.rnavbar li{display:inline-block}.rnavbar a{display:block;padding:.3em .8em;padding:.3rem .8rem}.rnavbar a:hover{background-color:#ececec}nav.doble{width:100%;font-size:0;white-space:nowrap}nav.doble>ul{width:50%;font-size:16px;font-size:1rem;white-space:initial;display:inline-block}nav.doble>ul:first-child{text-align:left}nav.doble>ul:last-child{text-align:right}nav.doble .right{text-align:right}nav.multi>ul{position:relative}nav.multi>ul li ul{display:none;position:absolute}nav.multi>ul li:hover ul{display:block}nav.multi>ul ul li{display:block}.nav ul>li:first-child{font-size:.9rem;margin-top:.5em;margin-bottom:.5em;text-transform:uppercase}.nav ul li:not(:first-child):hover,.nav ul li:not(:first-child) a:hover{cursor:pointer}
+
+.rnavbar{width:100%}.rnavbar > ul{font-size:0}.rnavbar li{display:inline-block;font-size:16px;font-size:initial}.rnavbar a{display:block;padding:.3em .8em;padding:.3rem .8rem}nav.doble{width:100%;font-size:0;white-space:nowrap}nav.doble > ul{width:50%;font-size:16px;font-size:1rem;white-space:initial;display:inline-block}nav.doble > ul:first-child{text-align:left}nav.doble > ul:last-child{text-align:right}nav.doble .right{text-align:right}nav.multi > ul{position:relative}nav.multi > ul li ul{display:none;position:absolute}nav.multi > ul li:hover ul{display:block}nav.multi > ul ul li{display:block}.nav ul > li:first-child{font-size:.9rem;margin-top:.5em;margin-bottom:.5em;text-transform:uppercase}.nav ul li:not(:first-child):hover,.nav ul li:not(:first-child) a:hover{cursor:pointer}

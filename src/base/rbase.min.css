@@ -1,6 +1,6 @@
 /*
  * Responsive Cat
- *
+ *  
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -17,7 +17,7 @@
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
  * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.3.1 beta
+ * @version 0.4.0 beta
  */
 
-*{margin:0;border:0;padding:0;outline:0;color:inherit;list-style:none;text-decoration:none;background-color:inherit}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{padding:0;font-style:normal;font-weight:100;font-family:"Helvetica Neue",Helvetica,Tahoma,sans-serif;font-size:100%;line-height:1.65rem;background:#fff;color:#222}
+*{margin:0;border:0;padding:0;outline:0;color:inherit;list-style:none;text-decoration:none;background-color:inherit}*,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{background:#fff;color:#222;font-family:Sans,sans-serif,Helvetica;font-size:100%;font-style:normal;font-weight:100;line-height:1.65rem}h1,h2,h3,h4,h5,h6{line-height:1.4;margin-top:.2rem;font-style:inherit;font-weight:inherit;margin-bottom:.5rem;text-rendering:optimizelegibility}h1{font-size:2.38em;font-size:2.38rem}h2{font-size:2.15em;font-size:2.15rem}h3{font-size:1.92em;font-size:1.92rem}h4{font-size:1.69em;font-size:1.69rem}h5{font-size:1.46em;font-size:1.46rem}h6{font-size:1.23em;font-size:1.23rem}

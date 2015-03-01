@@ -1,6 +1,6 @@
 /*
  * Responsive Cat
- *
+ *  
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -17,6 +17,7 @@
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
  * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.3.1 beta
+ * @version 0.4.0 beta
  */
-.rtable{width:100%;max-width:100%;line-height:1.6;empty-cells:show;border-spacing:0}.rtable td,.rtable th{padding:.5em 1em}table.gray{border:1px solid #cbcbcb;border-left:none}table.gray thead{background:none repeat scroll 0 0 #e0e0e0;color:#000;text-align:left;vertical-align:bottom}table.gray td,table.gray th{border-left:1px solid #cbcbcb}table.gray tbody.impar tr:nth-child(even){background-color:#ececec}
+
+.rtable{width:100%;max-width:100%;line-height:1.6;empty-cells:show;border-spacing:0}.rtable thead{text-align:left;vertical-align:bottom}.rtable td,.rtable th{padding:.5em 1em}table.gray{border:1px solid #CBCBCB;border-left:none}table.gray thead{background:#E0E0E0;color:#000;text-align:left;vertical-align:bottom}table.gray td,table.gray th{border-left:1px solid #CBCBCB}table.gray tbody tr:nth-child(even){background-color:#ececec}table.blue{border:1px solid #59aee2;border-left:none}table.blue thead{background:#70c0f2;color:#000;text-align:left;vertical-align:bottom}table.blue td,table.blue th{border-left:1px solid #59aee2}table.blue tbody tr:nth-child(even){background-color:#a9ddfe}

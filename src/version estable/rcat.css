@@ -17,7 +17,7 @@
  * @author Luis Gdonis <ldonis.emc2@gmail.com>
  * @link http://ldonis.com 
  * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.3.3 beta
+ * @version 0.4.0 beta
  */
 
 /*
@@ -105,7 +105,6 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.23rem;
     }
 
-
 /*
  *  Grids
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
@@ -127,8 +126,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px; /* IE8 */
     font-size: initial;    
     vertical-align: top;
+    white-space: initial; 
     display: inline-block;
-    white-space: initial;    
 }
 
 /*
@@ -136,43 +135,43 @@ h1, h2, h3, h4, h5, h6 {
  *  Ancho de columnas automaticas
  *  col-n = width/n
  */
-[class^="rgrid col-02"] > * { width: 50.00%; }
-[class^="rgrid col-03"] > * { width: 33.33%; }
-[class^="rgrid col-04"] > * { width: 25.00%; }
-[class^="rgrid col-05"] > * { width: 20.00%; }
-[class^="rgrid col-06"] > * { width: 16.66%; }
-[class^="rgrid col-07"] > * { width: 14.28%; }
-[class^="rgrid col-08"] > * { width: 12.50%; }
-[class^="rgrid col-09"] > * { width: 11.11%; }
-[class^="rgrid col-10"] > * { width: 10.00%; }
-[class^="rgrid col-11"] > * { width: 09.09%; }
-[class^="rgrid col-12"] > * { width: 08.33%; }
-[class^="rgrid col-13"] > * { width: 07.69%; }
-[class^="rgrid col-14"] > * { width: 07.14%; }
-[class^="rgrid col-15"] > * { width: 06.66%; }
-[class^="rgrid col-16"] > * { width: 06.25%; }
-[class^="rgrid col-17"] > * { width: 05.88%; }
-[class^="rgrid col-18"] > * { width: 05.55%; }
-[class^="rgrid col-19"] > * { width: 05.26%; }
-[class^="rgrid col-20"] > * { width: 05.00%; }
-[class^="rgrid col-21"] > * { width: 04.76%; }
-[class^="rgrid col-22"] > * { width: 04.54%; }
-[class^="rgrid col-23"] > * { width: 04.34%; }
-[class^="rgrid col-24"] > * { width: 04.16%; }
+[class^="rgrid columns-02"] > * { width: 50.00%; }
+[class^="rgrid columns-03"] > * { width: 33.33%; }
+[class^="rgrid columns-04"] > * { width: 25.00%; }
+[class^="rgrid columns-05"] > * { width: 20.00%; }
+[class^="rgrid columns-06"] > * { width: 16.66%; }
+[class^="rgrid columns-07"] > * { width: 14.28%; }
+[class^="rgrid columns-08"] > * { width: 12.50%; }
+[class^="rgrid columns-09"] > * { width: 11.11%; }
+[class^="rgrid columns-10"] > * { width: 10.00%; }
+[class^="rgrid columns-11"] > * { width: 09.09%; }
+[class^="rgrid columns-12"] > * { width: 08.33%; }
+[class^="rgrid columns-13"] > * { width: 07.69%; }
+[class^="rgrid columns-14"] > * { width: 07.14%; }
+[class^="rgrid columns-15"] > * { width: 06.66%; }
+[class^="rgrid columns-16"] > * { width: 06.25%; }
+[class^="rgrid columns-17"] > * { width: 05.88%; }
+[class^="rgrid columns-18"] > * { width: 05.55%; }
+[class^="rgrid columns-19"] > * { width: 05.26%; }
+[class^="rgrid columns-20"] > * { width: 05.00%; }
+[class^="rgrid columns-21"] > * { width: 04.76%; }
+[class^="rgrid columns-22"] > * { width: 04.54%; }
+[class^="rgrid columns-23"] > * { width: 04.34%; }
+[class^="rgrid columns-24"] > * { width: 04.16%; }
 
 /*
  *  ancho de columnas manuales
  *  .col-n = (100%/10) * n
  */
-.rgrid > .col-1 { width: 10.00%; }
-.rgrid > .col-2 { width: 20.00%; }
-.rgrid > .col-3 { width: 30.00%; }
-.rgrid > .col-4 { width: 40.00%; }
-.rgrid > .col-5 { width: 50.00%; }
-.rgrid > .col-6 { width: 60.00%; }
-.rgrid > .col-7 { width: 70.00%; }
-.rgrid > .col-8 { width: 80.00%; }
-.rgrid > .col-9 { width: 90.00%; }
+.rgrid > .column-1 { width: 10.00%; }
+.rgrid > .column-2 { width: 20.00%; }
+.rgrid > .column-3 { width: 30.00%; }
+.rgrid > .column-4 { width: 40.00%; }
+.rgrid > .column-5 { width: 50.00%; }
+.rgrid > .column-6 { width: 60.00%; }
+.rgrid > .column-7 { width: 70.00%; }
+.rgrid > .column-8 { width: 80.00%; }
+.rgrid > .column-9 { width: 90.00%; }
 
 
 /*
@@ -242,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         
     /*
-     *  Tabla Gris
+     *  Tabla azul
      */
     table.blue{
         border: 1px solid #59aee2;
@@ -354,10 +353,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     
-    /*
-     *  Estilos de formularios
-     *  ~·~  ~·~  ~·~  ~·~  ~·~
-     */
+    /* Estilos de formularios */    
 
     /*
      *  Individual con prefijo
@@ -467,6 +463,7 @@ h1, h2, h3, h4, h5, h6 {
             display: inline-block;
             width: 50%;
         }
+        
         form.align > div label{
             display: inline-block;
             width: 10rem;
@@ -474,29 +471,6 @@ h1, h2, h3, h4, h5, h6 {
             text-align: right;            
             vertical-align: middle;
             margin: 0px 1em 0px 0px;
-        }
-        
-        /*
-         *  Controles independientes
-         */
-        [class^="rinfo label"] label{
-            display: inline-block;                        
-            margin: 0px 1em 0px 0px;
-            min-width: 200px;            
-            text-align: right;
-            vertical-align: middle;
-            white-space: nowrap;
-        }
-        
-        [class^="rinfo label"] label p{
-            display: inline-block;            
-            min-width: 75%;
-            text-align: left;            
-            border-radius: 2px;            
-            border: 1px solid #CCC;
-            letter-spacing: 0.01rem;
-            padding: 0.10em 0.40em; /* IE8 */
-            padding: 0.10rem 0.40rem;            
         }
         
     /*
@@ -533,21 +507,19 @@ h1, h2, h3, h4, h5, h6 {
             border-radius: 0 0 5px 5px !important;
             border-bottom-width: 1px !important;
         }
-        
+
 /*
  *  Navegacion
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
     
-/*
- *  Menus horizontales
- */
+/* Menus horizontales */
 
 /*
  *  Menu estandar
  *  ~·~  ~·~  ~·~  ~·~
  */
-.rrnavbar{
+.rnavbar{
     width: 100%;
 }
 
@@ -576,10 +548,6 @@ h1, h2, h3, h4, h5, h6 {
         
     }
     
-    /*
-     *  Estilo de menus
-     */
-     
     /*
      *  Menu doble
      *  ~·~  ~·~  ~·~  ~·~
@@ -676,51 +644,35 @@ h1, h2, h3, h4, h5, h6 {
     .nav ul li:not(:first-child) a:hover{
         cursor: pointer
     }
-
-/*
- *  Paginadores
+    
+/* 
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ *  kit de Interfaz Grafica de Usuario
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~    
  */
-.navigation{
-    text-align: center;
-}
-
-    .navigation a,
-    .navigation span{
-        border: 1px solid #ccc;
-        padding: 5px 10px;
-    }
-    
-    ul.navigation{
-    }
-    
-    .navigation > li{
-        display: inline-block;
-    }
 
 /*
  *  Botones
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
-
-.btn{
+[class^="rbutton"]{
     padding: 6px 12px;
     border-radius: 3px;
     border: 1px solid transparent;
 }
 
-.btn:hover{
+[class^="rbutton"]:hover{
     cursor: pointer;
 }
 
-.btn:active{
+[class^="rbutton"]:active{
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 6px rgba(0, 0, 0, 0.2) inset;
 }
 
 /*
  *  Hack para simular <button> con <a>
  */
-a.btn{
+a[class^="rbutton"]{
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
@@ -730,13 +682,12 @@ a.btn{
     /*
      * Boton estandar
      */
-
-    .btn-standar{
+    .rbutton-standar{
         background-color: #FFF;
         border-color: #CCC;
     }
     
-    .btn-standar:hover{
+    .rbutton-standar:hover{
         border-color: #ADADAD;
         background-color: #E6E6E6;
     }
@@ -744,12 +695,12 @@ a.btn{
     /*
      * Boton primario
      */
-    .btn-primary{
+    .rbutton-primary{
         color: #FFF;
         border-color: #2E6DA4;
         background-color: #337AB7;
     }
-    .btn-primary:hover{
+    .rbutton-primary:hover{
         color: #FFF;
         border-color: #204D74;
         background-color: #286090;
@@ -758,12 +709,12 @@ a.btn{
     /*
      * Boton de exito
      */
-    .btn-success{
+    .rbutton-success{
         color: #FFF;
         border-color: #4CAE4C;
         background-color: #5CB85C;
     }
-    .btn-success:hover{
+    .rbutton-success:hover{
 	background-color:#449d44;
 	border-color:#398439
     }
@@ -771,11 +722,11 @@ a.btn{
     /*
      * Boton de información
      */
-    .btn-info{
+    .rbutton-info{
 	background-color:#5bc0de;
 	border-color:#46b8da        
     }
-    .btn-info:hover{
+    .rbutton-info:hover{
 	background-color:#31b0d5;
 	border-color:#269abc
     }
@@ -783,11 +734,12 @@ a.btn{
     /*
      * Boton de advertencia
      */
-    .btn-warning{
+    .rbutton-warning{
 	background-color:#f0ad4e;
 	border-color:#eea236
     }
-    .btn-warning:hover{
+    a.warning:hover,
+    button.warning:hover{
 	background-color:#ec971f;
 	border-color:#d58512
     }
@@ -795,11 +747,11 @@ a.btn{
     /*
      * Boton de error
      */
-    .btn-error{
+    .rbutton-error{
         background-color:#d9534f;
 	border-color:#d43f3a
     }
-    .btn-error:hover{
+    .rbutton-error:hover{
 	background-color:#c9302c;
 	border-color:#ac2925
     }
@@ -807,14 +759,14 @@ a.btn{
     /*
      *  Botones grupales
      */
-    .btn-group{
+    .button-group{
         font-size: 0;
     }
     
     /*
      *  Estilo generico para botones grupales
      */
-    .btn-group .btn{
+    .button-group [class^="rbutton"]{
         border-radius: 0;
         border-right-width: 0;
     }
@@ -822,7 +774,7 @@ a.btn{
     /*
      *  Primer boton grupal - izquierda a derecha
      */
-    .btn-group .btn:first-child{
+    .button-group [class^="rbutton"]:first-child{
         border-radius: 3px 0 0 3px !important;
         border-right: 0;
     }
@@ -830,7 +782,7 @@ a.btn{
     /*
      *  Primer boton grupal - izquierda a derecha
      */
-    .btn-group .btn:last-child{
+    .button-group [class^="rbutton"]:last-child{
         border-radius: 0 3px 3px 0 !important;
         border-right-width: 1px;
         
@@ -844,25 +796,25 @@ a.btn{
 
 /*
  *  Responsive Videos 
+ *  proporcion 16x9
  *  ~·~  ~·~  ~·~  ~·~
  */
-
 [class^="rvideo"]{
-    height: 0;
-    /*proporcion 16x9*/
-    padding-top: 25px;
-    
+    height: 0;    
     width: 50%;
-    padding-bottom: 28.125%;
-    
+    margin: 0 auto;
+    padding-top: 25px;        
+    padding-bottom: 28.125%;    
     /*
     width: 100%;
     padding-bottom: 56.25%;
     */
     position: relative;
-    margin: 0 auto;
 }
-
+    
+    /*
+     *  Iframe contenedor del video
+     */
     [class^="rvideo"] > iframe{
         position: absolute;
         top: 0;
@@ -870,7 +822,6 @@ a.btn{
         width: 100%;
         height: 100%;
     }
-   
 
 /*
  *  Responsive images
@@ -946,8 +897,6 @@ img{
     width: 50%;
 }
 
-
-
 /*
  *  Codigo
  */
@@ -975,9 +924,12 @@ hr{
     height: 2px;
 }
 
-hr.gray{
-    background-color: #CCC;
-}
+/*
+ *  Estilos de separadores
+ */
+    hr.gray{
+        background-color: #CCC;
+    }
 
 
 /*

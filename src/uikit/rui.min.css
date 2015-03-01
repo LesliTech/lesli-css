@@ -1,0 +1,23 @@
+/*
+ * Responsive Cat
+ *  
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <ldonis.emc2@gmail.com>
+ * @link http://ldonis.com 
+ * @license GNU GENERAL PUBLIC LICENSE
+ * @version 0.4.0 beta
+ */
+
+[class^="rbutton"]{padding:6px 12px;border-radius:3px;border:1px solid transparent}[class^="rbutton"]:hover{cursor:pointer}[class^="rbutton"]:active{box-shadow:0 0 0 1px rgba(0,0,0,0.15) inset,0 0 6px rgba(0,0,0,0.2) inset}a[class^="rbutton"]{font-size:12px;font-weight:400;line-height:15px;font-family:Sans}.rbutton-standar{background-color:#FFF;border-color:#CCC}.rbutton-standar:hover{border-color:#ADADAD;background-color:#E6E6E6}.rbutton-primary{color:#FFF;border-color:#2E6DA4;background-color:#337AB7}.rbutton-primary:hover{color:#FFF;border-color:#204D74;background-color:#286090}.rbutton-success{color:#FFF;border-color:#4CAE4C;background-color:#5CB85C}.rbutton-success:hover{background-color:#449d44;border-color:#398439}.rbutton-info{background-color:#5bc0de;border-color:#46b8da}.rbutton-info:hover{background-color:#31b0d5;border-color:#269abc}.rbutton-warning{background-color:#f0ad4e;border-color:#eea236}a.warning:hover,button.warning:hover{background-color:#ec971f;border-color:#d58512}.rbutton-error{background-color:#d9534f;border-color:#d43f3a}.rbutton-error:hover{background-color:#c9302c;border-color:#ac2925}.button-group{font-size:0}.button-group [class^="rbutton"]{border-radius:0;border-right-width:0}.button-group [class^="rbutton"]:first-child{border-radius:3px 0 0 3px!important;border-right:0}.button-group [class^="rbutton"]:last-child{border-radius:0 3px 3px 0!important;border-right-width:1px}[class^="rvideo"]{height:0;width:50%;margin:0 auto;padding-top:25px;padding-bottom:28.125%;position:relative}[class^="rvideo"] > iframe{position:absolute;top:0;left:0;width:100%;height:100%}img{height:auto;max-width:99.999%}

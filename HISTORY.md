@@ -4,7 +4,10 @@ Responsive Cat - Historial de cambios
 0.4.0 beta (12/02/2014)
 ------------------
 ### Formularios
-* Campos de informacion independientes
+* Cambio de paginadores a Nemo.css
+* Cambio de prefijo de columnas (col -> column[s])
+* Cambio en clase de botones (btn -> button-*)
+* Nueva sección destinada a la interfaz de usuario (interactivo)
 
 ### Paginadores
 * Estilos basicos
