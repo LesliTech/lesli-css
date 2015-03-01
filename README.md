@@ -13,7 +13,7 @@ Micro Framework CSS
 ```
 
 **Descargar**
-[Versión 0.3 beta](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
+[Versión 0.4.0-beta](https://github.com/ldonis/ResponsiveCat/archive/v0.4.0-beta.zip)
 
 Caracteristicas
 ---------------
@@ -24,13 +24,13 @@ Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptat
 
 * Menus verticales y horizontales predefinidos
 
-* Estilos para formularios
+* Tablas de datos personalizadas
 
-* Cajas de mensajes
+* Formularios con variedad de estilos
 
-* Variedad de estilos de botones
+* Kit de Interfaz de Usuario
 
-* Archivo extremadamente pequeño 9.1kb
+* Archivo extremadamente pequeño 9.9kb
 
 
 Navegadores soportados
