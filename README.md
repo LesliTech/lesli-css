@@ -1,4 +1,4 @@
-![''](http://rcat.ldonis.com/Website/rcat.ldonis.com/WebTemplate//img/rcat.png "Responsive cat")
+![''](http://ldonis.com/Websites/ldonis.com/project/img/rcat.png "Responsive cat")
 
 ResponsiveCat
 -----
