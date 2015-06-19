@@ -1,6 +1,6 @@
 /*
  * Responsive Cat
- *  
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -14,19 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * @author Luis Gdonis <ldonis.emc2@gmail.com>
- * @link http://ldonis.com 
- * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.4.0 beta
+ * @author Luis Gdonis <http://ldonis.com>
+ * @package RCat Structure
+ * @subpackage Grid System
+ * @version 0.5.0
  */
 
 /*
- *  Grids
- *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
- */
-
-/*
- *  Contenedor de columnas automaticas y manuales
+ * Contenedor de columnas automaticas y manuales
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
  */
 .rgrid{ 
     width: 100%;
@@ -34,21 +32,21 @@
 }
 
 /*
- *  Filas del grid
+ * Filas del grid
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
  */
-.rgrid > *{    
+.rgrid > *{
     height: 100%;    
-    font-size: 16px; /* IE8 */
     font-size: initial;    
     vertical-align: top;
     white-space: initial; 
     display: inline-block;
 }
-
 /*
- *  .rgrid
- *  Ancho de columnas automaticas
- *  col-n = width/n
+ * Ancho de columnas automaticas
+ * col-n = width/n
  */
 [class^="rgrid columns-02"] > * { width: 50.00%; }
 [class^="rgrid columns-03"] > * { width: 33.33%; }
@@ -87,3 +85,16 @@
 .rgrid > .column-7 { width: 70.00%; }
 .rgrid > .column-8 { width: 80.00%; }
 .rgrid > .column-9 { width: 90.00%; }
+
+/*
+ * MediaQueries
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+@media screen and (max-width : 320px){
+    .rgrid > *{
+        display: block;
+        width: 100%;
+    }
+}
