@@ -14,10 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * @author Luis Gdonis <ldonis.emc2@gmail.com>
- * @link http://ldonis.com 
- * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.4.0 beta
+ * @author Luis Gdonis <http://ldonis.com>
+ * @package RCat Structure
+ * @version 0.5.0
  */
 
 /*
@@ -56,6 +55,7 @@ html{
 body{ 
     background: #ffffff;
     color: #222222;
+    
     /*
      *  Tipografia
      */
@@ -69,7 +69,9 @@ body{
 
 /*
  *  Estilo de titulos
- *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
  */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
@@ -80,27 +82,9 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
 }
 
-    h1{
-        font-size: 2.38em;  /* IE8 */
-        font-size: 2.38rem;
-    }
-    h2{
-        font-size: 2.15em;  /* IE8 */
-        font-size: 2.15rem;
-    }
-    h3{
-        font-size: 1.92em;  /* IE8 */
-        font-size: 1.92rem;
-    }
-    h4{
-        font-size: 1.69em;  /* IE8 */
-        font-size: 1.69rem;
-    }
-    h5{
-        font-size: 1.46em;  /* IE8 */
-        font-size: 1.46rem;
-    }
-    h6{
-        font-size: 1.23em;  /* IE8 */
-        font-size: 1.23rem;
-    }
+    h1{ font-size: 2.38rem; }
+    h2{ font-size: 2.15rem; }
+    h3{ font-size: 1.92rem; }
+    h4{ font-size: 1.69rem; }
+    h5{ font-size: 1.46rem; }
+    h6{ font-size: 1.23rem; }

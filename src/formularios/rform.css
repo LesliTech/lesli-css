@@ -1,6 +1,6 @@
 /*
  * Responsive Cat
- *  
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -14,19 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * @author Luis Gdonis <ldonis.emc2@gmail.com>
- * @link http://ldonis.com 
- * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.4.0 beta
+ * @author Luis Gdonis <http://ldonis.com>
+ * @package RCat Structure
+ * @subpackage Formularios
+ * @version 0.5.0
  */
 
 /*
- *  Formularios
- *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  
- */
-
-/*
- *  Formulario estandar
+ * Formulario estandar
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
  */
 .rform{    
 }
@@ -52,11 +50,8 @@
     {
         border-radius: 3px;
         line-height: 1.65rem;
-        border: 1px solid #CCC;
         letter-spacing: 0.01rem;
-        padding: 0.35em 0.40em; /* IE8 */
         padding: 0.35rem 0.40rem;
-        box-shadow: inset 0 1px 3px #ddd;
     }
 
     /*
@@ -78,8 +73,6 @@
     .rform input[type="password"]:focus,
     .rform input[type="datetime"]:focus{ 
         outline: none;    
-        border-color: #129FEA;
-        box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
     }
 
     /*
@@ -100,125 +93,133 @@
     }
     
     
-    /* Estilos de formularios */    
+/*
+ * Formulario individual con prefijo
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+form.individual > div{
+    width: 100%;
+    font-size: 0;
+    white-space: nowrap;            
+}
 
-    /*
-     *  Individual con prefijo
-     */
-    form.individual > div{
-        width: 100%;
-        font-size: 0;
-        white-space: nowrap;            
-    }
-
-        form[class^="rform individual prefix"] > div > span,
-        form[class^="rform individual prefix"] > div > input{
-            font-size: 1rem;            
-            padding: 0.2rem !important;
-            white-space: initial;
-            display: inline-block;
-        }
-
-
-        form[class^= "rform individual prefix"] > div > span{
-            font-size: 16px; /* IE8 */
-            padding: 4px;    /* IE8 */
-            width: 25%;
-            background: #F2F2F2;
-            border: solid 1px #ccc;
-            border-right: medium none #CCC;
-        }
-
-        form[class^= "rform individual prefix"] > div > input{
-            width: 75%;
-            border-radius: 0px !important;
-        }
-    
-    /*
-     *  Individual con boton
-     */
-    form[class^="rform individual go"] > div > input{
-        font-size: 1rem;
+    form[class^="rform individual prefix"] > div > span,
+    form[class^="rform individual prefix"] > div > input{
+        font-size: 1rem;            
         padding: 0.2rem !important;
         white-space: initial;
         display: inline-block;
+    }
+
+    form[class^= "rform individual prefix"] > div > span{
+        width: 25%;
+        background: #F2F2F2;
+        border: solid 1px #ccc;
+        border-right: medium none #CCC;
+    }
+
+    form[class^= "rform individual prefix"] > div > input{
+        width: 75%;
         border-radius: 0px !important;
     }
     
-        /*
-         *  Campo de texto
-         */
-        form[class^= "rform individual go"] > div > input:first-child{
-            width: 85%;
-        }
+/*
+ * Formulario individual con boton
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+form[class^="rform individual go"] > div > input{
+    font-size: 1rem;
+    padding: 0.2rem !important;
+    white-space: initial;
+    display: inline-block;
+    border-radius: 0px !important;
+}
 
-        /*
-         *  boton
-         */
-        form[class^= "rform individual go"] > div > .btn{
-            width: 15%;
-            height: 2.2rem;
-            padding: 0.4em 2em; /* IE8 */
-        }
-    
     /*
-     *  Lineal
+     *  Campo de texto
      */
+    form[class^= "rform individual go"] > div > input:first-child{
+        width: 85%;
+    }
+
+    /*
+     *  boton
+     */
+    form[class^= "rform individual go"] > div > button,
+    form[class^= "rform individual go"] > div > input[type="submit"]{
+        width: 15%;
+        height: 2.2rem;
+    }
+    
+/*
+ * Formulario lineal
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
     form.inline{
+    }
 
+/*
+ * Formulario en bloque
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+form.block{            
+    text-align: left;
+    display: block;
+    margin: 0 auto;
+}
+
+    form.block input,
+    form.block select{
+        margin: 10px 0 !important;
+        width: 100%;
+        display: block;
+    }
+    
+/*
+ * Formulario alineado
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+form.align{
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+}
+
+    /*
+     *  Contenedor de controles
+     */
+    form.align > div{
+        width: 100%;
+        margin-bottom: 5px;
+        display: inline-block;
     }
 
     /*
-     *  Bloque
+     *  Controles alineados
      */
-    form.block{            
-        text-align: left;
-        display: block;
-        margin: 0 auto;
-    }
-    
-        form.block input,
-        form.block select{
-            margin: 10px 0 !important;
-            width: 100%;
-            display: block;
-        }
-    
-    /*
-     *  Alineado
-     */
-    form.align{
-        width: 500px;
-        display: block;
-        margin: 0 auto;
-        text-align: left;
+    form.align > div input{
+        display: inline-block;
+        width: 50%;
     }
 
-        /*
-         *  Contenedor de controles
-         */
-        form.align > div{
-            width: 100%;
-            margin-bottom: 5px;
-            display: inline-block;
-        }
-        
-        /*
-         *  Controles alineados
-         */
-        form.align > div input{
-            display: inline-block;
-            width: 50%;
-        }
-        
-        form.align > div label{
-            display: inline-block;
-            width: 10rem;
-            width: 10em;    /* IE8 */
-            text-align: right;            
-            vertical-align: middle;
-            margin: 0px 1em 0px 0px;
-        }
+    form.align > div label{
+        display: inline-block;
+        width: 10rem;
+        text-align: right;            
+        vertical-align: middle;
+        margin: 0px 1em 0px 0px;
+    }
         
     /*
      *  Grupal

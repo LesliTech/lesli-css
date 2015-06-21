@@ -14,10 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * @author Luis Gdonis <ldonis.emc2@gmail.com>
- * @link http://ldonis.com 
- * @license GNU GENERAL PUBLIC LICENSE
- * @version 0.4.0 beta
+ * @author Luis Gdonis <http://ldonis.com>
+ * @package RCat Structure
+ * @version 0.5.0
  */
 
-.rtable{width:100%;max-width:100%;line-height:1.6;empty-cells:show;border-spacing:0}.rtable thead{text-align:left;vertical-align:bottom}.rtable td,.rtable th{padding:.5em 1em}table.gray{border:1px solid #CBCBCB;border-left:none}table.gray thead{background:#E0E0E0;color:#000;text-align:left;vertical-align:bottom}table.gray td,table.gray th{border-left:1px solid #CBCBCB}table.gray tbody tr:nth-child(even){background-color:#ececec}table.blue{border:1px solid #59aee2;border-left:none}table.blue thead{background:#70c0f2;color:#000;text-align:left;vertical-align:bottom}table.blue td,table.blue th{border-left:1px solid #59aee2}table.blue tbody tr:nth-child(even){background-color:#a9ddfe}
+.rtable{width:100%;max-width:100%;line-height:1.6;empty-cells:show;border-spacing:0}.rtable thead{text-align:left;vertical-align:bottom}.rtable td,.rtable th{padding:.5em 1em}

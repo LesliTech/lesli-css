@@ -1,6 +1,15 @@
 Responsive Cat - Historial de cambios
 ===================
 
+0.5.0 (00/07/2015)
+------------------
+### Compatibilidad
+
+### Grid System
+* Breakpoints
+
+
+
 0.4.0 beta (28/02/2014)
 ------------------
 ### Formularios
