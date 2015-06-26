@@ -257,6 +257,30 @@ a[class^="rbutton"]{
     }
 
 /*
+ * Boton circular
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+[class^="rbutton"].circle{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/*
+ * Boton ovalado
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+[class^="rbutton"].oval{
+    border-radius: 45px;
+    text-align: center;
+}
+
+/*
  * Tablas
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */

@@ -6,14 +6,8 @@ ResponsiveCat
 Micro Framework CSS
 
 
-**Usar desde CDN:**
-
-```html
-<link rel="stylesheet" href="http://tools.ldonis.net/rcat/rcat.min.css">
-```
-
 **Descargar**
-[Versión 0.4.0-beta](https://github.com/ldonis/ResponsiveCat/archive/v0.4.0-beta.zip)
+[Versión 0.5.0-RC](https://github.com/ldonis/ResponsiveCat/archive/v0.5.0-RC.zip)
 
 Caracteristicas
 ---------------

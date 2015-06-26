@@ -80,7 +80,6 @@
      */
     .rform input[type="submit"],
     .rform input[type="button"]{
-        padding: 0.43em 1em; /* IE8 */
         padding: 0.61rem 1rem;
     }
     
