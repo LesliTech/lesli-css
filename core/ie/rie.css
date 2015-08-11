@@ -1,0 +1,136 @@
+/*
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <http://ldonis.com>
+ * @package RCat Structure
+ * @subpackage IE Compatibility
+ * @version 0.5.0
+ */
+
+/*
+ *  Estilo de titulos
+ *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+h1{ font-size: 2.38em; }
+h2{ font-size: 2.15em; }
+h3{ font-size: 1.92em; }
+h4{ font-size: 1.69em; }
+h5{ font-size: 1.46em; }
+h6{ font-size: 1.23em; }
+
+/*
+ * Filas del grid
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+.rgrid > *{    
+    font-size: 16px; /* IE8 */
+}
+
+/*
+ * Formulario estandar
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+.rform select,
+.rform textarea,
+.rform input[type="tel"],
+.rform input[type="url"],
+.rform input[type="text"],
+.rform input[type="date"],
+.rform input[type="time"],
+.rform input[type="email"],
+.rform input[type="phone"],
+.rform input[type="month"],
+.rform input[type="color"],
+.rform input[type="number"],
+.rform input[type="search"],
+.rform input[type="password"],
+.rform input[type="datetime"]    
+{
+    padding: 0.35em 0.40em; /* IE8 */
+}
+
+    /*
+     *  Botones de formularios
+     */
+    .rform input[type="submit"],
+    .rform input[type="button"]{
+        padding: 0.43em 1em; /* IE8 */
+    }
+    
+/*
+ * Formulario individual con prefijo
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+form[class^= "rform individual prefix"] > div > span{
+    font-size: 16px; /* IE8 */
+    padding: 4px;    /* IE8 */
+}
+
+/*
+ *  boton
+ */
+form[class^= "rform individual go"] > div > .btn{
+    padding: 0.4em 2em; /* IE8 */
+}
+
+/*
+ * Formulario alineado
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+form.align > div label{
+    width: 10em;    /* IE8 */
+}
+
+/*
+ *  Menu estandar
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+.rnavbar li{
+    font-size: 16px; /* IE8 */
+}
+
+/*
+ *  Enlaces
+ */
+.rnavbar a{
+    padding: 0.3em 0.8em;    /* IE8 */
+}
+
+/*
+ *  Menu doble
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */    
+nav.doble > ul{
+    font-size: 16px; /* IE8 */
+} 
+        
+    nav.doble .right{        
+        text-align: right; /* IE8 */
+    }

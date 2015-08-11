@@ -4,248 +4,56 @@
     <meta charset="utf-8">
     <title>Responsive Cat</title>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/version-estable/rcat-full.css" type="text/css">
+    <link rel="stylesheet" href="src/base/rbase.css" type="text/css">
+    <link rel="stylesheet" href="src/formularios/rform.css" type="text/css">
+    <link rel="stylesheet" href="src/grid/rgrid.css" type="text/css">
+    <link rel="stylesheet" href="src/navegacion/rnav.css" type="text/css">
+    <link rel="stylesheet" href="src/tablas/rtablas.css" type="text/css">
     <link rel="stylesheet" href="src/uikit/rui.css" type="text/css">
-    
-    <script>
-        /* Aside hight 100% */
-        function script(){
-            var h = window.innerHeight;            
-            document.getElementById('aside').style.height = h+'px';
-        }
-    </script>
     <style>
-
         body{            
             background-color:#fff;
             color:#222;
         }
         
         /*
-         *  Barra lateral
-         */
-        .aside{
-            position:fixed;
-            top:0;
-            left: -175px;
-            padding: 5px 0;
-            width:175px;
-            color:#eee;
-            background-color:#2c2c2c;
-            transition: all linear 0.4s;
-        }
-        .aside:hover{
-            left: -0px;
+         *  Contenedor principal de documentacion
+         */        
+        section{
+            width: 90%;
+            margin: auto;
+            text-align: center;
         }
 
         /*
-         *  Icono de menu
+         *  Contenedor demo
          */
-        .aside span.icon-menu{
-            display: block;
-            position: absolute;
-            width: 230px;
-            color:  #313131;
-            font-size: 2.5rem;
-            text-align: right;
-            background-color: transparent;
-            transition: all linear 0.4s;
-        }
-        .aside:hover span.icon-menu{
-            color: transparent;
-        }
-
-        .aside ul{
-            line-height:42px;
-            margin-top:25px;
+        .demo{
+            margin: 10px auto;
         }
         
         /*
-         *  Contenedor de enlaces
+         *  Hacks!
          */
-        .aside ul li{
-            text-align:left;
-            padding-left:10px;
-            transition:all linear .3s;
-            box-shadow:4px 0 rgba(255,255,255,0.2) inset;
-        }
-        .aside ul li:hover{
-            box-shadow:175px 0 rgba(255,255,255,0.2) inset;
-        }
-        
-        /*
-         *  Enlaces del menu
-         */
-        .aside ul li a{
-            display:block;
-            padding-left:10px;
-            background:transparent;
-            text-transform:uppercase;
-        }
-        
-        /* 
-         *  Separador de menus
-         */
-        .aside hr{
-            height:1px;
-            width:95%;
-            background-color:#6d6d6d
-        }
-        
-        /*
-         *  Logo de menu
-         */
-        .aside a img{
-            width:100px;
-        }
-        
-        /*
-         *  Encabezado
-         */
-        header{
-            background-color:#f5f5f5;
-            color:#4291c4;
-        }
-        
-        /*
-         *  Logo rCat
-         */
-        header img{
-            padding:20px 0 10px;
-        }
-        
-        /*
-         *  Titulo
-         */
-        header h1{
-            font-size:4rem;
-        }
-        
-        /*
-         *  Menu principal (encabezado)
-         */
-        header nav{
-            padding:40px;
-            border:1px solid #b4b4b4;
-            background-color:#EEE;
-        }
-        
-            /*
-             *  Enlaces
-             */
-            header nav a{
-                width:180px;
-                color:#2165a6;
-                font-weight:100;
-                font-family:sans-serif;
-                font-size:1.5rem!important;
-                font-size:1.5em!important;
-                transition:all .2s linear 0s;
-                border-bottom:1px solid transparent;
-            }            
-            header nav a:hover{
-                color:#222;border-bottom-color:#e74c3c;
-            }
-            
-            /*
-             *  Contenedor principal de documentacion
-             */
-            section{
-                margin:0 auto;
-                max-width:1200px;
-                padding:100px 0;
-            }
-            
-            /*
-             *  Titulo de funcionalidad
-             */
-            section article > h2{
-                text-align:center;
-                font-size:3rem;
-            }
-            
-            /*
-             *  Descripcion de funcionalidad
-             */
-            section article > p{
-                color:#222;
-                font-size:1.5rem;
-                text-align:center;
-            }
-            
-            section article>hr{
-                height:1px;
-                width:85%;
-                margin:50px auto;
-                background-color:#6d6d6d;
-            }
-            
-            section article>h6{text-align:center}
-            
-            /*
-             *  Resultado de funcionalidad
-             */
-            .demo{
-                margin:20px 0;
-                font-family:sans-serif!important;
-            }
-            
-            /*
-             *  Hacks!
-             */
-            .demo .rgrid div{padding:25px 0;border:1px solid #CCC;background-color:#7e9ec7;color:#FFF}
-            .demo .rform{margin:0 auto;width:600px}.demo form.block{width:250px}.demo form.group{width:350px}            
-
+       .demo .rgrid div,
+       .demo .rblock div{padding: 15px 0;border:1px solid #CCC;background-color:#7e9ec7;color:#FFF;}
+       .demo .rgrid div{margin-top: 1%;}
     </style>
 </head>
-<body onload="script()">
-    
-    <section id="aside" class="aside center">
-        <span class="icon-menu">&Assign;</span>
-        <a href="http://ldonis.com" target="blank"><img alt="ldonis" src="http://ldonis.com/Website/ldonis.com/WebTemplate/img/ldonis2.svg" class="center"></a>
-        <ul>
-            <li><a href="http://rcat.ldonis.com">rcat</a></li>
-            <li><hr></li>
-            <li><a href="#tipografia">tipografia</a></li>
-            <li><a href="#grids">grids</a></li>
-            <li><a href="#tablas">tablas</a></li>
-            <li><a href="#formularios">formularios</a></li>
-            <li><a href="#navegacion">navegacion</a></li>
-            <li><a href="#paginadores">paginadores</a></li>
-            <li><a href="#botones">botones</a></li>
-            <li><hr></li>
-            <li><a href="#r-videos">R-Videos</a></li>
-            <li><hr></li>
-            <li><a href="http://blog.ldonis.com/" target="blank">blog</a></li>
-            <li><a href="#contribuir">contribuir</a></li>
-        </ul>
-    </section>
-    
-    <header class="center">
-        <a name="rcat"></a>
-        <img alt="ResponsiveCat" src="http://rcat.ldonis.com/Website/rcat.ldonis.com/WebTemplate//img/rcat.png" class="center">
-        <h1 class="center">Responsive Cat</h1>
-        <nav class="rnavbar center">
-            <ul>
-                <li><a href="https://github.com/ldonis/responsivecat">github</a></li>
-                <li><a href="http://ldonis.com">ldonis</a></li>
-                <li><a href="https://github.com/ldonis/responsivecat/issues">issues</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <!--
-        Tipografia
-    -->    
+<body>
+
     <section>
-        <article>
-            <a name="tipografia"></a>
-            <h2>Tipografia</h2>
-            <p>Titulos, parrafos, citas, listas y otros elementos necesarios</p>
-            <hr>
-        </article>
-        <article>
-            <div class="center">
+        
+        <!--
+            Tipografia
+        --> 
+        <article id="tipografia">
+            <div>
+                <h2>Tipografia</h2>
+                <p>Titulos, parrafos, citas, listas y otros elementos necesarios</p>
+            </div>
+
+            <div class="demo center">
                 <h1>&lt;h1&gt;Titulo&lt;/h1&gt;</h1>
                 <h2>&lt;h2&gt;Titulo&lt;/h2&gt;</h2>
                 <h3>&lt;h3&gt;Titulo&lt;/h3&gt;</h3>
@@ -253,785 +61,455 @@
                 <h5>&lt;h5&gt;Titulo&lt;/h5&gt;</h5>
                 <h6>&lt;h6&gt;Titulo&lt;/h6&gt;</h6>
             </div>
-        </article>
-    </section>
-    
-    <!--
-        Grid system
-    -->
-    
-    <section>
-        <article>
-            <a name="grids"></a>
-            <h2>Grids</h2>
-            <p>Completo y flexible sistema de grids</p>
-            <hr>
-        </article>
-        
-        <article>
-            <h6>Grid automatico</h6>
-            <code>
-                        &lt;div class="rgrid columns-3"&gt;
-                            &lt;div&gt;columna 01&lt;/div&gt;
-                            &lt;div&gt;columna 02&lt;/div&gt;
-                            &lt;div&gt;columna 03&lt;/div&gt;
-                        &lt;/div&gt;
-            </code>            
-            <div class="demo">
-                <div class="rgrid columns-03 center">
-                    <div>columna 1</div>
-                    <div>columna 2</div>
-                    <div>columna 3</div>
-                </div>                
-            
-                <div class="rgrid columns-06 center">
-                    <div>col-1</div>
-                    <div>col-2</div>
-                    <div>col-3</div>
-                    <div>col-4</div>
-                    <div>col-5</div>
-                    <div>col-6</div>
-                </div>
-                
-                <div class="rgrid columns-12 center">
-                    <div>col-1</div>
-                    <div>col-2</div>
-                    <div>col-3</div>
-                    <div>col-4</div>
-                    <div>col-5</div>
-                    <div>col-6</div>
-                    <div>col-7</div>
-                    <div>col-8</div>
-                    <div>col-9</div>
-                    <div>col-10</div>
-                    <div>cpl-11</div>
-                    <div>cpl-12</div>
-                </div>
-                <div class="rgrid columns-24 center">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-                    <div>11</div>
-                    <div>12</div>
-                    <div>13</div>
-                    <div>14</div>
-                    <div>15</div>
-                    <div>16</div>
-                    <div>17</div>
-                    <div>18</div>
-                    <div>19</div>
-                    <div>20</div>
-                    <div>21</div>
-                    <div>22</div>
-                    <div>23</div>
-                    <div>24</div>
-                </div>
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Grid manual</h6>
-            <code>
-                        &lt;div class="rgrid"&gt;
-                            &lt;div class="column-1"&gt;&lt;/div&gt;
-                            &lt;div class="column-2"&gt;&lt;/div&gt;
-                            &lt;div class="column-3"&gt;&lt;/div&gt;
-                            &lt;div class="column-4"&gt;&lt;/div&gt;
-                            &lt;div class="column-n"&gt;&lt;/div&gt;
-                            &lt;div class="column-9"&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-            </code>
-            <div class="demo">
-                <div class="rgrid center">
-                    <div class="column-9">col-9</div>
-                    <div class="column-1">col-1</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-8">col-8</div>
-                    <div class="column-2">col-2</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-7">col-7</div>
-                    <div class="column-3">col-3</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-6">col-6</div>
-                    <div class="column-4">col-4</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-5">col-5</div>
-                    <div class="column-5">col-5</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-4">col-4</div>
-                    <div class="column-6">col-6</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-3">col-3</div>
-                    <div class="column-7">col-7</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-2">col-2</div>
-                    <div class="column-8">col-8</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-1">col-1</div>
-                    <div class="column-9">col-9</div>
-                </div>
-                
-                <div class="rgrid center">
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                    <div class="column-1">col-1</div>
-                </div>
-            </div>
-        </article>
-    </section>
-    
-    <!-- 
-        Tablas
-    -->
-    <section>
-        <article>
-            <a name="tablas"></a>
-            <h2>Tablas</h2>
-            <a name="tablas"></a>
-            <p>Tabla con estilo</p>
-            <hr>
-        </article>
-        
-        <article>
-            <h6>Tabla estandar</h6>
-            <code>
-                        &lt;table class='rtable gray'&gt;
-                            &lt;thead&gt;
-                                &lt;tr&gt;
-                                    &lt;th&gt;titulo 1&lt;/th&gt;
-                                    &lt;th&gt;titulo 2&lt;/th&gt;
-                                    &lt;th&gt;titulo 3&lt;/th&gt;
-                                    &lt;th&gt;titulo 4&lt;/th&gt;
-                                    &lt;th&gt;titulo 5&lt;/th&gt;
-                                &lt;/tr&gt;
-                            &lt;/thead&gt;
-                            &lt;tbody class='impar'&gt;
-                                &lt;tr&gt;
-                                    &lt;td&gt;row 1 col 1&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 2&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 3&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 4&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 5&lt;/td&gt;
-                                &lt;/tr&gt;
-                            &lt;/tbody&gt;
-                        &lt;/table&gt;
-            </code>            
-            <div class="demo">        
-                <table class='rtable'>
-                    <thead>
-                        <tr>
-                            <th>titulo 1</th>
-                            <th>titulo 2</th>
-                            <th>titulo 3</th>
-                            <th>titulo 4</th>
-                            <th>titulo 5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>row 1 col 1</td>
-                            <td>row 1 col 2</td>
-                            <td>row 1 col 3</td>
-                            <td>row 1 col 4</td>
-                            <td>row 1 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 2 col 1</td>
-                            <td>row 2 col 2</td>
-                            <td>row 2 col 3</td>
-                            <td>row 2 col 4</td>
-                            <td>row 2 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 3 col 1</td>
-                            <td>row 3 col 2</td>
-                            <td>row 3 col 3</td>
-                            <td>row 3 col 4</td>
-                            <td>row 3 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 4 col 1</td>
-                            <td>row 4 col 2</td>
-                            <td>row 4 col 3</td>
-                            <td>row 4 col 4</td>
-                            <td>row 4 col 5</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Tabla color</h6>
-            <code>
-                        &lt;table class='rtable [gray][blue]'&gt;
-                            &lt;thead&gt;
-                                &lt;tr&gt;
-                                    &lt;th&gt;titulo 1&lt;/th&gt;
-                                    &lt;th&gt;titulo 2&lt;/th&gt;
-                                    &lt;th&gt;titulo 3&lt;/th&gt;
-                                    &lt;th&gt;titulo 4&lt;/th&gt;
-                                    &lt;th&gt;titulo 5&lt;/th&gt;
-                                &lt;/tr&gt;
-                            &lt;/thead&gt;
-                            &lt;tbody class='impar'&gt;
-                                &lt;tr&gt;
-                                    &lt;td&gt;row 1 col 1&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 2&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 3&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 4&lt;/td&gt;
-                                    &lt;td&gt;row 1 col 5&lt;/td&gt;
-                                &lt;/tr&gt;
-                            &lt;/tbody&gt;
-                        &lt;/table&gt;
-            </code>            
-            <div class="demo">        
-                <table class='rtable gray'>
-                    <thead>
-                        <tr>
-                            <th>titulo 1</th>
-                            <th>titulo 2</th>
-                            <th>titulo 3</th>
-                            <th>titulo 4</th>
-                            <th>titulo 5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>row 1 col 1</td>
-                            <td>row 1 col 2</td>
-                            <td>row 1 col 3</td>
-                            <td>row 1 col 4</td>
-                            <td>row 1 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 2 col 1</td>
-                            <td>row 2 col 2</td>
-                            <td>row 2 col 3</td>
-                            <td>row 2 col 4</td>
-                            <td>row 2 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 3 col 1</td>
-                            <td>row 3 col 2</td>
-                            <td>row 3 col 3</td>
-                            <td>row 3 col 4</td>
-                            <td>row 3 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 4 col 1</td>
-                            <td>row 4 col 2</td>
-                            <td>row 4 col 3</td>
-                            <td>row 4 col 4</td>
-                            <td>row 4 col 5</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <table class='rtable blue'>
-                    <thead>
-                        <tr>
-                            <th>titulo 1</th>
-                            <th>titulo 2</th>
-                            <th>titulo 3</th>
-                            <th>titulo 4</th>
-                            <th>titulo 5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>row 1 col 1</td>
-                            <td>row 1 col 2</td>
-                            <td>row 1 col 3</td>
-                            <td>row 1 col 4</td>
-                            <td>row 1 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 2 col 1</td>
-                            <td>row 2 col 2</td>
-                            <td>row 2 col 3</td>
-                            <td>row 2 col 4</td>
-                            <td>row 2 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 3 col 1</td>
-                            <td>row 3 col 2</td>
-                            <td>row 3 col 3</td>
-                            <td>row 3 col 4</td>
-                            <td>row 3 col 5</td>
-                        </tr>
-                        <tr>
-                            <td>row 4 col 1</td>
-                            <td>row 4 col 2</td>
-                            <td>row 4 col 3</td>
-                            <td>row 4 col 4</td>
-                            <td>row 4 col 5</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-            </div>
-        </article>
-    </section>
-    
-    <!-- 
-        Formularios
-    -->
-    
-    <section>
-        <article>
-            <a name="formularios"></a>
-            <h2>Formularios</h2>
-            <p>Set de formularios</p>
-            <hr>
-        </article>
-        
-        <article>
-            <h6>Formularios individuales</h6>
-            <code>
-                        &lt;form class="rform individual prefix"&gt;
-                            &lt;div&gt;
-                                &lt;span&gt;
-                                    http://
-                                &lt;/span&gt;
-                                &lt;input type="text" placeholder="Ingrese url..."&gt;
-                            &lt;/div&gt;
-                        &lt;/form&gt;
-                        
-                        &lt;form class="rform individual go"&gt;
-                            &lt;div&gt;
-                                &lt;input type="text" placeholder="click me!"&gt;
-                                &lt;input type="button" class="rbutton primary" value="Go"&gt;
-                            &lt;/div&gt;
-                        &lt;/form&gt;
-            </code>            
-            <div class="demo">        
-                <form class="rform individual prefix">
-                    <div>
-                        <span>
-                            http://
-                        </span>
-                        <input type="text" placeholder="Ingrese url...">
-                    </div>
-                </form>
-                <br>
-                <form class="rform individual go">
-                    <div>
-                        <input type="text" placeholder="click me!">
-                        <input type="button" class="rbutton-primary" value="Go">
-                    </div>
-                </form>
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Formularios en linea</h6>
-            <code>
-                        &lt;form class="rform inline"&gt;
-                            &lt;input type="email" placeholder="Email"&gt;
-                            &lt;input type="password" placeholder="Password"&gt;
-                            &lt;button type="submit" class="rbutton-primary"&gt;aceptar&lt;/button&gt;
-                        &lt;/form&gt;
-            </code>            
-            <div class="demo">        
-                <form class="rform inline">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="submit" class="rbutton-primary" value="Aceptar">
-                </form>
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Formularios en bloque</h6>
-            <code>
-                        &lt;form class="rform block"&gt;
-                            &lt;label for="email"&gt;Email&lt;/label&gt;
-                                &lt;input id="email" type="email" placeholder="Email"&gt;
-                            &lt;label for="password"&gt;Password&lt;/label&gt;
-                                &lt;input id="password" type="password" placeholder="Password"&gt;
-                            &lt;label for="state"&gt;Pais&lt;/label&gt;
-                                &lt;select id="state"&gt;
-                                    &lt;option&gt;Guatemala&lt;/option&gt;
-                                    &lt;option&gt;Mexico&lt;/option&gt;
-                                    &lt;option&gt;Etc...&lt;/option&gt;
-                                &lt;/select&gt;
-                            &lt;input type="submit" class="rbutton-primary" value="aceptar"&gt;
-                        &lt;/form&gt;
-            </code>            
-            <div class="demo">        
-                <form class="rform block">
-                    <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="Email">
-                    <label for="password">Password</label>
-                        <input id="password" type="password" placeholder="Password">
-                    <label for="state">Pais</label>
-                        <select id="state">
-                            <option>Guatemala</option>
-                            <option>Mexico</option>
-                            <option>Etc...</option>
-                        </select>
-                    <input type="submit" class="rbutton-primary" value="aceptar">
-                </form>
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Formulario alineado</h6>
-            <code>
-                        &lt;form class="rform align"&gt;
-                            &lt;div&gt;
-                                &lt;label&gt;Nombre:&lt;/label&gt;
-                                &lt;input type="text" placeholder="Nombre"&gt;
-                            &lt;/div&gt;
-                            &lt;div&gt;
-                                &lt;label&gt;Apellidos:&lt;/label&gt;
-                                &lt;input type="text" placeholder="Apellidos"&gt;
-                            &lt;/div&gt;
-                            &lt;div&gt;
-                                &lt;label&gt;Edad:&lt;/label&gt;
-                                &lt;input type="number"&gt;
-                            &lt;/div&gt;
-                            &lt;div&gt;
-                                &lt;label&gt;Aceptar&lt;/label&gt;
-                                &lt;input type="button" value="aceptar" class="rbutton-primary"&gt;
-                            &lt;/div&gt;
-                        &lt;/form&gt;
-            </code>            
-            <div class="demo">        
-                <form class="rform align">
-                    <div>
-                        <label>Nombre:</label>
-                        <input type="text" placeholder="Nombre">
-                    </div>
-                    <div>
-                        <label>Apellidos:</label>
-                        <input type="text" placeholder="Apellidos">
-                    </div>
-                    <div>
-                        <label>Edad:</label>
-                        <input type="number">
-                    </div>
-                    <div>
-                        <label>Aceptar</label>
-                        <input type="button" value="aceptar" class="rbutton-primary">
-                    </div>
-                </form>
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Formulario grupal</h6>
-            <code>
-                        &lt;form class="rform group"&gt;
-                            &lt;div&gt;
-                                &lt;input type="text" placeholder="Nombres"&gt;
-                                &lt;input type="text" placeholder="Apellidos"&gt;
-                                &lt;input type="text" placeholder="E-mail"&gt;
-                            &lt;/div&gt;
-                            &lt;div&gt;
-                                &lt;input type="text" placeholder="Usuario"&gt;
-                                &lt;input type="password" placeholder="Contraseña"&gt;
-                                &lt;input type="button" value="aceptar" class="rbutton-primary"&gt;
-                            &lt;/div&gt;
-                        &lt;/form&gt;
-            </code>            
-            <div class="demo">        
-                <form class="rform group">
-                    <div>
-                        <input type="text" placeholder="Nombres">
-                        <input type="text" placeholder="Apellidos">
-                        <input type="text" placeholder="E-mail">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Usuario">
-                        <input type="password" placeholder="Contraseña">
-                        <input type="button" value="aceptar" class="rbutton-primary">
-                    </div>
-                </form>
-            </div>
-        </article>        
-    </section>
-    
-    <!-- 
-        Menus de navegacion
-    -->
-   
-    <section>
-        <article>
-            <a name="navegacion"></a>
-            <h2>Navegación</h2>
-            <p>Set de menus y estilo para enlaces</p>
-            <hr>
-        </article>
-        
-        <article>
-            <h6>Menu estandar</h6>
-            <code>
-                        &lt;nav class="rnavbar"&gt;
-                            &lt;ul&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/nav&gt;
-            </code>            
-            <div class="demo">     
-                <nav class="rnavbar center">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </article>
-        
-        <br><br>
-        <article>
-            <h6>Menu estandar</h6>
-            <code>
-                        &lt;nav class="rnavbar doble"&gt;
-                            &lt;ul&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                            &lt;/ul&gt;
-                            &lt;ul&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;Sign In&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="#"&gt;LogIn&lt;/a&gt;&lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/nav&gt;
-            </code>            
-            <div class="demo">     
-                <nav class="rnavbar doble">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    <ul class="right">
-                        <li><a href="#">Sign In</a></li>
-                        <li><a href="#">LogIn</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </article>
-        
-        <br><br>
-        <article>
-            <h6>Menu multi nivel</h6>
-            <code>
-                &lt;nav class="rnavbar multi"&gt;
-                    &lt;ul&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;
-                            &lt;ul&gt;
-                                &lt;li&gt;&lt;a&gt;Product 01&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a&gt;Product 02&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a&gt;Product 03&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a&gt;Product 04&lt;/a&gt;&lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/nav&gt;
-            </code>            
-            <div class="demo">     
-                
-                <nav class="rnavbar multi  center">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a>
-                            <ul>
-                                <li><a>Product 01</a></li>
-                                <li><a>Product 02</a></li>
-                                <li><a>Product 03</a></li>
-                                <li><a>Product 04</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
 
-            </div>
         </article>
+        <!--
+            Tipografia
+        --> 
+
+        <br><br>
+        
+        <!--
+            Grids
+        --> 
+        <article id="grid">
+            <div>
+                <h2>Grids</h2>
+                <p>Completo y flexible sistema de grids</p>
+            </div>
+            
+            <br>
+            
+            <h5>Grid automatico</h5>
+            <code>
+                &lt;div class="rgrid columns-3"&gt;
+                    &lt;div&gt;columna 01&lt;/div&gt;
+                    &lt;div&gt;columna 02&lt;/div&gt;
+                    &lt;div&gt;columna 03&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="rgrid columns-4"&gt;
+                    &lt;div&gt;columna 01&lt;/div&gt;
+                    &lt;div&gt;columna 02&lt;/div&gt;
+                    &lt;div&gt;columna 03&lt;/div&gt;
+                    &lt;div&gt;columna 04&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            
+            <div class="demo">
+                
+                <div class="rgrid columns-03">
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                </div>
+                
+                <div class="rgrid columns-04">
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                </div>
+                
+            </div>
+            
+            <br>
+            
+            <h5>Grid automatico disponible</h5>
+            <div class='demo'>
+                
+                <div class='rgrid columns-02'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                </div>
+                
+                <div class='rgrid columns-03'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                </div>
+                
+                <div class='rgrid columns-04'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                </div>
+                
+                <div class='rgrid columns-05'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                </div>
+                
+                <div class='rgrid columns-06'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                </div>
+                
+                <div class='rgrid columns-07'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                </div>
+                
+                <div class='rgrid columns-08'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                </div>
+
+                <div class='rgrid columns-09'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                </div>
+                
+                <div class='rgrid columns-10'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                    <div>columna 10</div>
+                </div>
+                
+                <div class='rgrid columns-11'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                    <div>columna 10</div>
+                    <div>columna 11</div>
+                </div>
+                
+                <div class='rgrid columns-12'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                    <div>columna 10</div>
+                    <div>columna 11</div>
+                    <div>columna 12</div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <h5>Grid manual</h5>
+            <code>
+                &lt;div class="rgrid"&gt;
+                   &lt;div class="column-1"&gt;&lt;/div&gt;
+                   &lt;div class="column-2"&gt;&lt;/div&gt;
+                   &lt;div class="column-3"&gt;&lt;/div&gt;
+                   &lt;div class="column-4"&gt;&lt;/div&gt;
+                   &lt;div class="column-n"&gt;&lt;/div&gt;
+                   &lt;div class="column-9"&gt;&lt;/div&gt;
+               &lt;/div&gt;
+            </code>
+
+            <div class='demo'>
+                <div class='rgrid'>
+                    <div class="column-3">col-3</div>
+                    <div class="column-7">col-7</div>
+                </div>
+                
+                <div class='rgrid'>
+                    <div class="column-2">col-2</div>
+                    <div class="column-2">col-2</div>
+                    <div class="column-6">col-6</div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <h5>Grid manual disponible</h5>
+            <div class="demo">
+                <div class="rgrid">
+                    <div class="column-9">col-9</div>
+                    <div class="column-1">col-1</div>
+                </div>
+                
+                <div class="rgrid">
+                    <div class="column-8">col-8</div>
+                    <div class="column-2">col-2</div>
+                </div>
+                
+                <div class="rgrid">
+                    <div class="column-7">col-7</div>
+                    <div class="column-3">col-3</div>
+                </div>
+                
+                <div class="rgrid">
+                    <div class="column-6">col-6</div>
+                    <div class="column-4">col-4</div>
+                </div>
+                
+                <div class="rgrid">
+                    <div class="column-5">col-5</div>
+                    <div class="column-5">col-5</div>
+                </div>
+                
+            </div>
+            
+        </article>
+        <!--
+            Grids
+        --> 
+
+        <br><br>
+        
+        <!--
+            Blocks
+        --> 
+        <article id="block">
+            <div>
+                <h2>Blocks</h2>
+                <p>Grids sin margen</p>
+            </div>
+            
+            <br>
+            
+            <h5>Block automatico</h5>
+            <code>
+                &lt;div class="rblock columns-3"&gt;
+                    &lt;div&gt;columna 01&lt;/div&gt;
+                    &lt;div&gt;columna 02&lt;/div&gt;
+                    &lt;div&gt;columna 03&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="rblock columns-4"&gt;
+                    &lt;div&gt;columna 01&lt;/div&gt;
+                    &lt;div&gt;columna 02&lt;/div&gt;
+                    &lt;div&gt;columna 03&lt;/div&gt;
+                    &lt;div&gt;columna 04&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            
+            <div class="demo">
+                
+                <div class="rblock columns-03">
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                </div>
+                
+                <div class="rblock columns-04">
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                </div>
+                
+            </div>
+        
+            <h5>Block automatico disponible</h5>
+            <div class='demo'>
+                
+                <div class='rblock columns-02'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                </div>
+                
+                <div class='rblock columns-03'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                </div>
+                
+                <div class='rblock columns-04'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                </div>
+                
+                <div class='rblock columns-05'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                </div>
+                
+                <div class='rblock columns-06'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                </div>
+                
+                <div class='rblock columns-07'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                </div>
+                
+                <div class='rblock columns-08'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                </div>
+
+                <div class='rblock columns-09'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                </div>
+                
+                <div class='rblock columns-10'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                    <div>columna 10</div>
+                </div>
+                
+                <div class='rblock columns-11'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                    <div>columna 10</div>
+                    <div>columna 11</div>
+                </div>
+                
+                <div class='rblock columns-12'>
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                    <div>columna 05</div>
+                    <div>columna 06</div>
+                    <div>columna 07</div>
+                    <div>columna 08</div>
+                    <div>columna 09</div>
+                    <div>columna 10</div>
+                    <div>columna 11</div>
+                    <div>columna 12</div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <h5>Block manual</h5>
+            <code>
+                &lt;div class="rblock"&gt;
+                   &lt;div class="column-1"&gt;&lt;/div&gt;
+                   &lt;div class="column-2"&gt;&lt;/div&gt;
+                   &lt;div class="column-3"&gt;&lt;/div&gt;
+                   &lt;div class="column-4"&gt;&lt;/div&gt;
+                   &lt;div class="column-n"&gt;&lt;/div&gt;
+                   &lt;div class="column-9"&gt;&lt;/div&gt;
+               &lt;/div&gt;
+            </code>
+
+            <div class='demo'>
+                <div class='rblock'>
+                    <div class="column-3">col-3</div>
+                    <div class="column-7">col-7</div>
+                </div>
+                
+                <div class='rblock'>
+                    <div class="column-2">col-2</div>
+                    <div class="column-2">col-2</div>
+                    <div class="column-6">col-6</div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <h5>Block manual disponible</h5>
+            <div class="demo">
+                <div class="rblock">
+                    <div class="column-9">col-9</div>
+                    <div class="column-1">col-1</div>
+                </div>
+                
+                <div class="rblock">
+                    <div class="column-8">col-8</div>
+                    <div class="column-2">col-2</div>
+                </div>
+                
+                <div class="rblock">
+                    <div class="column-7">col-7</div>
+                    <div class="column-3">col-3</div>
+                </div>
+                
+                <div class="rblock">
+                    <div class="column-6">col-6</div>
+                    <div class="column-4">col-4</div>
+                </div>
+                
+                <div class="rblock">
+                    <div class="column-5">col-5</div>
+                    <div class="column-5">col-5</div>
+                </div>
+                
+            </div>
     </section>
     
-    <!-- 
-        Botones
-    -->
-   
-    <section>
-        <article>
-            <a name="botones"></a>
-            <h2>Estilo de botones</h2>
-            <p></p>
-            <hr>
-        </article>
-        
-        <article>
-            <h6>Botones estandar</h6>
-            <code>
-                        &lt;button class="rbutton"&gt;Aceptar&lt;/button&gt;
-                        &lt;button class="rbutton-standar"&gt;Aceptar&lt;/button&gt;
-                        &lt;button class="rbutton-primary"&gt;Aceptar&lt;/button&gt;
-                        &lt;button class="rbutton-success"&gt;Aceptar&lt;/button&gt;
-                        &lt;button class="rbutton-info"&gt;Aceptar&lt;/button&gt;
-                        &lt;button class="rbutton-warning"&gt;Aceptar&lt;/button&gt;
-                        &lt;button class="rbutton-error"&gt;Aceptar&lt;/button&gt;
-            </code>            
-            <div class="demo center">
-                <button class="rbutton">Aceptar</button>
-                <button class="rbutton-standar">Aceptar</button>
-                <button class="rbutton-primary">Aceptar</button>
-                <button class="rbutton-success">Aceptar</button>
-                <button class="rbutton-info">Aceptar</button>
-                <button class="rbutton-warning">Aceptar</button>
-                <button class="rbutton-error">Aceptar</button>
-            </div>
-            
-            <p>Clase css "oval" y "circle"</p>
-            
-            <div class="demo center">
-                <button class="rbutton-standar circle">Aceptar</button>
-                <button class="rbutton-primary circle">Aceptar</button>
-                <button class="rbutton-success circle">Aceptar</button>
-                <button class="rbutton-info circle">Aceptar</button>
-                <button class="rbutton-warning circle">Aceptar</button>
-                <button class="rbutton-error circle">Aceptar</button>
-            </div>
-            
-            <div class="demo center">
-                <button class="rbutton-standar oval">Aceptar</button>
-                <button class="rbutton-primary oval">Aceptar</button>
-                <button class="rbutton-success oval">Aceptar</button>
-                <button class="rbutton-info oval">Aceptar</button>
-                <button class="rbutton-warning oval">Aceptar</button>
-                <button class="rbutton-error oval">Aceptar</button>
-            </div>
-            
-        </article>
-        <br><br>
-        <article>
-            <h6>Botones grupales</h6>
-            <code>
-                        &lt;div class="button-group"&gt;
-                            &lt;button class="rbutton"&gt;Aceptar&lt;/button&gt;
-                            &lt;button class="rbutton"&gt;Aceptar&lt;/button&gt;
-                            &lt;button class="rbutton"&gt;Aceptar&lt;/button&gt;
-                            &lt;button class="rbutton"&gt;Aceptar&lt;/button&gt;
-                        &lt;/div&gt;
-            </code>            
-            <div class="demo center">
-                <div class="button-group">
-                    <button class="rbutton-standar">Aceptar</button>
-                    <button class="rbutton-standar">Aceptar</button>
-                    <button class="rbutton-standar">Aceptar</button>
-                    <button class="rbutton-standar">Aceptar</button>
-                </div>
-            </div>
-        </article>
-    </section>
-    
-    <!-- 
-        Responsive Videos
-    -->
-   
-    <section>
-        <article>
-            <a name="r-videos"></a>
-            <h2>Responsive Videos</h2>
-            <p></p>
-            <hr>
-        </article>
-        
-        <article>
-            <h6>Videos de YouTube</h6>
-            <code>
-                
-                        &lt;div class="rvideo-50"&gt;
-                            &lt;iframe src="//www.youtube.com/"&gt;
-                            &lt;/iframe&gt;
-                        &lt;/div&gt;
-                
-            </code>            
-            <div class="demo center">
-                
-                <div class="rvideo-50">
-                    <iframe width="560" height="315" src="//www.youtube.com/embed/4qxi-sYUT9s" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
-                
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Videos de Vimeo</h6>
-            <code>
-                
-                    &lt;div class="rvideo-60"&gt;
-                        &lt;iframe src="//player.vimeo.com/&gt;
-                        &lt;/iframe&gt;
-                    &lt;/div&gt;
-                    
-            </code>            
-            <div class="demo center">
-                
-                <div class="rvideo-60">
-                    <iframe src="//player.vimeo.com/video/34038294?byline=0&amp;portrait=0" width="500" height="281" frameborder="0">
-                    </iframe>
-                </div>
-                
-            </div>
-        </article>
-        <br><br>
-        <article>
-            <h6>Videos de Vine</h6>
-            <code>
-                        
-            </code>            
-            <div class="demo center">
-                
-            </div>
-        </article>
-    </section>
-    <br><br>
 </body>
 </html>

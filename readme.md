@@ -3,7 +3,7 @@
 ResponsiveCat
 -----
 
-Micro Framework CSS
+CSS Micro Framework
 
 
 **Descargar**

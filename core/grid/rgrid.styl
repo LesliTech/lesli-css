@@ -1,0 +1,237 @@
+/*!
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <http://ldonis.com>
+ * @package RCat Structure
+ * @subpackage Grid System
+ * @version 0.6.0
+ */
+
+/*
+ * Contenedor de columnas automaticas y manuales
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.6.0
+ */
+.rgrid
+.rblock
+    width 100%
+    font-size 0
+ 
+/*
+ * Filas del grid
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.6.0
+ */
+.rgrid > *
+.rblock > *
+    height 100%    
+    font-size initial    
+    white-space initial 
+    display inline-block
+
+
+/*
+ * Margen de grid
+ */
+.rgrid > *
+    margin-left 1%
+    
+
+/*
+ * Grid
+ * Ancho de columnas automaticas
+ * columns-n = (width-margin)/n
+ */
+.rgrid.columns-02 > *
+    width 49.50% 
+    
+.rgrid.columns-03 > *
+    width 32.66% 
+    
+.rgrid.columns-04 > *
+    width 24.25% 
+    
+.rgrid.columns-05 > *
+    width 19.20% 
+    
+.rgrid.columns-06 > *
+    width 15.83% 
+    
+.rgrid.columns-07 > *
+    width 13.42% 
+    
+.rgrid.columns-08 > *
+    width 11.62% 
+    
+.rgrid.columns-09 > * 
+    width 10.22% 
+    
+.rgrid.columns-10 > * 
+    width 09.10% 
+    
+.rgrid.columns-11 > *
+    width 08.18% 
+    
+.rgrid.columns-12 > *
+    width 07.41% 
+
+/*
+ *  ancho de columnas manuales
+ *  .col-n = ((100-margen)/10) * n
+ */
+.rgrid > .column-1
+    width 09.00% 
+    
+.rgrid > .column-2
+    width 19.00% 
+    
+.rgrid > .column-3
+    width 29.00% 
+    
+.rgrid > .column-4
+    width 39.00% 
+    
+.rgrid > .column-5
+    width 49.00% 
+    
+.rgrid > .column-6
+    width 59.00% 
+    
+.rgrid > .column-7
+    width 69.00% 
+    
+.rgrid > .column-8
+    width 79.00% 
+    
+.rgrid > .column-9
+    width 89.00% 
+
+.rgrid > .column-1:first-child
+    width 10.00% 
+    
+.rgrid > .column-2:first-child
+    width 20.00% 
+    
+.rgrid > .column-3:first-child
+    width 30.00% 
+    
+.rgrid > .column-4:first-child
+    width 40.00% 
+    
+.rgrid > .column-5:first-child
+    width 50.00% 
+    
+.rgrid > .column-6:first-child
+    width 60.00% 
+    
+.rgrid > .column-7:first-child
+    width 70.00% 
+    
+.rgrid > .column-8:first-child
+    width 80.00% 
+    
+.rgrid > .column-9:first-child
+    width 90.00% 
+
+/*
+ *  remove margin from first element
+ */
+.rgrid > div:first-child
+    margin-left: 0 
+
+/*
+ * Block
+ * Ancho de columnas automaticas
+ * columns-n = width/n
+ */
+.rblock.columns-02 > *
+    width 50.00% 
+    
+.rblock.columns-03 > *
+    width 33.33% 
+    
+.rblock.columns-04 > *
+    width 25.00% 
+    
+.rblock.columns-05 > *
+    width 20.00% 
+    
+.rblock.columns-06 > *
+    width 16.66% 
+    
+.rblock.columns-07 > *
+    width 14.28% 
+    
+.rblock.columns-08 > *
+    width 12.50% 
+    
+.rblock.columns-09 > *
+    width 11.11% 
+    
+.rblock.columns-10 > *
+    width 10.00% 
+    
+.rblock.columns-11 > *
+    width 09.09% 
+    
+.rblock.columns-12 > *
+    width 08.33% 
+
+/*
+ *  ancho de columnas manuales
+ *  .col-n = (100/10) * n
+ */
+.rblock > .column-1
+    width 10.00% 
+    
+.rblock > .column-2
+    width 20.00% 
+    
+.rblock > .column-3
+    width 30.00% 
+    
+.rblock > .column-4
+    width 40.00% 
+    
+.rblock > .column-5
+    width 50.00% 
+    
+.rblock > .column-6
+    width 60.00% 
+    
+.rblock > .column-7
+    width 70.00% 
+    
+.rblock > .column-8
+    width 80.00% 
+    
+.rblock > .column-9
+    width 90.00% 
+
+/*
+ * MediaQueries
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.6.0
+ */
+@media screen and (max-width  320px)
+    .rgrid > *
+    .rblock > *
+        display block
+        width 100% !important
+        margin-left 0 !important

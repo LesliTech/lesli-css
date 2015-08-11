@@ -1,5 +1,13 @@
-Responsive Cat - Historial de cambios
-===================
+##Responsive Cat - Historial de cambios
+--------------------------------
+
+### Versión 0.6.0 (release on 00/00/2015)
+--------------------------------
+####Stylus
+* Migrating
+
+####Blocks
+* New Feature
 
 0.5.0 (00/07/2015)
 ------------------
@@ -7,8 +15,6 @@ Responsive Cat - Historial de cambios
 
 ### Grid System
 * Breakpoints
-
-
 
 0.4.0 beta (28/02/2014)
 ------------------

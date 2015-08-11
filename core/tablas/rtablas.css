@@ -19,4 +19,32 @@
  * @version 0.5.0
  */
 
-*{margin:0;border:0;padding:0;outline:0;color:inherit;list-style:none;text-decoration:none;background-color:inherit}*,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{background:#fff;color:#222;font-family:Sans,sans-serif,Helvetica;font-size:100%;font-style:normal;font-weight:100;line-height:1.65rem}h1,h2,h3,h4,h5,h6{line-height:1.4;margin-top:.2rem;font-style:inherit;font-weight:inherit;margin-bottom:.5rem;text-rendering:optimizelegibility}h1{font-size:2.38rem}h2{font-size:2.15rem}h3{font-size:1.92rem}h4{font-size:1.69rem}h5{font-size:1.46rem}h6{font-size:1.23rem}
+/*
+ * Estilo de tablas
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http://ldonis.com>
+ * @since 0.5.0
+ */
+.rtable{
+    width: 100%;
+    max-width: 100%;    
+    line-height: 1.6;
+    empty-cells: show;
+    border-spacing: 0px;
+}
+
+    /*
+     *  Encabezado de tabla
+     */
+    .rtable thead{
+        text-align: left;
+        vertical-align: bottom;
+    }
+    
+    /*
+     *  Celdas
+     */
+    .rtable td,
+    .rtable th{
+        padding: 0.5em 1em;
+    }

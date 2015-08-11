@@ -1,0 +1,30 @@
+{
+    "name": "ldonis/responsivecat",
+    "description": "CSS Micro Framework",
+    "type": "project",
+    "keywords": [
+        "css",
+        "js",
+        "less",
+        "mobile-first",
+        "responsive",
+        "front-end",
+        "framework",
+        "web"
+    ],
+    "homepage": "http://rcat.ldonis.com",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Luis Gdonis",
+            "email": "ldonis.emc2@gmail.com",
+            "homepage": "http://www.ldonis.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ldonis/Lesli/issues",
+        "forum": "http://stackoverflow.com/tags/lesli",
+        "source": "https://github.com/ldonis/Lesli"
+    }
+}
