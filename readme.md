@@ -7,7 +7,9 @@ CSS Micro Framework
 
 
 **Descargar**
-[Versión 0.5.0-RC](https://github.com/ldonis/ResponsiveCat/archive/v0.5.0-RC.zip)
+[Versión stable 0.5.0-RC](https://github.com/ldonis/ResponsiveCat/archive/v0.5.0-RC.zip)
+
+[Versión en desarrollo](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
 
 Caracteristicas
 ---------------
@@ -31,9 +33,9 @@ Navegadores soportados
 ----------------------
 
 * IE 8+ con [html5shiv.js](https://github.com/aFarkas/html5shiv)
-* Ultimas versiones estables: Firefox, Chrome, Safari 
+* Ultimas versiones estables: Firefox, Chrome, Safari
 * Android 4.x
- 
+
 
 Sitio web y documentación
 ----------------
@@ -45,7 +47,7 @@ Responsive Cat es completamente libre y de codigo abierto
 * Documentacion: [http://rcat.ldonis.com/docs/](http://rcat.ldonis.com/docs/)
 
 * Issue tracker: [https://github.com/ldonis/ResponsiveCat/issues](https://github.com/ldonis/ResponsiveCat/issues)
- 
+
 
 Licencia
 ----------------
