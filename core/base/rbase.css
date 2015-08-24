@@ -1,4 +1,4 @@
-/*!
+/*
  * Responsive Cat
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,77 +18,81 @@
  * @package RCat Structure
  * @version 0.6.0
  */
-
 /*
  *  Reset
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
-*
-    margin 0
-    border 0
-    padding 0
-    outline 0
-    color inherit
-    list-style none
-    text-decoration none
-    background-color inherit
-
-*
-*:before
-*:after
-    -webkit-box-sizing border-box
-    -moz-box-sizing border-box
-    box-sizing border-box
-
-html
-    -ms-text-size-adjust 100%;
-    -webkit-text-size-adjust 100%;
-
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+  background-color: inherit;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 /*
  *  Inicializa
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
-body
-    background #ffffff
-    color #222222
-
-    /*
+body {
+  background: #fff;
+  color: #222;
+/*
      *  Tipografia
      */
-    font-family Sans, sans-serif, Helvetica
-    font-size 100%
-    font-style normal
-    font-weight 100
-    line-height 1.65rem
-
+  font-family: Sans, sans-serif, Helvetica;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.65rem;
+}
 /*
  *  Estilo de titulos
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
  * @since 0.6.0
  */
-h1, h2, h3, h4, h5, h6
-    line-height 1.4
-    margin-top 0.2rem
-    font-style inherit
-    font-weight inherit
-    margin-bottom 0.5rem
-    text-rendering optimizelegibility
-
-h1
-    font-size 2.38rem
-
-h2
-    font-size 2.15rem
-
-h3
-    font-size 1.92rem
-
-h4
-    font-size 1.69rem
-
-h5
-    font-size 1.46rem
-
-h6
-    font-size 1.23rem
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
+  margin-top: 0.2rem;
+  font-style: inherit;
+  font-weight: inherit;
+  margin-bottom: 0.5rem;
+  text-rendering: optimizelegibility;
+}
+h1 {
+  font-size: 2.38rem;
+}
+h2 {
+  font-size: 2.15rem;
+}
+h3 {
+  font-size: 1.92rem;
+}
+h4 {
+  font-size: 1.69rem;
+}
+h5 {
+  font-size: 1.46rem;
+}
+h6 {
+  font-size: 1.23rem;
+}

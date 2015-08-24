@@ -1,6 +1,6 @@
 /*
  * Responsive Cat
- *  
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -65,10 +65,13 @@ code{
     .rform input[type="number"],
     .rform input[type="search"],
     .rform input[type="password"],
-    .rform input[type="datetime"]    
+    .rform input[type="datetime"]
     {
         border: 1px solid #CCC;
-        box-shadow: inset 0 1px 3px #ddd;
+        box-shadow: inset 0px 0px 3px 0px #ddd;
+        /*
+        box-shadow: inset 0 1px 1px #ddd;
+        */
     }
 
     /*
@@ -88,9 +91,14 @@ code{
     .rform input[type="number"]:focus,
     .rform input[type="search"]:focus,
     .rform input[type="password"]:focus,
-    .rform input[type="datetime"]:focus{ 
+    .rform input[type="datetime"]:focus{
+
         border-color: #129FEA;
-        box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;   
+        
+        /*
+        box-shadow: 0 0 0 1px rgba(37, 117, 237, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+        */
+
     }
 
 /*
@@ -106,7 +114,7 @@ code{
  */
 [class^="rbutton"]{
     padding: 6px 12px;
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid transparent;
 }
 
@@ -185,7 +193,7 @@ a[class^="rbutton"]{
  */
 .rbutton-info{
     background-color:#5bc0de;
-    border-color:#46b8da        
+    border-color:#46b8da
 }
 .rbutton-info:hover{
     background-color:#31b0d5;
@@ -221,7 +229,7 @@ a[class^="rbutton"]{
     background-color:#c9302c;
     border-color:#ac2925
 }
-    
+
 /*
  * Boton grupal
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
@@ -231,7 +239,7 @@ a[class^="rbutton"]{
 .button-group{
     font-size: 0;
 }
-    
+
     /*
      *  Estilo generico para botones grupales
      */
@@ -239,7 +247,7 @@ a[class^="rbutton"]{
         border-radius: 0;
         border-right-width: 0;
     }
-    
+
     /*
      *  Primer boton grupal - izquierda a derecha
      */
@@ -247,7 +255,7 @@ a[class^="rbutton"]{
         border-radius: 3px 0 0 3px !important;
         border-right: 0;
     }
-    
+
     /*
      *  Ultimo boton grupal - izquierda a derecha
      */
@@ -284,7 +292,7 @@ a[class^="rbutton"]{
  * Tablas
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
-    
+
 /*
  *  Tabla Gris
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
@@ -331,7 +339,7 @@ table.gray{
         border: 1px solid #59aee2;
         border-left: none;
     }
-    
+
         /*
          *  Encabezado de tabla
          */
@@ -341,7 +349,7 @@ table.gray{
             text-align: left;
             vertical-align: bottom;
         }
-    
+
         /*
          *  Estilo generico de celdas
          */
@@ -349,7 +357,7 @@ table.gray{
         table.blue th{
             border-left: 1px solid #59aee2;
         }
-    
+
         /*
          *  Estilos de celdas impares
          */
@@ -357,32 +365,32 @@ table.gray{
             background-color: #a9ddfe;
         }
 
-    
-    
-    
+
+
+
 /*
  *  Extras
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * /
 
 /*
- *  Responsive Videos 
+ *  Responsive Videos
  *  proporcion 16x9
  *  ~·~  ~·~  ~·~  ~·~
  * /
 [class^="rvideo"]{
-    height: 0;    
+    height: 0;
     width: 50%;
     margin: 0 auto;
-    padding-top: 25px;        
-    padding-bottom: 28.125%;    
+    padding-top: 25px;
+    padding-bottom: 28.125%;
     /*
     width: 100%;
     padding-bottom: 56.25%;
     * /
     position: relative;
 }
-    
+
     /*
      *  Iframe contenedor del video
      * /

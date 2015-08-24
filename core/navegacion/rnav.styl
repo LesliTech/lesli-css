@@ -1,4 +1,4 @@
-/*
+/*!
  * Responsive Cat
  *
  * This program is free software you can redistribute it and/or modify
@@ -19,130 +19,108 @@
  * @subpackage Navegacion
  * @version 0.6.0
  */
-/*
+
+/*!
  *  Menu estandar
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
  * @since 0.6.0
  */
-.rnavbar {
-  width: 100%;
-/*
+.rnavbar
+    width 100%
+
+    & > ul
+        font-size 0
+
+    /*!
      *  Contenedor de enlaces
      */
-/*
+    li
+        display inline-block
+        font-size initial    
+
+    /*!
      *  Enlaces
      */
-/*
+    a
+        display block
+        padding 0.3rem 0.8rem
+    
+    
+    /*!
      *  Menu doble
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.6.0
      */
-/*
+    &.doble
+        width 100%
+        font-size 0
+        white-space nowrap
+
+    &.doble > ul
+        width 50%
+        font-size 1rem            
+        white-space initial
+        display inline-block
+     
+
+    /*!
      *  Menu izquierdo
      */
-/*
+    &.doble > ul:first-child
+        text-align left
+    
+
+    /*!
      *  Menu derecho
      */
-/*
+    .doble > ul:last-child
+        text-align right
+    
+
+    /*!
      *  Menu multinivel
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.6.0
      */
-/*
+    &.multi
+
+    /*!
+     *  Contenedor principal de menu
+     */
+    &.multi > ul
+        position relative
+    
+    /*!
      *  Oculta el submenu
      */
-/*
+    &.multi > ul li ul
+        display none
+        position absolute
+    
+
+    /*!
      *  Muestra el submenu
      */
-/*
+    &.multi > ul li:hover ul
+        display block
+
+    /*!
      *  Contenedor de etiquetas de submenu
      */
-}
-.rnavbar > ul {
-  font-size: 0;
-}
-/*
-     *  Contenedor de enlaces
-     */
-.rnavbar li {
-  display: inline-block;
-  font-size: initial;
-}
-/*
-     *  Enlaces
-     */
-.rnavbar a {
-  display: block;
-  padding: 0.3rem 0.8rem;
-}
-/*
-     *  Menu doble
+    &.multi > ul ul li
+        display block
+    
+    
+    /*!
+     *  Menu vertical
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.6.0
+     * @since 0.5.0
      */
-.rnavbar.doble {
-  width: 100%;
-  font-size: 0;
-  white-space: nowrap;
-}
-.rnavbar.doble > ul {
-  width: 50%;
-  font-size: 1rem;
-  white-space: initial;
-  display: inline-block;
-}
-/*
-     *  Menu izquierdo
-     */
-.rnavbar.doble > ul:first-child {
-  text-align: left;
-}
-/*
-     *  Menu derecho
-     */
-.rnavbar .doble > ul:last-child {
-  text-align: right;
-}
-/*
-     *  Menu multinivel
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.6.0
-     */
-.rnavbar.multi,
-.rnavbar.multi > ul {
-  position: relative;
-}
-/*
-     *  Oculta el submenu
-     */
-.rnavbar.multi > ul li ul {
-  display: none;
-  position: absolute;
-}
-/*
-     *  Muestra el submenu
-     */
-.rnavbar.multi > ul li:hover ul {
-  display: block;
-}
-/*
-     *  Contenedor de etiquetas de submenu
-     */
-.rnavbar.multi > ul ul li {
-  display: block;
-}
-/*
- *  Menu vertical
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.5.0
- * /
-.nav
+    .nav
 
 
     /*
@@ -161,4 +139,4 @@
     .nav ul linot(first-child)hover,
     .nav ul linot(first-child) ahover
         cursor pointer
-
+    
