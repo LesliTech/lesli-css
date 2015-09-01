@@ -6,6 +6,9 @@
 ####Stylus
 * Migrating to stylus preprocessor
 
+####Grunt
+* Automatic deploy
+
 ####Blocks
 * New Feature
 

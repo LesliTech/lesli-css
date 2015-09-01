@@ -37,7 +37,7 @@
      */
     li
         display inline-block
-        font-size initial    
+        font-size initial
 
     /*!
      *  Enlaces
@@ -45,8 +45,8 @@
     a
         display block
         padding 0.3rem 0.8rem
-    
-    
+
+
     /*!
      *  Menu doble
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
@@ -60,24 +60,24 @@
 
     &.doble > ul
         width 50%
-        font-size 1rem            
+        font-size 1rem
         white-space initial
         display inline-block
-     
+
 
     /*!
      *  Menu izquierdo
      */
     &.doble > ul:first-child
         text-align left
-    
+
 
     /*!
      *  Menu derecho
      */
     .doble > ul:last-child
         text-align right
-    
+
 
     /*!
      *  Menu multinivel
@@ -92,14 +92,14 @@
      */
     &.multi > ul
         position relative
-    
+
     /*!
      *  Oculta el submenu
      */
     &.multi > ul li ul
         display none
         position absolute
-    
+
 
     /*!
      *  Muestra el submenu
@@ -112,8 +112,8 @@
      */
     &.multi > ul ul li
         display block
-    
-    
+
+
     /*!
      *  Menu vertical
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
@@ -125,18 +125,17 @@
 
     /*
      *  Titulo de lista o menu
-     * /
-    .nav lifirst-child    
-    
+     */
+    .nav li:first-child
 
-    .nav ul > lifirst-child    
+
+    .nav ul > li:first-child
         font-size 0.9rem
         margin-top 0.5em
         margin-bottom 0.5em
         text-transform uppercase
-    
 
-    .nav ul linot(first-child)hover,
-    .nav ul linot(first-child) ahover
+
+    .nav ul li:not(:first-child):hover,
+    .nav ul li:not(:first-child) a:hover
         cursor pointer
-    

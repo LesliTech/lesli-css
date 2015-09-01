@@ -6,10 +6,10 @@ ResponsiveCat
 CSS Micro Framework
 
 
-**Descargar**
+**Descargar**  
 [Versión stable 0.5.0-RC](https://github.com/ldonis/ResponsiveCat/archive/v0.5.0-RC.zip)
 
-[Versión en desarrollo](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
+[Versión en desarrollo (0.6.0)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
 
 Caracteristicas
 ---------------

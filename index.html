@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Responsive Cat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="core/base/rbase.css" type="text/css">
-    <link rel="stylesheet" href="core/grid/rgrid.css" type="text/css">
-    <link rel="stylesheet" href="core/form/rform.css" type="text/css">
-    <link rel="stylesheet" href="core/navegacion/rnav.css" type="text/css">
-    <link rel="stylesheet" href="core/tablas/rtablas.css" type="text/css">
-    <link rel="stylesheet" href="core/uikit/rui.css" type="text/css">
+    <link rel="stylesheet" href="src/base/rbase.css" type="text/css">
+    <link rel="stylesheet" href="src/grid/rgrid.css" type="text/css">
+    <link rel="stylesheet" href="src/form/rform.css" type="text/css">
+    <link rel="stylesheet" href="src/nav/rnav.css" type="text/css">
+    <link rel="stylesheet" href="src/table/rtable.css" type="text/css">
+    <link rel="stylesheet" href="src/uikit/rui.css" type="text/css">
     <style>
         body{
             background-color:#fff;
@@ -19,7 +19,7 @@
         /*
          *  Contenedor principal de documentacion
          */
-        section{
+        #docs_content{
             width: 90%;
             margin: 0 auto;
             text-align: center;
@@ -43,7 +43,17 @@
 </head>
 <body>
 
-    <section>
+    <section id="docs_content">
+
+        <article id="header">
+            <div>
+                <img alt="ResponsiveCat" src="http://rcat.ldonis.com/www/rcat.ldonis.com/Template/img/rcat.png"/>
+                <h3>Responsive Cat</h3>
+                <span>CSS Micro Framework</span>
+                <hr>
+            </div>
+        </article>
+        <hr>
 
         <!--
             Tipografia
@@ -367,7 +377,6 @@
             </div>
         </article>
 
-
         <br><br>
 
         <!--
@@ -383,7 +392,7 @@
 
             <br>
 
-            <h5 id="rform_individual">Formulario individual con prefijo</h5>
+            <h5 id="rform_individual_prefix">Formulario individual con prefijo</h5>
 
             <code>
 
@@ -410,7 +419,7 @@
 
             <br>
 
-            <h5 id="rform_individual">Formulario individual con boton</h5>
+            <h5 id="rform_individual_go">Formulario individual con boton</h5>
 
             <code>
 
@@ -436,7 +445,7 @@
 
             <br>
 
-            <h5 id="rform_lineal">Formulario en bloque</h5>
+            <h5 id="rform_block">Formulario en bloque</h5>
 
             <code>
 
@@ -462,7 +471,7 @@
 
             <br>
 
-            <h5 id="rform_lineal">Formulario alineado</h5>
+            <h5 id="rform_align">Formulario alineado</h5>
 
             <code>
 
@@ -512,7 +521,7 @@
 
             <br>
 
-            <h5 id="rform_lineal">Formulario grupal</h5>
+            <h5 id="rform_group">Formulario grupal</h5>
 
             <code>
 
@@ -551,7 +560,6 @@
             </div>
 
         </article>
-
 
     </section>
 
