@@ -20,34 +20,33 @@
  * @version 0.6.0
  */
 
-/*!
+/*
  *  Menu estandar
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
  * @since 0.6.0
  */
-.rnavbar
+.rnav
     width 100%
 
     & > ul
         font-size 0
 
-    /*!
+    /*
      *  Contenedor de enlaces
      */
     li
         display inline-block
         font-size initial
 
-    /*!
+    /*
      *  Enlaces
      */
     a
         display block
         padding 0.3rem 0.8rem
 
-
-    /*!
+    /*
      *  Menu doble
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
@@ -58,84 +57,92 @@
         font-size 0
         white-space nowrap
 
-    &.doble > ul
-        width 50%
-        font-size 1rem
-        white-space initial
-        display inline-block
+        & > ul
+            width 50%
+            font-size 1rem
+            white-space initial
+            display inline-block
 
+            /*
+             *  Menu izquierdo
+             */
+            &:first-child
+                text-align left
 
-    /*!
-     *  Menu izquierdo
-     */
-    &.doble > ul:first-child
-        text-align left
+            /*
+             *  Menu derecho
+             */
+            &:last-child
+                text-align right
 
-
-    /*!
-     *  Menu derecho
-     */
-    .doble > ul:last-child
-        text-align right
-
-
-    /*!
-     *  Menu multinivel
+    /*
+     * Menu multinivel
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.6.0
      */
     &.multi
 
-    /*!
-     *  Contenedor principal de menu
-     */
-    &.multi > ul
-        position relative
+        /*
+         *  Contenedor principal de menu
+         */
+        & > ul
+            position relative
 
-    /*!
-     *  Oculta el submenu
-     */
-    &.multi > ul li ul
-        display none
-        position absolute
+            /*
+             *  Oculta el submenu 1
+             */
+            & > li ul
+                display none
+                position absolute
 
+            /*
+             *  Muestra el submenu
+             */
+            & > li:hover > ul
+                display block
 
-    /*!
-     *  Muestra el submenu
-     */
-    &.multi > ul li:hover ul
-        display block
+            /*
+             *  Contenedor de etiquetas de submenu
+             */
+            & li ul li
+                display block
 
-    /*!
-     *  Contenedor de etiquetas de submenu
-     */
-    &.multi > ul ul li
-        display block
+            /*
+             * Contenedor de submenu 2
+             */
+            & > li > ul > li
+                 position relative
 
+                 /*
+                  * Submenu 2
+                  */
+                 &:hover ul
+                    display block
+                    left 100%
+                    top 0
 
-    /*!
+    /*
      *  Menu vertical
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.5.0
+     * @since 0.6.0
      */
-    .nav
+    &.vertical
 
+        ul > li
+            display block !important
+            text-align left
 
-    /*
-     *  Titulo de lista o menu
-     */
-    .nav li:first-child
+        /*
+         *  Titulo de lista o menu
+         */
+        ul > li:first-child
+            font-size 0.9rem
+            margin-top 0.5em
+            margin-bottom 0.5em
+            text-transform uppercase
 
-
-    .nav ul > li:first-child
-        font-size 0.9rem
-        margin-top 0.5em
-        margin-bottom 0.5em
-        text-transform uppercase
-
-
-    .nav ul li:not(:first-child):hover,
-    .nav ul li:not(:first-child) a:hover
-        cursor pointer
+        ul li:not(:first-child):hover
+        ul li:not(:first-child) a:hover
+            cursor pointer
