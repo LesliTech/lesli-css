@@ -1,14 +1,12 @@
-![''](http://ldonis.com/Websites/ldonis.com/project/img/rcat.png "Responsive cat")
+![''](http://rcat.ldonis.com/www/rcat.ldonis.com/Template/img/rcat.png "Responsive cat")
 
 ResponsiveCat
 -----
 
 CSS Micro Framework
 
-
 **Descargar**  
-[Versión stable 0.5.0-RC](https://github.com/ldonis/ResponsiveCat/archive/v0.5.0-RC.zip)
-
+[Versión stable 0.5.0-RC](https://github.com/ldonis/ResponsiveCat/archive/v0.5.0-RC.zip)  
 [Versión en desarrollo (0.6.0)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
 
 Caracteristicas
