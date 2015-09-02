@@ -14,6 +14,8 @@ Caracteristicas
 
 Responsive Cat cuenta con lo necesario para iniciar en el desarrollo web adaptativo, de una manera rapida y eficiente.
 
+* Nucleo pre-proceado con [Stylus](https://learnboost.github.io/stylus/)
+
 * Sistema de grid totalmente adaptativo
 
 * Menus verticales y horizontales predefinidos
