@@ -25,7 +25,7 @@
  * @author Luis Gdonis <http//ldonis.com>
  * @since 0.6.0
  */
-.rnavbar {
+.rnav {
   width: 100%;
 /*
      *  Contenedor de enlaces
@@ -40,123 +40,99 @@
      * @since 0.6.0
      */
 /*
-     *  Menu izquierdo
-     */
-/*
-     *  Menu derecho
-     */
-/*
-     *  Menu multinivel
+     * Menu multinivel
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.6.0
-     */
-/*
-     *  Oculta el submenu
-     */
-/*
-     *  Muestra el submenu
-     */
-/*
-     *  Contenedor de etiquetas de submenu
      */
 /*
      *  Menu vertical
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.5.0
+     * @since 0.6.0
      */
 }
-.rnavbar > ul {
+.rnav > ul {
   font-size: 0;
 }
-/*
-     *  Contenedor de enlaces
-     */
-.rnavbar li {
+.rnav li {
   display: inline-block;
   font-size: initial;
 }
-/*
-     *  Enlaces
-     */
-.rnavbar a {
+.rnav a {
   display: block;
   padding: 0.3rem 0.8rem;
 }
-/*
-     *  Menu doble
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.6.0
-     */
-.rnavbar.doble {
+.rnav.doble {
   width: 100%;
   font-size: 0;
   white-space: nowrap;
 }
-.rnavbar.doble > ul {
+.rnav.doble > ul {
   width: 50%;
   font-size: 1rem;
   white-space: initial;
   display: inline-block;
-}
 /*
-     *  Menu izquierdo
-     */
-.rnavbar.doble > ul:first-child {
+             *  Menu izquierdo
+             */
+/*
+             *  Menu derecho
+             */
+}
+.rnav.doble > ul:first-child {
   text-align: left;
 }
-/*
-     *  Menu derecho
-     */
-.rnavbar .doble > ul:last-child {
+.rnav.doble > ul:last-child {
   text-align: right;
 }
-/*
-     *  Menu multinivel
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.6.0
-     */
-.rnavbar.multi,
-.rnavbar.multi > ul {
+.rnav.multi > ul {
   position: relative;
-}
 /*
-     *  Oculta el submenu
-     */
-.rnavbar.multi > ul li ul {
+             *  Oculta el submenu 1
+             */
+/*
+             *  Muestra el submenu
+             */
+/*
+             *  Contenedor de etiquetas de submenu
+             */
+/*
+             * Contenedor de submenu 2
+             */
+}
+.rnav.multi > ul > li ul {
   display: none;
   position: absolute;
 }
-/*
-     *  Muestra el submenu
-     */
-.rnavbar.multi > ul li:hover ul {
+.rnav.multi > ul > li:hover > ul {
   display: block;
 }
-/*
-     *  Contenedor de etiquetas de submenu
-     */
-.rnavbar.multi > ul ul li {
+.rnav.multi > ul li ul li {
   display: block;
 }
+.rnav.multi > ul > li > ul > li {
+  position: relative;
 /*
-     *  Menu vertical
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.5.0
-     */
-.rnavbar .nav,
-.rnavbar .nav li:first-child,
-.rnavbar .nav ul > li:first-child {
+                  * Submenu 2
+                  */
+}
+.rnav.multi > ul > li > ul > li:hover ul {
+  display: block;
+  left: 100%;
+  top: 0;
+}
+.rnav.vertical ul > li {
+  display: block !important;
+  text-align: left;
+}
+.rnav.vertical ul > li:first-child {
   font-size: 0.9rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
-.rnavbar .nav ul li:not(:first-child):hover,
-.rnavbar .nav ul li:not(:first-child) a:hover {
+.rnav.vertical ul li:not(:first-child):hover,
+.rnav.vertical ul li:not(:first-child) a:hover {
   cursor: pointer;
 }
