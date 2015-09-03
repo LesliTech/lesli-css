@@ -581,7 +581,7 @@ h6 {
 
 /*
  * Responsive Cat
- *  
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -600,11 +600,11 @@ h6 {
  * @version 0.5.0
  */
 /*
- * Estilo de tablas
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http://ldonis.com>
- * @since 0.5.0
- */
+  * Estilo de tablas
+  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+  * @author Luis Gdonis <http://ldonis.com>
+  * @since 0.6.0
+  */
 .rtable {
   width: 100%;
   max-width: 100%;
@@ -615,16 +615,8 @@ h6 {
 /*
      *  Encabezado de tabla
      */
-.rtable thead {
-  text-align: left;
+thead {
   vertical-align: bottom;
-}
-/*
-     *  Celdas
-     */
-.rtable td,
-.rtable th {
-  padding: 0.5em 1em;
 }
 
 /*
@@ -644,7 +636,7 @@ h6 {
  * along with this program. If not, see <http//www.gnu.org/licenses/>.
  *
  * @author Luis Gdonis <http//ldonis.com>
- * @package RCat Structure
+ * @package RCat UIKit
  * @version 0.6.0
  */
 /*
@@ -1014,3 +1006,43 @@ img
     max-width 99.999%
 
 */
+
+/*
+ * Responsive Cat
+ *
+ * This program is free software you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http//www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <http//ldonis.com>
+ * @package RCat Helper
+ * @version 0.6.0
+ */
+/*
+  * Centrado con flexbox
+  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+  * @author Luis Gdonis <http//ldonis.com>
+  * @since 0.6.0
+  */
+.center {
+  display: flex;
+/*
+     * Centrado completo
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.0
+     */
+}
+.center.full {
+  align-items: center;
+  justify-content: center;
+}

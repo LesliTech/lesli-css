@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>Responsive Cat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/table/rtable.css" type="text/css">
+    <link rel="stylesheet" href="src/helper/rhelp.css" type="text/css">
     <link rel="stylesheet" href="src/base/rbase.css" type="text/css">
     <link rel="stylesheet" href="src/grid/rgrid.css" type="text/css">
     <link rel="stylesheet" href="src/form/rform.css" type="text/css">
-    <link rel="stylesheet" href="src/nav/rnav.css" type="text/css">
-    <link rel="stylesheet" href="src/table/rtable.css" type="text/css">
     <link rel="stylesheet" href="src/uikit/rui.css" type="text/css">
+    <link rel="stylesheet" href="src/nav/rnav.css" type="text/css">
     <style>
         body{
             background-color:#fff;
@@ -39,6 +40,8 @@
        .demo .rblock div{padding: 15px 0;border:1px solid #CCC;background-color:#7e9ec7;color:#FFF;}
        .demo .rgrid div{margin-top: 1%;}
        .demo .rform {max-width: 600px; margin: 0 auto;}
+       .demo .rtable { max-width: 800px; margin: 0 auto;}
+       .demo .center { max-width: 700px; min-height: 200px; margin: 0 auto;background-color: #7eb0e4; }
     </style>
 </head>
 <body>
@@ -66,7 +69,7 @@
                 <p>Titulos, parrafos, citas, listas y otros elementos necesarios</p>
             </div>
 
-            <div class="demo center">
+            <div class="demo">
                 <h1>&lt;h1&gt;Titulo&lt;/h1&gt;</h1>
                 <h2>&lt;h2&gt;Titulo&lt;/h2&gt;</h2>
                 <h3>&lt;h3&gt;Titulo&lt;/h3&gt;</h3>
@@ -281,6 +284,8 @@
                 </div>
 
             </div>
+
+            <br>
 
             <h5>Block automatico disponible</h5>
 
@@ -584,6 +589,15 @@
 
             <code>
 
+                    &lt;nav class=&quot;rnav&quot;&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;About&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Services&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+
             </code>
 
             <div class="demo">
@@ -604,6 +618,20 @@
             <h5 id="rnav_double">Menu doble</h5>
 
             <code>
+
+                    &lt;nav class=&quot;rnav doble&quot;&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;About&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Services&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;Buy&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Sign up&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Sign in&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
 
             </code>
 
@@ -630,6 +658,33 @@
             <h5 id="rnav_multi">Menu multi nivel</h5>
 
             <code>
+
+                    &lt;nav class=&quot;rnav multi&quot;&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;About&lt;/a&gt;
+                                &lt;ul&gt;
+                                    &lt;li&gt;&lt;a&gt;Sub menu&lt;/a&gt;&lt;/li&gt;
+                                    &lt;li&gt;&lt;a&gt;Sub menu&lt;/a&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Services&lt;/a&gt;
+                                &lt;ul&gt;
+                                    &lt;li&gt;&lt;a&gt;Sub menu&lt;/a&gt;&lt;/li&gt;
+                                    &lt;li&gt;&lt;a&gt;Sub menu&lt;/a&gt;&lt;/li&gt;
+                                    &lt;li&gt;&lt;a&gt;Sub menu&lt;/a&gt;
+                                        &lt;ul&gt;
+                                            &lt;li&gt;&lt;a&gt;Sub&amp;nbsp;menu&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a&gt;Sub&amp;nbsp;menu&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a&gt;Sub&amp;nbsp;menu&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;&lt;a&gt;Sub menu&lt;/a&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
 
             </code>
 
@@ -670,6 +725,15 @@
 
             <code>
 
+                    &lt;nav class=&quot;rnav vertical&quot;&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;About&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Services&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+
             </code>
 
             <div class="demo">
@@ -682,6 +746,87 @@
                         <li><a>Contact</a></li>
                     </ul>
                 </nav>
+
+            </div>
+
+        </article>
+
+        <br><br>
+
+        <!--
+            Tablas
+        -->
+
+        <article id="rtable">
+
+            <div>
+                <h2>Tablas</h2>
+                <p></p>
+            </div>
+
+            <br>
+
+            <h5 id="rtable">Tabla simple</h5>
+
+            <code>
+
+                    &lt;table class=&quot;rtable&quot;&gt;
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;header&lt;/td&gt;
+                                &lt;td&gt;header&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;celda&lt;/td&gt;
+                                &lt;td&gt;celda&lt;/td&gt;
+                                &lt;td&gt;celda&lt;/td&gt;
+                                &lt;td&gt;celda&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+
+            </code>
+
+            <div class="demo">
+
+                <table class="rtable">
+                    <thead>
+                        <tr>
+                            <td>header</td>
+                            <td>header</td>
+                            <td>header</td>
+                            <td>header</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                        </tr>
+                        <tr>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                        </tr>
+                        <tr>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                        </tr>
+                        <tr>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                            <td>celda</td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
 
@@ -805,6 +950,44 @@
                 <input type="submit" class="rbutton-info oval"    value="info">
                 <input type="submit" class="rbutton-warning oval" value="warning">
                 <input type="submit" class="rbutton-error oval"   value="error">
+
+            </div>
+
+        </article>
+
+        <br><br>
+
+        <!--
+            Helpers
+        -->
+
+        <article id="Helpers">
+
+            <div>
+                <h2>Helpers</h2>
+                <p></p>
+            </div>
+
+            <br>
+
+            <h5 id="help_centrado">Centrado</h5>
+            <p>Centrado flexbox</p>
+
+            <code>
+
+                &lt;div class=&quot;center full&quot;&gt;
+                    centrado vertical
+                &lt;/div&gt;
+
+            </code>
+
+            <div class="demo">
+
+                <div class="center full">
+
+                    centrado vertical
+
+                </div>
 
             </div>
 
