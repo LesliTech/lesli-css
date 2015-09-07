@@ -1041,8 +1041,19 @@ img
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.6.0
      */
+/*
+     * Centrado vertical
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.0
+     */
 }
 .center.full {
   align-items: center;
   justify-content: center;
+}
+.center.vertical {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
