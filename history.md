@@ -12,6 +12,9 @@
 ####Blocks
 * New Feature
 
+####Center
+* Full flexbox center
+
 ### Versión 0.5.0 (00/07/2015)
 --------------------------------
 ### Compatibilidad

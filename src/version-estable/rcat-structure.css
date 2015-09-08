@@ -1,6 +1,145 @@
 /*
  * Responsive Cat
  *
+ * This program is free software you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http//www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <http//ldonis.com>
+ * @package RCat Structure
+ * @subpackage Navegacion
+ * @version 0.6.0
+ */
+/*
+ *  Menu estandar
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.6.0
+ */
+.rnav {
+  width: 100%;
+/*
+     *  Contenedor de enlaces
+     */
+/*
+     *  Enlaces
+     */
+/*
+     *  Menu doble
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.0
+     */
+/*
+     * Menu multinivel
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.0
+     */
+/*
+     *  Menu vertical
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.0
+     */
+}
+.rnav > ul {
+  font-size: 0;
+}
+.rnav li {
+  display: inline-block;
+  font-size: initial;
+}
+.rnav a {
+  display: block;
+  padding: 0.3rem 0.8rem;
+}
+.rnav.doble {
+  width: 100%;
+  font-size: 0;
+  white-space: nowrap;
+}
+.rnav.doble > ul {
+  width: 50%;
+  font-size: 1rem;
+  white-space: initial;
+  display: inline-block;
+/*
+             *  Menu izquierdo
+             */
+/*
+             *  Menu derecho
+             */
+}
+.rnav.doble > ul:first-child {
+  text-align: left;
+}
+.rnav.doble > ul:last-child {
+  text-align: right;
+}
+.rnav.multi > ul {
+  position: relative;
+/*
+             *  Oculta el submenu 1
+             */
+/*
+             *  Muestra el submenu
+             */
+/*
+             *  Contenedor de etiquetas de submenu
+             */
+/*
+             * Contenedor de submenu 2
+             */
+}
+.rnav.multi > ul > li ul {
+  display: none;
+  position: absolute;
+}
+.rnav.multi > ul > li:hover > ul {
+  display: block;
+}
+.rnav.multi > ul li ul li {
+  display: block;
+}
+.rnav.multi > ul > li > ul > li {
+  position: relative;
+/*
+                  * Submenu 2
+                  */
+}
+.rnav.multi > ul > li > ul > li:hover ul {
+  display: block;
+  left: 100%;
+  top: 0;
+}
+.rnav.vertical ul > li {
+  display: block !important;
+  text-align: left;
+}
+.rnav.vertical ul > li:first-child {
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.rnav.vertical ul li:not(:first-child):hover,
+.rnav.vertical ul li:not(:first-child) a:hover {
+  cursor: pointer;
+}
+
+/*
+ * Responsive Cat
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or

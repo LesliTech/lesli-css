@@ -18,6 +18,7 @@ module.exports = function (grunt) {
         concat: {
             rcatfull: {
                 src:[
+                    'src/nav/rnav.css',
                     'src/base/rbase.css',
                     'src/form/rform.css',
                     'src/grid/rgrid.css',
@@ -28,6 +29,7 @@ module.exports = function (grunt) {
             },
             rcatstructure: {
                 src:[
+                    'src/nav/rnav.css',
                     'src/base/rbase.css',
                     'src/form/rform.css',
                     'src/grid/rgrid.css',
@@ -41,7 +43,7 @@ module.exports = function (grunt) {
             base: { src: 'src/base/rbase.css', dest: 'src/base/rbase.min.css' },
             form: { src: 'src/form/rform.css', dest: 'src/form/rform.min.css' },
             grid: { src: 'src/grid/rgrid.css', dest: 'src/grid/rgrid.min.css' },
-            table: { src: 'src/table/rtable.css', dest: 'src/rtable/rtable.min.css' },
+            table: { src: 'src/table/rtable.css', dest: 'src/table/rtable.min.css' },
             helper: { src: 'src/helper/rhelp.css', dest: 'src/helper/rhelp.min.css' },
             rcat: { src: 'src/version-estable/rcat.css', dest: 'src/version-estable/rcat.min.css' },
             rcatstructure: { src: 'src/version-estable/rcat-structure.css', dest: 'src/version-estable/rcat-structure.min.css' },

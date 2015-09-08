@@ -23,7 +23,7 @@ Caracteristicas
 
 * Kit de Interfaz de Usuario
 
-* Archivo extremadamente pequeño 9.9kb
+* Archivo extremadamente pequeño 9.09kb
 
 Navegadores soportados
 ----------------------
