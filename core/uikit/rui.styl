@@ -275,77 +275,82 @@ a[class^="rbutton"]
  * Tablas
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
-
-/*
- *  Tabla Gris
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.5.0
- * /
-table.gray
-    border 1px solid #CBCBCB
-    border-left none
-
+.rtable
 
     /*
-     *  Encabezado de tabla
-     * /
-    table.gray thead
-        background #E0E0E0
-        color #000
-        text-align left
-        vertical-align bottom
-
-
-    /*
-     *  Estilo generico de celdas
-     * /
-    table.gray td,
-    table.gray th
-        border-left 1px solid #CBCBCB
-
-
-    /*
-     *  Estilos de celdas impares
-     * /
-    table.gray tbody trnth-child(even)
-        background-color #ececec
-
-
-/*
- * Tabla azul
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.5.0
- * /
-    table.blue
-        border 1px solid #59aee2
+     *  Tabla Gris
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.0
+     */
+    &.gray
+        border 1px solid #CBCBCB
         border-left none
-
 
         /*
          *  Encabezado de tabla
-         * /
-        table.blue thead
+         */
+        thead
+            background #E0E0E0
+            color #000
+            text-align left
+            vertical-align bottom
+
+        /*
+         *  Estilo generico de celdas
+         */
+        td
+        th
+            border-left 1px solid #CBCBCB
+
+        /*
+         *  Cuerpo de la tabla
+         */
+        tbody
+
+            /*
+             *  Estilos de celdas impares
+             */
+            tr:nth-child(even)
+                background-color #ececec
+
+
+    /*
+     * Tabla azul
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.5.0
+     */
+    &.blue
+        border 1px solid #59aee2
+        border-left none
+
+        /*
+         *  Encabezado de tabla
+         */
+        thead
             background  #70c0f2
             color #000
             text-align left
             vertical-align bottom
 
-
         /*
          *  Estilo generico de celdas
-         * /
-        table.blue td,
-        table.blue th
+         */
+        td,
+        th
             border-left 1px solid #59aee2
 
-
         /*
-         *  Estilos de celdas impares
-         * /
-        table.blue tbody trnth-child(even)
-            background-color #a9ddfe
+         *  Cuerpo de la tabla
+         */
+        tbody
+
+            /*
+             *  Estilos de celdas impares
+             */
+            tr:nth-child(even)
+                background-color #a9ddfe
 
 
 
