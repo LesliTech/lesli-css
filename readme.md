@@ -5,8 +5,8 @@ ResponsiveCat
 Responsive Cat es un micro framework css que cuenta con lo necesario para iniciar en el desarrollo web adaptativo, de una manera rapida y eficiente.
 
 **Descargar**  
-[Versión stable 0.5.0-RC](https://github.com/ldonis/ResponsiveCat/archive/v0.5.0-RC.zip)  
-[Versión en desarrollo (0.6.0)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
+[Versión stable 0.6.0](https://github.com/ldonis/ResponsiveCat/archive/0.6.0.zip)  
+[Versión en desarrollo (0.6.1)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
 
 Caracteristicas
 ---------------
