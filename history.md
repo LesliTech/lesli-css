@@ -1,18 +1,18 @@
 ##Responsive Cat - Historial de cambios
 --------------------------------
 
-### Versión 0.6.0 (release on 00/00/2015)
+### Versión 0.6.0 (released on 08/09/2015)
 --------------------------------
-####Stylus
+#### Stylus
 * Migrating to stylus preprocessor
 
-####Grunt
+#### Grunt
 * Automatic deploy
 
-####Blocks
+#### Blocks
 * New Feature
 
-####Center
+#### Center
 * Full flexbox center
 
 ### Versión 0.5.0 (00/07/2015)
