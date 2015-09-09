@@ -757,6 +757,13 @@ h6 {
 thead {
   vertical-align: bottom;
 }
+/*
+     *  Celdas
+     */
+.rtable td,
+.rtable th {
+  padding: 0.5em 1em;
+}
 
 /*
  * Responsive Cat
@@ -1027,81 +1034,58 @@ a[class^="rbutton"] {
  * Tablas
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
+.rtable.gray {
+  border: 1px solid #cbcbcb;
+  border-left: none;
 /*
- *  Tabla Gris
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.5.0
- * /
-table.gray
-    border 1px solid #CBCBCB
-    border-left none
-
-
-    /*
-     *  Encabezado de tabla
-     * /
-    table.gray thead
-        background #E0E0E0
-        color #000
-        text-align left
-        vertical-align bottom
-
-
-    /*
-     *  Estilo generico de celdas
-     * /
-    table.gray td,
-    table.gray th
-        border-left 1px solid #CBCBCB
-
-
-    /*
-     *  Estilos de celdas impares
-     * /
-    table.gray tbody trnth-child(even)
-        background-color #ececec
-
-
-/*
- * Tabla azul
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.5.0
- * /
-    table.blue
-        border 1px solid #59aee2
-        border-left none
-
-
-        /*
          *  Encabezado de tabla
-         * /
-        table.blue thead
-            background  #70c0f2
-            color #000
-            text-align left
-            vertical-align bottom
-
-
-        /*
+         */
+/*
          *  Estilo generico de celdas
-         * /
-        table.blue td,
-        table.blue th
-            border-left 1px solid #59aee2
-
-
-        /*
-         *  Estilos de celdas impares
-         * /
-        table.blue tbody trnth-child(even)
-            background-color #a9ddfe
-
-
-
-
-
+         */
+/*
+         *  Cuerpo de la tabla
+         */
+}
+.rtable.gray thead {
+  background: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+.rtable.gray td,
+.rtable.gray th {
+  border-left: 1px solid #cbcbcb;
+}
+.rtable.gray tbody tr:nth-child(even) {
+  background-color: #ececec;
+}
+.rtable.blue {
+  border: 1px solid #59aee2;
+  border-left: none;
+/*
+         *  Encabezado de tabla
+         */
+/*
+         *  Estilo generico de celdas
+         */
+/*
+         *  Cuerpo de la tabla
+         */
+}
+.rtable.blue thead {
+  background: #70c0f2;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+.rtable.blue td,
+.rtable.blue th {
+  border-left: 1px solid #59aee2;
+}
+.rtable.blue tbody tr:nth-child(even) {
+  background-color: #a9ddfe;
+}
 /*
  *  Extras
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~

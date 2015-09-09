@@ -757,3 +757,10 @@ h6 {
 thead {
   vertical-align: bottom;
 }
+/*
+     *  Celdas
+     */
+.rtable td,
+.rtable th {
+  padding: 0.5em 1em;
+}
