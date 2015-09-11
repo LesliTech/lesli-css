@@ -3,10 +3,13 @@
 ResponsiveCat
 -----
 Responsive Cat es un micro framework css que cuenta con lo necesario para iniciar en el desarrollo web adaptativo, de una manera rapida y eficiente.
-
-**Descargar**  
-[Versión stable 0.6.0](https://github.com/ldonis/ResponsiveCat/archive/0.6.0.zip)  
-[Versión en desarrollo (0.6.1)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
+Instalación
+----------------
+* [Descargar versión stable 0.6.0](https://github.com/ldonis/ResponsiveCat/archive/0.6.0.zip).
+* [Descargar versión en desarrollo (0.6.1)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
+* Clonar el repositorio: `git clone https://github.com/ldonis/ResponsiveCat.git`.
+* Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
+* Instalar con [Composer](https://getcomposer.org): `composer require ldonis/ResponsiveCat`.
 
 Caracteristicas
 ---------------
