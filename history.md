@@ -1,6 +1,11 @@
 ##Responsive Cat - Historial de cambios
 --------------------------------
 
+### Versión 0.6.1 (released on 00/00/20XX)
+--------------------------------
+#### Helper
+* height 100% by default for flexbox vertical align
+
 ### Versión 0.6.0 (released on 08/09/2015)
 --------------------------------
 #### Stylus
