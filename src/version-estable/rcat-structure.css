@@ -130,6 +130,7 @@
   font-size: 0.9rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
   text-transform: uppercase;
 }
 .rnav.vertical ul li:not(:first-child):hover,
@@ -179,6 +180,7 @@
   box-sizing: border-box;
 }
 html {
+  font-family: Sans, sans-serif, Helvetica;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -187,16 +189,9 @@ html {
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  */
 body {
-  background: #fff;
-  color: #222;
-/*
-     *  Tipografia
-     */
-  font-family: Sans, sans-serif, Helvetica;
   font-size: 100%;
   font-style: normal;
   font-weight: 100;
-  line-height: 1.65rem;
 }
 /*
  *  Estilo de titulos
@@ -210,11 +205,8 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.4;
-  margin-top: 0.2rem;
   font-style: inherit;
   font-weight: inherit;
-  margin-bottom: 0.5rem;
   text-rendering: optimizelegibility;
 }
 h1 {
@@ -268,21 +260,8 @@ h6 {
      */
 .rform select,
 .rform textarea,
-.rform input[type="tel"],
-.rform input[type="url"],
-.rform input[type="text"],
-.rform input[type="date"],
-.rform input[type="time"],
-.rform input[type="email"],
-.rform input[type="phone"],
-.rform input[type="month"],
-.rform input[type="color"],
-.rform input[type="number"],
-.rform input[type="search"],
-.rform input[type="password"],
-.rform input[type="datetime"] {
+.rform input:not([type="submit"]):not([type="button"]) {
   border-radius: 2px;
-  line-height: 1.65rem;
   letter-spacing: 0.01rem;
   padding: 0.35rem 0.4rem;
 }
@@ -291,19 +270,7 @@ h6 {
      */
 .rform select:focus,
 .rform textarea:focus,
-.rform input[type="tel"]:focus,
-.rform input[type="url"]:focus,
-.rform input[type="text"]:focus,
-.rform input[type="date"]:focus,
-.rform input[type="time"]:focus,
-.rform input[type="email"]:focus,
-.rform input[type="phone"]:focus,
-.rform input[type="month"]:focus,
-.rform input[type="color"]:focus,
-.rform input[type="number"]:focus,
-.rform input[type="search"]:focus,
-.rform input[type="password"]:focus,
-.rform input[type="datetime"]:focus {
+.rform input:not([type="submit"]):not([type="button"]):focus {
   outline: none;
 }
 /*
@@ -324,7 +291,7 @@ h6 {
  * Formulario individual con prefijo
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
- * @since 0.6.0
+ * @since 0.7.0
  */
 /*
  * Contenedor/formulario
@@ -343,7 +310,7 @@ h6 {
          * Campo
          */
 }
-[class^="rform individual prefix"] > div > span,
+[class^="rform individual prefix"] > div > label,
 [class^="rform individual prefix"] > div > input {
   font-size: 1rem;
   padding: 0.2rem !important;
@@ -354,10 +321,11 @@ h6 {
 /*
          * Contenedor de de texto
          */
-[class^="rform individual prefix"] > div > span {
+[class^="rform individual prefix"] > div > label {
   width: 25%;
   background: #f2f2f2;
   border: solid 1px #ccc;
+  line-height: 1.3;
   border-right: medium none #ccc;
 }
 /*
@@ -522,31 +490,44 @@ h6 {
  * Contenedor de columnas automaticas y manuales
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http://ldonis.com>
- * @since 0.6.0
+ * @since 0.6.1
  */
 .rgrid,
 .rblock {
   width: 100%;
   font-size: 0;
+  text-align: justify;
+/**/
+/*
+     * Filas del grid
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http://ldonis.com>
+     * @since 0.6.0
+     */
+/*
+     * Grid
+     * Ancho de columnas automaticas
+     * columns-n = (width-margin)/n
+     */
+}
+.rgrid:after,
+.rblock:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
 }
 /*
- * Filas del grid
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http://ldonis.com>
- * @since 0.6.0
- */
+     * Filas del grid
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http://ldonis.com>
+     * @since 0.6.0
+     */
 .rgrid > *,
 .rblock > * {
   height: 100%;
   font-size: initial;
   white-space: initial;
   display: inline-block;
-}
-/*
- * Margen de grid
- */
-.rgrid > * {
-  margin-left: 1%;
 }
 .rgrid.columns-02 > * {
   width: 49.5%;
@@ -584,53 +565,53 @@ h6 {
 .rgrid > .column-1 {
   width: 9%;
 }
-.rgrid > .column-2 {
-  width: 19%;
-}
-.rgrid > .column-3 {
-  width: 29%;
-}
-.rgrid > .column-4 {
-  width: 39%;
-}
-.rgrid > .column-5 {
-  width: 49%;
-}
-.rgrid > .column-6 {
-  width: 59%;
-}
-.rgrid > .column-7 {
-  width: 69%;
-}
-.rgrid > .column-8 {
-  width: 79%;
-}
-.rgrid > .column-9 {
-  width: 89%;
-}
 .rgrid > .column-1:first-child {
   width: 10%;
+}
+.rgrid > .column-2 {
+  width: 19%;
 }
 .rgrid > .column-2:first-child {
   width: 20%;
 }
+.rgrid > .column-3 {
+  width: 29%;
+}
 .rgrid > .column-3:first-child {
   width: 30%;
+}
+.rgrid > .column-4 {
+  width: 39%;
 }
 .rgrid > .column-4:first-child {
   width: 40%;
 }
+.rgrid > .column-5 {
+  width: 49%;
+}
 .rgrid > .column-5:first-child {
   width: 50%;
+}
+.rgrid > .column-6 {
+  width: 59%;
 }
 .rgrid > .column-6:first-child {
   width: 60%;
 }
+.rgrid > .column-7 {
+  width: 69%;
+}
 .rgrid > .column-7:first-child {
   width: 70%;
 }
+.rgrid > .column-8 {
+  width: 79%;
+}
 .rgrid > .column-8:first-child {
   width: 80%;
+}
+.rgrid > .column-9 {
+  width: 89%;
 }
 .rgrid > .column-9:first-child {
   width: 90%;

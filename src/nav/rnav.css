@@ -130,6 +130,7 @@
   font-size: 0.9rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
   text-transform: uppercase;
 }
 .rnav.vertical ul li:not(:first-child):hover,

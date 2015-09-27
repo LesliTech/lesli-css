@@ -36,7 +36,7 @@
      * Centrado vertical
      * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
      * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.6.0
+     * @since 0.6.1
      */
 }
 .center.full {
@@ -47,4 +47,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
+/*
+         * Alineado de elementos
+         * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+         * @author Luis Gdonis <http//ldonis.com>
+         * @since 0.6.1
+         */
+}
+.center.vertical .left {
+  align-self: flex-start;
+}
+.center.vertical .right {
+  align-self: flex-end;
 }

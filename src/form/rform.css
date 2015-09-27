@@ -30,21 +30,8 @@
      */
 .rform select,
 .rform textarea,
-.rform input[type="tel"],
-.rform input[type="url"],
-.rform input[type="text"],
-.rform input[type="date"],
-.rform input[type="time"],
-.rform input[type="email"],
-.rform input[type="phone"],
-.rform input[type="month"],
-.rform input[type="color"],
-.rform input[type="number"],
-.rform input[type="search"],
-.rform input[type="password"],
-.rform input[type="datetime"] {
+.rform input:not([type="submit"]):not([type="button"]) {
   border-radius: 2px;
-  line-height: 1.65rem;
   letter-spacing: 0.01rem;
   padding: 0.35rem 0.4rem;
 }
@@ -53,19 +40,7 @@
      */
 .rform select:focus,
 .rform textarea:focus,
-.rform input[type="tel"]:focus,
-.rform input[type="url"]:focus,
-.rform input[type="text"]:focus,
-.rform input[type="date"]:focus,
-.rform input[type="time"]:focus,
-.rform input[type="email"]:focus,
-.rform input[type="phone"]:focus,
-.rform input[type="month"]:focus,
-.rform input[type="color"]:focus,
-.rform input[type="number"]:focus,
-.rform input[type="search"]:focus,
-.rform input[type="password"]:focus,
-.rform input[type="datetime"]:focus {
+.rform input:not([type="submit"]):not([type="button"]):focus {
   outline: none;
 }
 /*
@@ -86,7 +61,7 @@
  * Formulario individual con prefijo
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
- * @since 0.6.0
+ * @since 0.7.0
  */
 /*
  * Contenedor/formulario
@@ -105,7 +80,7 @@
          * Campo
          */
 }
-[class^="rform individual prefix"] > div > span,
+[class^="rform individual prefix"] > div > label,
 [class^="rform individual prefix"] > div > input {
   font-size: 1rem;
   padding: 0.2rem !important;
@@ -116,10 +91,11 @@
 /*
          * Contenedor de de texto
          */
-[class^="rform individual prefix"] > div > span {
+[class^="rform individual prefix"] > div > label {
   width: 25%;
   background: #f2f2f2;
   border: solid 1px #ccc;
+  line-height: 1.3;
   border-right: medium none #ccc;
 }
 /*
