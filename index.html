@@ -37,8 +37,8 @@
          *  Hacks!
          */
        .demo .rgrid div,
-       .demo .rblock div{padding: 15px 0;border:1px solid #CCC;background-color:#7e9ec7;color:#FFF;}
-       .demo .rgrid div{margin-top: 1%;}
+       .demo .rblock div{text-align: center; padding: 18px 0;border:1px solid #CCC;background-color:#7e9ec7;color:#FFF;}
+       .demo .rgrid > div{margin-top: 1%;}
        .demo .rform {max-width: 600px; margin: 0 auto;}
        .demo .rtable { max-width: 800px; margin: 0 auto;}
        .demo .center { max-width: 700px; min-height: 200px; margin: 0 auto;background-color: #7eb0e4; }
@@ -407,7 +407,7 @@
 
                     &lt;form class=&quot;rform individual prefix&quot;&gt;
                        &lt;div&gt;
-                           &lt;span&gt;Username&lt;/span&gt;
+                           &lt;label&gt;Username&lt;/label&gt;
                            &lt;input type=&quot;text&quot;&gt;
                        &lt;/div&gt;
                    &lt;/form&gt;
@@ -418,7 +418,7 @@
 
                 <form class="rform individual prefix">
                     <div>
-                        <span>Username</span>
+                        <label>Username</label>
                         <input type="text">
                     </div>
                 </form>
@@ -773,8 +773,8 @@
                     &lt;table class=&quot;rtable&quot;&gt;
                         &lt;thead&gt;
                             &lt;tr&gt;
-                                &lt;td&gt;header&lt;/td&gt;
-                                &lt;td&gt;header&lt;/td&gt;
+                                &lt;th&gt;header&lt;/th&gt;
+                                &lt;th&gt;header&lt;/th&gt;
                             &lt;/tr&gt;
                         &lt;/thead&gt;
                         &lt;tbody&gt;
@@ -791,13 +791,13 @@
 
             <div class="demo">
 
-                <table class="rtable">
+                <table class="rtable simple">
                     <thead>
                         <tr>
-                            <td>header</td>
-                            <td>header</td>
-                            <td>header</td>
-                            <td>header</td>
+                            <th>header</th>
+                            <th>header</th>
+                            <th>header</th>
+                            <th>header</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -951,7 +951,7 @@
 
             <code>
 
-                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-standar&quot; value=&quot;standar&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-standard&quot; value=&quot;standar&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-primary&quot; value=&quot;primary&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-success&quot; value=&quot;success&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-info&quot; value=&quot;info&quot;&gt;
@@ -962,7 +962,7 @@
 
             <div class="demo">
 
-                <input type="submit" class="rbutton-standar" value="standar">
+                <input type="submit" class="rbutton-standard" value="standard">
                 <input type="submit" class="rbutton-primary" value="primary">
                 <input type="submit" class="rbutton-success" value="success">
                 <input type="submit" class="rbutton-info" value="info">
@@ -973,12 +973,38 @@
 
             <br>
 
+            <h5 id="rui_botonesg">Botones fantasma</h5>
+
+            <code>
+
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-standar g&quot; value=&quot;standar&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-primary g&quot; value=&quot;primary&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-success g&quot; value=&quot;success&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-info g&quot; value=&quot;info&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-warning g&quot; value=&quot;warning&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-error g&quot; value=&quot;error&quot;&gt;
+
+            </code>
+
+            <div class="demo">
+
+                <input type="submit" class="rbutton-standard g" value="standard">
+                <input type="submit" class="rbutton-primary g" value="primary">
+                <input type="submit" class="rbutton-success g" value="success">
+                <input type="submit" class="rbutton-info g" value="info">
+                <input type="submit" class="rbutton-warning g" value="warning">
+                <input type="submit" class="rbutton-error g" value="error">
+
+            </div>
+
+            <br>
+
             <h5 id="rui_botonesgroup">Botones grupales</h5>
 
             <code>
 
                     &lt;div class=&quot;button-group&quot;&gt;
-                        &lt;input type=&quot;submit&quot; class=&quot;rbutton-standar&quot; value=&quot;standar&quot;&gt;
+                        &lt;input type=&quot;submit&quot; class=&quot;rbutton-standard&quot; value=&quot;standar&quot;&gt;
                         &lt;input type=&quot;submit&quot; class=&quot;rbutton-primary&quot; value=&quot;primary&quot;&gt;
                         &lt;input type=&quot;submit&quot; class=&quot;rbutton-success&quot; value=&quot;success&quot;&gt;
                         &lt;input type=&quot;submit&quot; class=&quot;rbutton-info&quot;    value=&quot;info&quot;&gt;
@@ -991,7 +1017,7 @@
             <div class="demo">
 
                 <div class="button-group">
-                    <input type="submit" class="rbutton-standar" value="standar">
+                    <input type="submit" class="rbutton-standard" value="standard">
                     <input type="submit" class="rbutton-primary" value="primary">
                     <input type="submit" class="rbutton-success" value="success">
                     <input type="submit" class="rbutton-info"    value="info">
@@ -1007,7 +1033,7 @@
 
             <code>
 
-                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-standar circle&quot; value=&quot;standar&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-standard circle&quot; value=&quot;standard&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-primary circle&quot; value=&quot;primary&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-success circle&quot; value=&quot;success&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-info circle&quot;    value=&quot;info&quot;&gt;
@@ -1018,7 +1044,7 @@
 
             <div class="demo">
 
-                <input type="submit" class="rbutton-standar circle" value="standar">
+                <input type="submit" class="rbutton-standard circle" value="standard">
                 <input type="submit" class="rbutton-primary circle" value="primary">
                 <input type="submit" class="rbutton-success circle" value="success">
                 <input type="submit" class="rbutton-info circle"    value="info">
@@ -1033,7 +1059,7 @@
 
             <code>
 
-                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-standar oval&quot; value=&quot;standar&quot;&gt;
+                    &lt;input type=&quot;submit&quot; class=&quot;rbutton-standard oval&quot; value=&quot;standard&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-primary oval&quot; value=&quot;primary&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-success oval&quot; value=&quot;success&quot;&gt;
                     &lt;input type=&quot;submit&quot; class=&quot;rbutton-info oval&quot;    value=&quot;info&quot;&gt;
@@ -1044,7 +1070,7 @@
 
             <div class="demo">
 
-                <input type="submit" class="rbutton-standar oval" value="standar">
+                <input type="submit" class="rbutton-standard oval" value="standard">
                 <input type="submit" class="rbutton-primary oval" value="primary">
                 <input type="submit" class="rbutton-success oval" value="success">
                 <input type="submit" class="rbutton-info oval"    value="info">
