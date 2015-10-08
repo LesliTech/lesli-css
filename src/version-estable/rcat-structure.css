@@ -193,8 +193,7 @@ body {
   font-style: normal;
   font-weight: 100;
 }
-/*
- *  Estilo de titulos
+/*  Estilo de titulos
  *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
  * @since 0.6.0
@@ -744,4 +743,68 @@ thead {
 .rtable td,
 .rtable th {
   padding: 0.5em 1em;
+}
+
+/*
+ * Responsive Cat
+ *
+ * This program is free software you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http//www.gnu.org/licenses/>.
+ *
+ * @author Luis Gdonis <http//ldonis.com>
+ * @package RCat Helper
+ * @version 0.6.0
+ */
+/*
+  * Centrado con flexbox
+  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+  * @author Luis Gdonis <http//ldonis.com>
+  * @since 0.6.0
+  */
+.center {
+  display: flex;
+/*
+     * Centrado completo
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.0
+     */
+/*
+     * Centrado vertical
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.6.1
+     */
+}
+.center.full {
+  align-items: center;
+  justify-content: center;
+}
+.center.vertical {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+/*
+         * Alineado de elementos
+         * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+         * @author Luis Gdonis <http//ldonis.com>
+         * @since 0.6.1
+         */
+}
+.center.vertical .left {
+  align-self: flex-start;
+}
+.center.vertical .right {
+  align-self: flex-end;
 }
