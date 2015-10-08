@@ -26,13 +26,18 @@ Caracteristicas
 
 * Kit de Interfaz de Usuario
 
+* Edición para desarrollo de wireframing
+
 * Archivo extremadamente pequeño 9.09kb
 
 Navegadores soportados
 ----------------------
 
 * IE 8+ con [html5shiv.js](https://github.com/aFarkas/html5shiv)
-* Ultimas versiones estables: Firefox, Chrome, Safari
+* Ultimas versiones estables:
+    + Firefox
+    + Chrome
+    + Safari
 * Android 4.x
 
 Sitio web y documentación

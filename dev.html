@@ -1,0 +1,87 @@
+<!Doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Cat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/base/rbase.css" type="text/css">
+    <link rel="stylesheet" href="src/grid/rgrid.css" type="text/css">
+    <link rel="stylesheet" href="src/dev/framing.css" type="text/css">
+    <style>
+
+        body > section{
+            width: 100%;
+            margin: 0 auto;
+            max-width: 1100px;
+            border:none !important;
+        }
+
+        /** Contenedor principal de documentacion **/
+        #docs_content{
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /** Encabezado de proyecto **/
+        #header{
+            margin: 50px auto 100px;
+            border-bottom: 1px solid #3498db;
+        }
+
+         /** Contenedor demo **/
+        .demo{
+            margin: 10px auto;
+        }
+
+        /** Hacks! **/
+        .demo .rgrid div,
+        .demo .rblock div{text-align: center; padding: 18px 0;}
+        .demo .rgrid{margin-top: 1%}
+    </style>
+</head>
+<body class="rdev">
+
+    <section id="docs_content">
+
+        <article id="header">
+            <div>
+                <img alt="ResponsiveCat" src="http://rcat.ldonis.com/www/rcat.ldonis.com/Template/img/rcat.png"/>
+                <h3>Responsive Cat</h3>
+                <span>CSS Micro Framework - Wireframing developer edition</span>
+                <hr>
+            </div>
+            <br>
+        </article>
+
+        <hr>
+
+        <br><br>
+
+        <article id="rgrid">
+
+            <h5 id="rgrid_automatico    ">Grid automatico</h5>
+
+            <div class="demo">
+
+                <div class="rgrid columns-03">
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                </div>
+
+                <div class="rgrid columns-04">
+                    <div>columna 01</div>
+                    <div>columna 02</div>
+                    <div>columna 03</div>
+                    <div>columna 04</div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+</body>
+</html>
