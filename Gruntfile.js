@@ -5,48 +5,53 @@ module.exports = function (grunt) {
             compile:{
                 options:{ 'compress': false },
                 files:{
-                    'src/nav/rnav.css' : 'core/nav/rnav.styl',
-                    'src/uikit/rui.css' : 'core/uikit/rui.styl',
                     'src/base/rbase.css' : 'core/base/rbase.styl',
-                    'src/form/rform.css' : 'core/form/rform.styl',
                     'src/grid/rgrid.css' : 'core/grid/rgrid.styl',
-                    'src/helper/rhelp.css' : 'core/helper/rhelp.styl',
+                    'src/form/rform.css' : 'core/form/rform.styl',
+                    'src/nav/rnav.css' : 'core/nav/rnav.styl',
                     'src/table/rtable.css' : 'core/table/rtable.styl',
-                    'src/dev/framing.css' : 'core/dev/framing.styl'
+                    'src/helper/rcenter.css' : 'core/helper/rcenter.styl',
+                    'src/helper/rlayout.css' : 'core/helper/rlayout.styl',
+                    'src/helper/rframing.css' : 'core/helper/rframing.styl',
+                    'src/uikit/rui.css' : 'core/uikit/rui.styl'
                 }
             }
         },
         concat: {
             rcatfull: {
                 src:[
-                    'src/nav/rnav.css',
                     'src/base/rbase.css',
-                    'src/form/rform.css',
                     'src/grid/rgrid.css',
+                    'src/form/rform.css',
+                    'src/nav/rnav.css',
                     'src/table/rtable.css',
-                    'src/uikit/rui.css',
-                    'src/helper/rhelp.css'],
+                    'src/helper/rcenter.css',
+                    'src/helper/rlayout.css',
+                    'src/helper/rframing.css',
+                    'src/uikit/rui.css'],
                 dest: 'src/version-estable/rcat.css'
             },
             rcatdev: {
                 src:[
-                    'src/nav/rnav.css',
                     'src/base/rbase.css',
-                    'src/form/rform.css',
                     'src/grid/rgrid.css',
+                    'src/form/rform.css',
+                    'src/nav/rnav.css',
                     'src/table/rtable.css',
-                    'src/helper/rhelp.css',
-                    'src/dev/framing.css'],
+                    'src/helper/rcenter.css',
+                    'src/helper/rlayout.css',
+                    'src/helper/rframing.css'],
                 dest: 'src/version-estable/rcat-dev.css'
             },
             rcatstructure: {
                 src:[
-                    'src/nav/rnav.css',
                     'src/base/rbase.css',
-                    'src/form/rform.css',
                     'src/grid/rgrid.css',
+                    'src/form/rform.css',
+                    'src/nav/rnav.css',
                     'src/table/rtable.css',
-                    'src/helper/rhelp.css'],
+                    'src/helper/rcenter.css',
+                    'src/helper/rlayout.css'],
                 dest: 'src/version-estable/rcat-structure.css'
             }
         },
@@ -57,17 +62,24 @@ module.exports = function (grunt) {
             form: { src: 'src/form/rform.css', dest: 'src/form/rform.min.css' },
             grid: { src: 'src/grid/rgrid.css', dest: 'src/grid/rgrid.min.css' },
             table: { src: 'src/table/rtable.css', dest: 'src/table/rtable.min.css' },
-            helper: { src: 'src/helper/rhelp.css', dest: 'src/helper/rhelp.min.css' },
+            center: { src: 'src/helper/rcenter.css', dest: 'src/helper/rcenter.min.css' },
+            layout: { src: 'src/helper/rlayout.css', dest: 'src/helper/rlayout.min.css' },
+            framing: { src: 'src/helper/rframing.css', dest: 'src/helper/rframing.min.css' },
             rcat: { src: 'src/version-estable/rcat.css', dest: 'src/version-estable/rcat.min.css' },
             rcatdev: { src: 'src/version-estable/rcat-dev.css', dest: 'src/version-estable/rcat-dev.min.css' },
             rcatstructure: { src: 'src/version-estable/rcat-structure.css', dest: 'src/version-estable/rcat-structure.min.css' },
+        },
+        stylint: {
+            src: ['src/**/*.styl']
         }
     });
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-stylint');
     grunt.registerTask(
-        'default', ['stylus:compile', 'concat:rcatfull','concat:rcatstructure','concat:rcatdev',
-                    'cssmin:ui','cssmin:nav','cssmin:base','cssmin:form','cssmin:grid','cssmin:table','cssmin:helper',
-                    'cssmin:rcat','cssmin:rcatstructure','cssmin:rcatdev']);
+        'deploy', ['stylus:compile', 'concat:rcatfull','concat:rcatdev','concat:rcatstructure',
+                    'cssmin:ui','cssmin:nav','cssmin:base','cssmin:form','cssmin:grid','cssmin:table','cssmin:center',
+                    'cssmin:layout','cssmin:framing','cssmin:rcat','cssmin:rcatstructure','cssmin:rcatdev']);
+    grunt.registerTask('dev',['stylint']);
 };
