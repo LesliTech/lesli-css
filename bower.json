@@ -5,7 +5,7 @@
     "ldonis <ldonis.emc2@gmail.com>"
   ],
   "description": "CSS Micro framework",
-  "main": "src/version-estable/rcat.min.css",
+  "main": "src/version/rcat.min.css",
   "moduleType": [
     "yui"
   ],
@@ -22,7 +22,7 @@
   "homepage": "rcat.ldonis.com",
   "ignore": [
     ".git",
-    "core",
+    ".gitignore",
     "nbproject",
     "node_modules"
   ]
