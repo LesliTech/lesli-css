@@ -1,6 +1,10 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~
+        ///* Deployment tasks
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~
         stylus:{
             compile:{
                 options:{ 'compress': false },
@@ -18,6 +22,18 @@ module.exports = function (grunt) {
             }
         },
         concat: {
+            rcat: {
+                src:[
+                    'src/base/rbase.css',
+                    'src/grid/rgrid.css',
+                    'src/form/rform.css',
+                    'src/nav/rnav.css',
+                    'src/table/rtable.css',
+                    'src/helper/rcenter.css',
+                    'src/helper/rlayout.css',
+                    'src/uikit/rui.css'],
+                dest: 'src/version/rcat.css'
+            },
             rcatfull: {
                 src:[
                     'src/base/rbase.css',
@@ -29,7 +45,7 @@ module.exports = function (grunt) {
                     'src/helper/rlayout.css',
                     'src/helper/rframing.css',
                     'src/uikit/rui.css'],
-                dest: 'src/version-estable/rcat.css'
+                dest: 'src/version/full/rcat.full.css'
             },
             rcatdev: {
                 src:[
@@ -41,7 +57,7 @@ module.exports = function (grunt) {
                     'src/helper/rcenter.css',
                     'src/helper/rlayout.css',
                     'src/helper/rframing.css'],
-                dest: 'src/version-estable/rcat-dev.css'
+                dest: 'src/version/dev/rcat.dev.css'
             },
             rcatstructure: {
                 src:[
@@ -52,7 +68,7 @@ module.exports = function (grunt) {
                     'src/table/rtable.css',
                     'src/helper/rcenter.css',
                     'src/helper/rlayout.css'],
-                dest: 'src/version-estable/rcat-structure.css'
+                dest: 'src/version/structure/rcat.structure.css'
             }
         },
         cssmin: {
@@ -65,21 +81,42 @@ module.exports = function (grunt) {
             center: { src: 'src/helper/rcenter.css', dest: 'src/helper/rcenter.min.css' },
             layout: { src: 'src/helper/rlayout.css', dest: 'src/helper/rlayout.min.css' },
             framing: { src: 'src/helper/rframing.css', dest: 'src/helper/rframing.min.css' },
-            rcat: { src: 'src/version-estable/rcat.css', dest: 'src/version-estable/rcat.min.css' },
-            rcatdev: { src: 'src/version-estable/rcat-dev.css', dest: 'src/version-estable/rcat-dev.min.css' },
-            rcatstructure: { src: 'src/version-estable/rcat-structure.css', dest: 'src/version-estable/rcat-structure.min.css' },
+            rcat: { src: 'src/version/rcat.css', dest: 'src/version/rcat.min.css' },
+            rcatdev: { src: 'src/version/dev/rcat.dev.css', dest: 'src/version/dev/rcat.dev.min.css' },
+            rcatfull: { src: 'src/version/full/rcat.full.css', dest: 'src/version/full/rcat.full.min.css' },
+            rcatstructure: { src: 'src/version/structure/rcat.structure.css', dest: 'src/version/structure/rcat.structure.min.css' },
         },
+
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~
+        ///* Development tasks
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~
         stylint: {
-            src: ['src/**/*.styl']
-        }
+            options: {
+              configFile: false,
+              config: {colons: 'never'}
+            },
+            src: ['core/base/rbase.styl']
+          },
     });
+
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    ///* Including plugins and dependencies
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-stylint');
-    grunt.registerTask(
-        'deploy', ['stylus:compile', 'concat:rcatfull','concat:rcatdev','concat:rcatstructure',
+
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    ///* Running/defining deployment tasks
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    grunt.registerTask('deploy',
+                    ['stylus:compile', 'concat:rcat','concat:rcatfull','concat:rcatdev','concat:rcatstructure',
                     'cssmin:ui','cssmin:nav','cssmin:base','cssmin:form','cssmin:grid','cssmin:table','cssmin:center',
-                    'cssmin:layout','cssmin:framing','cssmin:rcat','cssmin:rcatstructure','cssmin:rcatdev']);
+                    'cssmin:layout','cssmin:framing','cssmin:rcat','cssmin:rcatfull','cssmin:rcatstructure','cssmin:rcatdev']);
+
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    ///* Running/defining Development tasks
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     grunt.registerTask('dev',['stylint']);
 };
