@@ -1,9 +1,9 @@
 ![''](http://rcat.ldonis.com/www/rcat.ldonis.com/Template/img/rcat.png "Responsive cat")
 
-ResponsiveCat
------
+## ResponsiveCat
 Responsive Cat es un micro framework css que cuenta con lo necesario para iniciar en el desarrollo web adaptativo, de una manera rapida y eficiente.
-Instalación
+
+### Instalación
 ----------------
 * [Descargar versión stable 0.6.0](https://github.com/ldonis/ResponsiveCat/archive/0.6.0.zip).
 * [Descargar versión en desarrollo (0.7.0)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
@@ -11,7 +11,7 @@ Instalación
 * Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
 * Instalar con [Composer](https://getcomposer.org): `composer require ldonis/ResponsiveCat`.
 
-Caracteristicas
+### Caracteristicas
 ---------------
 
 * Nucleo preprocesado con [Stylus](https://learnboost.github.io/stylus/)
@@ -30,7 +30,7 @@ Caracteristicas
 
 * Archivo extremadamente pequeño 9.09kb
 
-Navegadores soportados
+### Compatibilidad
 ----------------------
 
 * IE 8+ con [html5shiv.js](https://github.com/aFarkas/html5shiv)
@@ -40,7 +40,7 @@ Navegadores soportados
     + Safari
 * Android 4.x
 
-Sitio web y documentación
+### Sitio web y documentación
 ----------------
 
 Responsive Cat es completamente libre y de codigo abierto
@@ -51,7 +51,7 @@ Responsive Cat es completamente libre y de codigo abierto
 
 * Issue tracker: [https://github.com/ldonis/ResponsiveCat/issues](https://github.com/ldonis/ResponsiveCat/issues)
 
-Licencia
+### Licencia
 ----------------
 
 Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ldonis/ResponsiveCat/blob/master/LICENSE).
