@@ -28,7 +28,7 @@ Responsive Cat es un micro framework css que cuenta con lo necesario para inicia
 
 * Edición para desarrollo de wireframing
 
-* Archivo extremadamente pequeño 9.09kb
+* Archivo extremadamente pequeño 9.75kb
 
 ### Compatibilidad
 ----------------------
