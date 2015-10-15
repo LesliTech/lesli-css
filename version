@@ -1,6 +1,16 @@
 Versión 0.7.0
 ================================
  0   Versión completa estable
- 7   Nuevas funcionalidades     
+ 7   Nuevas funcionalidades
  0   Mejoras en funcionalidades
-================================
+ ------------
+     alpha
+     beta
+     stable
+ ------------
+ ================================
+
+ Rules
+ ~·~ ~·~ ~·~
+ Cada liberación de versión alpha y beta debe incluir correlativo
+ La version estable no necesita la etiqueta
