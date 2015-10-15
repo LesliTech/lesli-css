@@ -829,3 +829,22 @@ thead {
  * @package RCat Layout
  * @version 0.6.0
  */
+body.layout.html5 {
+  width: 100%;
+  font-size: 0;
+}
+body.layout.html5 > * {
+  font-size: initial;
+  white-space: initial;
+}
+body.layout.html5 section,
+body.layout.html5 aside {
+  height: 100%;
+  display: inline-block;
+}
+body.layout.html5 section {
+  width: 75%;
+}
+body.layout.html5 aside {
+  width: 25%;
+}
