@@ -2,7 +2,7 @@
   "name": "ResponsiveCat",
   "version": "0.6.0",
   "authors": [
-    "ldonis <ldonis.emc2@gmail.com>"
+    "Luis Gdonis <ldonis.emc2@gmail.com>"
   ],
   "description": "CSS Micro framework",
   "main": "src/version/rcat.min.css",
@@ -19,7 +19,7 @@
     "web",
     "wireframing"
   ],
-  "license": "GPL",
+  "license": "GPL-3.0",
   "homepage": "rcat.ldonis.com",
   "ignore": [
     ".git",
