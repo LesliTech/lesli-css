@@ -17,7 +17,7 @@ Responsive Cat es un micro framework css que cuenta con lo necesario para inicia
 
 * Nucleo preprocesado con [Stylus](https://learnboost.github.io/stylus/)
 
-* Sistema de grid totalmente adaptativo
+* Sistema de grid totalmente responsive
 
 * Menus verticales y horizontales predefinidos
 
