@@ -1,6 +1,6 @@
 {
   "name": "ResponsiveCat",
-  "version": "0.6.0",
+  "version": "0.7.0-alpha",
   "authors": [
     "Luis Gdonis <ldonis.emc2@gmail.com>"
   ],
@@ -20,11 +20,11 @@
     "wireframing"
   ],
   "license": "GPL-3.0",
-  "homepage": "rcat.ldonis.com",
+  "homepage": "http://responsivecat.com",
   "ignore": [
     ".git",
     ".gitignore",
-    "nbproject",
+    ".gitattributes",
     "node_modules"
   ]
 }

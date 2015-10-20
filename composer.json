@@ -3,17 +3,16 @@
     "description": "CSS Micro Framework",
     "type": "project",
     "keywords": [
-        "css",
-        "js",
-        "less",
+        "CSS",
+        "framework",
+        "stylus",
         "mobile-first",
         "responsive",
         "front-end",
-        "framework",
         "web",
         "wireframing"
     ],
-    "homepage": "http://rcat.ldonis.com",
+    "homepage": "http://responsivecat.com",
     "license": "GPL-3.0",
     "authors": [
         {

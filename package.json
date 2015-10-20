@@ -1,7 +1,7 @@
 {
     "name": "responsivecat",
     "title": "CSS Micro Framework",
-    "version": "0.6.0",
+    "version": "0.7.0-alpha",
     "homepage": "http://rcat.ldonis.com",
     "author": "Luis Gdonis <ldonis.emc2@gmail.com>",
     "license": "GPL-3.0",
@@ -17,9 +17,9 @@
         "wireframing"],
     "repository": {
         "type": "git",
-        "url": "https://github.com/ldonis/ResponsiveCat.git"},
+        "url": "https://github.com/ResponsiveCat/ResponsiveCat.git"},
     "bugs": {
-        "url": "https://github.com/ldonis/ResponsiveCat/issues"},
+        "url": "https://github.com/ResponsiveCat/ResponsiveCat/issues"},
     "devDependencies": {
         "grunt": "0.4.1",
         "grunt-contrib-concat": "0.1.3",

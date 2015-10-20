@@ -1,13 +1,12 @@
-![''](http://rcat.ldonis.com/www/rcat.ldonis.com/Template/img/rcat.png "Responsive cat")
+![''](http://responsivecat.com/www/responsivecat.com/Template/img/rcat.png "Responsive cat")
 
 ## ResponsiveCat
 Responsive Cat es un micro framework css que cuenta con lo necesario para iniciar en el desarrollo web adaptativo, de una manera rapida y eficiente.
 
 ### Instalación
 ----------------
-* [Descargar versión stable 0.6.0](https://github.com/ldonis/ResponsiveCat/archive/0.6.0.zip).
-* [Descargar versión en desarrollo (0.7.0)](https://github.com/ldonis/ResponsiveCat/archive/master.zip)
-* Clonar el repositorio: `git clone https://github.com/ldonis/ResponsiveCat.git`.
+* [Descargar versión en desarrollo (0.7.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
+* Clonar el repositorio: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
 * Install with [npm](https://www.npmjs.com): `npm install responsivecat`.
 * Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
 * Instalar con [Composer](https://getcomposer.org): `composer require ldonis/ResponsiveCat`.
@@ -27,7 +26,7 @@ Responsive Cat es un micro framework css que cuenta con lo necesario para inicia
 
 * Kit de Interfaz de Usuario
 
-* Edición para desarrollo de wireframing
+* Plugin para desarrollo de wireframing
 
 * Archivo extremadamente pequeño 9.75kb
 
@@ -46,13 +45,13 @@ Responsive Cat es un micro framework css que cuenta con lo necesario para inicia
 
 Responsive Cat es completamente libre y de codigo abierto
 
-* Sitio web: [http://rcat.ldonis.com/](http://rcat.ldonis.com/)
+* Sitio web: [http://responsivecat.com/](http://responsivecat.com/)
 
-* Documentacion: [http://rcat.ldonis.com/docs/](http://rcat.ldonis.com/docs/)
+* Documentacion: [http://responsivecat.com/docs/](http://responsivecat.com/docs/)
 
 * Issue tracker: [https://github.com/ldonis/ResponsiveCat/issues](https://github.com/ldonis/ResponsiveCat/issues)
 
 ### Licencia
 ----------------
 
-Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ldonis/ResponsiveCat/blob/master/LICENSE).
+Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ResponsiveCat/ResponsiveCat/blob/master/LICENSE).
