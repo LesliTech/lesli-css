@@ -5,8 +5,7 @@ Si has usado [Responsive Cat](http://responsivecat.com) y te gusta el proyecto, 
 Este documento tiene el fin de establecer los pasos, directrices y mejores practicas para hacer una contribución, este proceso tiene como fin ser fácil y eficaz para todos los involucrados.
 
 _continuar_  
-Siguiendo estas pautas ayuda a comunicar que se respete el tiempo de
-los desarrolladores de la gestión y el desarrollo de este proyecto de código abierto. A cambio, ellos deben corresponder a este respecto en el tratamiento de su problema o evaluar parches y características.
+Siguiendo estas pautas ayuda a comunicar que se respete el tiempo de los desarrolladores de la gestión y el desarrollo de este proyecto de código abierto. A cambio, ellos deben corresponder a este respecto en el tratamiento de su problema o evaluar parches y características.
 
 
 ## Utilizando el seguimiento de incidencias

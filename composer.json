@@ -23,8 +23,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/ldonis/RCat/issues",
-        "forum": "http://stackoverflow.com/tags/RCat",
-        "source": "https://github.com/ldonis/RCat"
+        "issues": "https://github.com/ResponsiveCat/ResponsiveCat/issues",
+        "forum":  "http://stackoverflow.com/tags/RCat",
+        "source": "https://github.com/ResponsiveCat/ResponsiveCat"
     }
 }
