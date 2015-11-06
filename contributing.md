@@ -4,89 +4,68 @@ Si has usado [Responsive Cat](http://responsivecat.com) y te gusta el proyecto, 
 
 Este documento tiene el fin de establecer los pasos, directrices y mejores practicas para hacer una contribución, este proceso tiene como fin ser fácil y eficaz para todos los involucrados.
 
-_continuar_  
-Siguiendo estas pautas ayuda a comunicar que se respete el tiempo de los desarrolladores de la gestión y el desarrollo de este proyecto de código abierto. A cambio, ellos deben corresponder a este respecto en el tratamiento de su problema o evaluar parches y características.
+Estas pautas ayudan a mejorar la comunicacion, gestion y desarrollo de este proyecto ademas de respetar el tiempo de los desarrolladores. Como resultado se optimiza la resolucion de bugs, creacion de parches y desarrollo de nuevas caracteristicas.
 
+## Seguimiento de incidencias
 
-## Utilizando el seguimiento de incidencias
+El [seguimiento de incidencias] (https://github.com/ResponsiveCat/ResponsiveCat/issues) es
+el canal preferido para [informes de errores] (# bugs), [Solicitud de carateristicas] (# features)
+y [la presentacion de solicitudes de implementacion] (# pull-request), para el optimo mantenimiento de incidentes se solicita respetar las siguientes restricciones:
 
-El [seguimiento de incidencias] (https://github.com/h5bp/html5-boilerplate/issues) es
-el canal preferido para [informes de errores] (# bichos), [Características solicitudes] (# características)
-y [la presentación de solicitudes de extracción] (# pull-demandas), pero por favor, respete las siguientes
-restricciones:
+* ** No ** utilizar el gestor de incidencias para solicitudes de soporte personal.
 
-* Por favor, ** no ** utilizar el gestor de incidencias para solicitudes de apoyo personal (uso
-  [Desbordamiento de pila] (https://stackoverflow.com/questions/tagged/html5boilerplate)).
+* ** No ** salirse del tema o "trollear" los issues. Mantenga la discusión dentro del tema y se debe respetar la opinión de los demás.
 
-* Por favor, ** no ** descarrilar o duende cuestiones. Mantenga la discusión dentro del tema y
-  respetar las opiniones de los demás.
+## Informes de fallos
 
-* Por favor, no haga ** ** cuestiones abiertas o tirar de las solicitudes en relación con el código en
-  [`.htaccess`] (https://github.com/h5bp/server-configs-apache),
-  [`jQuery`] (https://github.com/jquery/jquery/),
-  [`Modernizr`] (https://github.com/Modernizr/Modernizr) o
-  [`Normalize.css`] (https://github.com/necolas/normalize.css) (abrirlos en
-  sus respectivos repositorios).
-
-
-<a name="bugs"> </a>
-## Los informes de fallos
-
-Un error es un problem_ _demonstrable que es causada por el código en el repositorio.
+Un error (bug) es un _problema_ _demonstrable_ que es causada por el código en el repositorio.
 Los buenos informes de errores son extremadamente útiles - ¡gracias!
 
 Directrices para los informes de errores:
 
-1. ** Utilice la búsqueda tema GitHub ** & mdash; comprobar si el problema ya ha sido
-   reportado.
+1. ** Utilice la búsqueda de GitHub ** & mdash; Para comprobar si el problema ya ha sido reportado.
 
-2. ** Compruebe si el problema se ha solucionado ** & mdash; tratar de reproducirlo mediante el
-   última `master 'o desarrollo de la rama en el repositorio.
+2. ** Compruebe si el problema se ha solucionado ** & mdash; tratando de reproducir el error utilizando la rama `master ' o la rama de desarrollo en el repositorio en su ultima versión.
 
-3. ** Aislar el problema ** & mdash; idealmente crear un [reducido de ensayos
-   caso] (https://css-tricks.com/reduced-test-cases/) y un ejemplo vivo.
+3. ** Aislar el problema ** & mdash; idealmente crear un [reduced-test-cases] (https://css-tricks.com/reduced-test-cases/).
 
-Un buen reporte de error no se debe dejar a otros que necesitan persiguen que por más
-información. Por favor, trate de ser lo más detallado posible en su informe. Que es
-su entorno? ¿Qué medidas va a reproducir el problema? ¿Qué navegador (s) y OS
-experimentar el problema? ¿Qué le espera a ser el resultado? Todos esos
-detalles ayudarán a la gente para arreglar cualquier error potenciales.
+Un buen reporte de error no debe dejar a los desarrolladores con la necesidad de contactarlo para obtener más información. Por favor, trate de ser lo más detallado posible en su informe.
+* ¿Que es su entorno?
+* ¿Qué medidas va a reproducir el problema?
+* ¿Qué navegador (s) y OS experimentar el problema?
+* ¿Qué le espera a ser el resultado?
+Todos estos detalles ayudarán al desarrollador para corregir el actual y cualquier otro error potencial.
 
 Ejemplo:
 
-> Ejemplo corto y descriptivo informe de error del título
+> Titulo del informe de error
 >
-> Un resumen de la cuestión y el entorno del navegador / OS en el que ocurre. Si
-> Adecuado, incluir los pasos necesarios para reproducir el error.
+> Un resumen del incidente y el entorno del navegador/sistema operativo en el que ocurre.
+> Es de utilidad incluir los pasos necesarios para reproducir el error.
 >
 > 1. Este es el primer paso
 > 2. Este es el segundo paso
 > 3. Otras medidas, etc.
 >
-> `<Url>` - un enlace para el caso de prueba reducida
+> `<Url>` - enlace apruebas unitarias o otro tipo de testing
 >
-> Cualquier otra información que quieres compartir que es relevante para el tema de ser
-> Reportado. Esto podría incluir las líneas de código que usted ha identificado como
-> Causando el error y posibles soluciones (y sus opiniones sobre su
-> Méritos).
+> Cualquier otra información que se quiera compartir que sea relevante para el incidente Reportado.
+> Esto podría incluir las líneas de código que usted ha identificado como
+> causante del error y posibles soluciones (y su opinion y méritos).
 
+## Solicitudes de funcionalidades
 
-<a name="features"> </a>
-## Solicitudes de funciones
-
-Peticiones son bienvenidos. Pero tome un momento para averiguar si su idea
-encaja con el alcance y los objetivos del proyecto. Todo depende de usted * * a hacer una fuerte
-caso para convencer a los desarrolladores del proyecto de los méritos de esta función. Por favor
+Todas las peticiones son bienvenidas. Pero tome un momento para averiguar si su idea
+encaja con el alcance y los objetivos del proyecto. Todo depende de * usted * para convencer
+a los desarrolladores del proyecto de los méritos de esta función. Por favor
 proporcionar el mayor detalle y el contexto de lo posible.
 
+## pull-request
 
-<a name="pull-requests"> </a>
-## Peticiones y jalar
+Pull-request con - parches, mejoras, nuevas características - son de gran ayuda.
+Ellos deben permanecer enfocado en su alcance del proyecto y evitar contenido no relacionado.
 
-Buenas peticiones de tracción - parches, mejoras, nuevas características - son una fantástica
-Ayuda. Ellos deben permanecer enfocado en su alcance y evitar que contiene no relacionada
-comete.
-
+<continuar>
 ** Por favor, pregunte primero ** antes de emprender cualquier solicitud de extracción significativa (por ejemplo,
 implementar características, refactorización de código, la migración a otro idioma),
 de lo contrario corre el riesgo de pasar mucho tiempo trabajando en algo que el

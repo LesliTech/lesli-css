@@ -128,22 +128,22 @@
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.6.0
      */
-    &.vertical
+    .vertical
 
-        ul > li
-            display block !important
-            text-align left
+         //  -------------------------------
+         //  Titulo de sub lista o sub menu
+         //  -------------------------------
+         & li > ul > li:first-child
+             font-size 0.9rem
+             margin-top 0.5em
+             margin-bottom 0.5em
+             border-bottom 1px solid #ccc
+             text-transform uppercase
 
-        /*
-         *  Titulo de lista o menu
-         */
-        ul > li:first-child
-            font-size 0.9rem
-            margin-top 0.5em
-            margin-bottom 0.5em
-            border-bottom 1px solid #ccc
-            text-transform uppercase
+         //  -------------------------------
+         //  Estilo de generico de lista
+         //  -------------------------------
+         ul
 
-        ul li:not(:first-child):hover
-        ul li:not(:first-child) a:hover
-            cursor pointer
+             li
+                 display block !important

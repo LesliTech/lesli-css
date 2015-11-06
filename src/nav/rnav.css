@@ -122,18 +122,13 @@
   left: 100%;
   top: 0;
 }
-.rnav.vertical ul > li {
-  display: block !important;
-  text-align: left;
-}
-.rnav.vertical ul > li:first-child {
+.rnav .vertical li > ul > li:first-child {
   font-size: 0.9rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
 }
-.rnav.vertical ul li:not(:first-child):hover,
-.rnav.vertical ul li:not(:first-child) a:hover {
-  cursor: pointer;
+.rnav .vertical ul li {
+  display: block !important;
 }
