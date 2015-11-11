@@ -1,33 +1,34 @@
 {
-  "name": "responsivecat",
-  "title": "CSS Micro Framework",
-  "version": "0.7.0",
-  "homepage": "http://rcat.ldonis.com",
-  "author": "Luis Gdonis <ldonis.emc2@gmail.com>",
-  "license": "GPL-3.0",
-  "description": "CSS Microframework para maquetada bajo estandares HTML5 y CSS3",
-  "keywords": [
-    "CSS",
-    "framework",
-    "stylus",
-    "mobile-first",
-    "responsive",
-    "front-end",
-    "web",
-    "wireframing"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ResponsiveCat/ResponsiveCat.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ResponsiveCat/ResponsiveCat/issues"
-  },
-  "devDependencies": {
-    "grunt": "0.4.1",
-    "grunt-contrib-concat": "0.1.3",
-    "grunt-contrib-cssmin": "0.6.1",
-    "grunt-contrib-stylus": "0.21.*",
-    "grunt-stylint": "0.*"
-  }
+    "name": "responsivecat",
+    "title": "CSS Micro Framework",
+    "version": "0.7.0",
+    "homepage": "http://rcat.ldonis.com",
+    "author": "Luis Gdonis <ldonis.emc2@gmail.com>",
+    "license": "GPL-3.0",
+    "description": "CSS Microframework para maquetada bajo estandares HTML5 y CSS3",
+    "keywords": [
+        "CSS",
+        "framework",
+        "stylus",
+        "mobile-first",
+        "responsive",
+        "front-end",
+        "web",
+        "wireframing",
+        "email"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ResponsiveCat/ResponsiveCat.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ResponsiveCat/ResponsiveCat/issues"
+    },
+    "devDependencies": {
+        "grunt": "0.4.1",
+        "grunt-contrib-concat": "0.1.3",
+        "grunt-contrib-cssmin": "0.6.1",
+        "grunt-contrib-stylus": "0.21.*",
+        "grunt-contrib-copy" : "0.*"
+    }
 }

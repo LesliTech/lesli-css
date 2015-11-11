@@ -62,8 +62,8 @@ proporcionar el mayor detalle y el contexto de lo posible.
 
 ## pull-request
 
-Pull-request con - parches, mejoras, nuevas características - son de gran ayuda.
-Ellos deben permanecer enfocado en su alcance del proyecto y evitar contenido no relacionado.
+Pull-request con parches, mejoras, nuevas características son de gran ayuda.
+Se debe permanecer enfocado al alcance del proyecto y evitar contenido no relacionado.
 
 <continuar>
 ** Por favor, pregunte primero ** antes de emprender cualquier solicitud de extracción significativa (por ejemplo,

@@ -1,0 +1,349 @@
+/**
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * CSS version 3
+ *
+ * Establece estilos genericos para sitio web
+ *
+ * @category Structure
+ * @package  Base styles
+ * @author   Luis Gdonis <mail@ldonis.com>
+ * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+ * @version  0.7.0
+ * @link     http://responsivecat.com
+ */
+/**
+ * Reset
+ * Reinicia los valores por defecto del margen y padding
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+  background-color: inherit;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: Sans, sans-serif, Helvetica;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+/**
+ * Inicializa los valores de estilos genericos
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+body {
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 100;
+}
+/**
+ * Estilo de titulos
+ *
+ * Establece un valor estandar para los titulos y subtitulos
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: inherit;
+  text-rendering: optimizelegibility;
+}
+/* Titulo principal
+ * ================================== */
+h1 {
+  font-size: 2.38rem;
+}
+/* Subtitulo
+ * ================================== */
+h2 {
+  font-size: 2.15rem;
+}
+/* Subtitulos
+ * ================================== */
+h3 {
+  font-size: 1.92rem;
+}
+h4 {
+  font-size: 1.69rem;
+}
+h5 {
+  font-size: 1.46rem;
+}
+h6 {
+  font-size: 1.23rem;
+}
+
+/**
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * CSS version 3
+ *
+ * Sistema de grids y blocks para ResponsiveCat
+ *
+ * @category Structure
+ * @package  Base styles
+ * @author   Luis Gdonis <mail@ldonis.com>
+ * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+ * @version  0.7.0
+ * @link     http://responsivecat.com
+ */
+/**!
+ * Contenedor de columnas automaticas y manuales
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rgrid,
+.rblock {
+  width: 100%;
+  font-size: 0;
+  text-align: justify;
+}
+/* Estilos a pseudo elementos
+     * ================================== */
+:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+/* Filas del grid
+     * ================================== */
+> * {
+  height: 100%;
+  font-size: initial;
+  white-space: initial;
+  display: inline-block;
+}
+/*
+ * Grid
+ * Ancho de columnas automaticas
+ * columns-n = (width-margin)/n
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rgrid.columns-02 > * {
+  width: 49.5%;
+}
+.rgrid.columns-03 > * {
+  width: 32.66%;
+}
+.rgrid.columns-04 > * {
+  width: 24.25%;
+}
+.rgrid.columns-05 > * {
+  width: 19.2%;
+}
+.rgrid.columns-06 > * {
+  width: 15.83%;
+}
+.rgrid.columns-07 > * {
+  width: 13.42%;
+}
+.rgrid.columns-08 > * {
+  width: 11.62%;
+}
+.rgrid.columns-09 > * {
+  width: 10.22%;
+}
+.rgrid.columns-10 > * {
+  width: 9.1%;
+}
+.rgrid.columns-11 > * {
+  width: 8.18%;
+}
+.rgrid.columns-12 > * {
+  width: 7.41%;
+}
+/* ancho de columnas manuales
+     * .col-n = ((100-margen)/10) * n
+     * ================================== */
+> .column-1 {
+  width: 9%;
+}
+> .column-1:first-child {
+  width: 10%;
+}
+> .column-2 {
+  width: 19%;
+}
+> .column-2:first-child {
+  width: 20%;
+}
+> .column-3 {
+  width: 29%;
+}
+> .column-3:first-child {
+  width: 30%;
+}
+> .column-4 {
+  width: 39%;
+}
+> .column-4:first-child {
+  width: 40%;
+}
+> .column-5 {
+  width: 49%;
+}
+> .column-5:first-child {
+  width: 50%;
+}
+> .column-6 {
+  width: 59%;
+}
+> .column-6:first-child {
+  width: 60%;
+}
+> .column-7 {
+  width: 69%;
+}
+> .column-7:first-child {
+  width: 70%;
+}
+> .column-8 {
+  width: 79%;
+}
+> .column-8:first-child {
+  width: 80%;
+}
+> .column-9 {
+  width: 89%;
+}
+> .column-9:first-child {
+  width: 90%;
+}
+/* remueve el margen del primer elemento
+     * ================================== */
+> div:first-child {
+  margin-left: 0;
+}
+/*
+ * Block
+ * Ancho de columnas automaticas
+ * columns-n = width/n
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rblock.columns-02 > * {
+  width: 50%;
+}
+.rblock.columns-03 > * {
+  width: 33.33%;
+}
+.rblock.columns-04 > * {
+  width: 25%;
+}
+.rblock.columns-05 > * {
+  width: 20%;
+}
+.rblock.columns-06 > * {
+  width: 16.66%;
+}
+.rblock.columns-07 > * {
+  width: 14.28%;
+}
+.rblock.columns-08 > * {
+  width: 12.5%;
+}
+.rblock.columns-09 > * {
+  width: 11.11%;
+}
+.rblock.columns-10 > * {
+  width: 10%;
+}
+.rblock.columns-11 > * {
+  width: 9.09%;
+}
+.rblock.columns-12 > * {
+  width: 8.33%;
+}
+.rblock > .column-1 {
+  width: 10%;
+}
+.rblock > .column-2 {
+  width: 20%;
+}
+.rblock > .column-3 {
+  width: 30%;
+}
+.rblock > .column-4 {
+  width: 40%;
+}
+.rblock > .column-5 {
+  width: 50%;
+}
+.rblock > .column-6 {
+  width: 60%;
+}
+.rblock > .column-7 {
+  width: 70%;
+}
+.rblock > .column-8 {
+  width: 80%;
+}
+.rblock > .column-9 {
+  width: 90%;
+}
+/*
+ * MediaQueries
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+@media screen and (max-width: 320px) {
+  .rgrid > *,
+  .rblock > * {
+    display: block;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}

@@ -1,1 +1,0 @@
-.center{display:flex}.center.full{align-items:center;justify-content:center}.center.vertical{align-items:center;justify-content:center;flex-direction:column;height:100%}.center.vertical .left{align-self:flex-start}.center.vertical .right{align-self:flex-end}

@@ -1,4 +1,4 @@
-/*
+/**
  * Responsive Cat
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,16 +16,21 @@
  *
  * CSS version 3
  *
- * @category CSS
- * @package  RCat Structure
+ * Establece estilos genericos para sitio web
+ *
+ * @category Structure
+ * @package  Base styles
  * @author   Luis Gdonis <mail@ldonis.com>
  * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
- * @version  0.6.0
- * @link     http://rcat.ldonis.com
+ * @version  0.7.0
+ * @link     http://responsivecat.com
  */
-/*
- *  Reset
- *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+/**
+ * Reset
+ * Reinicia los valores por defecto del margen y padding
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
  */
 * {
   margin: 0;
@@ -49,19 +54,24 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-/*
- *  Inicializa
- *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+/**
+ * Inicializa los valores de estilos genericos
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
  */
 body {
   font-size: 100%;
   font-style: normal;
   font-weight: 100;
 }
-/*  Estilo de titulos
- *  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+/**
+ * Estilo de titulos
+ *
+ * Establece un valor estandar para los titulos y subtitulos
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
- * @since 0.6.0
+ * @since 0.7.0
  */
 h1,
 h2,
@@ -73,12 +83,18 @@ h6 {
   font-weight: inherit;
   text-rendering: optimizelegibility;
 }
+/* Titulo principal
+ * ================================== */
 h1 {
   font-size: 2.38rem;
 }
+/* Subtitulo
+ * ================================== */
 h2 {
   font-size: 2.15rem;
 }
+/* Subtitulos
+ * ================================== */
 h3 {
   font-size: 1.92rem;
 }

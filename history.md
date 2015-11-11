@@ -6,11 +6,11 @@
 #### Helper
 * Flexbox integration
 
-#### Buttons
-* Add ghost buttons
-
 #### UIKit
 * Add global variables for colors
+
+##### Buttons
+* Add ghost buttons
 
 ### Versión 0.6.0 (released on 08/09/2015)
 --------------------------------

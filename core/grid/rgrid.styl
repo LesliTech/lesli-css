@@ -1,4 +1,4 @@
-/*!
+/**
  * Responsive Cat
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,87 +14,91 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * @author Luis Gdonis <http://ldonis.com>
- * @package RCat Structure
- * @subpackage Grid System
- * @version 0.6.0
+ * CSS version 3
+ *
+ * Sistema de grids y blocks para ResponsiveCat
+ *
+ * @category Structure
+ * @package  Base styles
+ * @author   Luis Gdonis <mail@ldonis.com>
+ * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+ * @version  0.7.0
+ * @link     http://responsivecat.com
  */
 
-/*
+/**!
  * Contenedor de columnas automaticas y manuales
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http://ldonis.com>
- * @since 0.6.1
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
  */
+ .rgrid
+ .rblock
+     width 100%
+     font-size 0
+     text-align justify
 
-.rgrid
-.rblock
-    width 100%
-    font-size 0
-    text-align justify
-    
-    /**/
+    /* Estilos a pseudo elementos
+     * ================================== */
     &:after
         content ''
         width 100%
         display inline-block
 
-    /*!
-     * Filas del grid
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http://ldonis.com>
-     * @since 0.6.0
-     */
+    /* Filas del grid
+     * ================================== */
     & > *
         height 100%
         font-size initial
         white-space initial
         display inline-block
 
-    /*
-     * Grid
-     * Ancho de columnas automaticas
-     * columns-n = (width-margin)/n
-     */
-.rgrid
+/*
+ * Grid
+ * Ancho de columnas automaticas
+ * columns-n = (width-margin)/n
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+ .rgrid
 
-    &.columns-02 > *
-        width 49.50%
+     &.columns-02 > *
+         width 49.50%
 
-    &.columns-03 > *
-        width 32.66%
+     &.columns-03 > *
+         width 32.66%
 
-    &.columns-04 > *
-        width 24.25%
+     &.columns-04 > *
+         width 24.25%
 
-    &.columns-05 > *
-        width 19.20%
+     &.columns-05 > *
+         width 19.20%
 
-    &.columns-06 > *
-        width 15.83%
+     &.columns-06 > *
+         width 15.83%
 
-    &.columns-07 > *
-        width 13.42%
+     &.columns-07 > *
+         width 13.42%
 
-    &.columns-08 > *
-        width 11.62%
+     &.columns-08 > *
+         width 11.62%
 
-    &.columns-09 > *
-        width 10.22%
+     &.columns-09 > *
+         width 10.22%
 
-    &.columns-10 > *
-        width 09.10%
+     &.columns-10 > *
+         width 09.10%
 
-    &.columns-11 > *
-        width 08.18%
+     &.columns-11 > *
+         width 08.18%
 
-    &.columns-12 > *
-        width 07.41%
+     &.columns-12 > *
+         width 07.41%
 
-    /*
-     *  ancho de columnas manuales
-     *  .col-n = ((100-margen)/10) * n
-     */
+    /* ancho de columnas manuales
+     * .col-n = ((100-margen)/10) * n
+     * ================================== */
     & > .column-1
         width 09.00%
 
@@ -149,17 +153,17 @@
         &:first-child
             width 90.00%
 
-
-    /*
-     *  remove margin from first element
-     */
+    /* remueve el margen del primer elemento
+     * ================================== */
     & > div:first-child
-        margin-left: 0
-
+        margin-left 0
 /*
  * Block
  * Ancho de columnas automaticas
  * columns-n = width/n
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
  */
 .rblock
 
@@ -196,10 +200,9 @@
     &.columns-12 > *
         width 08.33%
 
-    /*
-     *  ancho de columnas manuales
-     *  .col-n = (100/10) * n
-     */
+    /* ancho de columnas manuales
+     * .col-n = (100/10) * n
+     * ================================== */
     & > .column-1
         width 10.00%
 
@@ -229,9 +232,9 @@
 
 /*
  * MediaQueries
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http://ldonis.com>
- * @since 0.6.0
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
  */
 @media screen and (max-width  320px)
     .rgrid > *
