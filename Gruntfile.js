@@ -9,7 +9,8 @@ module.exports = function (grunt) {
             rcat: {
                 files: [
                     {expand: true, flatten: true, src: ['../rBase/core/*.styl'], dest: 'core/base', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['../rGrid/core/*.styl'], dest: 'core/grid', filter: 'isFile'}
+                    {expand: true, flatten: true, src: ['../rGrid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['../rNav/core/*.styl'], dest: 'core/nav', filter: 'isFile'}
                 ]
             }
         },
@@ -22,17 +23,10 @@ module.exports = function (grunt) {
                 options:{ 'compress': false },
                 files:{
                     'dist/base/rbase.css' : 'core/base/rbase.styl',
-                    'dist/grid/rgrid.css' : 'core/grid/rgrid.styl'
+                    'dist/grid/rgrid.css' : 'core/grid/rgrid.styl',
+                    'dist/nav/rnav.css' : 'core/nav/rnav.styl'
                 }
             }
-        },
-
-        ///* ~·~ ~·~ ~·~ ~·~ ~·~
-        ///* Minify tasks
-        ///* ~·~ ~·~ ~·~ ~·~ ~·~
-        cssmin: {
-            base: { src: 'dist/base/rbase.css', dest: 'dist/base/rbase.min.css' },
-            grid: { src: 'dist/grid/rgrid.css', dest: 'dist/grid/rgrid.min.css' }
         },
 
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
@@ -41,9 +35,20 @@ module.exports = function (grunt) {
         concat: {
             rcat: {
                 src:['dist/base/rbase.css',
-                     'dist/grid/rgrid.css'],
+                     'dist/grid/rgrid.css',
+                     'dist/nav/rnav.css'],
                 dest:'dist/rcat.css'
             }
+        },
+
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~
+        ///* Minify tasks
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~
+        cssmin: {
+            base: { src: 'dist/base/rbase.css', dest: 'dist/base/rbase.min.css' },
+            grid: { src: 'dist/grid/rgrid.css', dest: 'dist/grid/rgrid.min.css' },
+            grid: { src: 'dist/nav/rnav.css', dest: 'dist/nav/rnav.min.css' },
+            dist: { src: 'dist/rcat.css', dest: 'dist/rcat.min.css' }
         },
 
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
