@@ -108,7 +108,7 @@ h6 {
   font-size: 1.23rem;
 }
 
-/**
+/*
  * Responsive Cat
  *
  * This program is free software: you can redistribute it and/or modify
@@ -135,28 +135,34 @@ h6 {
  * @version  0.7.0
  * @link     http://responsivecat.com
  */
-/**!
- * Contenedor de columnas automaticas y manuales
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
+/*
+  * Contenedor de columnas automaticas y manuales
+  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+  * @author Luis Gdonis <http//ldonis.com>
+  * @since 0.7.0
+  */
 .rgrid,
 .rblock {
   width: 100%;
   font-size: 0;
   text-align: justify;
+/* Estilos a pseudo elementos
+     * ================================== */
+/* Filas del grid
+     * ================================== */
 }
 /* Estilos a pseudo elementos
      * ================================== */
-:after {
+.rgrid:after,
+.rblock:after {
   content: '';
   width: 100%;
   display: inline-block;
 }
 /* Filas del grid
      * ================================== */
-> * {
+.rgrid > *,
+.rblock > * {
   height: 100%;
   font-size: initial;
   white-space: initial;
@@ -171,99 +177,147 @@ h6 {
  * @since 0.7.0
  */
 .rgrid.columns-02 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 49.5%;
 }
 .rgrid.columns-03 > * {
-  width: 32.66%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 32.666666666666664%;
 }
 .rgrid.columns-04 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 24.25%;
 }
 .rgrid.columns-05 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 19.2%;
 }
 .rgrid.columns-06 > * {
-  width: 15.83%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 15.833333333333334%;
 }
 .rgrid.columns-07 > * {
-  width: 13.42%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 13.428571428571429%;
 }
 .rgrid.columns-08 > * {
-  width: 11.62%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 11.625%;
 }
 .rgrid.columns-09 > * {
-  width: 10.22%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 10.222222222222221%;
 }
 .rgrid.columns-10 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 9.1%;
 }
 .rgrid.columns-11 > * {
-  width: 8.18%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 8.181818181818182%;
 }
 .rgrid.columns-12 > * {
-  width: 7.41%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 7.416666666666667%;
 }
-/* ancho de columnas manuales
-     * .col-n = ((100-margen)/10) * n
-     * ================================== */
-> .column-1 {
+/*
+ * Grid
+ * Ancho de columnas manuales
+ * .column-n = ((width/10)*n)-margen
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rgrid .column-1 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 9%;
 }
-> .column-1:first-child {
+.rgrid .column-1:first-child {
   width: 10%;
 }
-> .column-2 {
+.rgrid .column-2 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 19%;
 }
-> .column-2:first-child {
+.rgrid .column-2:first-child {
   width: 20%;
 }
-> .column-3 {
+.rgrid .column-3 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 29%;
 }
-> .column-3:first-child {
+.rgrid .column-3:first-child {
   width: 30%;
 }
-> .column-4 {
+.rgrid .column-4 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 39%;
 }
-> .column-4:first-child {
+.rgrid .column-4:first-child {
   width: 40%;
 }
-> .column-5 {
+.rgrid .column-5 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 49%;
 }
-> .column-5:first-child {
+.rgrid .column-5:first-child {
   width: 50%;
 }
-> .column-6 {
+.rgrid .column-6 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 59%;
 }
-> .column-6:first-child {
+.rgrid .column-6:first-child {
   width: 60%;
 }
-> .column-7 {
+.rgrid .column-7 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 69%;
 }
-> .column-7:first-child {
+.rgrid .column-7:first-child {
   width: 70%;
 }
-> .column-8 {
+.rgrid .column-8 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 79%;
 }
-> .column-8:first-child {
+.rgrid .column-8:first-child {
   width: 80%;
 }
-> .column-9 {
+.rgrid .column-9 {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 89%;
 }
-> .column-9:first-child {
+.rgrid .column-9:first-child {
   width: 90%;
 }
-/* remueve el margen del primer elemento
-     * ================================== */
-> div:first-child {
-  margin-left: 0;
+.rgrid .column-10 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 99%;
+}
+.rgrid .column-10:first-child {
+  width: 100%;
 }
 /*
  * Block
@@ -274,76 +328,182 @@ h6 {
  * @since 0.7.0
  */
 .rblock.columns-02 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 50%;
 }
 .rblock.columns-03 > * {
-  width: 33.33%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 33.333333333333336%;
 }
 .rblock.columns-04 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 25%;
 }
 .rblock.columns-05 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 20%;
 }
 .rblock.columns-06 > * {
-  width: 16.66%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 16.666666666666668%;
 }
 .rblock.columns-07 > * {
-  width: 14.28%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 14.285714285714286%;
 }
 .rblock.columns-08 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 12.5%;
 }
 .rblock.columns-09 > * {
-  width: 11.11%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 11.11111111111111%;
 }
 .rblock.columns-10 > * {
+/* Se concatena el % al ancho
+             * ============================= */
   width: 10%;
 }
 .rblock.columns-11 > * {
-  width: 9.09%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 9.090909090909092%;
 }
 .rblock.columns-12 > * {
-  width: 8.33%;
-}
-.rblock > .column-1 {
-  width: 10%;
-}
-.rblock > .column-2 {
-  width: 20%;
-}
-.rblock > .column-3 {
-  width: 30%;
-}
-.rblock > .column-4 {
-  width: 40%;
-}
-.rblock > .column-5 {
-  width: 50%;
-}
-.rblock > .column-6 {
-  width: 60%;
-}
-.rblock > .column-7 {
-  width: 70%;
-}
-.rblock > .column-8 {
-  width: 80%;
-}
-.rblock > .column-9 {
-  width: 90%;
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 8.333333333333334%;
 }
 /*
- * MediaQueries
+ * Block
+ * Ancho de columnas automaticas
+ * columns-n = width/n
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
  * @since 0.7.0
  */
-@media screen and (max-width: 320px) {
-  .rgrid > *,
-  .rblock > * {
-    display: block;
-    width: 100% !important;
-    margin-left: 0 !important;
-  }
+.rblock.column-1 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 8.333333333333334%;
+}
+.rblock.column-2 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 16.666666666666668%;
+}
+.rblock.column-3 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 25%;
+}
+.rblock.column-4 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 33.333333333333336%;
+}
+.rblock.column-5 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 41.66666666666667%;
+}
+.rblock.column-6 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 50%;
+}
+.rblock.column-7 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 58.333333333333336%;
+}
+.rblock.column-8 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 66.66666666666667%;
+}
+.rblock.column-9 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 75%;
+}
+.rblock.column-10 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 83.33333333333334%;
+}
+.rblock.column-11 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 91.66666666666667%;
+}
+.rblock.column-12 > * {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 100%;
+}
+/*
+ * Block
+ * Ancho de columnas manuales
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rblock .column-1 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 10%;
+}
+.rblock .column-2 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 20%;
+}
+.rblock .column-3 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 30%;
+}
+.rblock .column-4 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 40%;
+}
+.rblock .column-5 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 50%;
+}
+.rblock .column-6 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 60%;
+}
+.rblock .column-7 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 70%;
+}
+.rblock .column-8 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 80%;
+}
+.rblock .column-9 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 90%;
+}
+.rblock .column-10 {
+/* Se concatena el % al ancho
+             * ============================= */
+  width: 100%;
 }
