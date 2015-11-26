@@ -11,7 +11,8 @@ module.exports = function (grunt) {
                     {expand: true, flatten: true, src: ['../rHelper/core/*.styl'], dest: 'core/helper', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['../rBase/core/*.styl'], dest: 'core/base', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['../rGrid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['../rNav/core/*.styl'], dest: 'core/nav', filter: 'isFile'}
+                    {expand: true, flatten: true, src: ['../rNav/core/*.styl'], dest: 'core/nav', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['../rUi/core/*.styl'], dest: 'core/ui', filter: 'isFile'}
                 ]
             }
         },
@@ -26,7 +27,8 @@ module.exports = function (grunt) {
                     'dist/helper/rhelper.css' : 'core/helper/rhelper.styl',
                     'dist/base/rbase.css' : 'core/base/rbase.styl',
                     'dist/grid/rgrid.css' : 'core/grid/rgrid.styl',
-                    'dist/nav/rnav.css' : 'core/nav/rnav.styl'
+                    'dist/nav/rnav.css' : 'core/nav/rnav.styl',
+                    'dist/ui/rui.css' : 'core/ui/rui.styl'
                 }
             }
         },
@@ -39,8 +41,16 @@ module.exports = function (grunt) {
                 src:['dist/base/rbase.css',
                      'dist/grid/rgrid.css',
                      'dist/nav/rnav.css',
+                     'dist/ui/rui.css',
                      'dist/helper/rhelper.css'],
                 dest:'dist/rcat.css'
+            },
+            structure: {
+                src:['dist/base/rbase.css',
+                     'dist/grid/rgrid.css',
+                     'dist/nav/rnav.css',
+                     'dist/helper/rhelper.css'],
+                dest:'dist/rcat.structure.css'
             }
         },
 
@@ -52,7 +62,9 @@ module.exports = function (grunt) {
             base: { src: 'dist/base/rbase.css', dest: 'dist/base/rbase.min.css' },
             grid: { src: 'dist/grid/rgrid.css', dest: 'dist/grid/rgrid.min.css' },
             nav: { src: 'dist/nav/rnav.css', dest: 'dist/nav/rnav.min.css' },
-            dist: { src: 'dist/rcat.css', dest: 'dist/rcat.min.css' }
+            ui: { src: 'dist/ui/rui.css', dest: 'dist/ui/rui.min.css' },
+            dist: { src: 'dist/rcat.css', dest: 'dist/rcat.min.css' },
+            structure: { src: 'dist/rcat.structure.css', dest: 'dist/rcat.structure.min.css' }
         },
 
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
