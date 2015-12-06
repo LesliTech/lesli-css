@@ -42,18 +42,17 @@ module.exports = function (grunt) {
                 },
             }
         },
-
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
         ///* Copy RCat modules
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
         copy: {
-            rcat: {
+            main: {
                 files: [
-                    {expand: true, flatten: true, src: ['../rHelper/core/*.styl'], dest: 'core/helper', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['../rBase/core/*.styl'], dest: 'core/base', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['../rGrid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['../rNav/core/*.styl'], dest: 'core/nav', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['../rUi/core/*.styl'], dest: 'core/ui', filter: 'isFile'}
+                    {expand: true, flatten: true, src: ['src/rHelper/core/*.styl'], dest: 'core/helper', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['src/rBase/core/*.styl'], dest: 'core/base', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['src/rGrid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['src/rNav/core/*.styl'], dest: 'core/nav', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['src/rUi/core/*.styl'], dest: 'core/ui', filter: 'isFile'}
                 ]
             }
         },
@@ -106,17 +105,8 @@ module.exports = function (grunt) {
             ui: { src: 'dist/ui/rui.css', dest: 'dist/ui/rui.min.css' },
             dist: { src: 'dist/rcat.css', dest: 'dist/rcat.min.css' },
             structure: { src: 'dist/rcat.structure.css', dest: 'dist/rcat.structure.min.css' }
-        },
-
-        ///* ~·~ ~·~ ~·~ ~·~ ~·~
-        ///* Watcher tasks
-        ///* ~·~ ~·~ ~·~ ~·~ ~·~
-        watch: {
-            stylus:{
-                files: ['core/*.styl'],
-                tasks: ['stylus:compile']
-            }
         }
+
     });
 
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
@@ -125,7 +115,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-git');
 
@@ -133,7 +122,6 @@ module.exports = function (grunt) {
     ///* Running/defining copy tasks
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     grunt.registerTask('clone', ['gitclone']);
-    //grunt.registerTask('build', ['gitclone']);
 
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     ///* Running/defining tasks
