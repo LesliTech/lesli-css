@@ -2,6 +2,47 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+        ///* Clone source repositories
+        ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+        gitclone: {
+            base: {
+                options: {
+                    repository: 'https://github.com/ResponsiveCat/rBase.git',
+                    branch: 'master',
+                    directory: 'src/rBase'
+                },
+            },
+            grid: {
+                options: {
+                    repository: 'https://github.com/ResponsiveCat/rGrid.git',
+                    branch: 'master',
+                    directory: 'src/rGrid'
+                },
+            },
+            helper: {
+                options: {
+                    repository: 'https://github.com/ResponsiveCat/rHelper.git',
+                    branch: 'master',
+                    directory: 'src/rHelper'
+                },
+            },
+            nav: {
+                options: {
+                    repository: 'https://github.com/ResponsiveCat/rNav.git',
+                    branch: 'master',
+                    directory: 'src/rNav'
+                },
+            },
+            ui: {
+                options: {
+                    repository: 'https://github.com/ResponsiveCat/rUi.git',
+                    branch: 'master',
+                    directory: 'src/rUi'
+                },
+            }
+        },
+
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
         ///* Copy RCat modules
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
@@ -86,11 +127,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-git');
 
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     ///* Running/defining copy tasks
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
-    grunt.registerTask('consolidate', ['copy']);
+    grunt.registerTask('clone', ['gitclone']);
+    //grunt.registerTask('build', ['gitclone']);
 
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     ///* Running/defining tasks
