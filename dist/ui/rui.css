@@ -57,6 +57,16 @@ code {
   * @since 0.7.0
   */
 /*
+  * <a> (link) reset
+  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+  * @author Luis Gdonis <http//ldonis.com>
+  * @since 0.7.0
+  */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/*
  * Hack para simular <button> con <a>
  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
  * @author Luis Gdonis <http//ldonis.com>
