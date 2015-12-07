@@ -1,58 +1,17 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
-        ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
-        ///* Clone source repositories
-        ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
-        gitclone: {
-            base: {
-                options: {
-                    repository: 'https://github.com/ResponsiveCat/rBase.git',
-                    branch: 'master',
-                    directory: 'src/rBase'
-                },
-            },
-            grid: {
-                options: {
-                    repository: 'https://github.com/ResponsiveCat/rGrid.git',
-                    branch: 'master',
-                    directory: 'src/rGrid'
-                },
-            },
-            helper: {
-                options: {
-                    repository: 'https://github.com/ResponsiveCat/rHelper.git',
-                    branch: 'master',
-                    directory: 'src/rHelper'
-                },
-            },
-            nav: {
-                options: {
-                    repository: 'https://github.com/ResponsiveCat/rNav.git',
-                    branch: 'master',
-                    directory: 'src/rNav'
-                },
-            },
-            ui: {
-                options: {
-                    repository: 'https://github.com/ResponsiveCat/rUi.git',
-                    branch: 'master',
-                    directory: 'src/rUi'
-                },
-            }
-        },
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
         ///* Copy RCat modules
         ///* ~·~ ~·~ ~·~ ~·~ ~·~
         copy: {
             main: {
                 files: [
-                    {expand: true, flatten: true, src: ['src/rHelper/core/*.styl'], dest: 'core/helper', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['src/rBase/core/*.styl'], dest: 'core/base', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['src/rGrid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['src/rNav/core/*.styl'], dest: 'core/nav', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['src/rUi/core/*.styl'], dest: 'core/ui', filter: 'isFile'}
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-helper/core/*.styl'], dest: 'core/helper', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-base/dist/rcat.base.css'], dest: 'core/base', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-grid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-nav/core/*.styl'], dest: 'core/nav', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-ui/core/*.styl'], dest: 'core/ui', filter: 'isFile'}
                 ]
             }
         },
@@ -65,7 +24,7 @@ module.exports = function (grunt) {
                 options:{ 'compress': false },
                 files:{
                     'dist/helper/rhelper.css' : 'core/helper/rhelper.styl',
-                    'dist/base/rbase.css' : 'core/base/rbase.styl',
+                    'dist/base/rbase.css' : 'core/base/rcat.base.css',
                     'dist/grid/rgrid.css' : 'core/grid/rgrid.styl',
                     'dist/nav/rnav.css' : 'core/nav/rnav.styl',
                     'dist/ui/rui.css' : 'core/ui/rui.styl'
@@ -118,11 +77,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-git');
 
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
-    ///* Running/defining copy tasks
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
-    grunt.registerTask('clone', ['gitclone']);
-
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     ///* Running/defining tasks
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
@@ -132,5 +86,10 @@ module.exports = function (grunt) {
     ///* Running/defining deploy tasks
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     grunt.registerTask('deploy', ['stylus', 'concat','cssmin']);
+
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    ///* Running/defining all tasks
+    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    grunt.registerTask('default', ['copy', 'stylus', 'concat','cssmin']);
 
 };

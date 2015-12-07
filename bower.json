@@ -21,6 +21,13 @@
     ],
     "license": "GPL-3.0",
     "homepage": "http://responsivecat.com",
+    "dependencies": {
+        "rcat-helper" : "master",
+        "rcat-base" : "master",
+        "rcat-grid" : "master",
+        "rcat-nav" : "master",
+        "rcat-ui" : "master"        
+    },
     "ignore": [
         ".git",
         ".gitignore",
