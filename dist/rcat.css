@@ -428,6 +428,15 @@ h5 {
 h6 {
   font-size: 1.23rem;
 }
+/**
+ * hr
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.1
+ */
+hr {
+  border: 0;
+}
 
 /*
  * Responsive Cat
