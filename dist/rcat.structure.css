@@ -873,6 +873,9 @@ hr {
  */
 .rnav {
   width: 100%;
+/*
+     * Remueve el padding de listas del contenedor de listas
+     */
 /* Contenedor de enlaces
      * ================================== */
 /*
@@ -893,6 +896,9 @@ hr {
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.7.0
      */
+}
+.rnav ul {
+  padding: 0;
 }
 .rnav > ul {
   font-size: 0;
