@@ -472,7 +472,10 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-* {
+/*
+ * Elimina margenes por defecto
+ */
+p {
   margin: 0;
 }
 /**
