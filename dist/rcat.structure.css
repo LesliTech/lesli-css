@@ -489,6 +489,8 @@ hr {
 }
 /* Estilos a pseudo elementos
      * ================================== */
+.rgrid:before,
+.rblock:before,
 .rgrid:after,
 .rblock:after {
   content: '';
