@@ -35,7 +35,6 @@
 .rblock {
   width: 100%;
   font-size: 0;
-  text-align: justify;
 /* Estilos a pseudo elementos
      * ================================== */
 /* Filas del grid
@@ -47,15 +46,15 @@
 .rblock:before,
 .rgrid:after,
 .rblock:after {
-  content: '';
-  width: 100%;
+  content: "";
   display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 /* Filas del grid
      * ================================== */
 .rgrid > *,
 .rblock > * {
-  height: 100%;
   font-size: initial;
   white-space: initial;
   display: inline-block;

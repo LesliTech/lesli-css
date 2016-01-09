@@ -36,24 +36,23 @@
 .rblock
     width 100%
     font-size 0
-    text-align justify
-
 
     /*! Estilos a pseudo elementos
      * ================================== */
     &:before
     &:after
-        content ''
-        width 100%
-        display inline-block
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
 
     /*! Filas del grid
      * ================================== */
     & > *
-        height 100%
         font-size initial
         white-space initial
         display inline-block
+        
 /*!
  * Grid
  * Ancho de columnas automaticas
