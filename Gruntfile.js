@@ -10,6 +10,7 @@ module.exports = function (grunt) {
                     {expand: true, flatten: true, src: ['rcat_modules/rcat-helper/core/*.styl'], dest: 'core/helper', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['rcat_modules/rcat-base/dist/rcat.base.css'], dest: 'core/base', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['rcat_modules/rcat-grid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-form/core/*.styl'], dest: 'core/form', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['rcat_modules/rcat-nav/core/*.styl'], dest: 'core/nav', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['rcat_modules/rcat-ui/core/*.styl'], dest: 'core/ui', filter: 'isFile'}
                 ]
@@ -26,6 +27,7 @@ module.exports = function (grunt) {
                     'dist/helper/rhelper.css' : 'core/helper/rhelper.styl',
                     'dist/base/rbase.css' : 'core/base/rcat.base.css',
                     'dist/grid/rgrid.css' : 'core/grid/rgrid.styl',
+                    'dist/form/rform.css' : 'core/form/rform.styl',
                     'dist/nav/rnav.css' : 'core/nav/rnav.styl',
                     'dist/ui/rui.css' : 'core/ui/rui.styl'
                 }
@@ -39,6 +41,7 @@ module.exports = function (grunt) {
             rcat: {
                 src:['dist/base/rbase.css',
                      'dist/grid/rgrid.css',
+                     'dist/form/rform.css',
                      'dist/nav/rnav.css',
                      'dist/ui/rui.css',
                      'dist/helper/rhelper.css'],
@@ -47,6 +50,7 @@ module.exports = function (grunt) {
             structure: {
                 src:['dist/base/rbase.css',
                      'dist/grid/rgrid.css',
+                     'dist/form/rform.css',
                      'dist/nav/rnav.css',
                      'dist/helper/rhelper.css'],
                 dest:'dist/rcat.structure.css'
@@ -60,6 +64,7 @@ module.exports = function (grunt) {
             helper: { src: 'dist/helper/rhelper.css', dest: 'dist/helper/rhelper.min.css' },
             base: { src: 'dist/base/rbase.css', dest: 'dist/base/rbase.min.css' },
             grid: { src: 'dist/grid/rgrid.css', dest: 'dist/grid/rgrid.min.css' },
+            form: { src: 'dist/form/rform.css', dest: 'dist/form/rform.min.css' },
             nav: { src: 'dist/nav/rnav.css', dest: 'dist/nav/rnav.min.css' },
             ui: { src: 'dist/ui/rui.css', dest: 'dist/ui/rui.min.css' },
             dist: { src: 'dist/rcat.css', dest: 'dist/rcat.min.css' },

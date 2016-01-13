@@ -1,0 +1,240 @@
+/*!
+ * Responsive Cat
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * CSS version 3
+ *
+ * Sistema de grids y blocks para ResponsiveCat
+ *
+ * @category Structure
+ * @package  Base styles
+ * @author   Luis Gdonis <mail@ldonis.com>
+ * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+ * @version  0.7.0
+ * @link     http://responsivecat.com
+ */
+
+/*!
+ * Formulario estandar
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rform
+
+    /*! Controles de formularios
+     * ================================== */
+    select
+    textarea
+    input:not([type="submit"])
+    input:not([type="button"])
+        letter-spacing 0.01rem
+        padding 7px 0
+
+    /*! Campo del formulario activo
+     * ================================== */
+    select:focus
+    textarea:focus
+    input:not([type="submit"]):not([type="button"]):focus
+        outline none
+
+    /*! Botones de formularios
+     * ================================== */
+    input[type="submit"]
+    input[type="button"]
+
+
+    /*! Estilo de etiquetas
+     * ================================== */
+    label
+        display inherit
+        margin inherit
+
+/*!
+ * Formulario individual con prefijo
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+
+/*! Contenedor/formulario
+ * ================================== */
+.rform.individual.prefix
+
+    /*! Contenedor de controles de formulario
+     * ================================== */
+    & > div
+        width 100%
+        font-size 0
+        white-space nowrap
+
+
+        & > label
+        & > input
+            font-size 1rem
+            padding 0.2rem !important
+            white-space initial
+            display inline-block
+            vertical-align top
+
+        /*! Contenedor de de texto
+         * ================================== */
+        & > label
+            width 25%
+            line-height 1.30
+            background #F2F2F2
+            border solid 1px #F2F2F2
+
+        /*! Campo
+         * ================================== */
+        & > input
+            width 75%
+            border solid 1px #ccc
+            border-radius 0px !important
+
+/*
+ * Formulario individual con boton
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rform.individual.go
+
+    /*! Contenedor de controles de formulario
+     * ================================== */
+    & > div
+        width 100%
+        font-size 0
+        white-space nowrap
+
+        & > input
+            font-size 1rem
+            padding 0.2rem !important
+            white-space initial
+            display inline-block
+            vertical-align top
+            border-radius 0px !important
+            height 2.1 rem
+
+        /*! Campo de texto
+         * ================================== */
+        & > input:first-child
+            width 85%
+
+        /*! boton
+         * ================================== */
+        & > button
+        & > input[type="submit"]
+            width 15%
+            border-radius 0px !important
+
+            &:hover
+                cursor pointer
+
+
+/*
+ * Formulario lineal
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rform.inline
+
+/*
+ * Formulario en bloque
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rform.block
+    text-align left
+    display block
+    margin 0 auto
+
+    & input
+    & select
+    & textarea
+        margin 5px 0
+        width 100%
+        display block
+
+/*
+ * Formulario alineado
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rform.align
+    width 500px
+    display block
+    margin 0 auto
+
+    /*! Contenedor de controles
+     * ================================== */
+    & > div
+        width 100%
+        margin-bottom 5px
+        display block
+        font-size 0
+
+        /*! Controles alineados
+         * ================================== */
+        label
+        input
+             display inline-block
+             font-size initial
+
+        label
+            width 40%
+            text-align right
+            padding-right 6px
+
+        input
+            width 60%
+
+/*
+ * Formulario grupal
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.rform.group
+    width 350px
+    display block
+    margin 0 auto
+    text-align left
+
+    /*! Contenedor de controles
+     * ================================== */
+    & > div
+        margin 20px 0
+
+        /*! Controles de formulario
+         * ================================== */
+        input
+        select
+            margin 0px
+            width 100%
+            text-align center
+            border-bottom-width 0px !important
+            box-shadow none !important
+            border-radius 0px !important
+
+        input:first-child
+            border-radius 5px 5px 0 0 !important
+
+        input:last-child
+            border-radius 0 0 5px 5px !important
+            border-bottom-width 1px !important
