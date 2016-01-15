@@ -181,15 +181,23 @@
   margin-bottom: 5px;
   display: block;
   font-size: 0;
+/*
+         * ================================== */
 /* Controles alineados
          * ================================== */
+}
+/*
+         * ================================== */
+.rform.align > div label,
+.rform.align > div input,
+.rform.align > div textarea {
+  font-size: initial;
 }
 /* Controles alineados
          * ================================== */
 .rform.align > div label,
 .rform.align > div input {
   display: inline-block;
-  font-size: initial;
 }
 .rform.align > div label {
   width: 40%;
