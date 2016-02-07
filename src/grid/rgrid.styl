@@ -26,18 +26,26 @@
  * @link     http://responsivecat.com
  */
 
- /*!
-  * Contenedor de columnas automaticas y manuales
-  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-  * @author Luis Gdonis <http//ldonis.com>
-  * @since 0.7.0
-  */
+/*
+ * Se incluyen variables de definicion
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+@require 'rgrid-custom'
+
+/*
+ * Contenedor de columnas automaticas y manuales
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
 .rgrid
 .rblock
     width 100%
     font-size 0
 
-    /*! Estilos a pseudo elementos
+    /* Estilos a pseudo elementos
      * ================================== */
     &:before
     &:after
@@ -46,12 +54,13 @@
         vertical-align: middle;
         height: 100%;
 
-    /*! Filas del grid
+    /* Filas del grid
      * ================================== */
     & > *
         font-size initial
         white-space initial
         display inline-block
+
 
 /*!
  * Grid
@@ -65,15 +74,15 @@
 
     /* Margen separador del grid
      * ============================= */
-    $margen = 1
+    $margen = var-columns-automatic-margin
 
     /* Cantidad de columnas del grid
      * ============================= */
-    $columns = 12
+    $columns = var-columns-automatic-total
 
     /* Nombre de columnas
      * ============================= */
-    $column-prefix = 'columns-'
+    $column-prefix = var-columns-automatic-prefix
 
     /* Margen de cada elemento del grid
      * ============================= */
@@ -87,7 +96,7 @@
         /* Si es menor de diez se agrega
          * un 0 al prefijo para estandarizar
          * ================================= */
-        if column < 10
+        if column < var-columns-automatic-total
             $column-name = $column-prefix + '0'
         else
             $column-name = $column-prefix
@@ -96,6 +105,8 @@
          * cada columna a excepcion de laprimera
          * tendra 1% de margen, o lo establecido
          * en la variable "$margen"
+         * % del total del ancho se distribuira
+         * entre columnas para el margen
          * ===================================== */
         $margen-calculado = $margen * (column - 1)
 
@@ -116,8 +127,12 @@
              * ============================= */
             width unit($ancho, '%')
 
-
-/*!
+    /* Remueve el margen de la ultima columna
+     * ============================= */
+    & > *:first-child
+        margin-left 0 !important
+        
+/*
  * Grid
  * Ancho de columnas manuales
  * .column-n = ((width/10)*n)-margen
@@ -129,19 +144,33 @@
 
     /* Margen separador del grid
      * ============================= */
-    $margen = 1
+    $margen = var-columns-manual-margin
 
     /* Cantidad de columnas del grid
      * ============================= */
-    $columns = 10
+    $columns = var-columns-manual-total
 
     /* Nombre de columnas
      * ============================= */
-    $column-prefix = 'column-'
+    $column-prefix = var-columns-manual-prefix
+
+    /* Margen de cada elemento del grid
+     * ============================= */
+    & > *
+        margin-left unit($margen, '%')
 
     /* Iteracion por cada columna
      * ============================= */
     for column in (1..$columns)
+        
+        /* Calcula el margen de columnas
+         * cada columna a excepcion de laprimera
+         * tendra 1% de margen, o lo establecido
+         * en la variable "$margen"
+         * % del total del ancho se distribuira
+         * entre columnas para el margen
+         * ===================================== */
+        $margen-calculado = $margen * (column - 1)
 
         /* Calcula el ancho de cada columna
          * formula
@@ -150,12 +179,6 @@
          * ================================ */
         $ancho = (( 100 / ( $columns)) * column) - $margen
 
-        /* Calcula el ancho de cada columna
-         * formula
-         *   Ancho total menos margen
-         *   dividido numero de columnas
-         * ================================ */
-        $ancho-no-margen = (( 100 / $columns) * column)
 
         /* Nombre de columna
          * ============================= */
@@ -171,12 +194,11 @@
              * ============================= */
             width unit($ancho, '%')
 
-            &:first-child
-                width unit($ancho-no-margen, '%')
-
-    & > div:first-child
+    /* Remueve el margen de la ultima columna
+     * ============================= */
+    & > *:first-child
         margin-left: 0
-
+        
 /*
  * Block
  * Ancho de columnas automaticas
@@ -189,20 +211,20 @@
 
     /* Cantidad de columnas del grid
      * ============================= */
-    $blocks = 12
+    $blocks = var-blocks-automatic-total
 
     /* Nombre de columnas
      * ============================= */
-    $block-prefix = 'columns-'
+    $block-prefix = var-blocks-automatic-prefix
 
     /* Iteracion por cada columna
      * ============================= */
     for block in (2..$blocks)
 
-        /* Si es menor de diez se agrega
-         * un 0 al prefijo para estandarizar
+        /* Si es menor de a la cantdiad de blocks se
+         * agrega un 0 al prefijo para estandarizar
          * ================================= */
-        if block < 10
+        if block < $blocks
             $column-name = $block-prefix + '0'
         else
             $column-name = $block-prefix
@@ -225,52 +247,6 @@
             width unit($ancho, '%')
 
 
-
-
-/*
- * Block
- * Ancho de columnas automaticas
- * columns-n = width/n
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rblock
-
-    /* Cantidad de columnas del grid
-     * ============================= */
-    $blocks = 12
-
-    /* Nombre de columnas
-     * ============================= */
-    $block-prefix = 'column-'
-
-    /* Iteracion por cada columna
-     * ============================= */
-    for block in (1..$blocks)
-
-        /* Nombre de columna
-         * ============================= */
-        $column-name = $block-prefix
-
-        /* Calcula el ancho de cada columna
-         * formula
-         *   Ancho total menos margen
-         *   dividido numero de columnas
-         * ================================ */
-        $ancho = ( 100 / $blocks) * block
-
-        /* Crea columna
-         * Concatena
-         *  Nombre de columna mas numero
-         * ============================= */
-        &.{$column-name}{block} > *
-
-            /* Se concatena el % al ancho
-             * ============================= */
-            width unit($ancho, '%')
-
-
 /*
  * Block
  * Ancho de columnas manuales
@@ -282,11 +258,11 @@
 
     /* Cantidad de columnas del grid
      * ============================= */
-    $blocks = 10
+    $blocks = var-blocks-manual-total
 
     /* Nombre de columnas
      * ============================= */
-    $block-prefix = 'column-'
+    $block-prefix = var-blocks-manual-prefix
 
     /* Iteracion por cada columna
      * ============================= */

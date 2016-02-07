@@ -7,12 +7,12 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true, flatten: true, src: ['rcat_modules/rcat-helper/core/*.styl'], dest: 'core/helper', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['rcat_modules/rcat-base/dist/rcat.base.css'], dest: 'core/base', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['rcat_modules/rcat-grid/core/*.styl'], dest: 'core/grid', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['rcat_modules/rcat-form/core/*.styl'], dest: 'core/form', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['rcat_modules/rcat-nav/core/*.styl'], dest: 'core/nav', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['rcat_modules/rcat-ui/core/*.styl'], dest: 'core/ui', filter: 'isFile'}
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-helper/core/*.styl'], dest: 'src/helper', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-base/src/*.styl'], dest: 'src/base', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-grid/src/*.styl'], dest: 'src/grid', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-form/core/*.styl'], dest: 'src/form', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-nav/core/*.styl'], dest: 'src/nav', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['rcat_modules/rcat-ui/core/*.styl'], dest: 'src/ui', filter: 'isFile'}
                 ]
             }
         },
@@ -24,12 +24,12 @@ module.exports = function (grunt) {
             compile:{
                 options:{ 'compress': false },
                 files:{
-                    'dist/helper/rhelper.css' : 'core/helper/rhelper.styl',
-                    'dist/base/rbase.css' : 'core/base/rcat.base.css',
-                    'dist/grid/rgrid.css' : 'core/grid/rgrid.styl',
-                    'dist/form/rform.css' : 'core/form/rform.styl',
-                    'dist/nav/rnav.css' : 'core/nav/rnav.styl',
-                    'dist/ui/rui.css' : 'core/ui/rui.styl'
+                    'dist/helper/rhelper.css' : 'src/helper/rhelper.styl',
+                    'dist/base/rbase.css' : 'src/base/rbase.styl',
+                    'dist/grid/rgrid.css' : 'src/grid/rgrid.styl',
+                    'dist/form/rform.css' : 'src/form/rform.styl',
+                    'dist/nav/rnav.css' : 'src/nav/rnav.styl',
+                    'dist/ui/rui.css' : 'src/ui/rui.styl'
                 }
             }
         },

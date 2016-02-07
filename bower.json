@@ -33,6 +33,12 @@
         ".git",
         ".gitignore",
         ".gitattributes",
-        "node_modules"
+        "composer.json",
+        "contributing.md",
+        "Gruntfile.js",
+        "package.json",
+        "node_modules",
+        "rcat_modules",
+        "src"
     ]
 }
