@@ -67,6 +67,9 @@
  * @author Luis Gdonis <http//ldonis.com>
  * @since 0.7.0
  */
+.rgrid > * {
+  margin-left: 1%;
+}
 .rgrid.columns-02 > * {
 /* Se concatena el % al ancho
              * ============================= */
@@ -209,6 +212,9 @@
 }
 .rgrid .column-10:first-child {
   width: 100%;
+}
+.rgrid > div:first-child {
+  margin-left: 0;
 }
 /*
  * Block

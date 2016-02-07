@@ -52,7 +52,7 @@
         font-size initial
         white-space initial
         display inline-block
-        
+
 /*!
  * Grid
  * Ancho de columnas automaticas
@@ -74,6 +74,11 @@
     /* Nombre de columnas
      * ============================= */
     $column-prefix = 'columns-'
+
+    /* Margen de cada elemento del grid
+     * ============================= */
+    & > *
+        margin-left unit($margen, '%')
 
     /* Iteracion por cada columna
      * ============================= */
@@ -169,6 +174,8 @@
             &:first-child
                 width unit($ancho-no-margen, '%')
 
+    & > div:first-child
+        margin-left: 0
 
 /*
  * Block
@@ -216,6 +223,8 @@
             /* Se concatena el % al ancho
              * ============================= */
             width unit($ancho, '%')
+
+
 
 
 /*
