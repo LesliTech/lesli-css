@@ -108,6 +108,28 @@ hr {
 p {
   margin: 0;
 }
+/**
+ * enlaces
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 1.0.0
+ */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+/**
+ * listas
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 1.0.0
+ */
+ul {
+  list-style: none;
+}
 
 /*
  * Responsive Cat
