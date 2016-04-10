@@ -24,10 +24,7 @@
     "devDependencies": {
         "rcat-helper" : "master",
         "rcat-base" : "master",
-        "rcat-grid" : "master",
-        "rcat-form" : "master",
-        "rcat-nav" : "master",
-        "rcat-ui" : "master"
+        "rcat-grid" : "master"
     },
     "ignore": [
         ".git",

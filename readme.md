@@ -5,30 +5,19 @@ CSS Micro Framework
 
 ##### Instalación
 ----------------
-* [Descargar versión en desarrollo (0.7.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
+* [Descargar versión estable (0.7.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
 * Clonar el repositorio: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
 * Instalar con [npm](https://www.npmjs.com): `npm install responsivecat`.
 * Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
-* Instalar con [Composer](https://getcomposer.org): `composer require ldonis/ResponsiveCat`.
 
 ##### Caracteristicas
 ---------------
 
-* Nucleo preprocesado con [Stylus](https://learnboost.github.io/stylus/)
+* Nucleo preprocesado con [Stylus](http://stylus-lang.com/)
 
 * Sistema de grid totalmente responsive
 
-* Menus verticales y horizontales predefinidos
-
-* Tablas de datos personalizadas
-
-* Formularios con variedad de estilos
-
-* Kit de Interfaz de Usuario
-
-* Herramienta para wireframing
-
-* Plugin para diseño de emails
+* Helpers y hacks para maquetación html
 
 * Archivo extremadamente pequeño 9.75kb
 
@@ -41,7 +30,7 @@ Responsive Cat es completamente libre y de codigo abierto
 
 * Documentacion: [http://responsivecat.com/docs/](http://responsivecat.com/docs/)
 
-* Issue tracker: [https://github.com/ldonis/ResponsiveCat/issues](https://github.com/ldonis/ResponsiveCat/issues)
+* Issue tracker: [https://github.com/ResponsiveCat/ResponsiveCat/issues](https://github.com/ResponsiveCat/ResponsiveCat/issues)
 
 ##### Licencia
 

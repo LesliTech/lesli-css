@@ -72,3 +72,81 @@
   flex-direction: column;
   height: 100%;
 }
+/*
+ * Oculta un elemento html del DOM
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.hidden {
+  display: none !important;
+}
+/*
+ * Tooltips
+ * Se debe agregar el atributo data-tooltip con el texto a mostrar
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 1.0.0
+ */
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+/* Oculta el tooltip
+     * ================================== */
+/* Coloca el tooltip sobre el elemento
+     * ================================== */
+/* Coloca el tringualo conector
+     * ================================== */
+/* Coloca el tringualo conector
+     * ================================== */
+}
+/* Oculta el tooltip
+     * ================================== */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+/* Coloca el tooltip sobre el elemento
+     * ================================== */
+[data-tooltip]:before {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: rgba(51,51,51,0.9);
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+/* Coloca el tringualo conector
+     * ================================== */
+[data-tooltip]:after {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51,51,51,0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+/* Coloca el tringualo conector
+     * ================================== */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}

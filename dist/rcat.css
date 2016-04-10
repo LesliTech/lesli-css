@@ -99,6 +99,15 @@ h6 {
 hr {
   border: 0;
 }
+/**
+ * margen por defecto
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.1
+ */
+p {
+  margin: 0;
+}
 
 /*
  * Responsive Cat
@@ -118,7 +127,7 @@ hr {
  *
  * CSS version 3
  *
- * Sistema de grids y blocks para ResponsiveCat
+     * Sistema de grids y blocks para ResponsiveCat
  *
  * @category Structure
  * @package  Base styles
@@ -435,740 +444,6 @@ hr {
  *
  * CSS version 3
  *
- * Sistema de grids y blocks para ResponsiveCat
- *
- * @category Structure
- * @package  Base styles
- * @author   Luis Gdonis <mail@ldonis.com>
- * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
- * @version  0.7.0
- * @link     http://responsivecat.com
- */
-/*
- * Formulario estandar
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-/* Controles de formularios
-     * ================================== */
-.rform select,
-.rform textarea,
-.rform input:not([type="submit"]),
-.rform input:not([type="button"]) {
-  letter-spacing: 0.01rem;
-  padding: 7px 0;
-}
-/* Campo del formulario activo
-     * ================================== */
-.rform select:focus,
-.rform textarea:focus,
-.rform input:not([type="submit"]):not([type="button"]):focus {
-  outline: none;
-}
-/* Botones de formularios
-     * ================================== */
-.rform input[type="submit"],
-.rform input[type="button"],
-.rform label {
-  display: inherit;
-  margin: inherit;
-}
-/*
- * Formulario individual con prefijo
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-/* Contenedor/formulario
- * ================================== */
-/* Contenedor de controles de formulario
-     * ================================== */
-.rform.individual.prefix > div {
-  width: 100%;
-  font-size: 0;
-  white-space: nowrap;
-/* Contenedor de de texto
-         * ================================== */
-/* Campo
-         * ================================== */
-}
-.rform.individual.prefix > div > label,
-.rform.individual.prefix > div > input {
-  font-size: 1rem;
-  padding: 0.2rem !important;
-  white-space: initial;
-  display: inline-block;
-  vertical-align: top;
-}
-/* Contenedor de de texto
-         * ================================== */
-.rform.individual.prefix > div > label {
-  width: 25%;
-  line-height: 1.3;
-  background: #f2f2f2;
-  border: solid 1px #f2f2f2;
-}
-/* Campo
-         * ================================== */
-.rform.individual.prefix > div > input {
-  width: 75%;
-  border: solid 1px #ccc;
-  border-radius: 0px !important;
-}
-/*
- * Formulario individual con boton
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-/* Contenedor de controles de formulario
-     * ================================== */
-.rform.individual.go > div {
-  width: 100%;
-  font-size: 0;
-  white-space: nowrap;
-/* Campo de texto
-         * ================================== */
-/* boton
-         * ================================== */
-}
-.rform.individual.go > div > input {
-  font-size: 1rem;
-  padding: 0.2rem !important;
-  white-space: initial;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 0px !important;
-  height: 2.1rem;
-}
-/* Campo de texto
-         * ================================== */
-.rform.individual.go > div > input:first-child {
-  width: 85%;
-}
-/* boton
-         * ================================== */
-.rform.individual.go > div > button,
-.rform.individual.go > div > input[type="submit"] {
-  width: 15%;
-  border-radius: 0px !important;
-}
-.rform.individual.go > div > button:hover,
-.rform.individual.go > div > input[type="submit"]:hover {
-  cursor: pointer;
-}
-/*
- * Formulario lineal
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rform.inline,
-.rform.block {
-  text-align: left;
-  display: block;
-  margin: 0 auto;
-}
-.rform.inline input,
-.rform.block input,
-.rform.inline select,
-.rform.block select,
-.rform.inline textarea,
-.rform.block textarea {
-  margin: 5px 0;
-  width: 100%;
-  display: block;
-}
-/*
- * Formulario alineado
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rform.align {
-  width: 500px;
-  display: block;
-  margin: 0 auto;
-/* Contenedor de controles
-     * ================================== */
-}
-/* Contenedor de controles
-     * ================================== */
-.rform.align > div {
-  width: 100%;
-  margin-bottom: 5px;
-  display: block;
-  font-size: 0;
-/*
-         * ================================== */
-/* Controles alineados
-         * ================================== */
-}
-/*
-         * ================================== */
-.rform.align > div label,
-.rform.align > div input,
-.rform.align > div textarea {
-  font-size: initial;
-}
-/* Controles alineados
-         * ================================== */
-.rform.align > div label,
-.rform.align > div input {
-  display: inline-block;
-}
-.rform.align > div label {
-  width: 40%;
-  text-align: right;
-  padding-right: 6px;
-}
-.rform.align > div input {
-  width: 60%;
-}
-/*
- * Formulario grupal
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rform.group {
-  width: 350px;
-  display: block;
-  margin: 0 auto;
-  text-align: left;
-/* Contenedor de controles
-     * ================================== */
-}
-/* Contenedor de controles
-     * ================================== */
-.rform.group > div {
-  margin: 20px 0;
-/* Controles de formulario
-         * ================================== */
-}
-/* Controles de formulario
-         * ================================== */
-.rform.group > div input,
-.rform.group > div select {
-  margin: 0px;
-  width: 100%;
-  text-align: center;
-  border-bottom-width: 0px !important;
-  box-shadow: none !important;
-  border-radius: 0px !important;
-}
-.rform.group > div input:first-child {
-  border-radius: 5px 5px 0 0 !important;
-}
-.rform.group > div input:last-child {
-  border-radius: 0 0 5px 5px !important;
-  border-bottom-width: 1px !important;
-}
-
-/*
- * Responsive Cat
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
- * CSS version 3
- *
- * Modulo de Menus para ResponsiveCat
- *
- * @category Structure
- * @package  RCat
- * @author   Luis Gdonis <mail@ldonis.com>
- * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
- * @version  0.7.0
- * @link     http://responsivecat.com
- */
-/*
- * Contenedor principal
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rnav {
-  width: 100%;
-/*
-     * Remueve el padding de listas del contenedor de listas
-     */
-/* Contenedor de enlaces
-     * ================================== */
-/*
-     * Estilo de Menu doble
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-/*
-     * Menu multinivel
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-/*
-     * Menu vertical
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-}
-.rnav ul {
-  padding: 0;
-}
-.rnav > ul {
-  font-size: 0;
-}
-/* Contenedor de enlaces
-     * ================================== */
-.rnav li {
-  display: inline-block;
-  font-size: initial;
-/* Enlaces
-         * ================================== */
-}
-/* Enlaces
-         * ================================== */
-.rnav li a {
-  display: block;
-  padding: 0.3rem 0.8rem;
-}
-/*
-     * Estilo de Menu doble
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rnav.doble {
-  width: 100%;
-  font-size: 0;
-  white-space: nowrap;
-}
-.rnav.doble > ul {
-  width: 50%;
-  font-size: 1rem;
-  white-space: initial;
-  display: inline-block;
-/* Menu izquierdo
-             * ================================== */
-/* Menu derecho
-             * ================================== */
-}
-/* Menu izquierdo
-             * ================================== */
-.rnav.doble > ul:first-child {
-  text-align: left;
-}
-/* Menu derecho
-             * ================================== */
-.rnav.doble > ul:last-child {
-  text-align: right;
-}
-/*
-     * Menu multinivel
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rnav.multi > ul {
-  position: relative;
-}
-.rnav.multi > ul > li ul {
-  display: none;
-  position: absolute;
-}
-.rnav.multi > ul > li:hover > ul {
-  display: block;
-}
-.rnav.multi > ul li ul li {
-  display: block;
-}
-.rnav.multi > ul > li > ul > li {
-  position: relative;
-}
-.rnav.multi > ul > li > ul > li:hover ul {
-  display: block;
-  left: 100%;
-  top: 0;
-}
-/*
-     * Menu vertical
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rnav.vertical li > ul > li:first-child {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #ccc;
-  text-transform: uppercase;
-}
-.rnav.vertical ul li {
-  display: block !important;
-}
-
-/*
- * Responsive Cat
- *
- * This program is free software you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http//www.gnu.org/licenses/>.
- *
- * CSS version 3
- *
- * Interfaz de usuario (mini) para ResponsiveCat
- *
- * @category UserInterface
- * @package  UI Module
- * @author   Luis Gdonis <hello@ldonis.com>
- * @license  GPLv3 http//www.gnu.org/licenses/gpl-3.0.en.html
- * @version  0.7.0
- * @link     http//responsivecat.com
- */
-/*
-  * Contenedor de codigo
-  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-  * @author Luis Gdonis <http//ldonis.com>
-  * @since 0.7.0
-  */
-code {
-  display: block;
-  margin: 0 auto;
-  width: 90%;
-  white-space: pre-wrap;
-  font-family: Consolas, "Liberation Mono", Courier, monospace, sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
-  padding: 1rem 1rem 0.5rem 2.5rem;
-  text-align: left;
-  color: #333;
-  background: #fafafa;
-  border: 1px solid #cbcbcb;
-  margin-bottom: 15px;
-}
-/*
- * Botones
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- */
-/*
-  * Colores estandar por defecto
-  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-  * @author Luis Gdonis <http//ldonis.com>
-  * @since 0.7.0
-  */
-/*
-  * <a> (link) reset
-  * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-  * @author Luis Gdonis <http//ldonis.com>
-  * @since 0.7.0
-  */
-a {
-  color: inherit;
-  text-decoration: none;
-}
-/*
- * Hack para simular <button> con <a>
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-a.rbutton {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
-  font-family: Sans;
-}
-/*
- * Estilo base de boton
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-[class^="rbutton"] {
-  padding: 6px 12px;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.01);
-/* Estilo de boton fantasma
-     * ================================== */
-}
-[class^="rbutton"]:hover {
-  cursor: pointer;
-}
-[class^="rbutton"]:active {
-  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.15) inset, 0px 0px 6px rgba(0,0,0,0.2) inset;
-}
-/* Estilo de boton fantasma
-     * ================================== */
-[class^="rbutton"].g {
-  transition: all 0.2s ease;
-}
-/*
-     * Boton estandar
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rbutton-standard {
-  background-color: #fff;
-  border-color: #e6e6e6;
-/* Boton estandar fantasma
-         * ================================== */
-}
-.rbutton-standard:hover {
-  color: #222;
-  border-color: #e6e6e6;
-  background-color: #e6e6e6;
-}
-/* Boton estandar fantasma
-         * ================================== */
-.rbutton-standard.g {
-  background-color: transparent;
-  border-color: #e6e6e6;
-  color: #e6e6e6;
-}
-.rbutton-standard.g:hover {
-  background-color: #e6e6e6;
-  color: #fff;
-}
-/*
-     * Boton primario
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rbutton-primary {
-  color: #fff;
-  border-color: #286090;
-  background-color: #337ab7;
-/* Boton primario fantasma
-         * ================================== */
-}
-.rbutton-primary:hover {
-  color: #fff;
-  background-color: #286090;
-}
-/* Boton primario fantasma
-         * ================================== */
-.rbutton-primary.g {
-  background-color: transparent;
-  border-color: #337ab7;
-  color: #286090;
-}
-.rbutton-primary.g:hover {
-  background-color: #337ab7;
-  color: #fff;
-}
-/*
-     * Boton success
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rbutton-success {
-  color: #fff;
-  border-color: #449d44;
-  background-color: #5cb85c;
-/* Boton primario fantasma
-         * ================================== */
-}
-.rbutton-success:hover {
-  background-color: #449d44;
-  border-color: #449d44;
-}
-/* Boton primario fantasma
-         * ================================== */
-.rbutton-success.g {
-  background-color: transparent;
-  border-color: #5cb85c;
-  color: #449d44;
-}
-.rbutton-success.g:hover {
-  background-color: #5cb85c;
-  color: #fff;
-}
-/*
-     * Boton informacion
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rbutton-info {
-  background-color: #5bc0de;
-  border-color: #31b0d5;
-/* Boton informacion fantasma
-         * ================================== */
-}
-.rbutton-info:hover {
-  background-color: #31b0d5;
-  border-color: #31b0d5;
-}
-/* Boton informacion fantasma
-         * ================================== */
-.rbutton-info.g {
-  background-color: transparent;
-  border-color: #5bc0de;
-  color: #31b0d5;
-}
-.rbutton-info.g:hover {
-  background-color: #5bc0de;
-  color: #fff;
-}
-/*
-     * Boton advertencia
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rbutton-warning {
-  background-color: #f0ad4e;
-  border-color: #ec971f;
-/* Boton advertencia fantasma
-         * ================================== */
-}
-.rbutton-warning:hover {
-  background-color: #ec971f;
-}
-/* Boton advertencia fantasma
-         * ================================== */
-.rbutton-warning.g {
-  background-color: transparent;
-  border-color: #f0ad4e;
-  color: #ec971f;
-}
-.rbutton-warning.g:hover {
-  background-color: #f0ad4e;
-  color: #fff;
-}
-/*
-     * Boton error
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.rbutton-error {
-  background-color: #d9534f;
-  border-color: #c9302c;
-/* Boton error fantasma
-         * ================================== */
-}
-.rbutton-error:hover {
-  background-color: #c9302c;
-}
-/* Boton error fantasma
-         * ================================== */
-.rbutton-error.g {
-  background-color: transparent;
-  border-color: #d9534f;
-  color: #c9302c;
-}
-.rbutton-error.g:hover {
-  background-color: #d9534f;
-  color: #fff;
-}
-/*
- * Botones grupales
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.button-group {
-  font-size: 0;
-/*
-     * Estilo generico para botones grupales
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-}
-/*
-     * Estilo generico para botones grupales
-     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-     * @author Luis Gdonis <http//ldonis.com>
-     * @since 0.7.0
-     */
-.button-group [class^="rbutton"] {
-  border-radius: 0px;
-  border-right-width: 0px;
-/* Primer boton grupal - izquierda a derecha
-         * ========================================== */
-/* Ultimo boton grupal - izquierda a derecha
-         * ========================================== */
-}
-/* Primer boton grupal - izquierda a derecha
-         * ========================================== */
-.button-group [class^="rbutton"]:first-child {
-  border-radius: 3px 0 0 3px !important;
-  border-right: 0;
-}
-/* Ultimo boton grupal - izquierda a derecha
-         * ========================================== */
-.button-group [class^="rbutton"]:last-child {
-  border-radius: 0 3px 3px 0 !important;
-  border-right-width: 1px;
-}
-/*
- * Boton circular
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-[class^="rbutton"].circle {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  text-align: center;
-}
-/*
- * Boton ovalado
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-[class^="rbutton"].oval {
-  border-radius: 45px;
-  text-align: center;
-}
-
-/*
- * Responsive Cat
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
- * CSS version 3
- *
  * Helpers y hacks para ResponsiveCat
  *
  * @category Structure
@@ -1224,4 +499,82 @@ a.rbutton {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+}
+/*
+ * Oculta un elemento html del DOM
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 0.7.0
+ */
+.hidden {
+  display: none !important;
+}
+/*
+ * Tooltips
+ * Se debe agregar el atributo data-tooltip con el texto a mostrar
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 1.0.0
+ */
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+/* Oculta el tooltip
+     * ================================== */
+/* Coloca el tooltip sobre el elemento
+     * ================================== */
+/* Coloca el tringualo conector
+     * ================================== */
+/* Coloca el tringualo conector
+     * ================================== */
+}
+/* Oculta el tooltip
+     * ================================== */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+/* Coloca el tooltip sobre el elemento
+     * ================================== */
+[data-tooltip]:before {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: rgba(51,51,51,0.9);
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+/* Coloca el tringualo conector
+     * ================================== */
+[data-tooltip]:after {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51,51,51,0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+/* Coloca el tringualo conector
+     * ================================== */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
 }
