@@ -5,7 +5,7 @@ CSS Micro Framework
 
 ##### Instalación
 ----------------
-* [Descargar versión estable (0.7.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
+* [Descargar versión estable (1.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/1.0.0.zip)
 * Clonar el repositorio: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
 * Instalar con [npm](https://www.npmjs.com): `npm install responsivecat`.
 * Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
