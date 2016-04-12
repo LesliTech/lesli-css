@@ -19,7 +19,7 @@ CSS Micro Framework
 
 * Helpers y hacks para maquetación html
 
-* Archivo extremadamente pequeño 9.75kb
+* Archivo extremadamente pequeño 3.77kb
 
 ##### Sitio web y documentación
 ---------------
@@ -32,6 +32,8 @@ Responsive Cat es completamente libre y de codigo abierto
 
 * Issue tracker: [https://github.com/ResponsiveCat/ResponsiveCat/issues](https://github.com/ResponsiveCat/ResponsiveCat/issues)
 
+* Project: [https://tree.taiga.io/project/ldonis-responsivecat/](https://tree.taiga.io/project/ldonis-responsivecat/)
+
 ##### Licencia
 
-Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ResponsiveCat/ResponsiveCat/blob/master/LICENSE).
+Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ResponsiveCat/ResponsiveCat/blob/master/LICENSE).
