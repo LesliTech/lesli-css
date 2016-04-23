@@ -1,10 +1,11 @@
-<img alt"ResponsiveCat" src="http://responsivecat.com/www/responsivecat.com/Template/img/rcat-logo_notxt.png" width="225px">
+![alt text](http://img.ldonis.net/rcat/rcat-logo-notext-225.png "ResponsiveCat logo")
 
 ### [ResponsiveCat](http://responsivecat.com/)
 CSS Micro Framework
 
 ##### Instalación
 ----------------
+* [Descargar versión desarrollo (1.2.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
 * [Descargar versión estable (1.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/1.0.0.zip)
 * Clonar el repositorio: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
 * Instalar con [npm](https://www.npmjs.com): `npm install responsivecat`.
