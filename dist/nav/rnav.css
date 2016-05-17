@@ -44,6 +44,12 @@
      * @author Luis Gdonis <http//ldonis.com>
      * @since 0.7.0
      */
+/*
+     * Menu language selector
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.7.0
+     */
 }
 .rnav ul {
   padding: 0;
@@ -79,4 +85,30 @@
 }
 .rnav.vertical ul li {
   display: block !important;
+}
+/*
+     * Menu language selector
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.7.0
+     */
+.rnav.lang {
+  width: 100%;
+  max-width: 200px;
+  position: relative;
+}
+.rnav.lang:hover ul {
+  display: block;
+}
+.rnav.lang p:after {
+  content: "\25BE";
+}
+.rnav.lang ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 200px;
+}
+.rnav.lang ul li {
+  display: block;
 }

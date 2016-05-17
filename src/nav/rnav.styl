@@ -79,3 +79,33 @@
 
               li
                   display block !important
+
+
+    /*!
+     * Menu language selector
+     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+     * @author Luis Gdonis <http//ldonis.com>
+     * @since 0.7.0
+     */
+    menu-lang-width=200px
+
+    &.lang
+        width 100%
+        max-width menu-lang-width
+        position relative
+
+        &:hover ul
+            display block
+
+        p
+            &:after
+              content "\25BE"
+
+        ul
+            display none
+            position absolute
+            width 100%
+            max-width menu-lang-width
+
+            li
+                display block
