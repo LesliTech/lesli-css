@@ -82,7 +82,7 @@
     position relative
     cursor pointer
     z-index 2
-    
+
     /*! Oculta el tooltip
      * ================================== */
     &:before
@@ -90,7 +90,7 @@
         pointer-events none
         visibility hidden
         opacity 0
-        
+
 
     /*! Coloca el tooltip sobre el elemento
      * ================================== */
@@ -140,16 +140,52 @@
  * @since 1.1.0
  */
 code
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    white-space: pre-wrap;
-    font-family: Consolas,"Liberation Mono",Courier,monospace,sans-serif;
-    font-size: 1rem;
-    line-height: 1.4;
-    padding: 1rem 1rem .5rem 2.5rem;
-    text-align: left;
-    color: #333;
-    background: #fafafa;
-    border: 1px solid #cbcbcb;
-    margin-bottom: 15px;
+    display block
+    margin 0 auto
+    width 90%
+    white-space pre-wrap
+    font-family Consolas,"Liberation Mono",Courier,monospace,sans-serif
+    font-size 1rem
+    line-height 1
+    padding 1rem 1rem .5rem 2.5rem
+    text-align left
+    color #333
+    background #fafafa
+    border 1px solid #cbcbcb
+    margin-bottom 15px
+
+/*!
+ * Contenedor de codigo
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 1.1.0
+ */
+.text-center
+    text-align center
+
+/*!
+ * Modal window
+ * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+ * @author Luis Gdonis <http//ldonis.com>
+ * @since 1.1.0
+ */
+.rmodal
+    position fixed
+    top 0
+    left 0
+    z-index 999
+    height 100vh
+    width 100%
+
+    display none
+    align-items center
+    justify-content center
+    flex-direction column
+
+    background-color rgba(255,255,255,0.2)
+
+    &.active
+        display flex
+
+    .content
+        background-color #fff
