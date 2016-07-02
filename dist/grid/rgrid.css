@@ -1,50 +1,66 @@
 /*
- * Responsive Cat
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
- * CSS version 3
- *
-     * Sistema de grids y blocks para ResponsiveCat
- *
- * @category Structure
- * @package  Base styles
- * @author   Luis Gdonis <mail@ldonis.com>
- * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
- * @version  0.7.0
- * @link     http://responsivecat.com
- */
+* Responsive Cat
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+* CSS version 3
+*
+* Establece estilos estandar para sitio web
+*
+* @author   Luis Gdonis <emc2@ldonis.com>
+* @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+* @version  2.0.0 beta
+* @link     http://responsivecat.com
+*/
 /*
- * Se incluyen variables de definicion
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
+* Se incluyen variables estandar y constructores del framework
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since  2.0.0
+*/
 /*
- * Contenedor de columnas automaticas y manuales
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
+* Funciones y Mixins para construir el grid
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+*/
+/*
+* Retorna el nombre de la clase
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+/*
+* Retorna el nombre de la clase
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+/*
+* Retorna el nombre de la clase
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+/*
+* Contenedor de columnas automaticas y manuales
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
 .rgrid,
 .rblock {
   width: 100%;
   font-size: 0;
-/* Estilos a pseudo elementos
-     * ================================== */
-/* Filas del grid
-     * ================================== */
 }
 .rgrid:before,
 .rblock:before,
@@ -62,255 +78,292 @@
   display: inline-block;
 }
 /*
- * Grid
- * Ancho de columnas automaticas
- * columns-n = (width-margin)/n
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rgrid > * {
-  margin-left: 1%;
+* Constructor de grid con columnas automaticas columns-n = (width-margin)/n
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+@media (min-width: 420px) {
+  .rgrid.r420 > * {
+    margin-left: 1%;
+  }
+  .rgrid.r420.columns-02 > * {
+    width: 49.5%;
+  }
+  .rgrid.r420.columns-03 > * {
+    width: 32.666666666666664%;
+  }
+  .rgrid.r420.columns-04 > * {
+    width: 24.25%;
+  }
+  .rgrid.r420.columns-05 > * {
+    width: 19.2%;
+  }
+  .rgrid.r420.columns-06 > * {
+    width: 15.833333333333334%;
+  }
+  .rgrid.r420.columns-07 > * {
+    width: 13.428571428571429%;
+  }
+  .rgrid.r420.columns-08 > * {
+    width: 11.625%;
+  }
+  .rgrid.r420.columns-09 > * {
+    width: 10.222222222222221%;
+  }
+  .rgrid.r420.columns-10 > * {
+    width: 9.1%;
+  }
+  .rgrid.r420.columns-11 > * {
+    width: 8.181818181818182%;
+  }
+  .rgrid.r420.columns-12 > * {
+    width: 7.416666666666667%;
+  }
+  .rgrid > *:first-child {
+    margin-left: 0 !important;
+  }
 }
-.rgrid.columns-02 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 49.5%;
+@media (min-width: 620px) {
+  .rgrid.r620 > * {
+    margin-left: 1%;
+  }
+  .rgrid.r620.columns-02 > * {
+    width: 49.5%;
+  }
+  .rgrid.r620.columns-03 > * {
+    width: 32.666666666666664%;
+  }
+  .rgrid.r620.columns-04 > * {
+    width: 24.25%;
+  }
+  .rgrid.r620.columns-05 > * {
+    width: 19.2%;
+  }
+  .rgrid.r620.columns-06 > * {
+    width: 15.833333333333334%;
+  }
+  .rgrid.r620.columns-07 > * {
+    width: 13.428571428571429%;
+  }
+  .rgrid.r620.columns-08 > * {
+    width: 11.625%;
+  }
+  .rgrid.r620.columns-09 > * {
+    width: 10.222222222222221%;
+  }
+  .rgrid.r620.columns-10 > * {
+    width: 9.1%;
+  }
+  .rgrid.r620.columns-11 > * {
+    width: 8.181818181818182%;
+  }
+  .rgrid.r620.columns-12 > * {
+    width: 7.416666666666667%;
+  }
+  .rgrid > *:first-child {
+    margin-left: 0 !important;
+  }
 }
-.rgrid.columns-03 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 32.666666666666664%;
-}
-.rgrid.columns-04 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 24.25%;
-}
-.rgrid.columns-05 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 19.2%;
-}
-.rgrid.columns-06 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 15.833333333333334%;
-}
-.rgrid.columns-07 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 13.428571428571429%;
-}
-.rgrid.columns-08 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 11.625%;
-}
-.rgrid.columns-09 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 10.222222222222221%;
-}
-.rgrid.columns-010 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 9.1%;
-}
-.rgrid.columns-011 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 8.181818181818182%;
-}
-.rgrid.columns-12 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 7.416666666666667%;
-}
-.rgrid > *:first-child {
-  margin-left: 0 !important;
-}
-/*
- * Grid
- * Ancho de columnas manuales
- * .column-n = ((width/10)*n)-margen
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rgrid > * {
-  margin-left: 1%;
-}
-.rgrid .column-1 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 9%;
-}
-.rgrid .column-2 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 19%;
-}
-.rgrid .column-3 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 29%;
-}
-.rgrid .column-4 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 39%;
-}
-.rgrid .column-5 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 49%;
-}
-.rgrid .column-6 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 59%;
-}
-.rgrid .column-7 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 69%;
-}
-.rgrid .column-8 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 79%;
-}
-.rgrid .column-9 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 89%;
-}
-.rgrid .column-10 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 99%;
-}
-.rgrid > *:first-child {
-  margin-left: 0;
+@media (min-width: 820px) {
+  .rgrid.r820 > * {
+    margin-left: 1%;
+  }
+  .rgrid.r820.columns-02 > * {
+    width: 49.5%;
+  }
+  .rgrid.r820.columns-03 > * {
+    width: 32.666666666666664%;
+  }
+  .rgrid.r820.columns-04 > * {
+    width: 24.25%;
+  }
+  .rgrid.r820.columns-05 > * {
+    width: 19.2%;
+  }
+  .rgrid.r820.columns-06 > * {
+    width: 15.833333333333334%;
+  }
+  .rgrid.r820.columns-07 > * {
+    width: 13.428571428571429%;
+  }
+  .rgrid.r820.columns-08 > * {
+    width: 11.625%;
+  }
+  .rgrid.r820.columns-09 > * {
+    width: 10.222222222222221%;
+  }
+  .rgrid.r820.columns-10 > * {
+    width: 9.1%;
+  }
+  .rgrid.r820.columns-11 > * {
+    width: 8.181818181818182%;
+  }
+  .rgrid.r820.columns-12 > * {
+    width: 7.416666666666667%;
+  }
+  .rgrid > *:first-child {
+    margin-left: 0 !important;
+  }
 }
 /*
- * Block
- * Ancho de columnas automaticas
- * columns-n = width/n
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rblock.columns-02 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 50%;
+* Constructor de grid con columnas manuales columns-n = (width-margin)/n
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+@media (min-width: 420px) {
+  .rgrid.r420 > * {
+    margin-left: 1%;
+  }
+  .rgrid.r420 .column-01 {
+    width: 9%;
+  }
+  .rgrid.r420 .column-02 {
+    width: 19%;
+  }
+  .rgrid.r420 .column-03 {
+    width: 29%;
+  }
+  .rgrid.r420 .column-04 {
+    width: 39%;
+  }
+  .rgrid.r420 .column-05 {
+    width: 49%;
+  }
+  .rgrid.r420 .column-06 {
+    width: 59%;
+  }
+  .rgrid.r420 .column-07 {
+    width: 69%;
+  }
+  .rgrid.r420 .column-08 {
+    width: 79%;
+  }
+  .rgrid.r420 .column-09 {
+    width: 89%;
+  }
+  .rgrid.r420 .column-10 {
+    width: 99%;
+  }
+  .rgrid > *:first-child {
+    margin-left: 0 !important;
+  }
 }
-.rblock.columns-03 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 33.333333333333336%;
-}
-.rblock.columns-04 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 25%;
-}
-.rblock.columns-05 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 20%;
-}
-.rblock.columns-06 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 16.666666666666668%;
-}
-.rblock.columns-07 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 14.285714285714286%;
-}
-.rblock.columns-08 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 12.5%;
-}
-.rblock.columns-09 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 11.11111111111111%;
-}
-.rblock.columns-010 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 10%;
-}
-.rblock.columns-011 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 9.090909090909092%;
-}
-.rblock.columns-12 > * {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 8.333333333333334%;
+@media (min-width: 620px) {
+  .rgrid.r620 > * {
+    margin-left: 1%;
+  }
+  .rgrid.r620 .column-01 {
+    width: 9%;
+  }
+  .rgrid.r620 .column-02 {
+    width: 19%;
+  }
+  .rgrid.r620 .column-03 {
+    width: 29%;
+  }
+  .rgrid.r620 .column-04 {
+    width: 39%;
+  }
+  .rgrid.r620 .column-05 {
+    width: 49%;
+  }
+  .rgrid.r620 .column-06 {
+    width: 59%;
+  }
+  .rgrid.r620 .column-07 {
+    width: 69%;
+  }
+  .rgrid.r620 .column-08 {
+    width: 79%;
+  }
+  .rgrid.r620 .column-09 {
+    width: 89%;
+  }
+  .rgrid.r620 .column-10 {
+    width: 99%;
+  }
+  .rgrid > *:first-child {
+    margin-left: 0 !important;
+  }
 }
 /*
- * Block
- * Ancho de columnas manuales
- * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
- * @author Luis Gdonis <http//ldonis.com>
- * @since 0.7.0
- */
-.rblock .column-1 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 10%;
+* Constructor de blocks con columnas automaticas columns-n = width/n
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+@media (min-width: 420px) {
+  .rblock.r420.columns-02 > * {
+    width: 50%;
+  }
+  .rblock.r420.columns-03 > * {
+    width: 33.333333333333336%;
+  }
+  .rblock.r420.columns-04 > * {
+    width: 25%;
+  }
+  .rblock.r420.columns-05 > * {
+    width: 20%;
+  }
+  .rblock.r420.columns-06 > * {
+    width: 16.666666666666668%;
+  }
+  .rblock.r420.columns-07 > * {
+    width: 14.285714285714286%;
+  }
+  .rblock.r420.columns-08 > * {
+    width: 12.5%;
+  }
+  .rblock.r420.columns-09 > * {
+    width: 11.11111111111111%;
+  }
+  .rblock.r420.columns-10 > * {
+    width: 10%;
+  }
+  .rblock.r420.columns-11 > * {
+    width: 9.090909090909092%;
+  }
+  .rblock.r420.columns-12 > * {
+    width: 8.333333333333334%;
+  }
 }
-.rblock .column-2 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 20%;
-}
-.rblock .column-3 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 30%;
-}
-.rblock .column-4 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 40%;
-}
-.rblock .column-5 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 50%;
-}
-.rblock .column-6 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 60%;
-}
-.rblock .column-7 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 70%;
-}
-.rblock .column-8 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 80%;
-}
-.rblock .column-9 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 90%;
-}
-.rblock .column-10 {
-/* Se concatena el % al ancho
-             * ============================= */
-  width: 100%;
+/*
+* Constructor de blocks con columnas manuales columns-n = width/n
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+@media (min-width: 420px) {
+  .rblock.r420 .column-01 {
+    width: 10%;
+  }
+  .rblock.r420 .column-02 {
+    width: 20%;
+  }
+  .rblock.r420 .column-03 {
+    width: 30%;
+  }
+  .rblock.r420 .column-04 {
+    width: 40%;
+  }
+  .rblock.r420 .column-05 {
+    width: 50%;
+  }
+  .rblock.r420 .column-06 {
+    width: 60%;
+  }
+  .rblock.r420 .column-07 {
+    width: 70%;
+  }
+  .rblock.r420 .column-08 {
+    width: 80%;
+  }
+  .rblock.r420 .column-09 {
+    width: 90%;
+  }
+  .rblock.r420 .column-10 {
+    width: 100%;
+  }
 }

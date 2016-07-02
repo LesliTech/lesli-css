@@ -5,8 +5,8 @@ CSS Micro Framework
 
 ##### Instalación
 ----------------
-* [Descargar versión en desarrollo (1.2.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
-* [Descargar versión estable (1.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/1.0.0.zip)
+* [Descargar versión en desarrollo (2.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
+* [Descargar versión estable (2.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/2.0.0.zip)
 * Instalar con [npm](https://www.npmjs.com): `npm install responsivecat`.
 * Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
 * Clonar el repositorio: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
@@ -33,7 +33,6 @@ Responsive Cat es completamente libre y de codigo abierto
 
 * Issue tracker: [https://github.com/ResponsiveCat/ResponsiveCat/issues](https://github.com/ResponsiveCat/ResponsiveCat/issues)
 
-* Project: [https://tree.taiga.io/project/ldonis-responsivecat/](https://tree.taiga.io/project/ldonis-responsivecat/)
 
 ##### Licencia
 

@@ -1,8 +1,8 @@
 {
     "name": "ResponsiveCat",
-    "version": "0.7.0",
+    "version": "2.0.0",
     "authors": [
-        "Luis Gdonis <ldonis.emc2@gmail.com>"
+        "Luis Gdonis <emc2@ldonis.com>"
     ],
     "description": "CSS Micro framework",
     "main": "dist/rcat.min.css",
@@ -21,22 +21,13 @@
     ],
     "license": "GPL-3.0",
     "homepage": "http://responsivecat.com",
-    "devDependencies": {
-        "rcat-helper" : "master",
-        "rcat-base" : "master",
-        "rcat-grid" : "master",
-        "rcat-nav" : "master"
-    },
     "ignore": [
         ".git",
         ".gitignore",
         ".gitattributes",
         "composer.json",
-        "contributing.md",
         "Gruntfile.js",
         "package.json",
-        "node_modules",
-        "rcat_modules",
-        "src"
+        "node_modules"
     ]
 }
