@@ -28,7 +28,9 @@
         "rcat-cat":"https://github.com/ResponsiveCat/rCat.git#master",
         "rcat-init":"https://github.com/ResponsiveCat/rInit.git#master",
         "rcat-base":"https://github.com/ResponsiveCat/rBase.git#master",
-        "rcat-grid":"https://github.com/ResponsiveCat/rGrid.git#master"
+        "rcat-grid":"https://github.com/ResponsiveCat/rGrid.git#master",
+        "rcat-nav":"https://github.com/ResponsiveCat/rNav.git#master",
+        "rcat-helper":"https://github.com/ResponsiveCat/rHelper.git#master"
     },
     "devDependencies": {
         "grunt": "^1",
@@ -37,10 +39,9 @@
         "grunt-contrib-copy" : "^1"
    },
    "scripts":{
-       "rgrid-build":"grunt build",
-       "rgrid-compile":"grunt compile",
-       "rgrid-distribute":"grunt distribute",
-       "rgrid-deploy":"npm run rgrid-build && npm run rgrid-compile && npm run rgrid-distribute",
-       "postinstall":"npm run rgrid-deploy"
+       "rcat-build":"grunt build",
+       "rcat-compile":"grunt compile",
+       "rcat-distribute":"grunt distribute",
+       "rcat-deploy":"npm run rcat-build && npm run rcat-compile && npm run rcat-distribute"
    }
 }

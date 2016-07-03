@@ -1,0 +1,89 @@
+/*
+* Responsive Cat
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+* CSS version 3
+*
+* Modulo de Menus y listas para ResponsiveCat
+*
+* @author   Luis Gdonis <emc2@ldonis.com>
+* @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+* @version  2.0.0 beta
+* @link     http://responsivecat.com
+*/
+/*
+* Contenedor principal
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+.rnav {
+  width: 100%;
+/*
+    * Menu vertical
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <http://ldonis.com>
+    * @since 2.0.0
+    */
+/*
+    * Selector de idioma
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <http://ldonis.com>
+    * @since 2.0.0
+    */
+}
+.rnav ul {
+  padding: 0;
+}
+.rnav > ul {
+  font-size: 0;
+}
+.rnav li {
+  display: inline-block;
+  font-size: initial;
+}
+.rnav li a {
+  display: block;
+  padding: 0.3rem 0.8rem;
+}
+.rnav.vertical li > ul > li:first-child {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+}
+.rnav.vertical ul li {
+  display: block !important;
+}
+.rnav.lang {
+  width: 100%;
+  max-width: 200px;
+  position: relative;
+}
+.rnav.lang:hover ul {
+  display: block;
+}
+.rnav.lang p:after {
+  content: "\25BE";
+}
+.rnav.lang ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: menu-lang-width;
+}
+.rnav.lang ul li {
+  display: block;
+}
