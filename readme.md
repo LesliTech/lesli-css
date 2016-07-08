@@ -20,7 +20,7 @@ CSS Micro Framework
 
 * Helpers y hacks para maquetación html
 
-* Archivo extremadamente pequeño 3.77kb
+* Framework liviano 11.66kb
 
 ##### Sitio web y documentación
 ---------------

@@ -20,7 +20,7 @@
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  2.0.0 beta
+* @version  2.1.0 beta
 * @link     http://responsivecat.com
 */
 
@@ -29,7 +29,7 @@
 * Se incluyen variables estandar y constructores del framework
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since  2.0.0
+* @since  2.1.0
 */
 @require '../init/rinit'
 
@@ -107,12 +107,13 @@ getManualColumnWidth($column-total, $column-number, $margin)
 * Contenedor de columnas automaticas y manuales
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 2.1.0
 */
 .rgrid
 .rblock
     width 100%
     font-size 0
+
 
     // * Estilos a pseudo elementos
     // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
@@ -128,14 +129,42 @@ getManualColumnWidth($column-total, $column-number, $margin)
     & > *
         font-size initial
         white-space initial
+        display block
+
+
+
+/*
+* Disparador de columnas
+* Crea media queri para formar columnas al llegara al width indicado en
+* breakpoint start + iteracion
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.1.0
+*/
+@media (min-width: unit($rgrid-breakpoint-start, 'px'))
+
+    // * Margen de cada elemento del grid,
+    // * a excepcion del ultimo elemento
+    // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    .rgrid
+
+        & > *:not(:last-child)
+            margin-right unit($rgrid-columns-automatic-margin, '%')
+
+
+    // * Columnas de blocks y grid
+    // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    .rgrid > *
+    .rblock > *
         display inline-block
+
 
 
 /*
 * Constructor de grid con columnas automaticas columns-n = (width-margin)/n
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 2.1.0
 */
 .rgrid
 
@@ -161,104 +190,40 @@ getManualColumnWidth($column-total, $column-number, $margin)
             $rgrid-breakpoint-class-name = 'r' + $rgrid-breakpoint
 
 
-            // * Margen de cada elemento del grid
-            // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-            &.{$rgrid-breakpoint-class-name} > *
-                margin-left unit($rgrid-columns-automatic-margin, '%')
-
-
             // Recorre la cantidad de columnas configuradas
-            for column in ( 2 .. $rgrid-columns-automatic-count )
+            for column in ( 2 .. $rgrid-columns-count )
 
 
-                // Obtiene el nombre de la clase para columnas del grid
+                // Obtiene el nombre de la clase para columnas automaticas del grid
                 $rgrid-class-name = getClassName(column, $rgrid-columns-automatic-prefix)
 
+                // Obtiene el nombre de la clase para columnas manuales del grid
+                $rgrid-class-name-manual = getClassName(column, $rgrid-columns-manual-prefix)
 
-                // Obtiene ancho de cada columna
+
+                // Obtiene ancho de cada columna automatica
                 $rgrid-width-percent = getAutoColumnWidth(column, $rgrid-columns-automatic-margin )
 
+                // Obtiene ancho de cada columna manual
+                $rgrid-width-percent-manual = getManualColumnWidth($rgrid-columns-count, column, $rgrid-columns-manual-margin )
 
-                // Genera la clase css para el ancho de cada columna
+
+                // Genera la clase css para el ancho de cada columna automatica
                 &.{$rgrid-breakpoint-class-name}.{$rgrid-class-name} > *
                     width unit($rgrid-width-percent, '%')
 
 
-            // * Remueve el margen de la ultima columna
-            // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-            & > *:first-child
-                margin-left 0 !important
-
-
-        // aumenta el breakpoint segun lo configurado para cada iteracion
-        $rgrid-breakpoint = $rgrid-breakpoint + $rgrid-breakpoint-iteration
-
-
-
-
-/*
-* Constructor de grid con columnas manuales columns-n = (width-margin)/n
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-.rgrid
-
-
-    // Calcula el total de iteraciones a realizar para los breakpoints
-    $rgrid-iterations-count = ($rgrid-breakpoint-end - $rgrid-breakpoint-start )
-    $rgrid-iterations-count = $rgrid-iterations-count / $rgrid-breakpoint-iteration
-
-
-    // Ancho en pixeles para primer breakpoint
-    $rgrid-breakpoint = $rgrid-breakpoint-start
-
-
-    // Por cada breakpoint
-    for media in (1 .. $rgrid-iterations-count)
-
-
-        // inicializa breakpoints
-        @media (min-width: unit($rgrid-breakpoint, 'px'))
-
-
-            // Clase css para breakpoints
-            $rgrid-breakpoint-class-name = 'r' + $rgrid-breakpoint
-
-
-            // * Margen de cada elemento del grid
-            // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-            &.{$rgrid-breakpoint-class-name} > *
-                margin-left unit($rgrid-columns-manual-margin, '%')
-
-
-            // Recorre la cantidad de columnas configuradas
-            for column in ( 1 .. $rgrid-columns-manual-count )
-
-
-                // Obtiene el nombre de la clase para columnas del grid
-                $rgrid-class-name = getClassName(column, $rgrid-columns-manual-prefix)
-
-
-                // Obtiene ancho de cada columna
-                $rgrid-width-percent = getManualColumnWidth($rgrid-columns-manual-count, column, $rgrid-columns-manual-margin )
-
-
-                // Genera la clase css para el ancho de cada columna
+                // Genera la clase css para el ancho de cada columna manual
                 &.{$rgrid-breakpoint-class-name}
 
-                    .{$rgrid-class-name}
-                        width unit($rgrid-width-percent, '%')
-
-
-            // * Remueve el margen de la ultima columna
-            // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-            & > *:first-child
-                margin-left 0 !important
+                    .{$rgrid-class-name-manual}
+                        width unit($rgrid-width-percent-manual, '%')
 
 
         // aumenta el breakpoint segun lo configurado para cada iteracion
         $rgrid-breakpoint = $rgrid-breakpoint + $rgrid-breakpoint-iteration
+
+
 
 
 
@@ -266,7 +231,7 @@ getManualColumnWidth($column-total, $column-number, $margin)
 * Constructor de blocks con columnas automaticas columns-n = width/n
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 2.1.0
 */
 .rblock
 
@@ -293,74 +258,31 @@ getManualColumnWidth($column-total, $column-number, $margin)
 
 
             // Recorre la cantidad de columnas configuradas
-            for column in ( 2 .. $rblocks-columns-automatic-count )
+            for column in ( 2 .. $rblocks-columns-count )
 
 
-                // Obtiene el nombre de la clase para columnas del grid
+                // Obtiene el nombre de la clase para columnas del grid automatico
                 $rblock-class-name = getClassName(column, $rblocks-columns-automatic-prefix)
 
+                // Obtiene el nombre de la clase para columnas del grid manual
+                $rblock-class-name-manual = getClassName(column, $rblocks-columns-manual-prefix)
 
-                // Obtiene ancho de cada columna
+
+                // Obtiene ancho de cada columna automatica
                 $rblock-width-percent = 100 / column
 
+                // Obtiene ancho de cada columna manual
+                $rblock-width-percent-manual = (100 / $rblocks-columns-count) * column
 
-                // Genera la clase css para el ancho de cada columna
+                // Genera la clase css para el ancho de cada columna automatica
                 &.{$rblock-breakpoint-class-name}.{$rblock-class-name} > *
                     width unit($rblock-width-percent, '%')
 
-
-        // aumenta el breakpoint segun lo configurado para cada iteracion
-        $rgrid-breakpoint = $rgrid-breakpoint + $rgrid-breakpoint-iteration
-
-
-
-/*
-* Constructor de blocks con columnas manuales columns-n = width/n
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-.rblock
-
-
-    // Calcula el total de iteraciones a realizar para los breakpoints
-    $rgrid-iterations-count = ($rgrid-breakpoint-end - $rgrid-breakpoint-start )
-    $rgrid-iterations-count = $rgrid-iterations-count / $rgrid-breakpoint-iteration
-
-
-    // Ancho en pixeles para primer breakpoint
-    $rgrid-breakpoint = $rgrid-breakpoint-start
-
-
-    // Por cada breakpoint
-    for media in (2 .. $rgrid-iterations-count)
-
-
-        // inicializa breakpoints
-        @media (min-width: unit($rgrid-breakpoint, 'px'))
-
-
-            // Clase css para breakpoints
-            $rblock-breakpoint-class-name = 'r' + $rgrid-breakpoint
-
-
-            // Recorre la cantidad de columnas configuradas
-            for column in ( 1 .. $rblocks-columns-manual-count )
-
-
-                // Obtiene el nombre de la clase para columnas del grid
-                $rblock-class-name = getClassName(column, $rblocks-columns-manual-prefix)
-
-
-                // Obtiene ancho de cada columna
-                $rblock-width-percent = (100 / $rblocks-columns-manual-count) * column
-
-
-                // Genera la clase css para el ancho de cada columna
+                // Genera la clase css para el ancho de cada columna manual
                 &.{$rblock-breakpoint-class-name}
 
-                    .{$rblock-class-name}
-                        width unit($rblock-width-percent, '%')
+                    .{$rblock-class-name-manual}
+                        width unit($rblock-width-percent-manual, '%')
 
 
         // aumenta el breakpoint segun lo configurado para cada iteracion

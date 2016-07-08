@@ -20,14 +20,14 @@
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  2.0.0 beta
+* @version  2.1.0 beta
 * @link     http://responsivecat.com
 */
 /*
 * Se incluyen variables estandar y constructores del framework
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since  2.0.0
+* @since  2.1.0
 */
 /*
 * Funciones y Mixins para construir el grid
@@ -55,7 +55,7 @@
 * Contenedor de columnas automaticas y manuales
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 2.1.0
 */
 .rgrid,
 .rblock {
@@ -75,733 +75,578 @@
 .rblock > * {
   font-size: initial;
   white-space: initial;
-  display: inline-block;
+  display: block;
+}
+/*
+* Disparador de columnas
+* Crea media queri para formar columnas al llegara al width indicado en
+* breakpoint start + iteracion
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.1.0
+*/
+@media (min-width: 320px) {
+  .rgrid > *:not(:last-child) {
+    margin-right: 1%;
+  }
+  .rgrid > *,
+  .rblock > * {
+    display: inline-block;
+  }
 }
 /*
 * Constructor de grid con columnas automaticas columns-n = (width-margin)/n
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 2.1.0
 */
 @media (min-width: 320px) {
-  .rgrid.r320 > * {
-    margin-left: 1%;
-  }
   .rgrid.r320.columns-02 > * {
     width: 49.5%;
+  }
+  .rgrid.r320 .column-02 {
+    width: 15.666666666666668%;
   }
   .rgrid.r320.columns-03 > * {
     width: 32.666666666666664%;
   }
+  .rgrid.r320 .column-03 {
+    width: 24%;
+  }
   .rgrid.r320.columns-04 > * {
     width: 24.25%;
+  }
+  .rgrid.r320 .column-04 {
+    width: 32.333333333333336%;
   }
   .rgrid.r320.columns-05 > * {
     width: 19.2%;
   }
+  .rgrid.r320 .column-05 {
+    width: 40.66666666666667%;
+  }
   .rgrid.r320.columns-06 > * {
     width: 15.833333333333334%;
+  }
+  .rgrid.r320 .column-06 {
+    width: 49%;
   }
   .rgrid.r320.columns-07 > * {
     width: 13.428571428571429%;
   }
+  .rgrid.r320 .column-07 {
+    width: 57.333333333333336%;
+  }
   .rgrid.r320.columns-08 > * {
     width: 11.625%;
+  }
+  .rgrid.r320 .column-08 {
+    width: 65.66666666666667%;
   }
   .rgrid.r320.columns-09 > * {
     width: 10.222222222222221%;
   }
+  .rgrid.r320 .column-09 {
+    width: 74%;
+  }
   .rgrid.r320.columns-10 > * {
     width: 9.1%;
+  }
+  .rgrid.r320 .column-10 {
+    width: 82.33333333333334%;
   }
   .rgrid.r320.columns-11 > * {
     width: 8.181818181818182%;
   }
+  .rgrid.r320 .column-11 {
+    width: 90.66666666666667%;
+  }
   .rgrid.r320.columns-12 > * {
     width: 7.416666666666667%;
   }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
+  .rgrid.r320 .column-12 {
+    width: 99%;
   }
 }
 @media (min-width: 420px) {
-  .rgrid.r420 > * {
-    margin-left: 1%;
-  }
   .rgrid.r420.columns-02 > * {
     width: 49.5%;
+  }
+  .rgrid.r420 .column-02 {
+    width: 15.666666666666668%;
   }
   .rgrid.r420.columns-03 > * {
     width: 32.666666666666664%;
   }
+  .rgrid.r420 .column-03 {
+    width: 24%;
+  }
   .rgrid.r420.columns-04 > * {
     width: 24.25%;
+  }
+  .rgrid.r420 .column-04 {
+    width: 32.333333333333336%;
   }
   .rgrid.r420.columns-05 > * {
     width: 19.2%;
   }
+  .rgrid.r420 .column-05 {
+    width: 40.66666666666667%;
+  }
   .rgrid.r420.columns-06 > * {
     width: 15.833333333333334%;
+  }
+  .rgrid.r420 .column-06 {
+    width: 49%;
   }
   .rgrid.r420.columns-07 > * {
     width: 13.428571428571429%;
   }
+  .rgrid.r420 .column-07 {
+    width: 57.333333333333336%;
+  }
   .rgrid.r420.columns-08 > * {
     width: 11.625%;
+  }
+  .rgrid.r420 .column-08 {
+    width: 65.66666666666667%;
   }
   .rgrid.r420.columns-09 > * {
     width: 10.222222222222221%;
   }
+  .rgrid.r420 .column-09 {
+    width: 74%;
+  }
   .rgrid.r420.columns-10 > * {
     width: 9.1%;
+  }
+  .rgrid.r420 .column-10 {
+    width: 82.33333333333334%;
   }
   .rgrid.r420.columns-11 > * {
     width: 8.181818181818182%;
   }
+  .rgrid.r420 .column-11 {
+    width: 90.66666666666667%;
+  }
   .rgrid.r420.columns-12 > * {
     width: 7.416666666666667%;
   }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
+  .rgrid.r420 .column-12 {
+    width: 99%;
   }
 }
 @media (min-width: 520px) {
-  .rgrid.r520 > * {
-    margin-left: 1%;
-  }
   .rgrid.r520.columns-02 > * {
     width: 49.5%;
+  }
+  .rgrid.r520 .column-02 {
+    width: 15.666666666666668%;
   }
   .rgrid.r520.columns-03 > * {
     width: 32.666666666666664%;
   }
+  .rgrid.r520 .column-03 {
+    width: 24%;
+  }
   .rgrid.r520.columns-04 > * {
     width: 24.25%;
+  }
+  .rgrid.r520 .column-04 {
+    width: 32.333333333333336%;
   }
   .rgrid.r520.columns-05 > * {
     width: 19.2%;
   }
+  .rgrid.r520 .column-05 {
+    width: 40.66666666666667%;
+  }
   .rgrid.r520.columns-06 > * {
     width: 15.833333333333334%;
+  }
+  .rgrid.r520 .column-06 {
+    width: 49%;
   }
   .rgrid.r520.columns-07 > * {
     width: 13.428571428571429%;
   }
+  .rgrid.r520 .column-07 {
+    width: 57.333333333333336%;
+  }
   .rgrid.r520.columns-08 > * {
     width: 11.625%;
+  }
+  .rgrid.r520 .column-08 {
+    width: 65.66666666666667%;
   }
   .rgrid.r520.columns-09 > * {
     width: 10.222222222222221%;
   }
+  .rgrid.r520 .column-09 {
+    width: 74%;
+  }
   .rgrid.r520.columns-10 > * {
     width: 9.1%;
+  }
+  .rgrid.r520 .column-10 {
+    width: 82.33333333333334%;
   }
   .rgrid.r520.columns-11 > * {
     width: 8.181818181818182%;
   }
+  .rgrid.r520 .column-11 {
+    width: 90.66666666666667%;
+  }
   .rgrid.r520.columns-12 > * {
     width: 7.416666666666667%;
   }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
+  .rgrid.r520 .column-12 {
+    width: 99%;
   }
 }
 @media (min-width: 620px) {
-  .rgrid.r620 > * {
-    margin-left: 1%;
-  }
   .rgrid.r620.columns-02 > * {
     width: 49.5%;
+  }
+  .rgrid.r620 .column-02 {
+    width: 15.666666666666668%;
   }
   .rgrid.r620.columns-03 > * {
     width: 32.666666666666664%;
   }
+  .rgrid.r620 .column-03 {
+    width: 24%;
+  }
   .rgrid.r620.columns-04 > * {
     width: 24.25%;
+  }
+  .rgrid.r620 .column-04 {
+    width: 32.333333333333336%;
   }
   .rgrid.r620.columns-05 > * {
     width: 19.2%;
   }
+  .rgrid.r620 .column-05 {
+    width: 40.66666666666667%;
+  }
   .rgrid.r620.columns-06 > * {
     width: 15.833333333333334%;
+  }
+  .rgrid.r620 .column-06 {
+    width: 49%;
   }
   .rgrid.r620.columns-07 > * {
     width: 13.428571428571429%;
   }
+  .rgrid.r620 .column-07 {
+    width: 57.333333333333336%;
+  }
   .rgrid.r620.columns-08 > * {
     width: 11.625%;
+  }
+  .rgrid.r620 .column-08 {
+    width: 65.66666666666667%;
   }
   .rgrid.r620.columns-09 > * {
     width: 10.222222222222221%;
   }
+  .rgrid.r620 .column-09 {
+    width: 74%;
+  }
   .rgrid.r620.columns-10 > * {
     width: 9.1%;
+  }
+  .rgrid.r620 .column-10 {
+    width: 82.33333333333334%;
   }
   .rgrid.r620.columns-11 > * {
     width: 8.181818181818182%;
   }
+  .rgrid.r620 .column-11 {
+    width: 90.66666666666667%;
+  }
   .rgrid.r620.columns-12 > * {
     width: 7.416666666666667%;
   }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
+  .rgrid.r620 .column-12 {
+    width: 99%;
   }
 }
 @media (min-width: 720px) {
-  .rgrid.r720 > * {
-    margin-left: 1%;
-  }
   .rgrid.r720.columns-02 > * {
     width: 49.5%;
+  }
+  .rgrid.r720 .column-02 {
+    width: 15.666666666666668%;
   }
   .rgrid.r720.columns-03 > * {
     width: 32.666666666666664%;
   }
+  .rgrid.r720 .column-03 {
+    width: 24%;
+  }
   .rgrid.r720.columns-04 > * {
     width: 24.25%;
+  }
+  .rgrid.r720 .column-04 {
+    width: 32.333333333333336%;
   }
   .rgrid.r720.columns-05 > * {
     width: 19.2%;
   }
+  .rgrid.r720 .column-05 {
+    width: 40.66666666666667%;
+  }
   .rgrid.r720.columns-06 > * {
     width: 15.833333333333334%;
+  }
+  .rgrid.r720 .column-06 {
+    width: 49%;
   }
   .rgrid.r720.columns-07 > * {
     width: 13.428571428571429%;
   }
+  .rgrid.r720 .column-07 {
+    width: 57.333333333333336%;
+  }
   .rgrid.r720.columns-08 > * {
     width: 11.625%;
+  }
+  .rgrid.r720 .column-08 {
+    width: 65.66666666666667%;
   }
   .rgrid.r720.columns-09 > * {
     width: 10.222222222222221%;
   }
+  .rgrid.r720 .column-09 {
+    width: 74%;
+  }
   .rgrid.r720.columns-10 > * {
     width: 9.1%;
+  }
+  .rgrid.r720 .column-10 {
+    width: 82.33333333333334%;
   }
   .rgrid.r720.columns-11 > * {
     width: 8.181818181818182%;
   }
+  .rgrid.r720 .column-11 {
+    width: 90.66666666666667%;
+  }
   .rgrid.r720.columns-12 > * {
     width: 7.416666666666667%;
   }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
-  }
-}
-@media (min-width: 820px) {
-  .rgrid.r820 > * {
-    margin-left: 1%;
-  }
-  .rgrid.r820.columns-02 > * {
-    width: 49.5%;
-  }
-  .rgrid.r820.columns-03 > * {
-    width: 32.666666666666664%;
-  }
-  .rgrid.r820.columns-04 > * {
-    width: 24.25%;
-  }
-  .rgrid.r820.columns-05 > * {
-    width: 19.2%;
-  }
-  .rgrid.r820.columns-06 > * {
-    width: 15.833333333333334%;
-  }
-  .rgrid.r820.columns-07 > * {
-    width: 13.428571428571429%;
-  }
-  .rgrid.r820.columns-08 > * {
-    width: 11.625%;
-  }
-  .rgrid.r820.columns-09 > * {
-    width: 10.222222222222221%;
-  }
-  .rgrid.r820.columns-10 > * {
-    width: 9.1%;
-  }
-  .rgrid.r820.columns-11 > * {
-    width: 8.181818181818182%;
-  }
-  .rgrid.r820.columns-12 > * {
-    width: 7.416666666666667%;
-  }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
-  }
-}
-/*
-* Constructor de grid con columnas manuales columns-n = (width-margin)/n
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-@media (min-width: 320px) {
-  .rgrid.r320 > * {
-    margin-left: 1%;
-  }
-  .rgrid.r320 .column-01 {
-    width: 9%;
-  }
-  .rgrid.r320 .column-02 {
-    width: 19%;
-  }
-  .rgrid.r320 .column-03 {
-    width: 29%;
-  }
-  .rgrid.r320 .column-04 {
-    width: 39%;
-  }
-  .rgrid.r320 .column-05 {
-    width: 49%;
-  }
-  .rgrid.r320 .column-06 {
-    width: 59%;
-  }
-  .rgrid.r320 .column-07 {
-    width: 69%;
-  }
-  .rgrid.r320 .column-08 {
-    width: 79%;
-  }
-  .rgrid.r320 .column-09 {
-    width: 89%;
-  }
-  .rgrid.r320 .column-10 {
+  .rgrid.r720 .column-12 {
     width: 99%;
-  }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
-  }
-}
-@media (min-width: 420px) {
-  .rgrid.r420 > * {
-    margin-left: 1%;
-  }
-  .rgrid.r420 .column-01 {
-    width: 9%;
-  }
-  .rgrid.r420 .column-02 {
-    width: 19%;
-  }
-  .rgrid.r420 .column-03 {
-    width: 29%;
-  }
-  .rgrid.r420 .column-04 {
-    width: 39%;
-  }
-  .rgrid.r420 .column-05 {
-    width: 49%;
-  }
-  .rgrid.r420 .column-06 {
-    width: 59%;
-  }
-  .rgrid.r420 .column-07 {
-    width: 69%;
-  }
-  .rgrid.r420 .column-08 {
-    width: 79%;
-  }
-  .rgrid.r420 .column-09 {
-    width: 89%;
-  }
-  .rgrid.r420 .column-10 {
-    width: 99%;
-  }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
-  }
-}
-@media (min-width: 520px) {
-  .rgrid.r520 > * {
-    margin-left: 1%;
-  }
-  .rgrid.r520 .column-01 {
-    width: 9%;
-  }
-  .rgrid.r520 .column-02 {
-    width: 19%;
-  }
-  .rgrid.r520 .column-03 {
-    width: 29%;
-  }
-  .rgrid.r520 .column-04 {
-    width: 39%;
-  }
-  .rgrid.r520 .column-05 {
-    width: 49%;
-  }
-  .rgrid.r520 .column-06 {
-    width: 59%;
-  }
-  .rgrid.r520 .column-07 {
-    width: 69%;
-  }
-  .rgrid.r520 .column-08 {
-    width: 79%;
-  }
-  .rgrid.r520 .column-09 {
-    width: 89%;
-  }
-  .rgrid.r520 .column-10 {
-    width: 99%;
-  }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
-  }
-}
-@media (min-width: 620px) {
-  .rgrid.r620 > * {
-    margin-left: 1%;
-  }
-  .rgrid.r620 .column-01 {
-    width: 9%;
-  }
-  .rgrid.r620 .column-02 {
-    width: 19%;
-  }
-  .rgrid.r620 .column-03 {
-    width: 29%;
-  }
-  .rgrid.r620 .column-04 {
-    width: 39%;
-  }
-  .rgrid.r620 .column-05 {
-    width: 49%;
-  }
-  .rgrid.r620 .column-06 {
-    width: 59%;
-  }
-  .rgrid.r620 .column-07 {
-    width: 69%;
-  }
-  .rgrid.r620 .column-08 {
-    width: 79%;
-  }
-  .rgrid.r620 .column-09 {
-    width: 89%;
-  }
-  .rgrid.r620 .column-10 {
-    width: 99%;
-  }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
-  }
-}
-@media (min-width: 720px) {
-  .rgrid.r720 > * {
-    margin-left: 1%;
-  }
-  .rgrid.r720 .column-01 {
-    width: 9%;
-  }
-  .rgrid.r720 .column-02 {
-    width: 19%;
-  }
-  .rgrid.r720 .column-03 {
-    width: 29%;
-  }
-  .rgrid.r720 .column-04 {
-    width: 39%;
-  }
-  .rgrid.r720 .column-05 {
-    width: 49%;
-  }
-  .rgrid.r720 .column-06 {
-    width: 59%;
-  }
-  .rgrid.r720 .column-07 {
-    width: 69%;
-  }
-  .rgrid.r720 .column-08 {
-    width: 79%;
-  }
-  .rgrid.r720 .column-09 {
-    width: 89%;
-  }
-  .rgrid.r720 .column-10 {
-    width: 99%;
-  }
-  .rgrid > *:first-child {
-    margin-left: 0 !important;
   }
 }
 /*
 * Constructor de blocks con columnas automaticas columns-n = width/n
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 2.1.0
 */
 @media (min-width: 320px) {
   .rblock.r320.columns-02 > * {
     width: 50%;
   }
+  .rblock.r320 .column-02 {
+    width: 16.666666666666668%;
+  }
   .rblock.r320.columns-03 > * {
     width: 33.333333333333336%;
+  }
+  .rblock.r320 .column-03 {
+    width: 25%;
   }
   .rblock.r320.columns-04 > * {
     width: 25%;
   }
+  .rblock.r320 .column-04 {
+    width: 33.333333333333336%;
+  }
   .rblock.r320.columns-05 > * {
     width: 20%;
+  }
+  .rblock.r320 .column-05 {
+    width: 41.66666666666667%;
   }
   .rblock.r320.columns-06 > * {
     width: 16.666666666666668%;
   }
+  .rblock.r320 .column-06 {
+    width: 50%;
+  }
   .rblock.r320.columns-07 > * {
     width: 14.285714285714286%;
+  }
+  .rblock.r320 .column-07 {
+    width: 58.333333333333336%;
   }
   .rblock.r320.columns-08 > * {
     width: 12.5%;
   }
+  .rblock.r320 .column-08 {
+    width: 66.66666666666667%;
+  }
   .rblock.r320.columns-09 > * {
     width: 11.11111111111111%;
+  }
+  .rblock.r320 .column-09 {
+    width: 75%;
   }
   .rblock.r320.columns-10 > * {
     width: 10%;
   }
+  .rblock.r320 .column-10 {
+    width: 83.33333333333334%;
+  }
   .rblock.r320.columns-11 > * {
     width: 9.090909090909092%;
   }
+  .rblock.r320 .column-11 {
+    width: 91.66666666666667%;
+  }
   .rblock.r320.columns-12 > * {
     width: 8.333333333333334%;
+  }
+  .rblock.r320 .column-12 {
+    width: 100%;
   }
 }
 @media (min-width: 420px) {
   .rblock.r420.columns-02 > * {
     width: 50%;
   }
+  .rblock.r420 .column-02 {
+    width: 16.666666666666668%;
+  }
   .rblock.r420.columns-03 > * {
     width: 33.333333333333336%;
+  }
+  .rblock.r420 .column-03 {
+    width: 25%;
   }
   .rblock.r420.columns-04 > * {
     width: 25%;
   }
+  .rblock.r420 .column-04 {
+    width: 33.333333333333336%;
+  }
   .rblock.r420.columns-05 > * {
     width: 20%;
+  }
+  .rblock.r420 .column-05 {
+    width: 41.66666666666667%;
   }
   .rblock.r420.columns-06 > * {
     width: 16.666666666666668%;
   }
+  .rblock.r420 .column-06 {
+    width: 50%;
+  }
   .rblock.r420.columns-07 > * {
     width: 14.285714285714286%;
+  }
+  .rblock.r420 .column-07 {
+    width: 58.333333333333336%;
   }
   .rblock.r420.columns-08 > * {
     width: 12.5%;
   }
+  .rblock.r420 .column-08 {
+    width: 66.66666666666667%;
+  }
   .rblock.r420.columns-09 > * {
     width: 11.11111111111111%;
+  }
+  .rblock.r420 .column-09 {
+    width: 75%;
   }
   .rblock.r420.columns-10 > * {
     width: 10%;
   }
+  .rblock.r420 .column-10 {
+    width: 83.33333333333334%;
+  }
   .rblock.r420.columns-11 > * {
     width: 9.090909090909092%;
   }
+  .rblock.r420 .column-11 {
+    width: 91.66666666666667%;
+  }
   .rblock.r420.columns-12 > * {
     width: 8.333333333333334%;
+  }
+  .rblock.r420 .column-12 {
+    width: 100%;
   }
 }
 @media (min-width: 520px) {
   .rblock.r520.columns-02 > * {
     width: 50%;
   }
+  .rblock.r520 .column-02 {
+    width: 16.666666666666668%;
+  }
   .rblock.r520.columns-03 > * {
     width: 33.333333333333336%;
+  }
+  .rblock.r520 .column-03 {
+    width: 25%;
   }
   .rblock.r520.columns-04 > * {
     width: 25%;
   }
+  .rblock.r520 .column-04 {
+    width: 33.333333333333336%;
+  }
   .rblock.r520.columns-05 > * {
     width: 20%;
+  }
+  .rblock.r520 .column-05 {
+    width: 41.66666666666667%;
   }
   .rblock.r520.columns-06 > * {
     width: 16.666666666666668%;
   }
+  .rblock.r520 .column-06 {
+    width: 50%;
+  }
   .rblock.r520.columns-07 > * {
     width: 14.285714285714286%;
+  }
+  .rblock.r520 .column-07 {
+    width: 58.333333333333336%;
   }
   .rblock.r520.columns-08 > * {
     width: 12.5%;
   }
+  .rblock.r520 .column-08 {
+    width: 66.66666666666667%;
+  }
   .rblock.r520.columns-09 > * {
     width: 11.11111111111111%;
+  }
+  .rblock.r520 .column-09 {
+    width: 75%;
   }
   .rblock.r520.columns-10 > * {
     width: 10%;
   }
+  .rblock.r520 .column-10 {
+    width: 83.33333333333334%;
+  }
   .rblock.r520.columns-11 > * {
     width: 9.090909090909092%;
+  }
+  .rblock.r520 .column-11 {
+    width: 91.66666666666667%;
   }
   .rblock.r520.columns-12 > * {
     width: 8.333333333333334%;
   }
-}
-@media (min-width: 620px) {
-  .rblock.r620.columns-02 > * {
-    width: 50%;
-  }
-  .rblock.r620.columns-03 > * {
-    width: 33.333333333333336%;
-  }
-  .rblock.r620.columns-04 > * {
-    width: 25%;
-  }
-  .rblock.r620.columns-05 > * {
-    width: 20%;
-  }
-  .rblock.r620.columns-06 > * {
-    width: 16.666666666666668%;
-  }
-  .rblock.r620.columns-07 > * {
-    width: 14.285714285714286%;
-  }
-  .rblock.r620.columns-08 > * {
-    width: 12.5%;
-  }
-  .rblock.r620.columns-09 > * {
-    width: 11.11111111111111%;
-  }
-  .rblock.r620.columns-10 > * {
-    width: 10%;
-  }
-  .rblock.r620.columns-11 > * {
-    width: 9.090909090909092%;
-  }
-  .rblock.r620.columns-12 > * {
-    width: 8.333333333333334%;
-  }
-}
-/*
-* Constructor de blocks con columnas manuales columns-n = width/n
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-@media (min-width: 320px) {
-  .rblock.r320 .column-01 {
-    width: 10%;
-  }
-  .rblock.r320 .column-02 {
-    width: 20%;
-  }
-  .rblock.r320 .column-03 {
-    width: 30%;
-  }
-  .rblock.r320 .column-04 {
-    width: 40%;
-  }
-  .rblock.r320 .column-05 {
-    width: 50%;
-  }
-  .rblock.r320 .column-06 {
-    width: 60%;
-  }
-  .rblock.r320 .column-07 {
-    width: 70%;
-  }
-  .rblock.r320 .column-08 {
-    width: 80%;
-  }
-  .rblock.r320 .column-09 {
-    width: 90%;
-  }
-  .rblock.r320 .column-10 {
-    width: 100%;
-  }
-}
-@media (min-width: 420px) {
-  .rblock.r420 .column-01 {
-    width: 10%;
-  }
-  .rblock.r420 .column-02 {
-    width: 20%;
-  }
-  .rblock.r420 .column-03 {
-    width: 30%;
-  }
-  .rblock.r420 .column-04 {
-    width: 40%;
-  }
-  .rblock.r420 .column-05 {
-    width: 50%;
-  }
-  .rblock.r420 .column-06 {
-    width: 60%;
-  }
-  .rblock.r420 .column-07 {
-    width: 70%;
-  }
-  .rblock.r420 .column-08 {
-    width: 80%;
-  }
-  .rblock.r420 .column-09 {
-    width: 90%;
-  }
-  .rblock.r420 .column-10 {
-    width: 100%;
-  }
-}
-@media (min-width: 520px) {
-  .rblock.r520 .column-01 {
-    width: 10%;
-  }
-  .rblock.r520 .column-02 {
-    width: 20%;
-  }
-  .rblock.r520 .column-03 {
-    width: 30%;
-  }
-  .rblock.r520 .column-04 {
-    width: 40%;
-  }
-  .rblock.r520 .column-05 {
-    width: 50%;
-  }
-  .rblock.r520 .column-06 {
-    width: 60%;
-  }
-  .rblock.r520 .column-07 {
-    width: 70%;
-  }
-  .rblock.r520 .column-08 {
-    width: 80%;
-  }
-  .rblock.r520 .column-09 {
-    width: 90%;
-  }
-  .rblock.r520 .column-10 {
-    width: 100%;
-  }
-}
-@media (min-width: 620px) {
-  .rblock.r620 .column-01 {
-    width: 10%;
-  }
-  .rblock.r620 .column-02 {
-    width: 20%;
-  }
-  .rblock.r620 .column-03 {
-    width: 30%;
-  }
-  .rblock.r620 .column-04 {
-    width: 40%;
-  }
-  .rblock.r620 .column-05 {
-    width: 50%;
-  }
-  .rblock.r620 .column-06 {
-    width: 60%;
-  }
-  .rblock.r620 .column-07 {
-    width: 70%;
-  }
-  .rblock.r620 .column-08 {
-    width: 80%;
-  }
-  .rblock.r620 .column-09 {
-    width: 90%;
-  }
-  .rblock.r620 .column-10 {
+  .rblock.r520 .column-12 {
     width: 100%;
   }
 }
