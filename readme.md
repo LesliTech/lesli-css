@@ -1,7 +1,8 @@
 ![alt text](http://cdn.ldonis.net/assets/logos/responsivecat/rcat-logo-notext-200.png "ResponsiveCat logo")
 
 ### [ResponsiveCat](http://responsivecat.com/)
-CSS Micro Framework
+*Responsive cat es un microframework css creado para proporcionar una base de estilos basica y consistente para aplicaciones y paginas web, permitiendo crear hojas de estilo y codigo html de forma limpia ordenada y eficiente*
+
 
 ##### Instalación
 ----------------
