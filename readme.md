@@ -1,4 +1,4 @@
-![alt text](http://img.ldonis.net/rcat/rcat-logo-notext-225.png "ResponsiveCat logo")
+![alt text](http://cdn.ldonis.net/assets/logos/responsivecat/rcat-logo-notext-200.png "ResponsiveCat logo")
 
 ### [ResponsiveCat](http://responsivecat.com/)
 CSS Micro Framework
