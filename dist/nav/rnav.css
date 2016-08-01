@@ -43,6 +43,12 @@
     * @author Luis Gdonis <http://ldonis.com>
     * @since 2.0.0
     */
+/*
+    * Navigation menu
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <http://ldonis.com>
+    * @since 2.1.0
+    */
 }
 .rnav ul {
   padding: 0;
@@ -86,4 +92,29 @@
 }
 .rnav.lang ul li {
   display: block;
+}
+.rnav.menu > input {
+  display: none;
+}
+.rnav.menu > input:checked ~ ul {
+  height: auto;
+}
+.rnav.menu ul {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.rnav.menu ul li {
+  display: block;
+}
+@media (min-width: 800px) {
+  .rnav.menu > label {
+    display: none;
+  }
+  .rnav.menu ul {
+    height: auto;
+  }
+  .rnav.menu ul li {
+    display: inline-block;
+  }
 }

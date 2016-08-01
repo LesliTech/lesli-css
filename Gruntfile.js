@@ -29,7 +29,7 @@ module.exports = function (grunt) {
                     'dist/base/rbase.css' : 'src/base/rbase.styl',
                     'dist/grid/rgrid.css' : 'src/grid/rgrid.styl',
                     'dist/nav/rnav.css' : 'src/nav/rnav.styl',
-                    'dist/helper/rhelper.css' : 'src/nav/rnav.styl',
+                    'dist/helper/rhelper.css' : 'src/helper/rhelper.styl',
                 }
             }
         },

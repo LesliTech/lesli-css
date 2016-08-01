@@ -16,7 +16,7 @@
 *
 * CSS version 3
 *
-* Modulo de Menus y listas para ResponsiveCat
+* Helpers y hacks para ResponsiveCat
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
@@ -24,66 +24,138 @@
 * @link     http://responsivecat.com
 */
 /*
-* Contenedor principal
+* Centrado total con flexbox
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
 * @since 2.0.0
 */
-.rnav {
-  width: 100%;
+.rcenter {
+  display: flex;
+}
+.rcenter.full {
+  align-items: center;
+  justify-content: center;
+}
+.rcenter.vertical {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
 /*
-    * Menu vertical
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <http://ldonis.com>
-    * @since 2.0.0
-    */
+* Oculta un elemento html del DOM
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+.hidden {
+  display: none !important;
+}
 /*
-    * Selector de idioma
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <http://ldonis.com>
-    * @since 2.0.0
-    */
-}
-.rnav ul {
-  padding: 0;
-}
-.rnav > ul {
-  font-size: 0;
-}
-.rnav li {
-  display: inline-block;
-  font-size: initial;
-}
-.rnav li a {
-  display: block;
-  padding: 0.3rem 0.8rem;
-}
-.rnav.vertical li > ul > li:first-child {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #ccc;
-  text-transform: uppercase;
-}
-.rnav.vertical ul li {
-  display: block !important;
-}
-.rnav.lang {
-  width: 100%;
-  max-width: 200px;
+* Tooltips
+* Se debe agregar el atributo data-tooltip con el texto a mostrar
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+[data-tooltip] {
   position: relative;
+  cursor: pointer;
+  z-index: 2;
 }
-.rnav.lang:hover ul {
-  display: block;
+[data-tooltip]:before,
+[data-tooltip]:after {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 }
-.rnav.lang p:after {
-  content: "\25BE";
-}
-.rnav.lang ul {
-  display: none;
+[data-tooltip]:before {
   position: absolute;
-  width: 100%;
-  max-width: menu-lang-width;
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: rgba(51,51,51,0.9);
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
 }
-.rnav.lang ul li {
+[data-tooltip]:after {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51,51,51,0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+/*
+* Contenedor de codigo
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+.rcode {
   display: block;
+  margin: 0 auto;
+  width: 90%;
+  white-space: pre-wrap;
+  font-family: Consolas, "Liberation Mono", Courier, monospace, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 1rem 1rem 0.5rem 2.5rem;
+  text-align: left;
+  color: #333;
+  background: #fafafa;
+  border: 1px solid #cbcbcb;
+  margin-bottom: 15px;
+}
+/*
+* Centrado de texto
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+.text-center {
+  text-align: center;
+}
+/*
+* Modal window
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since 2.0.0
+*/
+.rmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255,255,255,0.2);
+}
+.rmodal.active {
+  display: flex;
+}
+.rmodal .content {
+  background-color: #fff;
 }
