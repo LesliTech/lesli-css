@@ -100,6 +100,12 @@
 * @author Luis Gdonis <http://ldonis.com>
 * @since 2.2.0
 */
+.rgrid.columns-01 > * {
+  width: 100%;
+}
+.rgrid .column-01 {
+  width: 7.333333333333334%;
+}
 .rgrid.columns-02 > * {
   width: 49.5%;
 }

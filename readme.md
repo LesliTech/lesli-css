@@ -7,7 +7,7 @@
 
 ##### Instalación
 ===
-* [Descargar versión en desarrollo (2.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
+* [Descargar versión en desarrollo (2.5.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
 * [Descargar versión estable (2.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/2.0.0.zip)
 * Instalar con [npm](https://www.npmjs.com): `npm install responsivecat`.
 * Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
@@ -22,7 +22,7 @@
 
 * Helpers y hacks para maquetación html
 
-* Framework liviano 11.66kb
+* Framework liviano 5.35kb
 
 ##### Sitio web y documentación
 ===
