@@ -20,7 +20,7 @@
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  2.0.0 beta
+* @version  3.0.0 beta
 * @link     http://responsivecat.com
 */
 
@@ -28,39 +28,23 @@
 * Centrado total con flexbox
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
-.rcenter
+rcat-rhelper-center($type = false)
+    
+
+    // Flexbox
     display flex
+    align-items center
+    justify-content center
 
 
-    // * Estilos a pseudo elementos
+    // Centrado vertical
+    if $type == 'vertical'
 
-
-    // * Centrado completo
-    // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    &.full
-        align-items center
-        justify-content center
-
-
-    // * Centrado completo
-    // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    &.vertical
-        align-items center
-        justify-content center
         flex-direction column
         height 100%
 
-
-/*
-* Oculta un elemento html del DOM
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-.hidden
-    display none !important
 
 
 /*
@@ -68,9 +52,11 @@
 * Se debe agregar el atributo data-tooltip con el texto a mostrar
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
-[data-tooltip]
+rcat-rhelper-tooltip($position)
+
+    //[data-tooltip]
     position relative
     cursor pointer
     z-index 2
@@ -126,9 +112,9 @@
 * Contenedor de codigo
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
-.rcode
+rcat-rhelper-code()
     display block
     margin 0 auto
     width 90%
@@ -144,22 +130,14 @@
     margin-bottom 15px
 
 
-/*
-* Centrado de texto
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-.text-center
-    text-align center
 
 /*
 * Modal window
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
-.rmodal
+rcat-rhelper-modal()
     position fixed
     top 0
     left 0
@@ -179,3 +157,4 @@
 
     .content
         background-color #fff
+

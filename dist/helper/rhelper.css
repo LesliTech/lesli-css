@@ -16,47 +16,42 @@
 *
 * CSS version 3
 *
-* Helpers y hacks para ResponsiveCat
+* Sistema de Grids y Blocks para ResponsiveCat
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  2.0.0 beta
-* @link     http://responsivecat.com
+* @version  3.0.0 alpha
+* @link     http://www.responsivecat.com
 */
 /*
-* Centrado total con flexbox
+* Se incluye el modulo rGrid del Framework
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since  3.0.0 alpha
+*/
+/*
+* Centrado con flexbox
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since  3.0.0 alpha
 */
 .rcenter {
   display: flex;
-}
-.rcenter.full {
   align-items: center;
   justify-content: center;
 }
 .rcenter.vertical {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100%;
 }
 /*
-* Oculta un elemento html del DOM
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-.hidden {
-  display: none !important;
-}
-/*
 * Tooltips
-* Se debe agregar el atributo data-tooltip con el texto a mostrar
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
 [data-tooltip] {
   position: relative;
@@ -108,7 +103,7 @@
 * Contenedor de codigo
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
 .rcode {
   display: block;
@@ -126,19 +121,10 @@
   margin-bottom: 15px;
 }
 /*
-* Centrado de texto
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-.text-center {
-  text-align: center;
-}
-/*
 * Modal window
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
 .rmodal {
   position: fixed;

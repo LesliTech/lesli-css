@@ -1,7 +1,7 @@
 {
     "name": "responsivecat",
     "title": "CSS Micro Framework",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "homepage": "http://responsivecat.com",
     "author": "Luis Gdonis <emc2@ldonis.com>",
     "license": "GPL-3.0",
@@ -29,7 +29,6 @@
         "rcat-init":"https://github.com/ResponsiveCat/rInit.git#master",
         "rcat-base":"https://github.com/ResponsiveCat/rBase.git#master",
         "rcat-grid":"https://github.com/ResponsiveCat/rGrid.git#master",
-        "rcat-nav":"https://github.com/ResponsiveCat/rNav.git#master",
         "rcat-helper":"https://github.com/ResponsiveCat/rHelper.git#master"
     },
     "devDependencies": {

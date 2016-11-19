@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 
 
         ///* Copy RCat modules
-        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~ 
         copy: {
             main: {
                 files: [
@@ -12,31 +12,29 @@ module.exports = function (grunt) {
                     {expand: true, flatten: true, src: ['node_modules/rcat-init/src/*.styl'], dest: 'src/init', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['node_modules/rcat-base/src/*.styl'], dest: 'src/base', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['node_modules/rcat-grid/src/*.styl'], dest: 'src/grid', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['node_modules/rcat-nav/src/*.styl'], dest: 'src/nav', filter: 'isFile'},
                     {expand: true, flatten: true, src: ['node_modules/rcat-helper/src/*.styl'], dest: 'src/helper', filter: 'isFile'}
                 ]
             }
         },
 
 
-        ///* Compile tasks
-        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+        ///* Compile stylus to css
+        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
         stylus:{
             compile:{
                 options:{ 'compress': false },
                 files:{
                     'dist/rcat.css' : 'src/cat/rcat.styl',
-                    'dist/base/rbase.css' : 'src/base/rbase.styl',
-                    'dist/grid/rgrid.css' : 'src/grid/rgrid.styl',
-                    'dist/nav/rnav.css' : 'src/nav/rnav.styl',
-                    'dist/helper/rhelper.css' : 'src/helper/rhelper.styl',
+                    'dist/base/rbase.css' : 'src/base/rcat.styl',
+                    'dist/grid/rgrid.css' : 'src/grid/rcat.styl',
+                    'dist/helper/rhelper.css' : 'src/helper/rcat.styl',
                 }
             }
         },
 
 
-        ///* Minify tasks
-        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+        ///* Minifying css files
+        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
         cssmin: {
             base: { src: 'dist/base/rbase.css', dest: 'dist/base/rbase.min.css' },
             grid: { src: 'dist/grid/rgrid.css', dest: 'dist/grid/rgrid.min.css' },
@@ -56,28 +54,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
 
-    ///* Copy modules
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    ///* Defining Development tasks
+    ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
     grunt.registerTask('build', ['copy']);
-
-
-    ///* Compile framework
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     grunt.registerTask('compile', ['stylus']);
-
-
-    ///* Minify files
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     grunt.registerTask('distribute', ['cssmin']);
-
-
-    ///* Running/defining deploy tasks
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
     grunt.registerTask('deploy', ['copy', 'stylus', 'cssmin']);
-
-
-    ///* Running/defining all tasks
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
-    grunt.registerTask('default', ['copy', 'stylus', 'cssmin']);
 
 };

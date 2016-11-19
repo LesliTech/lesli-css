@@ -16,100 +16,64 @@
 *
 * CSS version 3
 *
-* Establece estilos estandar para sitio web
+* Sistema de Grids y Blocks para ResponsiveCat
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
 * @version  3.0.0 alpha
-* @link     http://responsivecat.com
+* @link     http://www.responsivecat.com
 */
+
+/*
+* Se incluye el modulo rGrid del Framework
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since  3.0.0 alpha
+*/
+@require 'rhelper'
 
 
 /*
-* Reset
-* Reinicia los valores por defecto del margen y padding
+* Centrado con flexbox
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since  3.0.0 alpha
+*/
+.rcenter
+	
+	// Centrado total
+	rcat-rhelper-center()
+
+
+	// Centrado vertical
+	&.vertical	
+		rcat-rhelper-center('vertical')
+	
+/*
+* Tooltips
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
 * @since 3.0.0
 */
-
-// * box sizing
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-*
-*:before
-*:after
-    box-sizing border-box
-
-html
-    font-family sans-serif
-    -ms-text-size-adjust 100%
-    -webkit-text-size-adjust 100%
-
-body
-    margin 0
+[data-tooltip]
+	rcat-rhelper-tooltip('top')
 
 
 /*
-* Estilo de titulos
-* Establece un valor estandar para los titulos y subtitulos
+* Contenedor de codigo
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
-
-// * Estilo estandar para titulos
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-h1, h2, h3, h4, h5, h6
-    font-style inherit
-    font-weight inherit
-    text-rendering optimizelegibility
-    margin 0
-
-
-// * Titulo principal
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-h1
-    font-size 2rem
+.rcode
+	rcat-rhelper-code()
 
 
 /*
-* hr
+* Modal window
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
+* @since 3.0.0
 */
-hr
-    border 0
-
-
-/*
-* Margen por defecto en parrafos
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-p
-    margin 0
-
-/*
-* Estilos estandar para enlaces
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 2.0.0
-*/
-a
-    text-decoration none
-    color inherit
-
-    &:visited
-        color inherit
-
-/*
-* Responsive images
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 3.0.0 alpha
-*/
-img
-    max-width 100%
-    height auto
+.rmodal
+	rcat-rhelper-modal()

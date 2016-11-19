@@ -1,41 +1,41 @@
-![alt text](http://cdn.ldonis.net/assets/logos/responsivecat/rcat-logo-notext-200.png "ResponsiveCat logo")
+![ResponsiveCat logo](https://cdn.ldonis.net/assets/logos/responsivecat/rcat-logo-200.png "ResponsiveCat")
 
 ### [ResponsiveCat](http://responsivecat.com/)
 ---
+
 *Responsive cat es un microframework css creado para proporcionar una base de estilos basica y consistente para aplicaciones y paginas web, permitiendo crear hojas de estilo y codigo html de forma limpia ordenada y eficiente*
 
 
-##### Instalación
-===
-* [Descargar versión en desarrollo (2.5.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip)
-* [Descargar versión estable (2.0.0)](https://github.com/ResponsiveCat/ResponsiveCat/archive/2.0.0.zip)
-* Instalar con [npm](https://www.npmjs.com): `npm install responsivecat`.
-* Instalar con [Bower](http://bower.io): `bower install ResponsiveCat`.
-* Clonar el repositorio: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
-
-##### Caracteristicas
-===
-
-* Nucleo preprocesado con [Stylus](http://stylus-lang.com/)
-
-* Sistema de grid totalmente responsive
-
-* Helpers y hacks para maquetación html
-
-* Framework liviano 5.35kb
-
-##### Sitio web y documentación
-===
-
-Responsive Cat es completamente libre y de codigo abierto
-
-* Sitio web: [http://responsivecat.com/](http://responsivecat.com/)
-
-* Documentacion: [http://responsivecat.com/docs/](http://responsivecat.com/docs/)
-
-* Issue tracker: [https://github.com/ResponsiveCat/ResponsiveCat/issues](https://github.com/ResponsiveCat/ResponsiveCat/issues)
+#### Installation
+---------------
+* [Download the development version](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip).
+* [Download the latest release](https://github.com/ResponsiveCat/ResponsiveCat/archive/v2.0.0.zip).
+* Install with [NPM](http://npmjs.com): `npm install responsivecat`.
+* Install with [Bower](http://bower.io): `bower install responsivecat`.
+* Clone the repo: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
 
 
-##### Licencia
+#### Features
 
-Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://github.com/ResponsiveCat/ResponsiveCat/blob/master/LICENSE).
+* Core compiled with [Stylus](http://stylus-lang.com/)
+
+* Fully responsive grid system
+
+* Helpers y hacks and tricks
+
+* Lightweight framework 5.35kb  
+
+
+#### Website and documentation
+--------
+Responsive Cat is completely free and open source
+
+* Website: [http://responsivecat.com/](http://responsivecat.com/)
+
+* Documentation: [http://responsivecat.com/docs/](http://responsivecat.com/docs/)
+
+* Issue tracker: [https://github.com/ResponsiveCat/ResponsiveCat/issues](https://github.com/ResponsiveCat/rGrid/issues)
+
+#### License
+--------
+Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://www.gnu.org/licenses/gpl-3.0.html).

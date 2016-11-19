@@ -16,28 +16,18 @@
 *
 * CSS version 3
 *
-* Establece estilos estandar para sitio web
+* Sistema de Grids y Blocks para ResponsiveCat
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  3.0.0
-* @link     http://responsivecat.com
+* @version  3.0.0 alpha
+* @link     http://www.responsivecat.com
 */
 
-
-// * Include base
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-include-rbase()
-    @require 'src/base/rbase.styl'
-
-
-// * Include grid
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-include-rgrid()
-    @require 'src/grid/rgrid.styl'
-
-
-// * Include helper
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-include-rhelper()
-    @require 'src/helper/rhelper.styl'
+/*
+* Se incluye el modulo rGrid del Framework
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <http://ldonis.com>
+* @since  3.0.0 alpha
+*/
+@require 'rbase'
