@@ -21,8 +21,8 @@ Version 0.1.0 alpha
 #### Module content
 --------
 ***index.styl:*** Framework loader  
-***lesli.css:*** (compiled) Development version 
-***lesli.min.css:*** (compiled) Minified version, ready to use in production
+***lesli.css:*** (compiled) Development version  
+***lesli.min.css:*** (compiled) Minified version, ready to use in production  
 
 ```
 Lesli/
@@ -33,6 +33,7 @@ Lesli/
 └── dist/
     ├── rcat.grid.css
     └── rcat.grid.min.css
+```
 
 
 #### Website & documentation
