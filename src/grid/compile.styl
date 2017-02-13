@@ -1,5 +1,5 @@
 /*
-* Responsive Cat
+* Lesli CSS
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -16,62 +16,49 @@
 *
 * CSS version 3
 *
-* Sistema de Grids y Blocks para ResponsiveCat
+* Grids & blocks system
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  3.0.0 alpha
-* @link     http://www.responsivecat.com
+* @version  0.1.0
+* @link     https://www.lesli.tech
 */
 
-/*
-* Se incluye el modulo rGrid del Framework
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since  3.0.0 alpha
-*/
-@require 'rgrid'
+// loading grid module
+@require 'grid'
 
-
-/*
-* Se incluyen variables estandar y constructores del framework
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since  3.0.0 alpha
-*/
-@require '../init/rinit'
-
-
-/*
-* Construye el framework CSS
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-*/
+// including standards
+@require '../init/standards'
 
 /*
 * Grids
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since  3.0.0 alpha
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since  0.1.0 alpha
 */
-.rgrid
-    
+.lesli-grid
+
 	// Genera unicamente estilos para el contenedor del grid
-	rcat-grid(margin: $rgrid-columns-automatic-margin)
+	lesli-grid(margin: $lesli-grid-columns-automatic-margin)
 
 	// Recorre la cantidad de columnas configuradas
 	// for manual grid it should start in 1, for manual grid I have to add a conditional
 	// to start to generate CSS after the second iteration of the "for" cicle 
-	for column in ( 2 .. $rgrid-columns-count )
+	for column in ( 2 .. $lesli-grid-columns-count )
 
 		// Numero de columna actual
 		$column-number = column
-		
+
 		// Arma el nombre de la clase
-		$column-class-name = rcat-rgrid_GetClassName($column-number, $rgrid-columns-automatic-prefix)
-		
+		$column-class-name = lesli-grid--get-class-name(
+								column-number: $column-number,
+								column-prefix: $lesli-grid-columns-automatic-prefix)
+
 		// Columnas automaticas
 		&.{$column-class-name} > *
-		
+
 			// Utiliza el mixin del framework para crear el estilo para la columna automatica
-			rcat-grid-column($column-number, 0, $rgrid-columns-automatic-margin)
+			lesli-grid-column(
+				column: $column-number,
+				column-total: 0,
+				margin: $lesli-grid-columns-automatic-margin)

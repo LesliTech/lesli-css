@@ -1,0 +1,119 @@
+/*
+* Lesli CSS
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+* CSS version 3
+*
+* Base styles
+*
+* @author   Luis Gdonis <emc2@ldonis.com>
+* @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+* @version  0.1.0
+* @link     https://www.lesli.tech
+*/
+/*
+    * Reset
+    * Reinicia los valores por defecto del margen y padding
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 0.1.0
+    */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+/*
+    * Estilo de titulos
+    * Establece un valor estandar para los titulos y subtitulos
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 2.0.0
+    */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: inherit;
+  text-rendering: optimizelegibility;
+  margin: 0;
+}
+h1 {
+  font-size: 2rem;
+}
+/*
+    * hr
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 2.0.0
+    */
+hr {
+  border: 0;
+}
+/*
+    * Margen por defecto en parrafos
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 2.0.0
+    */
+p {
+  margin: 0;
+}
+/*
+    * Estilos estandar para enlaces
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 2.0.0
+    */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+/*
+    * Responsive images
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 0.1.0 alpha
+    */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*
+    * Navigation and list
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 0.1.0 alpha
+    */
+ul {
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}

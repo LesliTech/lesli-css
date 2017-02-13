@@ -3,62 +3,62 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
 
-        ///* Copy RCat modules
-        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~ 
-        copy: {
-            main: {
-                files: [
-                    {expand: true, flatten: true, src: ['node_modules/rcat-cat/src/*.styl'], dest: 'src/cat', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['node_modules/rcat-init/src/*.styl'], dest: 'src/init', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['node_modules/rcat-base/src/*.styl'], dest: 'src/base', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['node_modules/rcat-grid/src/*.styl'], dest: 'src/grid', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['node_modules/rcat-helper/src/*.styl'], dest: 'src/helper', filter: 'isFile'}
-                ]
-            }
-        },
-
-
         ///* Compile stylus to css
         ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
         stylus:{
-            compile:{
+            compile_only:{
                 options:{ 'compress': false },
                 files:{
-                    'dist/rcat.css' : 'src/cat/rcat.styl',
-                    'dist/base/rbase.css' : 'src/base/rcat.styl',
-                    'dist/grid/rgrid.css' : 'src/grid/rcat.styl',
-                    'dist/helper/rhelper.css' : 'src/helper/rcat.styl',
+                    'dist/base/base.css' : 'src/base/compile.styl',
+                    'dist/grid/grid.css' : 'src/grid/compile.styl'
+                }
+            },
+            compile_minify:{
+                options:{ 'compress': true },
+                files:{
+                    'dist/base/base.min.css' : 'dist/base/base.css',
+                    'dist/grid/grid.min.css' : 'dist/grid/grid.css'
+                }
+            },
+            framework_only:{
+                options:{ 'compress': false },
+                files:{
+                    'dist/lesli.css' : [
+                        'dist/base/base.css',
+                        'dist/grid/grid.css'
+                    ]
+                }
+            },
+            framework_minify:{
+                options:{ 'compress': true },
+                files:{
+                    'dist/lesli.min.css' : 'dist/lesli.css'
                 }
             }
         },
 
-
-        ///* Minifying css files
+        ///* Files watcher
         ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-        cssmin: {
-            base: { src: 'dist/base/rbase.css', dest: 'dist/base/rbase.min.css' },
-            grid: { src: 'dist/grid/rgrid.css', dest: 'dist/grid/rgrid.min.css' },
-            nav: { src: 'dist/grid/rgrid.css', dest: 'dist/grid/rgrid.min.css' },
-            helper: { src: 'dist/helper/rhelper.css', dest: 'dist/helper/rhelper.min.css' },
-            dist: { src: 'dist/rcat.css', dest: 'dist/rcat.min.css' }
-        }
-
+        watch: {
+            stylus:{
+                files: ['src/**/*.styl'],
+                tasks: ['stylus:compile_only']
+            }
+        },
 
     });
 
 
     ///* Including plugins and dependencies
     ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
 
 
     ///* Defining Development tasks
     ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    grunt.registerTask('build', ['copy']);
-    grunt.registerTask('compile', ['stylus']);
-    grunt.registerTask('distribute', ['cssmin']);
-    grunt.registerTask('deploy', ['copy', 'stylus', 'cssmin']);
+    grunt.registerTask('compile', ['stylus:compile_only']);
+    grunt.registerTask('distribute', ['cssmin:compile_minify']);
+    grunt.registerTask('deploy', ['stylus']);
 
 };

@@ -1,5 +1,5 @@
 /*
-* Responsive Cat
+* Lesli CSS
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -16,60 +16,23 @@
 *
 * CSS version 3
 *
-* Sistema de Grids y Blocks para ResponsiveCat
+* Grids & blocks system
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  3.0.0 alpha
-* @link     http://www.responsivecat.com
+* @version  0.1.0
+* @link     https://www.lesli.tech
 */
+
+// Funciones y Mixins para construir el grid
+// -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-
+
 /*
-* Se incluye el modulo rGrid del Framework
+* Carga modulo del framework
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since  3.0.0 alpha
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
 */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-style: inherit;
-  font-weight: inherit;
-  text-rendering: optimizelegibility;
-  margin: 0;
-}
-h1 {
-  font-size: 2rem;
-}
-hr {
-  border: 0;
-}
-p {
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-a:visited {
-  color: inherit;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
+Lesli--load(module_name)
+
+	@require module_name + '/' module_name

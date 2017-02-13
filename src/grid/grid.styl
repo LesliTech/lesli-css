@@ -1,5 +1,5 @@
 /*
-* Responsive Cat
+* Lesli CSS
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -16,42 +16,40 @@
 *
 * CSS version 3
 *
-* Sistema de Grids y Blocks para ResponsiveCat
+* Grids & blocks system
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  3.0.0 alpha
-* @link     http://www.responsivecat.com
+* @version  0.1.0
+* @link     https://www.lesli.tech
 */
 
-/*
-* Funciones y Mixins para construir el grid
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-*/
+// Funciones y Mixins para construir el grid
+// -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-
 
 /*
 * Retorna el nombre de la clase
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 3.0.0 alpha
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
 */
-rcat-rgrid_GetClassName($column-number, $column-prefix = 'columns')
+lesli-grid--get-class-name(column-number, column-prefix = 'col')
 
     // si el numero de columna es menor a 10, se agrega un cero al inicio
-    if $column-number < 10
-        $column-number = '0' + $column-number
+    if column-number < 10
+        column-number = '0' + column-number
 
     // arma nombre de clase css
-    return $column-prefix + '-' + $column-number
+    return column-prefix + '-' + column-number
 
 
 /*
 * Retorna el nombre de la clase
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
+* @author Luis Gdonis <https://www.lesli.tech>
 * @since 2.0.0
 */
-rcat-rgrid_GetColumnWidth(column, column-total, margin)
+lesli-grid--get-column-width(column, column-total, margin)
 
     // Variables
     $column-number = column
@@ -90,17 +88,17 @@ rcat-rgrid_GetColumnWidth(column, column-total, margin)
 * @param column-total Total de columnas
 *
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 3.0.0 alpha
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
 */
-rcat-grid-column(column, column-total = 12, margin=0)
+lesli-grid-column(column, column-total = 12, margin=0)
     
     // Variables
     $column-number = column     // Numero de columnas
     $column-number-total = column-total // Numero total de columnas para el grid
     
     // Obtiene el ancho de cada columna
-    $column-width =  rcat-rgrid_GetColumnWidth($column-number, $column-number-total, margin)
+    $column-width =  lesli-grid--get-column-width($column-number, $column-number-total, margin)
     
     // Imprime el width para cada columna
     width unit($column-width, '%')
@@ -116,19 +114,19 @@ rcat-grid-column(column, column-total = 12, margin=0)
 * @param breakpoint int Breakpoint a generar en pixeles
 *
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since 3.0.0 alpha
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
 */
-rcat-grid(columns = 0, margin=0, breakpoint=320)
+lesli-grid(columns = 0, margin=0, breakpoint=320)
     
     // Variables
-    $rgrid-columns = columns
-    $rgrid-breakpoint = breakpoint
-    $rgrid-columns-margin = margin
+    $lesli-grid-columns = columns
+    $lesli-grid-breakpoint = breakpoint
+    $lesli-grid-columns-margin = margin
 
     // basic styles for grid container
     width 100%
-    font-size 0    
+    font-size 0
     
     // * Estilos a pseudo elementos
     &:before
@@ -145,29 +143,29 @@ rcat-grid(columns = 0, margin=0, breakpoint=320)
         display inline-block
 
     // Si el grid incluye margen
-    if $rgrid-columns-margin > 0
+    if $lesli-grid-columns-margin > 0
         
         // * Margen de cada elemento del grid,
         & > *:not(:last-child)
-            margin-right unit($rgrid-columns-margin, '%')
+            margin-right unit($lesli-grid-columns-margin, '%')
 
     // automatic columns 
     if columns > 0
         
-        //$rgrid-width-percent = rgrid-GetColumnWidth($rgrid-columns, $rgrid-columns-margin)
-        $rgrid-class-name = rcat-rgrid_GetClassName(columns)
+        //$lesli-grid-width-percent = rgrid-GetColumnWidth($lesli-grid-columns, $lesli-grid-columns-margin)
+        $lesli-grid-class-name = lesli-grid--get-class-name(columns)
             
         // Genera la clase css para el ancho de cada columna automatica
-        &.{$rgrid-class-name} > *
+        &.{$lesli-grid-class-name} > *
             
             // Utilizo el mixin para crear columnas
-            rcat-grid-column(column: $rgrid-columns, margin: $rgrid-columns-margin)
+            lesli-grid-column(column: $lesli-grid-columns, margin: $lesli-grid-columns-margin)
             
     // inicializa breakpoints
-    @media (max-width: unit($rgrid-breakpoint, 'px'))
+    @media (max-width: unit($lesli-grid-breakpoint, 'px'))
 
         // Clase css para breakpoints
-        $rgrid-breakpoint-class-name = 'r' + $rgrid-breakpoint
+        $lesli-grid-breakpoint-class-name = 'r' + $lesli-grid-breakpoint
 
-        &.{$rgrid-breakpoint-class-name} > *
+        &.{$lesli-grid-breakpoint-class-name} > *
             width 100%

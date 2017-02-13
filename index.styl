@@ -1,5 +1,5 @@
 /*
-* Responsive Cat
+* Lesli CSS
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -16,28 +16,16 @@
 *
 * CSS version 3
 *
-* Establece estilos estandar para sitio web
+* Framework includer
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  3.0.0
-* @link     http://responsivecat.com
+* @version  0.1.0
+* @link     https://www.lesli.tech
 */
 
+@require 'src/lesli/lesli'
 
-// * Include base
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-include-rbase()
-    @require 'src/base/rbase.styl'
+@require 'src/base/base'
 
-
-// * Include grid
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-include-rgrid()
-    @require 'src/grid/rgrid.styl'
-
-
-// * Include helper
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-include-rhelper()
-    @require 'src/helper/rhelper.styl'
+@require 'src/grid/grid'

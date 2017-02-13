@@ -1,11 +1,11 @@
 {
-    "name": "responsivecat",
+    "name": "leslicss",
     "title": "CSS Micro Framework",
-    "version": "3.0.0",
-    "homepage": "http://responsivecat.com",
+    "version": "0.1.0",
+    "homepage": "https://www.lesli.tech",
     "author": "Luis Gdonis <emc2@ldonis.com>",
     "license": "GPL-3.0",
-    "description": "CSS Microframework para maquetada bajo estandares HTML5 y CSS3",
+    "description": "Lesli CSS is a serie of tools created to provide a clean, clear and easy to use CSS interface for websites and web applications.",
     "keywords": [
         "CSS",
         "framework",
@@ -19,23 +19,18 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/ResponsiveCat/ResponsiveCat.git"
+        "url": "https://github.com/LesliTech/LesliCSS.git"
     },
     "bugs": {
-        "url": "https://github.com/ResponsiveCat/ResponsiveCat/issues"
+        "url": "https://github.com/LesliTech/LesliCSS/issues"
     },
     "dependencies":{
-        "rcat-cat":"https://github.com/ResponsiveCat/rCat.git#master",
-        "rcat-init":"https://github.com/ResponsiveCat/rInit.git#master",
-        "rcat-base":"https://github.com/ResponsiveCat/rBase.git#master",
-        "rcat-grid":"https://github.com/ResponsiveCat/rGrid.git#master",
-        "rcat-helper":"https://github.com/ResponsiveCat/rHelper.git#master"
     },
     "devDependencies": {
         "grunt": "^1",
-        "grunt-contrib-stylus": "^1",
-        "grunt-contrib-cssmin": "^1",
-        "grunt-contrib-copy" : "^1"
+        "grunt-contrib-watch": "^1",
+        "grunt-contrib-stylus": "^1"
+
    },
    "scripts":{
        "rcat-build":"grunt build",

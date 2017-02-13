@@ -1,41 +1,53 @@
-![ResponsiveCat logo](https://cdn.ldonis.net/assets/logos/responsivecat/rcat-logo-200.png "ResponsiveCat")
+![LesliTech LesliCSS logo](https://cdn.ldonis.net/LesliTech/Css/Logos/LesliCSS-logo-150.png "LesliTech LesliCSS logo")
 
-### [ResponsiveCat](http://responsivecat.com/)
+#### Lesli CSS is a serie of tools created to provide a clean, clear and easy to use CSS interface for websites and web applications. 
 ---
 
-*Responsive cat es un microframework css creado para proporcionar una base de estilos basica y consistente para aplicaciones y paginas web, permitiendo crear hojas de estilo y codigo html de forma limpia ordenada y eficiente*
-
+Version 0.1.0 alpha
 
 #### Installation
----------------
-* [Download the development version](https://github.com/ResponsiveCat/ResponsiveCat/archive/master.zip).
-* [Download the latest release](https://github.com/ResponsiveCat/ResponsiveCat/archive/v2.0.0.zip).
-* Install with [NPM](http://npmjs.com): `npm install responsivecat`.
-* Install with [Bower](http://bower.io): `bower install responsivecat`.
-* Clone the repo: `git clone https://github.com/ResponsiveCat/ResponsiveCat.git`.
+--------
+* Clone the repo: `https://github.com/LesliTech/LesliCSS.git`.
 
 
 #### Features
-
-* Core compiled with [Stylus](http://stylus-lang.com/)
-
-* Fully responsive grid system
-
-* Helpers y hacks and tricks
-
-* Lightweight framework 5.35kb  
-
-
-#### Website and documentation
 --------
-Responsive Cat is completely free and open source
+* Core compiled with [Stylus](http://stylus-lang.com/)
+* Fully responsive grid system
+* Helpers y hacks and tricks
+* Lightweight framework 5.35kb
 
-* Website: [http://responsivecat.com/](http://responsivecat.com/)
 
-* Documentation: [http://responsivecat.com/docs/](http://responsivecat.com/docs/)
+#### Module content
+--------
+***index.styl:*** Framework loader  
+***lesli.css:*** (compiled) Development version 
+***lesli.min.css:*** (compiled) Minified version, ready to use in production
 
-* Issue tracker: [https://github.com/ResponsiveCat/ResponsiveCat/issues](https://github.com/ResponsiveCat/rGrid/issues)
+```
+Lesli/
+├── index.styl
+├── src/
+│   ├── modules source code
+│   └── modules source code
+└── dist/
+    ├── rcat.grid.css
+    └── rcat.grid.min.css
+
+
+#### Website & documentation
+--------
+
+Lesli is completely free and open source
+
+* Website: [https://www.lesli.tech/](https://www.lesli.tech/)
+
+* Documentation: [https://www.lesli.tech/css/](https://www.lesli.tech/css/)
+
+* Issue tracker: [https://github.com/LesliTech/LesliCSS/issues](https://github.com/LesliTech/LesliCSS/issues)
+
 
 #### License
 --------
-Software desarrollado en Guatemala distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](https://www.gnu.org/licenses/gpl-3.0.html).
+
+Software desarrollado en [Guatemala](http://visitguatemala.com/) distribuido bajo *Licencia Publica General v 3.0* (*General Public License*)  puedes leer la licencia completa [aqui](http://www.gnu.org/licenses/gpl-3.0.html)

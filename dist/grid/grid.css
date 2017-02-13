@@ -1,5 +1,5 @@
 /*
-* Responsive Cat
+* Lesli CSS
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -16,90 +16,73 @@
 *
 * CSS version 3
 *
-* Sistema de Grids y Blocks para ResponsiveCat
+* Grids & blocks system
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  3.0.0 alpha
-* @link     http://www.responsivecat.com
-*/
-/*
-* Se incluye el modulo rGrid del Framework
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since  3.0.0 alpha
-*/
-/*
-* Se incluyen variables estandar y constructores del framework
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since  3.0.0 alpha
-*/
-/*
-* Construye el framework CSS
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
+* @version  0.1.0
+* @link     https://www.lesli.tech
 */
 /*
 * Grids
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <http://ldonis.com>
-* @since  3.0.0 alpha
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since  0.1.0 alpha
 */
-.rgrid {
+.lesli-grid {
   width: 100%;
   font-size: 0;
 }
-.rgrid:before,
-.rgrid:after {
+.lesli-grid:before,
+.lesli-grid:after {
   content: "";
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-.rgrid > * {
+.lesli-grid > * {
   font-size: initial;
   white-space: initial;
   display: inline-block;
 }
-.rgrid > *:not(:last-child) {
+.lesli-grid > *:not(:last-child) {
   margin-right: 1%;
 }
 @media (max-width: 320px) {
-  .rgrid.r320 > * {
+  .lesli-grid.r320 > * {
     width: 100%;
   }
 }
-.rgrid.columns-02 > * {
+.lesli-grid.columns-02 > * {
   width: 49.5%;
 }
-.rgrid.columns-03 > * {
+.lesli-grid.columns-03 > * {
   width: 32.666666666666664%;
 }
-.rgrid.columns-04 > * {
+.lesli-grid.columns-04 > * {
   width: 24.25%;
 }
-.rgrid.columns-05 > * {
+.lesli-grid.columns-05 > * {
   width: 19.2%;
 }
-.rgrid.columns-06 > * {
+.lesli-grid.columns-06 > * {
   width: 15.833333333333334%;
 }
-.rgrid.columns-07 > * {
+.lesli-grid.columns-07 > * {
   width: 13.428571428571429%;
 }
-.rgrid.columns-08 > * {
+.lesli-grid.columns-08 > * {
   width: 11.625%;
 }
-.rgrid.columns-09 > * {
+.lesli-grid.columns-09 > * {
   width: 10.222222222222221%;
 }
-.rgrid.columns-10 > * {
+.lesli-grid.columns-10 > * {
   width: 9.1%;
 }
-.rgrid.columns-11 > * {
+.lesli-grid.columns-11 > * {
   width: 8.181818181818182%;
 }
-.rgrid.columns-12 > * {
+.lesli-grid.columns-12 > * {
   width: 7.416666666666667%;
 }
