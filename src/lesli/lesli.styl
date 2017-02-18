@@ -28,6 +28,21 @@
 // -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-
 
 /*
+* Framework information
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
+*/
+Lesli()
+	/*!
+		Lesli CSS
+		CSS Micro Framework
+		Version 0.1.0 beta
+	*/
+
+
+
+/*
 * Carga modulo del framework
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <https://www.lesli.tech>
@@ -36,3 +51,54 @@
 Lesli--load(module_name)
 
 	@require module_name + '/' module_name
+	
+
+
+/*
+* Incluye imagenes
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
+*/
+Lesli--image(image, section = false)
+
+	$path = ''
+
+	if section
+		$path = '../../' + section + '/img/'
+	
+	else
+		$path = '../img/'
+
+	
+	return $path + image
+    
+
+
+/*
+* Incluye hojas de estilo
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
+*/
+Lesli--include(stylesheet, section = false, extenssion = 'styl')
+
+	$path = ''
+
+	if section
+		$path = '../../' + section + '/css/'
+
+	else
+		$path = '../css('
+
+	@require $path + stylesheet + extenssion
+
+
+
+/*
+* Incluye fuentes
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
+*/
+//Lesli--font(name, types = false)
