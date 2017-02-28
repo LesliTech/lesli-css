@@ -48,9 +48,9 @@ Lesli()
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli--load(module_name)
+Lesli--load(module_name, src='../../Template/css/lesli/src/')
 
-	@require module_name + '/' module_name
+	return src + module_name + '/' + module_name + '.styl'
 	
 
 

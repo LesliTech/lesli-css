@@ -33,15 +33,14 @@
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
 }
 /*
     * Estilo de titulos
@@ -59,7 +58,6 @@ h6 {
   font-style: inherit;
   font-weight: inherit;
   text-rendering: optimizelegibility;
-  margin: 0;
 }
 h1 {
   font-size: 2rem;
@@ -72,15 +70,6 @@ h1 {
     */
 hr {
   border: 0;
-}
-/*
-    * Margen por defecto en parrafos
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <https://www.lesli.tech>
-    * @since 2.0.0
-    */
-p {
-  margin: 0;
 }
 /*
     * Estilos estandar para enlaces
@@ -111,9 +100,6 @@ img {
     * @author Luis Gdonis <https://www.lesli.tech>
     * @since 0.1.0 alpha
     */
-ul {
-  padding: 0;
-}
 ul li {
   list-style: none;
 }
