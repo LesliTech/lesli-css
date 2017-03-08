@@ -165,7 +165,5 @@ lesli-grid(columns = 0, margin=0, breakpoint=320)
     @media (max-width: unit($lesli-grid-breakpoint, 'px'))
 
         // Clase css para breakpoints
-        $lesli-grid-breakpoint-class-name = 'r' + $lesli-grid-breakpoint
-
-        &.{$lesli-grid-breakpoint-class-name} > *
-            width 100%
+        & > *
+            min-width 100%

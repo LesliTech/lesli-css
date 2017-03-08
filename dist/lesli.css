@@ -155,8 +155,8 @@ ul li {
   margin-right: 1%;
 }
 @media (max-width: 320px) {
-  .lesli-grid.r320 > * {
-    width: 100%;
+  .lesli-grid > * {
+    min-width: 100%;
   }
 }
 .lesli-grid.columns-02 > * {
