@@ -10,7 +10,8 @@ module.exports = function (grunt) {
                 options:{ 'compress': false },
                 files:{
                     'dist/base/base.css' : 'src/base/compile.styl',
-                    'dist/grid/grid.css' : 'src/grid/compile.styl'
+                    'dist/grid/grid.css' : 'src/grid/compile.styl',
+                    'dist/print/print.css' : 'src/print/print.styl'
                 }
             },
             compile_minify:{
