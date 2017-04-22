@@ -150,9 +150,8 @@ lesli-grid(columns = 0, margin=0, breakpoint=320)
             margin-right unit($lesli-grid-columns-margin, '%')
 
     // automatic columns 
-    if columns > 0
+    if $lesli-grid-columns > 0
         
-        //$lesli-grid-width-percent = rgrid-GetColumnWidth($lesli-grid-columns, $lesli-grid-columns-margin)
         $lesli-grid-class-name = lesli-grid--get-class-name(columns)
             
         // Genera la clase css para el ancho de cada columna automatica
