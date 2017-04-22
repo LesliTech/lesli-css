@@ -1,0 +1,145 @@
+/*
+* Lesli CSS
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+* CSS version 3
+*
+* Lesli CSS for e-mails
+*
+* @author   Luis Gdonis <emc2@ldonis.com>
+* @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+* @version  0.1.0
+* @link     https://www.lesli.tech
+*/
+
+
+/*
+* Body styles
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+body
+	background-color $email-standard-color-gray
+
+
+/*
+* Email container
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-email
+	background-color $email-standard-color-gray
+	border-spacing 0px
+	margin 20px auto
+	max-width 800px
+	width 100%
+
+	// some resets
+	*
+		font-family "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
+		color $email-standard-color-black
+		line-height 1.3
+		font-size 15px
+
+/*
+* Email header
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-email
+	
+	thead td
+		padding $email-standard-padding-head
+		background-color $email-standard-color-primary
+		color $email-standard-color-white
+		text-align left
+
+		h1
+			font-size 24px
+			
+
+/*
+* Email body
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-email
+	tbody td
+		text-align left
+		padding $email-standard-padding-body
+		background-color $email-standard-color-white
+
+	// titles
+	h3
+		font-size 1.2rem
+		margin-bottom 15px
+	
+	// Parrafos	
+	p
+		margin-bottom 10px
+		
+	// Links
+	a
+		border-bottom 1px solid rgb(40, 100, 150)
+
+/*
+* Email footer
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-email
+	
+	tfoot td
+		padding $email-standard-padding-foot
+
+		p
+			margin 0px
+			font-size 12px
+			color darken($email-standard-color-gray, 30)
+			
+
+
+/*
+* Email Helpers
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-email
+
+
+	// * Displays
+	.lesli-email-display-inline
+		display inline
+	
+
+	// * Aligners
+	.lesli-email-center-vertical
+		vertical-align middle
+		
+
+	// * Widths
+	for w in ( 1 .. 25 )
+		
+		$width-class-width = (w * 10)
+		$width-class-name = 'lesli-email-width-' + $width-class-width
+		
+		.{$width-class-name}
+			width unit( $width-class-width, 'px')
