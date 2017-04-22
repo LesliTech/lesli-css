@@ -1,4 +1,4 @@
-![LesliTech LesliCSS logo](https://cdn.ldonis.net/LesliTech/Css/Logos/LesliCSS-logo-150.png "LesliTech LesliCSS logo")
+![LesliTech LesliCSS logo](https://cdn.lesli.tech/assets/logos/LesliCSS/LesliCSS-logo-150.png "LesliTech LesliCSS logo")
 
 #### Lesli CSS is a serie of tools created to provide a clean, clear and easy to use CSS interface for websites and web applications. 
 ---
@@ -14,8 +14,8 @@ Version 0.1.0 alpha
 --------
 * Core compiled with [Stylus](http://stylus-lang.com/)
 * Fully responsive grid system
-* Helpers y hacks and tricks
-* Lightweight framework 5.35kb
+* Helpers, hacks and tricks
+* Lightweight framework 1.18kb
 
 
 #### Module content
