@@ -1,6 +1,6 @@
 ![LesliTech LesliCSS logo](https://cdn.lesli.tech/assets/logos/LesliCSS/LesliCSS-logo-150.png "LesliTech LesliCSS logo")
 
-#### Lesli CSS is a serie of tools created to provide a clean, clear and easy to use CSS interface for websites and web applications. 
+#### Lesli CSS is a collection of tools created to provide a clean, clear and easy to use CSS interface for websites and web applications. 
 ---
 
 Version 0.1.0 alpha
