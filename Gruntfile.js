@@ -11,7 +11,8 @@ module.exports = function (grunt) {
                 files:{
                     'dist/base/base.css' : 'src/base/compile.styl',
                     'dist/grid/grid.css' : 'src/grid/compile.styl',
-                    'dist/print/print.css' : 'src/print/print.styl'
+                    'dist/print/print.css' : 'src/print/print.styl',
+                    'dist/mail/mail.css' : 'src/mail/mail.styl'
                 }
             },
             compile_minify:{
