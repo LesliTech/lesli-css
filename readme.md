@@ -8,6 +8,7 @@ Version 0.1.0 alpha
 #### Installation
 --------
 * Clone the repo: `https://github.com/LesliTech/LesliCSS.git`.
+* Install with NPM: `npm install leslicss`.
 
 
 #### Features
