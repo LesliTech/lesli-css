@@ -65,16 +65,16 @@ lesli-grid--get-column-width(column, column-total, margin)
     // Columns are generated automatically?
     // La formula es diferente dependendiendo si las columnas
     // seran simetricas o no
-    if $column-total == 0
+    if $column-total != 0
         
         // El ancho de cada columna sera igual al ancho disponible (menos margen)
         // dividido entre el total de columnas del grid
         $width = ((100 - $margin) / $column-number)
-        
+
     else
         
         $width = ((100 / $column-total) * $column-number) - $margin
-        
+
 
     // Se retorna el ancho de columna
     return $width
@@ -142,23 +142,19 @@ lesli-grid(columns = 0, margin=0, breakpoint=320)
         white-space initial
         display inline-block
 
+        // automatic columns 
+        if $lesli-grid-columns > 0
+
+            // Utilizo el mixin para crear columnas
+            lesli-grid-column(column: $lesli-grid-columns, margin: $lesli-grid-columns-margin)
+
+
     // Si el grid incluye margen
     if $lesli-grid-columns-margin > 0
         
         // * Margen de cada elemento del grid,
         & > *:not(:last-child)
             margin-right unit($lesli-grid-columns-margin, '%')
-
-    // automatic columns 
-    if $lesli-grid-columns > 0
-        
-        $lesli-grid-class-name = lesli-grid--get-class-name(columns)
-            
-        // Genera la clase css para el ancho de cada columna automatica
-        &.{$lesli-grid-class-name} > *
-            
-            // Utilizo el mixin para crear columnas
-            lesli-grid-column(column: $lesli-grid-columns, margin: $lesli-grid-columns-margin)
             
     // inicializa breakpoints
     @media (max-width: unit($lesli-grid-breakpoint, 'px'))
