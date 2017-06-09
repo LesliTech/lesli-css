@@ -32,8 +32,8 @@ Lesli/
 │   ├── modules source code
 │   └── modules source code
 └── dist/
-    ├── rcat.grid.css
-    └── rcat.grid.min.css
+    ├── module compiled version
+    └── module compiled version
 ```
 
 
