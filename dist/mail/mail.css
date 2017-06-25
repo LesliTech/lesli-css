@@ -1,0 +1,269 @@
+/*
+* Lesli CSS
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+* CSS version 3
+*
+* Lesli CSS for e-mails
+*
+* @author   Luis Gdonis <emc2@ldonis.com>
+* @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+* @version  0.1.0
+* @link     https://www.lesli.tech
+*/
+/*
+    * Reset
+    * Reinicia los valores por defecto del margen y padding
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 0.1.0
+    */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+/*
+    * Estilo de titulos
+    * Establece un valor estandar para los titulos y subtitulos
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 2.0.0
+    */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 {
+  font-size: 2rem;
+}
+/*
+    * hr
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 2.0.0
+    */
+hr {
+  border: 0;
+}
+/*
+    * Estilos estandar para enlaces
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 2.0.0
+    */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+/*
+    * Responsive images
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 0.1.0 alpha
+    */
+img {
+  width: 100%;
+  height: auto;
+}
+/*
+    * Responsive images
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 0.1.0 alpha
+    */
+p {
+  margin: 0;
+}
+/*
+    * Navigation and list
+    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    * @author Luis Gdonis <https://www.lesli.tech>
+    * @since 0.1.0 alpha
+    */
+ul li {
+  list-style: none;
+}
+/*
+* Email body global
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+body.lesli-mail {
+  background-color: #f0f0f0;
+}
+/*
+* Email container
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-mail {
+  border-spacing: 0px;
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+}
+table.lesli-mail * {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+}
+/*
+* Email header
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-mail thead td {
+  padding: 25px 0px 25px 30px;
+  text-align: left;
+}
+/*
+* Email body
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-mail tbody td {
+  text-align: left;
+  padding: 25px 0px 30px 30px;
+}
+table.lesli-mail h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+table.lesli-mail p {
+  margin-bottom: 10px;
+}
+table.lesli-mail a {
+  border-bottom: 1px solid #286496;
+}
+/*
+* Email footer
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-mail tfoot td {
+  padding: 20px 0px;
+}
+table.lesli-mail tfoot td p {
+  margin: 0px;
+  font-size: 12px;
+}
+/*
+* Email Helpers
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0
+*/
+table.lesli-mail .lesli-mail-display-inline {
+  display: inline;
+}
+table.lesli-mail .lesli-mail-center-vertical {
+  vertical-align: middle;
+}
+table.lesli-mail .lesli-mail-width-10 {
+  width: 10px;
+}
+table.lesli-mail .lesli-mail-width-20 {
+  width: 20px;
+}
+table.lesli-mail .lesli-mail-width-30 {
+  width: 30px;
+}
+table.lesli-mail .lesli-mail-width-40 {
+  width: 40px;
+}
+table.lesli-mail .lesli-mail-width-50 {
+  width: 50px;
+}
+table.lesli-mail .lesli-mail-width-60 {
+  width: 60px;
+}
+table.lesli-mail .lesli-mail-width-70 {
+  width: 70px;
+}
+table.lesli-mail .lesli-mail-width-80 {
+  width: 80px;
+}
+table.lesli-mail .lesli-mail-width-90 {
+  width: 90px;
+}
+table.lesli-mail .lesli-mail-width-100 {
+  width: 100px;
+}
+table.lesli-mail .lesli-mail-width-110 {
+  width: 110px;
+}
+table.lesli-mail .lesli-mail-width-120 {
+  width: 120px;
+}
+table.lesli-mail .lesli-mail-width-130 {
+  width: 130px;
+}
+table.lesli-mail .lesli-mail-width-140 {
+  width: 140px;
+}
+table.lesli-mail .lesli-mail-width-150 {
+  width: 150px;
+}
+table.lesli-mail .lesli-mail-width-160 {
+  width: 160px;
+}
+table.lesli-mail .lesli-mail-width-170 {
+  width: 170px;
+}
+table.lesli-mail .lesli-mail-width-180 {
+  width: 180px;
+}
+table.lesli-mail .lesli-mail-width-190 {
+  width: 190px;
+}
+table.lesli-mail .lesli-mail-width-200 {
+  width: 200px;
+}
+table.lesli-mail .lesli-mail-width-210 {
+  width: 210px;
+}
+table.lesli-mail .lesli-mail-width-220 {
+  width: 220px;
+}
+table.lesli-mail .lesli-mail-width-230 {
+  width: 230px;
+}
+table.lesli-mail .lesli-mail-width-240 {
+  width: 240px;
+}
+table.lesli-mail .lesli-mail-width-250 {
+  width: 250px;
+}
