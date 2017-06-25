@@ -55,13 +55,13 @@ lesli-grid--get-column-width(column, column-total, margin)
     $column-number = column
     $column-total = column-total
     $margin = margin
-
+    
     // El total del margen en todo el grid sera igual al total de
     // columnas por el porcentaje de margen asignado
     // La primera columna del grid no lleva margen
     // por tal razon se resta dicha columna al total de columnas
     $margin = $margin * ( $column-number - 1 )
-
+    
     // Columns are generated automatically?
     // La formula es diferente dependendiendo si las columnas
     // seran simetricas o no
@@ -98,7 +98,7 @@ lesli-grid-column(column, column-total = 12, margin=0)
     $column-number-total = column-total // Numero total de columnas para el grid
     
     // Obtiene el ancho de cada columna
-    $column-width =  lesli-grid--get-column-width($column-number, $column-number-total, margin)
+    $column-width = lesli-grid--get-column-width($column-number, $column-number-total, margin)
     
     // Imprime el width para cada columna
     width unit($column-width, '%')
