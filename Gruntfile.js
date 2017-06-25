@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 
 
     ///* Including plugins and dependencies
-    ///* ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~ ~·~
+    ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-stylus');
 
@@ -60,7 +60,6 @@ module.exports = function (grunt) {
     ///* Defining Development tasks
     ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
     grunt.registerTask('compile', ['stylus:compile_only']);
-    grunt.registerTask('distribute', ['cssmin:compile_minify']);
     grunt.registerTask('deploy', ['stylus']);
 
 };

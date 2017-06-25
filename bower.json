@@ -1,10 +1,10 @@
 {
-    "name": "ResponsiveCat",
-    "version": "2.0.0",
+    "name": "LesliCSS",
+    "version": "0.1s.0",
     "authors": [
         "Luis Gdonis <emc2@ldonis.com>"
     ],
-    "description": "CSS Micro framework",
+    "description": "CSS Micro Framework",
     "main": "dist/rcat.min.css",
     "moduleType": [
         "yui"
@@ -20,7 +20,7 @@
         "wireframing"
     ],
     "license": "GPL-3.0",
-    "homepage": "http://responsivecat.com",
+    "homepage": "https://www.lesli.tech",
     "ignore": [
         ".git",
         ".gitignore",

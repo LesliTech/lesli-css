@@ -33,9 +33,7 @@
 
    },
    "scripts":{
-       "rcat-build":"grunt build",
        "rcat-compile":"grunt compile",
-       "rcat-distribute":"grunt distribute",
-       "rcat-deploy":"npm run rcat-build && npm run rcat-compile && npm run rcat-distribute"
+       "rcat-deploy":"grunt deploy"
    }
 }
