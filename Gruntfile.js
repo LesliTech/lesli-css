@@ -7,45 +7,36 @@ module.exports = function (grunt) {
         ///* Compile stylus to css
         ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
         stylus:{
-            compile_only:{
+            compile_tests:{
                 options:{ 'compress': false },
                 files:{
-                    'dist/base/base.css' : 'src/base/compile.styl',
-                    'dist/grid/grid.css' : 'src/grid/compile.styl',
-                    'dist/print/print.css' : 'src/print/print.styl',
-                    'dist/mail/mail.css' : 'src/mail/mail.styl'
-                }
-            },
-            compile_minify:{
-                options:{ 'compress': true },
-                files:{
-                    'dist/base/base.min.css' : 'dist/base/base.css',
-                    'dist/grid/grid.min.css' : 'dist/grid/grid.css'
-                }
-            },
-            framework_only:{
-                options:{ 'compress': false },
-                files:{
-                    'dist/lesli.css' : [
-                        'dist/base/base.css',
-                        'dist/grid/grid.css'
-                    ]
-                }
-            },
-            framework_minify:{
-                options:{ 'compress': true },
-                files:{
-                    'dist/lesli.min.css' : 'dist/lesli.css'
+                    'tests/grid/grid.test.css' : 'tests/grid/grid.test.styl'
                 }
             }
+        },
+
+
+        ///* Copy vendor modules
+        ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+        copy: {
+
+            ///* LesliCSS Framework - init file
+            normalize:{
+                expand: true,
+                flatten: true,
+                filter: 'isFile',
+                src: 'node_modules/normalize.css/normalize.css',
+                dest: 'src/vendor/'
+            }
+
         },
 
         ///* Files watcher
         ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
         watch: {
             stylus:{
-                files: ['src/**/*.styl'],
-                tasks: ['stylus:compile_only']
+                files: ['src/**/*.styl','tests/**/*.styl'],
+                tasks: ['stylus']
             }
         },
 
@@ -60,8 +51,8 @@ module.exports = function (grunt) {
 
     ///* Defining Development tasks
     ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    grunt.registerTask('compile', ['stylus:compile_only']);
-    grunt.registerTask('deploy', ['stylus']);
+    grunt.registerTask('compile-tests', ['stylus:compile_tests']);
+    grunt.registerTask('vendor', ['copy:normalize']);
 
 
 };

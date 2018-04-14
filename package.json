@@ -24,16 +24,18 @@
     "bugs": {
         "url": "https://github.com/LesliTech/LesliCSS/issues"
     },
-    "dependencies":{
+    "dependencies": {
+        "normalize.css": "^8.0.0"
     },
     "devDependencies": {
         "grunt": "^1",
+        "grunt-contrib-copy": "^1",
         "grunt-contrib-watch": "^1",
         "grunt-contrib-stylus": "^1"
-   },
-   "scripts":{
-        "dev" : "grunt watch",
-        "deploy":"grunt deploy",
-        "compile":"grunt compile"
-   }
+    },
+    "scripts": {
+        "dev": "grunt watch",
+        "vendor": "grunt vendor",
+        "compile-tests": "grunt compile-tests"
+    }
 }
