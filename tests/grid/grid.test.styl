@@ -1,0 +1,103 @@
+
+
+// * Including Lesli CSS framework
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+@require '../../src/lesli/lesli'
+
+
+// * Loading Lesli CSS modules
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+@require Lesli--load('base', '../../src/')
+@require Lesli--load('grid', '../../src/')
+
+
+// * Base styles
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~ 
+Lesli-base()
+
+
+// * Grid module tests
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~ 
+for column in (1..20)
+	$column = column
+	.col-{$column}
+		Lesli-grid(columns: $column, 1)
+
+	.col-px-{$column}
+		Lesli-grid(columns: $column, 3px)
+
+
+
+
+/*
+.col-2
+	Lesli-grid(columns: 2, 1)
+	
+.col-3
+	Lesli-grid(columns: 3, 1)
+	
+.col-4
+	Lesli-grid(columns: 4, 1)
+	
+.col-5
+	Lesli-grid(columns: 5, 1)
+	
+.col-6
+	Lesli-grid(columns: 6, 1)
+	
+.col-7
+	Lesli-grid(columns: 7, 1)
+	
+.col-8
+	Lesli-grid(columns: 8, 1)
+	
+.col-9
+	Lesli-grid(columns: 9, 1)
+	
+.col-10
+	Lesli-grid(columns: 10, 1)
+	
+.col-11
+	Lesli-grid(columns: 11, 1)
+	
+.col-12
+	Lesli-grid(columns: 12, 1)
+	
+.col-13
+	Lesli-grid(columns: 13, 1)
+	
+.col-14
+	Lesli-grid(columns: 14, 1)
+	
+.col-15
+	Lesli-grid(columns: 15, 1)
+	
+.col-16
+	Lesli-grid(columns: 16, 1)
+	
+.col-17
+	Lesli-grid(columns: 17, 1)
+	
+.col-18
+	Lesli-grid(columns: 18, 1)
+	
+.col-19
+	Lesli-grid(columns: 19, 1)
+	
+.col-20
+	Lesli-grid(columns: 20, 1)
+*/
+
+// * Test styles
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~ 
+body
+	background-color silver
+
+section
+	margin 5px auto 10px
+
+section div
+	background-color #fff
+	text-align center
+	color #1d1d1d
+	padding 10px
