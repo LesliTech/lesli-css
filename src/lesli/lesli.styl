@@ -16,28 +16,28 @@
 *
 * CSS version 3
 *
-* Grids & blocks system
+* Lesli native functions
 *
 * @author   Luis Gdonis <emc2@ldonis.com>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  0.1.0
+* @version  1.0.0
 * @link     https://www.lesli.tech
 */
 
-// Funciones y Mixins para construir el grid
-// -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-  -·-
 
 /*
 * Framework information
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <https://www.lesli.tech>
-* @since 0.1.0 alpha
+* @since 1.0.0 alpha
 */
 Lesli()
 	/*!
 	Lesli CSS
-	CSS Micro Framework
-	Version 0.1.0 beta
+	CSS UI builder
+	Version 1.0.0 beta
+	https://www.lesli.tech
+	https://www.lesli.tech/lab/css
 	*/
 
 
@@ -58,7 +58,7 @@ Lesli--load(module_name, src='../../Template/css/lesli/src/')
 * Incluye imagenes
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <https://www.lesli.tech>
-* @since 0.1.0 alpha
+* @since 1.0.0 alpha
 */
 Lesli--image(image, section = false)
 
@@ -69,7 +69,6 @@ Lesli--image(image, section = false)
 	
 	else
 		$path = '../img/'
-
 	
 	return $path + image
     
@@ -79,7 +78,7 @@ Lesli--image(image, section = false)
 * Incluye hojas de estilo
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <https://www.lesli.tech>
-* @since 0.1.0 alpha
+* @since 1.0.0 alpha
 */
 Lesli--include(stylesheet, section = false, extenssion = 'styl')
 
@@ -89,7 +88,7 @@ Lesli--include(stylesheet, section = false, extenssion = 'styl')
 		$path = '../../' + section + '/css/'
 
 	else
-		$path = '../css('
+		$path = '../css/'
 
 	@require $path + stylesheet + extenssion
 
