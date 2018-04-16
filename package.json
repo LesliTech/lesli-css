@@ -36,6 +36,7 @@
     "scripts": {
         "dev": "grunt watch",
         "vendor": "grunt vendor",
+        "compile": "grunt compile",
         "compile-tests": "grunt compile-tests"
     }
 }

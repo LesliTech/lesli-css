@@ -80,7 +80,7 @@ Lesli--image(image, section = false)
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 1.0.0 alpha
 */
-Lesli--include(stylesheet, section = false, extenssion = 'styl')
+Lesli--include(stylesheet, section = false, extension = 'styl')
 
 	$path = ''
 
@@ -90,14 +90,4 @@ Lesli--include(stylesheet, section = false, extenssion = 'styl')
 	else
 		$path = '../css/'
 
-	@require $path + stylesheet + extenssion
-
-
-
-/*
-* Incluye fuentes
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <https://www.lesli.tech>
-* @since 0.1.0 alpha
-*/
-//Lesli--font(name, types = false)
+	@require $path + stylesheet + extension
