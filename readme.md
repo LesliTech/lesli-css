@@ -13,7 +13,6 @@ Version 1.0.0 alpha
 
 
 #### Really?... Another CSS framework?
---------
 Yes, why not? There are too many amazing tools to build user interfaces like [uikit](https://getuikit.com/) and [milligram](https://milligram.io/) that allows to anyone to build beautiful designs with just a couple of lines of code; After a couple of year working with CSS frameworks on front-end projects I found a problem: they add their own styles.
 
 Lesli CSS born to have a tool only for the html structure without any default style, no default colors, no default margins, paddings, layouts, structure, or force the developers to write the html on a specific way, etc. 
@@ -22,7 +21,7 @@ Lesli CSS born to have a tool only for the html structure without any default st
 
 #### Installation
 --------
-* Clone the repo: `https://github.com/LesliTech/LesliCSS.git`.
+* Install from source: `https://github.com/LesliTech/LesliCSS.git`.
 * Install with NPM: `npm install leslicss`.
 
 
@@ -62,8 +61,7 @@ Lesli/
 #### Development
 --------
 * Clone the repo: `https://github.com/LesliTech/LesliCSS.git`.  
-* Install with NPM: `npm install leslicss`.  
-* Copy vendor dependencies: `npm run vendor`.  
+* Install dependencies: `npm install`.  
 * Development mode: `npm run dev`.  
 * Built tests: `npm run tests`.  
 
@@ -74,7 +72,7 @@ Lesli/
 
 Lesli is completely free and open source
 
-* Website: [https://www.lesli.tech/tech/css](https://www.lesli.tech/lab/css)
+* Website: [https://www.lesli.tech/lab/css](https://www.lesli.tech/lab/css)
 
 * Documentation: [https://docs.lesli.tech/css/](https://docs.lesli.tech/css/)
 
