@@ -68,3 +68,23 @@ Lesli-flex-center(vertical= false)
 	if(vertical)
 		flex-direction column
 		height 100%
+		
+
+
+/*
+* Fluid grid with flexbox
+*
+* @param items-width min default width for items
+* @param gutter margin for elements
+*
+* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+* @author Luis Gdonis <https://www.lesli.tech>
+* @since 0.1.0 alpha
+*/
+Lesli-flex-grid(items-width: 150px, gutter: 10px)
+	display flex
+	flex-wrap wrap
+
+	div
+		flex 1 1 items-width
+		margin 0 gutter gutter
