@@ -36,17 +36,17 @@
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli-flex(direction= 'row', align= 'center', justify= 'space-between')
-	
-	$direction = direction
-	$justify = justify
-	$align = align
+Lesli-flex(direction= row, align= center, justify= space-between)
+
+    $direction = direction
+    $justify = justify
+    $align = align
 
 
-	display flex
-	flex-direction $direction
-	justify-content $justify
-	align-items $align
+    display flex
+    flex-direction $direction
+    justify-content $justify
+    align-items $align
 
 
 
@@ -61,14 +61,14 @@ Lesli-flex(direction= 'row', align= 'center', justify= 'space-between')
 */
 Lesli-flex-center(vertical= false)
 
-	display flex
-	align-items center
-	justify-content center
+    display flex
+    align-items center
+    justify-content center
 
-	if(vertical)
-		flex-direction column
-		height 100%
-		
+    if(vertical)
+        flex-direction column
+        height 100%
+
 
 
 /*
@@ -81,10 +81,10 @@ Lesli-flex-center(vertical= false)
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli-flex-grid(items-width: 150px, gutter: 10px)
-	display flex
-	flex-wrap wrap
+Lesli-flex-grid(items-width= 150px, gutter= 10px)
+    display flex
+    flex-wrap wrap
 
-	div
-		flex 1 1 items-width
-		margin 0 gutter gutter
+    div
+        flex 1 1 items-width
+        margin 0 gutter gutter
