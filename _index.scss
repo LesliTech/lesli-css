@@ -24,9 +24,4 @@
 * @link     https://www.lesli.tech
 */
 
-// * Carga modulos de Lesli CSS
-// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-@require 'src/lesli/lesli'
-@require 'src/base/base'
-@require 'src/flex/flex'
-@require 'src/grid/grid'
+@import 'lesli'

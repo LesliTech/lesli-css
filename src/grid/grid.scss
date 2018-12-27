@@ -1,5 +1,5 @@
-/*
-* Lesli CSS
+/**
+* Lesli
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -14,19 +14,28 @@
 * You should have received a copy of the GNU General Public License
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
-* CSS version 3
+* Powered by https://www.lesli.tech
+* Building a better future, one line of code at a time.
 *
-* Grids & blocks system
-* Funciones y Mixins para construir el grid
-*
-* @author   Luis Gdonis <emc2@ldonis.com>
+* @author   Luis Donis <ldonis@lesli.tech>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  0.1.0
-* @link     https://www.lesli.tech
+* @version  GIT: 1.0.0 alpha
 */
 
-Lesli-grid-margin(margin, $type=false)
 
+@function strip-unit($number) {
+
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+
+}
+
+
+@function lesli-grid-margin($margin, $type:false) {
+    /*
     $margin-type = unit(margin)
     
     if $type
@@ -41,6 +50,11 @@ Lesli-grid-margin(margin, $type=false)
         $margin = unit($margin, '%')
         
     return $margin
+    */
+
+    @return $margin;
+
+}
 
 /*
 * Columnas de grids & blocks
@@ -53,56 +67,55 @@ Lesli-grid-margin(margin, $type=false)
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli-grid-column(column, column-total = 12, margin=0)
+@mixin lesli-grid-column($column, $column-total: 12, $margin:0) {
     
     // Variables
-    $column = column
-    $column-total = column-total
-    $margin-type = unit(margin)
-    $margin = unit(margin, '')
-    $width-total = 100
+    $margin-type: unit($margin);
+    $margin: unit(margin, '');
+    $width-total: 100;
 
     // El total del margen en todo el grid sera igual al total de
     // columnas por el total de margen asignado
     // La ultima columna del grid no lleva margen
     // por tal razon se resta dicha columna al total de columnas
     
-    
 
     // Automatic columns
-    if $column-total > 0
-        
-        $margin = $margin * ($column - 1)
-        $margin = $margin / $column
+    @if $column-total > 0 {
+            
+        $margin: $margin * ($column - 1);
+        $margin: $margin / $column;
         
         // El ancho de cada columna sera igual al ancho disponible (menos margen)
         // dividido entre el total de columnas del grid
-        $width = 100 / $column
+        $width: 100 / $column;
         
-        $width = unit($width, '%')
+        $width: unit($width, '%');
 
+    }
 
     // Manual columns
-    if $column-total == 0
-        $width = ((100 / $column-total) * $column) - $margin
+    @if $column-total == 0 {
+        $width: ((100 / $column-total) * $column) - $margin;
+    }
 
 
     // Margin in pixels
-    if $margin-type == 'px'
-        //$margin = round(Lesli-grid-margin($margin, 'px'))
-        $margin = Lesli-grid-margin($margin, 'px')
-        $width = "calc(%s - %s)" % ($width $margin)
+    @if $margin-type == 'px' {
+        $margin: lesli-grid-margin($margin, 'px');
+        $width: "calc(%s - %s)" % ($width $margin);
+    }
 
 
     // Margin in percentage
-    if $margin-type == '%' or $margin-type == ''
-        $width = $width - $margin
-
+    @if $margin-type == '%' or $margin-type == '' {
+        $width: $width - $margin;
+    }
 
     // Se retorna el ancho de columna
-    width $width
+    width: $width;
     
-    return true
+}
 
 
 /*
@@ -118,54 +131,59 @@ Lesli-grid-column(column, column-total = 12, margin=0)
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli-grid(columns = 0, margin=0, breakpoint=320)
+@mixin lesli-grid($columns: 0, $margin: 0, $breakpoint: 320) {
     
-    // Variables
-    $margin = margin
-    $columns = columns
-    $breakpoint = breakpoint
-
-
     // basic styles for grid container
-    width 100%
-    font-size 0
+    width: 100%;
+    font-size: 0;
 
-    // * Estilos a pseudo elementos
-    &:before
-    &:after
-        content ""
-        display inline-block
-        vertical-align middle
+    // Estilos a pseudo elementos
+    &:before,
+    &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
         //height 100%
+    }
 
-    // * Filas del grid
-    & > *
-        font-size initial
-        white-space initial
-        display inline-block
+    // Filas del grid
+    & > * {
+        font-size: initial;
+        white-space: initial;
+        display: inline-block;
 
         // automatic columns 
-        if $columns > 0
-
+        @if $columns > 0 {
             // Utilizo el mixin para crear columnas
-            Lesli-grid-column(column: $columns, margin: $margin)
+            // Lesli-grid-column(column: $columns, margin: $margin)
+        }
 
+    }
 
     // inicializa breakpoints
-    @media (max-width: unit($breakpoint, 'px'))
+
+    @media (max-width: (strip-unit($breakpoint) * 1px)) {
 
         // Clase css para breakpoints
-        & > *
-            display block
-            width initial
+        & > * {
+            display: block;
+            width: initial;
+        }
 
-    @media (min-width: unit($breakpoint, 'px'))
+    }
+
+    @media (min-width: (strip-unit($breakpoint) * 1px)) {
 
         // Si el grid incluye margen
-        if $margin != 0
-            
+        @if $margin != 0 {
+
             // * Margen de cada elemento del grid,
-            & > *:not(:last-child)
-                margin-right Lesli-grid-margin($margin)
-                
-    return true
+            & > *:not(:last-child){
+                //margin-right Lesli-grid-margin($margin)
+            }
+
+        }
+
+    }
+
+}

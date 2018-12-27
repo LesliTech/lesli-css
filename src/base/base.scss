@@ -28,7 +28,7 @@
 * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 * @author Luis Gdonis <https://www.lesli.tech>
 */
-Lesli-base()
+@mixin lesli-base() {
 
     /*
     * Normalize
@@ -36,7 +36,8 @@ Lesli-base()
     * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
     * @since 1.0.0
     */
-    @require '../../src/vendor/normalize.css'
+    //@import './../src/vendor/normalize';
+    @include normalize;
 
 
     /*
@@ -46,18 +47,20 @@ Lesli-base()
     * @since 1.0.0
     */
 
-    *
-    *:before
-    *:after
-        margin 0
-        padding 0
-        box-sizing border-box
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    html
-        font-size 16px
-        font-family sans-serif
-        -ms-text-size-adjust 100%
-        -webkit-text-size-adjust 100%
+    html {
+        font-size: 16px;
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
 
 
     /*
@@ -70,11 +73,12 @@ Lesli-base()
 
     // * Estilo estandar para titulos
     // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    h1, h2, h3, h4, h5, h6
-        margin 0
-        font-style inherit
-        font-weight inherit
-        text-rendering optimizelegibility
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        font-style: inherit;
+        font-weight: inherit;
+        text-rendering: optimizelegibility;
+    }
 
 
     /*
@@ -83,12 +87,15 @@ Lesli-base()
     * @author Luis Gdonis <https://www.lesli.tech>
     * @since 1.0.0
     */
-    a
-        text-decoration none
-        color inherit
+    a {
+        text-decoration: none;
+        color: inherit;
 
-        &:visited
-            color inherit
+        &:visited {
+            color: inherit;
+        }
+
+    }
 
 
     /*
@@ -97,9 +104,10 @@ Lesli-base()
     * @author Luis Gdonis <https://www.lesli.tech>
     * @since 0.1.0 alpha
     */
-    img
-        max-width 100%
-        height auto
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
 
     /*
@@ -108,8 +116,9 @@ Lesli-base()
     * @author Luis Gdonis <https://www.lesli.tech>
     * @since 0.1.0 alpha
     */
-    p
-        margin 0
+    p {
+        margin: 0;
+    }
 
 
     /*
@@ -118,8 +127,12 @@ Lesli-base()
     * @author Luis Gdonis <https://www.lesli.tech>
     * @since 0.1.0 alpha
     */
-    ul
+    ul {
         
-        li
-            list-style none
+        li{
+            list-style: none;
+        }
+
+    }
         
+}

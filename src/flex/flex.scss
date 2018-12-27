@@ -1,5 +1,5 @@
-/*
-* Lesli CSS
+/**
+* Lesli
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -14,14 +14,12 @@
 * You should have received a copy of the GNU General Public License
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
-* CSS version 3
+* Powered by https://www.lesli.tech
+* Building a better future, one line of code at a time.
 *
-* Flexbox module
-*
-* @author   Luis Gdonis <emc2@ldonis.com>
+* @author   Luis Donis <ldonis@lesli.tech>
 * @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  1.0.0
-* @link     https://www.lesli.tech
+* @version  GIT: 1.0.0 alpha
 */
 
 
@@ -36,18 +34,14 @@
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli-flex(direction= row, align= center, justify= space-between)
+@mixin lesli-flex($direction:row, $align: center, $justify: space-between) {
 
-    $direction = direction
-    $justify = justify
-    $align = align
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
 
-
-    display flex
-    flex-direction $direction
-    justify-content $justify
-    align-items $align
-
+}
 
 
 /*
@@ -59,17 +53,18 @@ Lesli-flex(direction= row, align= center, justify= space-between)
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli-flex-center(vertical= false)
+@mixin lesli-flex-center($vertical: false) {
 
-    display flex
-    align-items center
-    justify-content center
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    if(vertical)
-        flex-direction column
-        height 100%
+    @if ($vertical) {
+        flex-direction: column;
+        height: 100%;
+    }
 
-
+}
 
 /*
 * Fluid grid with flexbox
@@ -81,10 +76,14 @@ Lesli-flex-center(vertical= false)
 * @author Luis Gdonis <https://www.lesli.tech>
 * @since 0.1.0 alpha
 */
-Lesli-flex-grid(items-width= 150px, gutter= 10px)
-    display flex
-    flex-wrap wrap
+@mixin lesli-flex-grid($items-width: 150px, $gutter: 10px) {
+    
+    display: flex;
+    flex-wrap: wrap;
 
-    div
-        flex 1 1 items-width
-        margin 0 gutter gutter
+    div {
+        flex: 1 1 $items-width;
+        margin: 0 $gutter gutter;
+    }
+
+}

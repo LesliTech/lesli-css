@@ -1,42 +1,42 @@
 {
-    "name": "leslicss",
-    "title": "CSS UI builder",
-    "version": "1.0.0",
-    "homepage": "https://www.lesli.tech/lab/css",
-    "author": "Luis Gdonis <emc2@ldonis.com>",
-    "license": "GPL-3.0",
-    "description": "Lesli CSS is a serie of tools created to provide a clean, clear and easy to use CSS interface for websites and web applications.",
-    "keywords": [
-        "CSS",
-        "framework",
-        "stylus",
-        "mobile-first",
-        "responsive",
-        "front-end",
-        "web",
-        "wireframing",
-        "email"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/LesliTech/LesliCSS.git"
-    },
-    "bugs": {
-        "url": "https://github.com/LesliTech/LesliCSS/issues"
-    },
-    "dependencies": {
-        "normalize.css": "^8.0.0"
-    },
-    "devDependencies": {
-        "grunt": "^1",
-        "grunt-contrib-copy": "^1",
-        "grunt-contrib-watch": "^1",
-        "grunt-contrib-stylus": "^1"
-    },
-    "scripts": {
-        "dev": "grunt watch",
-        "vendor": "grunt vendor",
-        "compile": "grunt compile",
-        "compile-tests": "grunt compile-tests"
-    }
+  "name": "leslicss",
+  "version": "1.1.0",
+  "description": "CSS UI builder",
+  "homepage": "https://www.lesli.tech/lab/css",
+  "author": "Luis Donis <ldonis@lesli.tech>",
+  "license": "GPL-3.0",
+  "keywords": [
+    "CSS",
+    "framework",
+    "stylus",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "web",
+    "wireframing",
+    "email"
+  ],
+  "bugs": {
+    "url": "https://github.com/LesliTech/LesliCSS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LesliTech/LesliCSS.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.9",
+    "gulp-cli": "~2.0",
+    "gulp-modify-file": "^1.0.1",
+    "gulp-rename": "^1.3",
+    "gulp-sass": "~4.0",
+    "normalize.css": "^8.0.0"
+  },
+  "scripts": {
+    "dev": "gulp dev",
+    "vendor": "gulp vendor",
+    "build": "gulp build",
+    "scss": "gulp scss",
+    "test": "gulp test"
+  }
 }
