@@ -1,57 +1,49 @@
-/*
-* Lesli CSS
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program. If not, see <http://www.gnu.org/licenses/>.
-*
-* CSS version 3
-*
-* @author   Luis Gdonis <emc2@ldonis.com>
-* @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
-* @version  1.0.0
-* @link     https://www.lesli.tech
+/**
+Lesli
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+LesliCSS - SCSS Utilities for websites and web applications  
+
+Powered by https://www.lesli.tech
+Building a better future, one line of code at a time.
+
+@dev      Luis Donis <ldonis@lesli.tech>
+@author   LesliTech <hello@lesli.tech>
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+@version  0.2.0-alpha
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
 */
 
 
-/*
-* Function definition
-* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-* @author Luis Gdonis <https://www.lesli.tech>
-*/
+// · 
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 @mixin lesli-base() {
 
-    /*
-    * Normalize
-    * https://necolas.github.io/normalize.css/
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @since 1.0.0
-    */
-    //@import './../src/vendor/normalize';
+
+    // · Normalize
     @include normalize;
 
 
-    /*
-    * Reset
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <https://www.lesli.tech>
-    * @since 1.0.0
-    */
-
+    // · Reset
     *,
     *:before,
     *:after {
-        margin: 0;
-        padding: 0;
+        //margin: 0;
+        //padding: 0;
         box-sizing: border-box;
     }
 
@@ -63,33 +55,18 @@
     }
 
 
-    /*
-    * Estilo de titulos
-    * Establece un valor estandar para los titulos y subtitulos
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <https://www.lesli.tech>
-    * @since 1.0.0
-    */
-
-    // * Estilo estandar para titulos
-    // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+    // · Estilo estandar para titulos
     h1, h2, h3, h4, h5, h6 {
-        margin: 0;
         font-style: inherit;
         font-weight: inherit;
         text-rendering: optimizelegibility;
     }
 
 
-    /*
-    * Estilos estandar para enlaces
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <https://www.lesli.tech>
-    * @since 1.0.0
-    */
+    // · Estilos estandar para enlaces
     a {
-        text-decoration: none;
         color: inherit;
+        text-decoration: none;
 
         &:visited {
             color: inherit;
@@ -98,35 +75,20 @@
     }
 
 
-    /*
-    * Responsive images
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <https://www.lesli.tech>
-    * @since 0.1.0 alpha
-    */
+    // · Responsive images
     img {
-        max-width: 100%;
         height: auto;
+        max-width: 100%;
     }
 
 
-    /*
-    * Paragraphs
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <https://www.lesli.tech>
-    * @since 0.1.0 alpha
-    */
+    // · Paragraphs
     p {
         margin: 0;
     }
 
 
-    /*
-    * Navigation and list
-    * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
-    * @author Luis Gdonis <https://www.lesli.tech>
-    * @since 0.1.0 alpha
-    */
+    // · Navigation and list
     ul {
         
         li{
