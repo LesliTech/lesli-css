@@ -1,17 +1,10 @@
 {
-    "name": "leslicss",
-    "version": "0.1.0-alpha",
-    "description": "SCSS Utilities for websites and web applications",
-    "homepage": "https://lesli.dev/",
+    "name": "lesli-css",
+    "title": "LesliCSS",
+    "homepage": "https://lesli.cloud",
     "author": "LesliTech <hello@lesli.tech>",
-    "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/LesliTech/LesliCSS/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/LesliTech/LesliCSS.git"
-    },
+    "license": "All rights reserved",
+    "private": true,
     "dependencies": {
         "normalize.css": "8.0.1"
     }
