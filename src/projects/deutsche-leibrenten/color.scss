@@ -24,24 +24,21 @@ Building a better future, one line of code at a time.
 */
 
 
-// · include vendor libraries
-@import "./src/vendor/normalize.scss";
+// · 
+@import "../../base/colors.scss";
 
 
-// · include core 
-@import "./src/base/structure.scss";
+// · 
+@function lesli-deutsche-leibrenten-color($pallete, $variant: 500) {
 
+    $deutsche-leibrenten-colors: (
+        deutsche-leibrenten: (
+            primary: rgb(0, 83, 128),
+            secondary: rgb(32, 168, 216),
+            tertiary: rgb(0, 183, 228)
+        )
+    );
 
-// · include helpers for LesliCloud
-@import "./src/projects/leslicloud/fonts.scss";
-@import "./src/projects/leslicloud/color.scss";
+    @return get-lesli-css-base-colors($deutsche-leibrenten-colors, $variant: 500);
 
-
-// · include helpers for Deutsche Leibrenten
-@import "./src/projects/deutsche-leibrenten/color.scss";
-@import "./src/projects/deutsche-leibrenten/fonts.scss";
-
-
-// · include helpers 
-@import "./src/helpers/flex/flex.scss";
-@import "./src/helpers/grid/grid.scss";
+}
