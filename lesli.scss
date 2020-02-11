@@ -28,10 +28,8 @@ Building a better future, one line of code at a time.
 @import "./src/vendor/normalize.scss";
 
 
-// · include core helpers
+// · include core 
 @import "./src/base/base.scss";
-@import "./src/flex/flex.scss";
-@import "./src/grid/grid.scss";
 
 
 // · include helpers for LesliCloud
@@ -41,3 +39,8 @@ Building a better future, one line of code at a time.
 
 // · include helpers for Deutsche Leibrenten
 @import "./src/dl/color.scss";
+
+
+// · include helpers 
+@import "./src/helpers/flex/flex.scss";
+@import "./src/helpers/grid/grid.scss";

@@ -4,7 +4,7 @@
 	</a>
 </p>
 
-<h3 align="center">SCSS Utilities for websites, apps and web applications</h3>
+<h3 align="center">SCSS Utilities for websites and web applications</h3>
 
 <hr/>
 
