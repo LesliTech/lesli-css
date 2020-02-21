@@ -33,14 +33,6 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@function get-css-color($deutsche-leibrenten-colors, $pallete, $variant: 500) {
-
-    @return get-lesli-css-base-color($deutsche-leibrenten-colors, $pallete, $variant);
-
-}
-
-
-// · 
 @function get-lesli-css-base-color($lesli-css-app-colors, $pallete, $variant: 500) {
 
     $lesli-css-base-colors: (
