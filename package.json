@@ -4,6 +4,7 @@
     "homepage": "https://lesli.cloud",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "All rights reserved",
+    "version": "0.3.0",
     "private": true,
     "dependencies": {
         "normalize.css": "8.0.1"
