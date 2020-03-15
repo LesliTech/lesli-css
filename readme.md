@@ -8,7 +8,7 @@
 
 <hr/>
 <p align="center">
-	Version 0.1.0-alpha
+	Version 0.3.0-beta
 </p>
 <p align="center">
 	<a href="https://www.lesli.tech" target="_blank">
