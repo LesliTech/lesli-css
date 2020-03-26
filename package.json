@@ -1,11 +1,10 @@
 {
     "name": "lesli-css",
-    "title": "LesliCSS",
-    "homepage": "https://lesli.cloud",
+    "description": "SCSS Utilities for websites, apps and web applications",
+    "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
-    "license": "All rights reserved",
+    "license": "GPLv3",
     "version": "0.3.0",
-    "private": true,
     "dependencies": {
         "normalize.css": "8.0.1"
     }
