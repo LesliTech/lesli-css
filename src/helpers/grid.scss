@@ -166,18 +166,4 @@ Building a better future, one line of code at a time.
 
     }
 
-    @media (min-width: (strip-unit($breakpoint) * 1px)) {
-
-        // Si el grid incluye margen
-        @if $margin != 0 {
-
-            // * Margen de cada elemento del grid,
-            & > *:not(:last-child){
-                //margin-right Lesli-grid-margin($margin)
-            }
-
-        }
-
-    }
-
 }
