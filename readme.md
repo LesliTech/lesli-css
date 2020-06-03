@@ -23,18 +23,18 @@ npm install lesli-css --save
 LesliCSS  
 ├── src/  
 │   ├── base/  
-│	│	├──	fonts.scss
-│	│	└──	normalize.scss
-│	├── functions/  
-│	│	└──	colors.scss
-│	├── helpers/  
-│	│	├──	columns.scss
-│	│	├──	flex.scss
-│	│	└──	grid.scss
+│   │   ├── fonts.scss  
+│   │   └── normalize.scss  
+│   ├── functions/  
+│   │   └── colors.scss  
+│   ├── helpers/  
+│   │   ├── columns.scss  
+│   │   ├── flex.scss  
+│   │   └── grid.scss  
 │   └── mixins/  
-│		├──	breakpoints.scss
-│		└──	scroolbar.scss
-└── vendor
+│       ├── breakpoints.scss  
+│       └── scroolbar.scss  
+└── vendor  
 
 
 
