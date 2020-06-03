@@ -57,14 +57,13 @@ Building a better future, one line of code at a time.
 
 // · Fluid grid with flexbox 
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-@mixin lesli-css-flex-grid($items-width: 150px, $gutter: 10px) {
-    
+@mixin lesli-css-flex-grid($items-width: 150px, $margin: 10px) {
     display: flex;
     flex-wrap: wrap;
 
     & > * {
         flex: 1 1 $items-width;
-        margin: 0 $gutter;
+        margin: 0 $margin;
     }
 
 }
