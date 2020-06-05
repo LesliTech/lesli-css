@@ -4,7 +4,7 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "dependencies": {
         "normalize.css": "8.0.1"
     }
