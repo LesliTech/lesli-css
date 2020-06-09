@@ -34,7 +34,7 @@ LesliCSS
 │    │    └── grid.scss  
 │    └── mixins/  
 │        ├── breakpoints.scss  
-│        └── scroolbar.scss  
+│        └── scrollbar.scss  
 └── vendor  
 ```
 
