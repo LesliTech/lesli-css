@@ -39,7 +39,7 @@ FullHD up to 1408px
 */
 
 
-// · Defining available breakpints sizes
+// · Defining available breakpoints sizes
 $breakpoints: (
     "small":      ( min-width:  320px, max-width:  520px ),
     "mobile":     ( min-width:  320px, max-width:  768px ),
@@ -99,6 +99,28 @@ $breakpoints: (
 
         // If the key doesn't exist in the map
         @warn "Breakpoint `#{$breakpoint}` not found.";
+
+    }
+
+}
+
+
+
+// · 
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@mixin lesli-css-breakpoint-custom($min_width, $max_width:false) {
+
+    @if $max_width {
+
+        @media only screen and (min-width: $min_width) and (max-width: $max_width) { 
+            @content;
+        }
+
+    } @else { 
+
+        @media only screen and (min-width: $min_width) { 
+            @content;
+        }
 
     }
 
