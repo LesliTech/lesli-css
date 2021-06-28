@@ -169,3 +169,9 @@ Building a better future, one line of code at a time.
     @return $color;
 
 }
+
+
+// · polyfill
+@function lesli-css-get-color($pallete, $variant: 500) {
+    @return lesli-css-color($pallete, $variant);
+}
