@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="#" target="_blank">
-		<img alt="LesliCSS logo" width="200px" src="https://cdn.lesli.tech/leslidev/leslicss/brand/leslicss-imagotipo.svg" />
+		<img alt="LesliCSS logo" width="200px" src="./lesli-css-logo.svg" />
 	</a>
 </p>
 
@@ -8,7 +8,7 @@
 
 <hr/>
 
-Version 0.9.2  
+Version 0.9.3  
 
 
 #### Installation
@@ -57,6 +57,11 @@ lesli-css
 
 }
 
+// Standard font configuration
+@include lesli-css-fonts-standard()
+
+// Standarize html elements to Lesli standards
+@include lesli-css-normalize()
 
 // Breakpoints
 @include lesli-css-breakpoint("small") {
@@ -74,6 +79,10 @@ lesli-css
 @include lesli-css-breakpoint-custom(200px, 300px) {
 	// styles for min-width: 200px and max-width: 300px only
 }
+
+
+// customize the scrollbar (if supported)
+@include lesli-css-scrollbar()
 
 ```
 
