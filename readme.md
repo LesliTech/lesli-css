@@ -8,7 +8,7 @@
 
 <hr/>
 
-Version 0.9.3  
+Version 1.0.0  
 
 
 #### Installation
@@ -23,18 +23,16 @@ npm install lesli-css --save
 ```text
 lesli-css  
 ├── src/  
-│    ├── base/  
-│    │    ├── fonts.scss  
-│    │    └── normalize.scss  
 │    ├── functions/  
 │    │    └── colors.scss  
-│    ├── helpers/  
-│    │    ├── columns.scss  
-│    │    ├── flex.scss  
-│    │    └── grid.scss  
 │    └── mixins/  
-│        ├── breakpoints.scss  
-│        └── scrollbar.scss  
+│         ├── fonts.scss  
+│         ├── normalize.scss  
+│         ├── columns.scss  
+│         ├── flex.scss  
+│         └── grid.scss  
+│         ├── breakpoints.scss  
+│         └── scrollbar.scss  
 └── vendor  
 ```
 
@@ -44,6 +42,13 @@ lesli-css
 ```scss
 
 @import "lesli-css";
+
+
+// Initialize your styles
+@include lesli-css-normalize;
+
+// Include Montserrat and Open Sans fonts from google
+@include lesli-css-fonts-standard;
 
 
 // Work with the color pallete

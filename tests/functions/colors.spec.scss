@@ -1,4 +1,5 @@
-/**
+/*
+
 Lesli
 
 Copyright (c) 2020, Lesli Technologies, S. A.
@@ -27,58 +28,40 @@ Building a better future, one line of code at a time.
 
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
+
 */
 
 
-@mixin lesli-css-columns($columns: 0, $margin: 0) {
-    
-    
-    // basic styles for grid container 
-    width: 100%;
-    font-size: 0;
-    margin: 0 auto;
+// · 
+@import "true";
+@import "../../src/functions/colors.scss";
 
-    // Estilos a pseudo elementos
-    &:before,
-    &:after {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
+
+// · 
+@include describe('@function lesli-css-color($pallete, $variant: 500)') {
+
+    @include it('should return the color for blue default') {
+    @include assert-equal(lesli-css-color(blue), #3689e6);
     }
 
-
-    // · Manual columns definition
-    @if $columns != 0 {
-
-        //column-width: 250px;
-        //column-count: $columns;
-
-        // The column-gap property specifies the gap between the columns.
-        column-gap: $margin;
-
-        // Specify the minimum width for each column, and the maximum number of columns:
-        columns: $columns;
+    @include it('should return the color for blue 100') {
+    @include assert-equal(lesli-css-color(blue, 100), #8cd5ff);
     }
 
-    // Filas del grid
-    & > * {
-        font-size: initial;
-        white-space: initial;
-        display: inline-block;
-        margin-bottom: $margin;
+    @include it('should return the color for blue 300') {
+    @include assert-equal(lesli-css-color(blue, 300), #64baff);
     }
 
-    $breakpoint: 320px;
+    @include it('should return the color for blue 500') {
+    @include assert-equal(lesli-css-color(blue, 500), #3689e6);
+    }
 
-    // inicializa breakpoints
-    @media (max-width: (strip-unit($breakpoint) * 1px)) {
+    @include it('should return the color for blue 700') {
+    @include assert-equal(lesli-css-color(blue, 700), #0d52bf);
+    }
 
-        // Clase css para breakpoints
-        & > * {
-            display: block;
-            width: initial;
-        }
-
+    @include it('should return the color for blue 900') {
+    @include assert-equal(lesli-css-color(blue, 900), #002e99); 
     }
 
 }

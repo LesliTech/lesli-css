@@ -42,12 +42,12 @@ Building a better future, one line of code at a time.
 
 // · Center with flexbox 
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-@mixin lesli-css-flex-center($vertical: false) {
+@mixin lesli-css-flex-center($direction) {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    @if ($vertical) {
+    @if ($direction == 'vertical') {
         flex-direction: column;
         height: 100%;
     }
@@ -55,16 +55,26 @@ Building a better future, one line of code at a time.
 }
 
 
+@mixin lesli-css-flex-center-vertical($height:auto) {
+    @include lesli-css-flex-center('vertical');
+    flex-grow: 1;
+    height: $height;
+}
+
+
 // · Fluid grid with flexbox 
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-@mixin lesli-css-flex-grid($items-width: 150px, $margin: 10px) {
+@mixin lesli-css-flex-columns($column-width: 150px, $gap:false) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     & > * {
-        flex: 1 1 $items-width;
-        max-width: $items-width;
-        margin: 0 $margin ($margin * 2);
+        flex-basis: $column-width;
+        max-width: $column-width;
+        @if ($gap) {
+            margin: 0 $gap ($gap * 2);
+        }
     }
 
 }

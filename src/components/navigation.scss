@@ -1,0 +1,10 @@
+@mixin lesli-css-navigation {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        a {
+            display: block;
+        }
+    }
+}

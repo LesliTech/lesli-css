@@ -5,7 +5,26 @@
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
     "version": "0.9.3",
+    "keywords": [
+        "css",
+        "scss"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LesliTech/lesli-css.git"
+    },
+    "bugs": {
+        "url": "https://github.com/LesliTech/lesli-css/issues"
+    },
     "devDependencies": {
+        "sass": "^1.49.9",
+        "glob": "^7.2.0",
+        "jest": "^27.5.1",
+        "node-sass": "^7.0.1",
+        "sass-true": "^6.1.0",
         "normalize.css": "8.0.1"
+    },
+    "scripts": {
+        "test": "jest"
     }
 }
