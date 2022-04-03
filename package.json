@@ -4,7 +4,7 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "0.9.3",
+    "version": "1.0.0-beta.1",
     "keywords": [
         "css",
         "scss"

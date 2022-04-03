@@ -8,13 +8,12 @@ $container-max-width: $fullhd !default;
     flex-grow: 1;
     margin: 0 auto;
     position: relative;
-    width: auto;
+    width: 100%;
 
     @if ($fluid) {
         max-width: none !important;
         padding-left: $gap;
         padding-right: $gap;
-        width: 100%;
     }
 
     @include lesli-css-breakpoint("fullhd") {

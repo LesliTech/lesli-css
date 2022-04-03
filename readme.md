@@ -8,7 +8,7 @@
 
 <hr/>
 
-Version 1.0.0  
+Version 1.0.0-beta.1  
 
 
 #### Installation
@@ -23,16 +23,22 @@ npm install lesli-css --save
 ```text
 lesli-css  
 ├── src/  
+│    ├── base/  
+│    │    ├── fonts.scss  
+│    │    └── fonts.scss  
+│    ├── components/  
+│    │    ├── columns.scss  
+│    │    ├── container.scss  
+│    │    ├── grid.scss  
+│    │    └── navigation.scss  
 │    ├── functions/  
 │    │    └── colors.scss  
-│    └── mixins/  
-│         ├── fonts.scss  
-│         ├── normalize.scss  
-│         ├── columns.scss  
-│         ├── flex.scss  
-│         └── grid.scss  
-│         ├── breakpoints.scss  
-│         └── scrollbar.scss  
+│    ├── mixins/  
+│    │    ├── breakpoint.scss  
+│    │    ├── flex.scss  
+│    │    └── scrollbar.scss  
+│    └── settings/  
+│         └── variables.scss  
 └── vendor  
 ```
 

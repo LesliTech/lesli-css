@@ -1,7 +1,7 @@
 /*
 Lesli
 
-Copyright (c) 2020, Lesli Technologies, S. A.
+Copyright (c) 2022, Lesli Technologies, S. A.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -28,6 +28,7 @@ Building a better future, one line of code at a time.
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
 */
+
 
 @import "../settings/variables.scss";
 
@@ -75,7 +76,6 @@ Building a better future, one line of code at a time.
 }
 
 @mixin lesli-css-breakpoint-until-desktop() {
-    @debug "aqui";
     @include lesli-css-breakpoint-builder($max:desktop) {
         @content;
     }
@@ -136,20 +136,20 @@ Building a better future, one line of code at a time.
 
     } 
 
-    @if $min {
-        @if not $min-width {
+    @if not $min-width {
+        @if $min {    
             @if is-number($min) {
-                @if index('em' 'px' 'rem', unit($min)) != null {
+                @if index("em" "px" "rem", unit($min)) != null {
                     $min-width: $min;
                 }
             }
         }
     }
 
-    @if $max {
-        @if not $max-width {
+    @if not $max-width {
+        @if $max {
             @if is-number($max) {
-                @if index('em' 'px' 'rem', unit($max)) != null {
+                @if index("em" "px" "rem", unit($max)) != null {
                     $max-width: $max;
                 }
             }
