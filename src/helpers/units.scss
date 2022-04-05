@@ -1,4 +1,4 @@
-/*
+/**
 Lesli
 
 Copyright (c) 2022, Lesli Technologies, S. A.
@@ -30,22 +30,15 @@ Building a better future, one line of code at a time.
 */
 
 
-// · 
-@import "./src/base/fonts";
-@import "./src/base/normalize";
+// · Remove the unit of a length
+// · @param {Number} $number - Number to remove unit from
+// · @return {Number} - Unitless number
+@function strip-unit($number) {
 
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
 
-// · include components 
-@import "./src/components/columns.scss";
-@import "./src/components/container.scss";
-@import "./src/components/navigation.scss";
+    @return $number;
 
-
-// · include functions 
-@import "./src/functions/colors";
-
-
-// · include mixins 
-@import "./src/mixins/breakpoint";
-@import "./src/mixins/scrollbar";
-@import "./src/mixins/flex";
+}
