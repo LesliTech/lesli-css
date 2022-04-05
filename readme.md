@@ -8,7 +8,7 @@
 
 <hr/>
 
-Version 1.0.0-beta.2  
+Version 1.0.0
 
 
 #### Installation
