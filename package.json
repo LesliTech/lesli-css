@@ -4,10 +4,11 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "keywords": [
         "css",
-        "scss"
+        "scss",
+        "sass"
     ],
     "repository": {
         "type": "git",
