@@ -35,6 +35,23 @@ Building a better future, one line of code at a time.
 
     $lesli-css-colors: (
 
+        palette: (
+            primary: #0d52bf
+        ),
+
+        // · engines collection
+        collection: (
+            administration: #3b6cff,
+            intelligence: #172447,
+            productivity: #ff3c00,
+            integration: #edb78e,
+            analytics: #63ccb5,
+            security: #d3d3d3,
+            finance: #ff2453,
+            sales: #764aff,
+            it: #ffd700
+        ),
+
         // · blue
         blue: (
             100: #8cd5ff,
