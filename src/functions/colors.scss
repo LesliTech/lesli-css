@@ -31,12 +31,13 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@function lesli-css-color-builder($pallete, $variant: 500, $extracolors: ()) {
+@function lesli-css-color-palette($pallete: false) {
 
     $lesli-css-colors: (
 
         palette: (
-            primary: #0d52bf
+            primary: #0d52bf,
+            dark: #001f66
         ),
 
         // · engines collection
@@ -167,6 +168,20 @@ Building a better future, one line of code at a time.
 
     );
 
+    @if $pallete {
+        @return map-get($lesli-css-colors, $pallete);
+    } @else {
+        @return $lesli-css-colors;
+    }
+
+}
+
+
+// · 
+@function lesli-css-color-builder($pallete, $variant: 500, $extracolors: ()) {
+
+    $lesli-css-colors: lesli-css-color-palette();
+
     $lesli-css-colors: map-merge($lesli-css-colors, $extracolors);
 
     $pallete: map-get($lesli-css-colors, $pallete);
@@ -181,4 +196,24 @@ Building a better future, one line of code at a time.
 // · 
 @function lesli-css-color($pallete, $variant: 500) {
     @return lesli-css-color-builder($pallete, $variant);
+}
+
+
+// · 
+@mixin lesli-css-color-print($property: "color", $classs: "lesli-css-color") {
+
+    $lesli-css-color-pallete: lesli-css-color-palette();
+
+    @each $pallete_name, $pallete in $lesli-css-color-pallete {
+
+        @each $variant, $color in $pallete {
+
+            .#{$classs}-#{$pallete_name}-#{$variant} {
+
+                //background-color: lesli-css-color($pallete_name, $variant);
+                #{$property}: lesli-css-color($pallete_name, $variant);
+
+            }
+        }
+    }
 }
