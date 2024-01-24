@@ -25,11 +25,11 @@ lesli-css
 ├── src/  
 │    ├── base/  
 │    │    ├── fonts.scss  
-│    │    └── fonts.scss  
+│    │    └── normalize.scss  
 │    ├── components/  
+│    │    ├── blockquote.scss  
 │    │    ├── columns.scss  
 │    │    ├── container.scss  
-│    │    ├── grid.scss  
 │    │    └── navigation.scss  
 │    ├── functions/  
 │    │    └── colors.scss  
@@ -39,6 +39,7 @@ lesli-css
 │    │    └── scrollbar.scss  
 │    └── settings/  
 │         └── variables.scss  
+├── tests  
 └── vendor  
 ```
 

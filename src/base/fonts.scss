@@ -32,19 +32,28 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@mixin lesli-css-fonts-standard() {
+@mixin lesli-css-fonts-standard($title, $body) {
 
+    $baseFonts: "Helvetica Neue", "Helvetica", "Arial", "sans-serif", sans-serif;
+
+    $bodyFonts: #{$body}, #{$baseFonts};
+
+    $titleFonts: #{$title}, #{$bodyFonts};
 
     // · title font
-    h1, h2, h3, h4, h5, h6 {
-        font-family: "Domine", "Helvetica Neue", "Helvetica", "Arial", "sans-serif", sans-serif;
+    h1, h2, h3 {
+        font-family: $titleFonts
     }
 
+    // · title font
+    h4, h5, h6 {
+        font-family: $bodyFonts
+    }
 
     // · body font
     body,
     html {
-        font-family: "OpenSans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif", sans-serif;
+        font-family: $bodyFonts
     }
 
 }
