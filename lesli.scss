@@ -31,21 +31,21 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@import "./src/base/fonts";
-@import "./src/base/normalize";
+@import "./source/base/fonts";
+@import "./source/base/normalize";
 
 
 // · include components 
-@import "./src/components/columns.scss";
-@import "./src/components/container.scss";
-@import "./src/components/navigation.scss";
+@import "./source/components/columns.scss";
+@import "./source/components/container.scss";
+@import "./source/components/navigation.scss";
 
 
 // · include functions 
-@import "./src/functions/colors";
+@import "./source/functions/colors";
 
 
 // · include mixins 
-@import "./src/mixins/breakpoint";
-@import "./src/mixins/scrollbar";
-@import "./src/mixins/flex";
+@import "./source/mixins/breakpoint";
+@import "./source/mixins/scrollbar";
+@import "./source/mixins/flex";

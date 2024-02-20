@@ -17,14 +17,14 @@
     "bugs": {
         "url": "https://github.com/LesliTech/lesli-css/issues"
     },
+    "dependencies": {
+        "sass": "1.71.0",
+        "bulma": "0.9.4"
+    },
     "devDependencies": {
-        "normalize.css": "8.0.1",
-
         "jest": "27.5.1",
         "glob": "8.0.1",
-        "sass": "1.50.1",
         "sass-true": "6.1.0"
-        
     },
     "scripts": {
         "test": "jest"
