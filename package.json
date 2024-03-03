@@ -10,6 +10,15 @@
         "scss",
         "sass"
     ],
+    "files":[
+        "bulma",
+        "source",
+        "_index.scss",
+        "lesli.scss",
+        "lesli.txt",
+        "license",
+        "readme"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/LesliTech/lesli-css.git"
@@ -24,9 +33,14 @@
     "devDependencies": {
         "jest": "27.5.1",
         "glob": "8.0.1",
+        "vitest": "1.3.0",
+        "@vitest/coverage-v8":"1.3.0",
         "sass-true": "6.1.0"
     },
     "scripts": {
-        "test": "jest"
+        "test2": "jest",
+        "test": "vitest run",
+        "test:report": "vitest run --reporter=verbose",
+        "test:coverage": "vitest run --coverage"
     }
 }
