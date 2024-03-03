@@ -36,5 +36,6 @@
 
 *.tgz
 .DS_Store
+/coverage
 /node_modules
 /package

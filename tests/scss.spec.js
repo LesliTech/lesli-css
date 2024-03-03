@@ -48,6 +48,6 @@ describe("RUNNING SASS TESTS", () => {
     const sassTestFiles = glob.sync(path.resolve(process.cwd(), "tests/**/*.spec.scss"))
 
     // Run True on every file found with the describe and it methods provided
-    sassTestFiles.forEach(file => sassTrue.runSass({ file }, { describe, it }))
+    sassTestFiles.forEach(file => sassTrue.runSass({ describe, it }, file))
 
 })
