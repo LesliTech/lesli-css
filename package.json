@@ -4,7 +4,7 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "1.6.2",
+    "version": "2.0.0",
     "keywords": [
         "css",
         "scss",
@@ -25,6 +25,10 @@
     },
     "bugs": {
         "url": "https://github.com/LesliTech/lesli-css/issues"
+    },
+    "exports": {
+        ".": "./lesli.scss",
+        "./bulma": "./source/vendor/bulma.scss"
     },
     "dependencies": {
         "sass": "1.71.1",

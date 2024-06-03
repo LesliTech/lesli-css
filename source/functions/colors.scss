@@ -35,12 +35,13 @@ Building a better future, one line of code at a time.
 
     $lesli-css-colors: (
 
-        palette: (
+        // · lesli official color palette
+        lesli: (
             primary: #0d52bf,
             dark: #001f66
         ),
 
-        // · engines collection
+        // · lesli engine collections
         collection: (
             administration: #3b6cff,
             intelligence: #172447,
@@ -53,7 +54,7 @@ Building a better future, one line of code at a time.
             it: #ffd700
         ),
 
-        // · blue
+        // · 
         blue: (
             100: #8cd5ff,
             300: #64baff,
@@ -62,7 +63,7 @@ Building a better future, one line of code at a time.
             900: #002e99 
         ),
 
-        // · Administration
+        // · 
         bubble: (
             100: #fe9ab8,
             300: #f4679d,
@@ -71,7 +72,7 @@ Building a better future, one line of code at a time.
             900: #910e38
         ),
 
-        // · Sales & Marketing
+        // · 
         grape: (
             100: #e4c6fa,
             300: #cd9ef7,
@@ -80,7 +81,7 @@ Building a better future, one line of code at a time.
             900: #452981 
         ),
 
-        // · Productivity & Workteam
+        // · 
         lime: (
             100: #d1ff82,
             300: #9bdb4d,
@@ -89,7 +90,7 @@ Building a better future, one line of code at a time.
             900: #206b00 
         ),
 
-        // · Finance
+        // · 
         orange: (
             100: #ffc27d,
             300: #ffa154,
@@ -98,7 +99,7 @@ Building a better future, one line of code at a time.
             900: #a62100 
         ),
 
-        // · Analytics
+        // · 
         berry: (
             100: #ff8c82,
             300: #ed5353,
@@ -107,7 +108,7 @@ Building a better future, one line of code at a time.
             900: #7a0000 
         ),
 
-        // · Intelligence
+        // · 
         cocoa: (
             100: #a3907c,
             300: #8a715e,
@@ -116,7 +117,7 @@ Building a better future, one line of code at a time.
             900: #3d211b 
         ),
 
-        // · IT & Help Desk
+        // · 
         banana: (
             100: #fff394,
             300: #ffe16b,
@@ -125,7 +126,7 @@ Building a better future, one line of code at a time.
             900: #ad5f00 
         ),
 
-        // · Security & Privacy
+        // · 
         slate: (
             100: #95a3ab,
             300: #667885,
@@ -134,22 +135,13 @@ Building a better future, one line of code at a time.
             900: #0e141f 
         ),
 
-        // · Integrations
+        // · 
         mint: (
             100: #89ffdd,
             300: #43d6b5,
             500: #28bca3,
             700: #0e9a83,
             900: #007367
-        ),
-
-        // · 
-        black: (
-            100: #666666,
-            300: #4d4d4d,
-            500: #333333,
-            700: #1a1a1a,
-            900: #000000 
         ),
 
         // · 
@@ -161,31 +153,42 @@ Building a better future, one line of code at a time.
             900: #555761 
         ),
 
-        // · Solid standard colors
-        solid: (
-            white: rgb(255, 255, 255)
-        )
-
+        // · 
+        black: (
+            100: #666666,
+            300: #4d4d4d,
+            500: #333333,
+            700: #1a1a1a,
+            900: #000000 
+        ),
     );
 
     @if $pallete {
+
+        // return a specific palette
         @return map-get($lesli-css-colors, $pallete);
     } @else {
+
+        // return all the colors
         @return $lesli-css-colors;
     }
 
 }
 
 
-// · 
+// · construye un selector de colores para una paleta especifica
 @function lesli-css-color-builder($pallete, $variant: 500, $extracolors: ()) {
 
+    // obtiene todos los colores disponibles
     $lesli-css-colors: lesli-css-color-palette();
 
+    // incluye colores externos si fueron proporcionados
     $lesli-css-colors: map-merge($lesli-css-colors, $extracolors);
 
+    // obtiene la paleta de colores solicitada
     $pallete: map-get($lesli-css-colors, $pallete);
 
+    // ovtiene la variante del color solicitado
     $color: map-get($pallete, $variant);
 
     @return $color;
@@ -193,13 +196,13 @@ Building a better future, one line of code at a time.
 }
 
 
-// · 
+// · retorna una variante de una paleta de colores
 @function lesli-css-color($pallete, $variant: 500) {
     @return lesli-css-color-builder($pallete, $variant);
 }
 
 
-// · 
+// · imprime todos los colores disponibles
 @mixin lesli-css-color-print($property: "color", $classs: "lesli-css-color") {
 
     $lesli-css-color-pallete: lesli-css-color-palette();

@@ -1,14 +1,21 @@
-<p align="center">
-	<a href="#" target="_blank">
-		<img alt="LesliCSS logo" width="200px" src="./lesli-css-logo.svg" />
-	</a>
-</p>
-
-<h3 align="center">SCSS Utilities for websites and web applications</h3>
+<div align="center">
+	<img alt="LesliCSS logo" width="200px" src="./docs/lesli-css-logo.svg" />
+	<h3>SCSS Utilities for websites and web applications</h3>
+</div>
 
 <hr/>
 
-Version 1.5.0
+<p align="center" class="is-flex is-justify-content-center">
+    <a target="blank" href="https://www.npmjs.com/package/lesli-css">
+        <img height="22" alt="NPM Version" src="https://img.shields.io/npm/v/lesli-css" />
+    </a>
+	<a class="mx-2" href="https://codecov.io/gh/LesliTech/lesli-css" > 
+		<img height="22" src="https://codecov.io/gh/LesliTech/lesli-css/graph/badge.svg?token=WYB6XTWZWN"/> 
+	</a>
+	<a href="https://codecov.io/github/LesliTech/lesli-css"> 
+        <img height="22" src="https://sonarcloud.io/api/project_badges/measure?project=LesliTech_lesli-css&metric=sqale_rating"/> 
+    </a>
+</p>
 
 
 #### Installation
@@ -22,10 +29,7 @@ npm install lesli-css --save
 --------
 ```text
 lesli-css  
-├── src/  
-│    ├── base/  
-│    │    ├── fonts.scss  
-│    │    └── normalize.scss  
+├── source/  
 │    ├── components/  
 │    │    ├── blockquote.scss  
 │    │    ├── columns.scss  
@@ -33,12 +37,18 @@ lesli-css
 │    │    └── navigation.scss  
 │    ├── functions/  
 │    │    └── colors.scss  
+│    ├── helpers/  
+│    │    └── units.scss  
 │    ├── mixins/  
 │    │    ├── breakpoint.scss  
 │    │    ├── flex.scss  
+│    │    ├── fonts.scss  
+│    │    ├── normalize.scss  
 │    │    └── scrollbar.scss  
-│    └── settings/  
-│         └── variables.scss  
+│    ├── settings/  
+│    │    └── variables.scss  
+│    └── vendor/  
+│         └── bulma.scss  
 ├── tests  
 └── vendor  
 ```
@@ -48,14 +58,12 @@ lesli-css
 --------
 ```scss
 
+// Import the library
 @import "lesli-css";
 
 
-// Initialize your styles
-@include lesli-css-normalize;
-
-// Include Montserrat and Open Sans fonts from google
-@include lesli-css-fonts-standard;
+// Include your custom fonts for titles and body
+@include lesli-css-fonts-standard("Domine", "OpenSans");
 
 
 // Work with the color pallete
@@ -66,27 +74,24 @@ lesli-css
 	color: lesli-css-color(blue, 500); // default
 	color: lesli-css-color(blue, 700);
 	color: lesli-css-color(blue, 900);
-
 }
 
-// Standard font configuration
-@include lesli-css-fonts-standard()
-
-// Standarize html elements to Lesli standards
-@include lesli-css-normalize()
 
 // Breakpoints
 @include lesli-css-breakpoint("small") {
 	// your code
 }
 
+
 @include lesli-css-breakpoint-only("mobile") {
 	// styles for min-width: 320px and max-width: 768px only
 }
 
+
 @include lesli-css-breakpoint-custom(100px) {
 	// styles start at 100px
 }
+
 
 @include lesli-css-breakpoint-custom(200px, 300px) {
 	// styles for min-width: 200px and max-width: 300px only
