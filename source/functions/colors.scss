@@ -211,7 +211,7 @@ Building a better future, one line of code at a time.
 
         @each $variant, $color in $pallete {
 
-            .#{$classs}-#{$pallete_name}-#{$variant} {
+            .#{$classs}-#{""+$pallete_name+""}-#{$variant} {
 
                 //background-color: lesli-css-color($pallete_name, $variant);
                 #{$property}: lesli-css-color($pallete_name, $variant);
