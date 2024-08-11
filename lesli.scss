@@ -31,7 +31,7 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@import "./source/mixins/fonts";
+
 
 
 // · include components 
@@ -45,6 +45,7 @@ Building a better future, one line of code at a time.
 
 
 // · include mixins 
+@import "./source/mixins/fonts";
 @import "./source/mixins/breakpoint";
 @import "./source/mixins/scrollbar";
 @import "./source/mixins/flex";

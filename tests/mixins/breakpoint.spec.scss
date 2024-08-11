@@ -46,55 +46,6 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-builder("small", "small") {
-                    .div {
-                        color: red;
-                    }
-                }
-            }
-
-            @include expect {
-                @media only screen and (min-width: 320px) and (max-width: 520px) {
-                    .div {
-                        color: red;
-                    }
-                }
-            }
-
-        }
-
-    }
-
-
-    @include it('should create a breakpoint for small as min-width') {
-
-        @include assert {
-
-            @include output {
-                @include lesli-css-breakpoint-builder("small") {
-                    .div {
-                        color: red;
-                    }
-                }
-            }
-
-            @include expect {
-                @media only screen and (min-width: 320px) {
-                    .div {
-                        color: red;
-                    }
-                }
-            }
-
-        }
-
-    }
-
-    @include it('should create a breakpoint for small size') {
-
-        @include assert {
-
-            @include output {
                 @include lesli-css-breakpoint-small {
                     .div {
                         color: red;
@@ -113,6 +64,7 @@ Building a better future, one line of code at a time.
         }
 
     }
+
 
     @include it('should create a breakpoint for mobile size') {
 
@@ -138,7 +90,7 @@ Building a better future, one line of code at a time.
 
     }
 
-    @include it('should create a breakpoint above tablet size') {
+    @include it('should create a breakpoint for tablet size') {
 
         @include assert {
 
@@ -162,7 +114,7 @@ Building a better future, one line of code at a time.
 
     }
 
-    @include it('should create a breakpoint above desktop size') {
+    @include it('should create a breakpoint for desktop size') {
 
         @include assert {
 
@@ -425,5 +377,4 @@ Building a better future, one line of code at a time.
         }
 
     }
-
 }

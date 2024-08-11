@@ -1,7 +1,7 @@
 /*
 Lesli
 
-Copyright (c) 2022, Lesli Technologies, S. A.
+Copyright (c) 2024, Lesli Technologies, S. A.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -14,109 +14,140 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
+along with this program. If not, see http://www.gnu.org/licenses/.
 
 LesliCSS - SCSS Utilities for websites, apps and web applications
 
-Powered by https://www.lesli.tech
+Made with ♥ by LesliTech
 Building a better future, one line of code at a time.
 
-@contact  <hello@lesli.tech>
-@website  <https://lesli.tech>
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
 @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
 
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
 */
 
 
+
+// · Import default breakpoint sizes
 @import "../settings/variables.scss";
 
 
+// · 
 @mixin lesli-css-breakpoint-small() {
     @include lesli-css-breakpoint-builder($max:small) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-mobile() {
     @include lesli-css-breakpoint-builder($max:mobile) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-tablet() {
     @include lesli-css-breakpoint-builder($min:tablet) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-desktop() {
     @include lesli-css-breakpoint-builder($min:desktop) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-widescreen() {
     @include lesli-css-breakpoint-builder($min:widescreen) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-fullhd() {
     @include lesli-css-breakpoint-builder($min:fullhd) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-until-tablet() {
     @include lesli-css-breakpoint-builder($max:tablet) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-until-desktop() {
     @include lesli-css-breakpoint-builder($max:desktop) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-until-widescreen() {
     @include lesli-css-breakpoint-builder($max:widescreen) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-until-widescreen() {
     @include lesli-css-breakpoint-builder($max:widescreen) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-only-mobile() {
     @include lesli-css-breakpoint-builder($min:mobile, $max:mobile) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-only-tablet() {
     @include lesli-css-breakpoint-builder($min:tablet, $max:tablet) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-only-desktop() {
     @include lesli-css-breakpoint-builder($min:desktop, $max:desktop) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-only-widescreen() {
     @include lesli-css-breakpoint-builder($min:widescreen, $max:widescreen) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint($min, $max:false) {
     @include lesli-css-breakpoint-builder($min, $max) {
         @content;
@@ -128,40 +159,19 @@ Building a better future, one line of code at a time.
     $min-width: false;
     $max-width: false;
 
+    // Search for a default value for the min width from the requested named breakpoint
     @if map-has-key($breakpoints, $min) {
-
-        // Prints a media query based on the value
         $min-width: map-get(map-get($breakpoints, $min), min-width);
-
     } 
 
+    // Search for a default value for the max width from the requested named breakpoint
     @if map-has-key($breakpoints, $max) {
-
-        // Prints a media query based on the value
         $max-width: map-get(map-get($breakpoints, $max), max-width);
-
     } 
 
-    @if not $min-width {
-        @if $min {    
-            @if is-number($min) {
-                @if index("em" "px" "rem", unit($min)) != null {
-                    $min-width: $min;
-                }
-            }
-        }
-    }
 
-    @if not $max-width {
-        @if $max {
-            @if is-number($max) {
-                @if index("em" "px" "rem", unit($max)) != null {
-                    $max-width: $max;
-                }
-            }
-        }
-    }
-
+    // print media queries 
+    
     @if $min-width and not $max-width {
         @media only screen and (min-width: $min-width) { 
             @content;
@@ -179,6 +189,5 @@ Building a better future, one line of code at a time.
             @content;
         }
     }
-
 }
 

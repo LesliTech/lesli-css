@@ -33,61 +33,79 @@ Building a better future, one line of code at a time.
 
 // · Global Bulma variables
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+$primary: #0D52Bf !default;
 
-$navbar-background-color: transparent;
-// $radius: 8px;
-// $radius-small: 3px;
-// $radius-large: 4px;
-// $control-radius: $radius;
-// $control-radius-small: $radius-small;
-// $table-cell-padding: 1rem;
-// $input-radius: 4px;
+
+
+// Override global Sass variables from the /utilities folder
+@use "bulma/sass/utilities" with (
+    $primary: $primary,
+    $link: $primary,
+    $info: $primary
+);
+
 
 
 // · Import Bulma framework
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-@import "bulma/sass/base/all";
-@import "bulma/sass/utilities/all";
-@import "bulma/sass/helpers/all";
+@forward "bulma/sass/base";
 
-@import "bulma/sass/form/all";
 
-@import "bulma/sass/components/card";
-@import "bulma/sass/components/tabs";
-@import "bulma/sass/components/media";
-@import "bulma/sass/components/level";
-@import "bulma/sass/components/navbar";
-@import "bulma/sass/components/dropdown";
-//@import "bulma/sass/components/messages";
-@import "bulma/sass/components/pagination";
+// · Bulma layout components
+@forward "bulma/sass/layout/container";
+@forward "bulma/sass/layout/hero";
 
-@import "bulma/sass/elements/notification";
-@import "bulma/sass/elements/container";
-@import "bulma/sass/elements/button";
-@import "bulma/sass/elements/image";
-@import "bulma/sass/elements/title";
-@import "bulma/sass/elements/table";
-@import "bulma/sass/elements/icon";
-@import "bulma/sass/elements/tag";
 
-@import "bulma/sass/grid/columns";
+// · Bulma elements
+@forward "bulma/sass/elements/table";
+@forward "bulma/sass/elements/button";
 
-@import "bulma/sass/helpers/flexbox";
 
-@import "bulma/sass/layout/hero";
+// · Bulma components
+@forward "bulma/sass/components/navbar";
+
+
+// · Bulma form
+@forward "bulma/sass/form/tools";
+@forward "bulma/sass/form/select";
+
+
+// · Bulma columns & grid
+@forward "bulma/sass/grid/columns";
+
+
+// · Bulma utilities
+@forward "bulma/sass/helpers";
+
+
+
+// Import the themes so that all CSS variables have a value
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@use "bulma/sass/themes/light";
+@use "bulma/sass/themes/setup";
+
+
+
+// Initialize Bulma only with the light theme
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+:root {
+    @include light.light-theme;
+    @include setup.setup-theme;
+}
+
 
 
 // · Bulma elements/components overrides
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 
-.dropdown-item {
-    display: flex;
-    span.icon {
-        margin-right: 8px;
-    }
-}
+// .dropdown-item {
+//     display: flex;
+//     span.icon {
+//         margin-right: 8px;
+//     }
+// }
 
-fieldset.block {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+// fieldset.block {
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+// }

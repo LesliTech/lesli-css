@@ -4,7 +4,7 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "2.1s.0",
+    "version": "2.1.0",
     "keywords": [
         "css",
         "scss",
@@ -13,6 +13,7 @@
     "files":[
         "bulma",
         "source",
+        "_index.scss",
         "lesli.scss",
         "lesli.txt",
         "license",
@@ -37,7 +38,10 @@
         "glob": "11.0.0",
         "vitest": "2.0.5",
         "sass-true": "8.0.0",
-        "@vitest/coverage-v8":"2.0.5"
+        "@vitest/coverage-v8":"2.0.5",
+
+        "rollup": "4.12.0",
+        "rollup-plugin-scss":"4.0.0"
     },
     "scripts": {
         "test": "vitest run",
