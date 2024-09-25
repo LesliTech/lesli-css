@@ -63,6 +63,7 @@ $primary: #0D52Bf !default;
 
 
 // · Bulma components
+@forward "bulma/sass/components/tabs";
 @forward "bulma/sass/components/navbar";
 @forward "bulma/sass/components/dropdown";
 
