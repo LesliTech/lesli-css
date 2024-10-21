@@ -57,6 +57,7 @@ $primary: #0D52Bf !default;
 
 
 // · Bulma elements
+@forward "bulma/sass/elements/box";
 @forward "bulma/sass/elements/icon";
 @forward "bulma/sass/elements/table";
 @forward "bulma/sass/elements/button";
@@ -66,6 +67,7 @@ $primary: #0D52Bf !default;
 @forward "bulma/sass/components/tabs";
 @forward "bulma/sass/components/navbar";
 @forward "bulma/sass/components/dropdown";
+@forward "bulma/sass/components/pagination";
 
 
 // · Bulma form
@@ -78,6 +80,10 @@ $primary: #0D52Bf !default;
 
 // · Bulma columns & grid
 @forward "bulma/sass/grid/columns";
+
+
+// · Layout
+@forward "bulma/sass/layout/level";
 
 
 // · Bulma utilities
