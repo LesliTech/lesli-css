@@ -1,4 +1,4 @@
-/**
+/*
 Lesli
 
 Copyright (c) 2022, Lesli Technologies, S. A.
@@ -28,65 +28,30 @@ Building a better future, one line of code at a time.
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
 */
-
-
-@import "../helpers/units.scss";
-
-
-// · 
-@mixin lesli-css-columns($columns: 0, $margin: 0) {
+@mixin lesli-css-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-    
-    // basic styles for grid container 
-    width: 100%;
-    font-size: 0;
-    margin: 0 auto;
-
-
-    // Estilos a pseudo elementos
-    &:before,
-    &:after {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
+    &.space-around {
+        justify-content: space-around;
     }
 
-
-    // · Manual columns definition
-    @if $columns != 0 {
-
-        //column-width: 250px;
-        //column-count: $columns;
-
-        // The column-gap property specifies the gap between the columns.
-        column-gap: $margin;
-
-        // Specify the minimum width for each column, and the maximum number of columns:
-        columns: $columns;
+    &.align-bottom {
+        align-items: flex-end;
     }
 
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
 
-    // Filas del grid
-    & > * {
-        font-size: initial;
-        white-space: initial;
-        display: inline-block;
-        margin-bottom: $margin;
-    }
-
-
-    $breakpoint: 320px;
-
-    
-    // inicializa breakpoints
-    @media (max-width: (strip-unit($breakpoint) * 1px)) {
-
-        // Clase css para breakpoints
-        & > * {
-            display: block;
-            width: initial;
+        &:first-child {
+            flex-grow: 1;
         }
 
+        a {
+            display: block;
+        }
     }
-
 }

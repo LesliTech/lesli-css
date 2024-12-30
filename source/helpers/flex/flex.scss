@@ -1,4 +1,4 @@
-/*
+/**
 Lesli
 
 Copyright (c) 2020, Lesli Technologies, S. A.
@@ -30,30 +30,33 @@ Building a better future, one line of code at a time.
 */
 
 
+// · Flexbox container 
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@mixin lesli-css-flex($direction:row, $align: center, $justify: space-between) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
 
-// · 
-@mixin lesli-css-fonts-standard($title, $body) {
 
-    $baseFonts: "Helvetica Neue", "Helvetica", "Arial", "sans-serif", sans-serif;
+// · Center with flexbox 
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@mixin lesli-css-flex-center($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    $bodyFonts: #{$body}, #{$baseFonts};
-
-    $titleFonts: #{$title}, #{$bodyFonts};
-
-    // · title font
-    h1, h2, h3 {
-        font-family: $titleFonts
+    @if ($direction == 'vertical') {
+        flex-direction: column;
+        height: 100%;
     }
 
-    // · title font
-    h4, h5, h6 {
-        font-family: $bodyFonts
-    }
+}
 
-    // · body font
-    body,
-    html {
-        font-family: $bodyFonts
-    }
 
+@mixin lesli-css-flex-center-vertical($height:auto) {
+    @include lesli-css-flex-center('vertical');
+    flex-grow: 1;
+    height: $height;
 }

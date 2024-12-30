@@ -32,7 +32,7 @@ Building a better future, one line of code at a time.
 
 
 // · Import default breakpoint sizes
-@import "../settings/variables.scss";
+@import "../../settings/variables.scss";
 
 
 // · 
@@ -108,8 +108,8 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@mixin lesli-css-breakpoint-until-widescreen() {
-    @include lesli-css-breakpoint-builder($max:widescreen) {
+@mixin lesli-css-breakpoint-until-fullhd() {
+    @include lesli-css-breakpoint-builder($max:fullhd) {
         @content;
     }
 }
@@ -148,12 +148,22 @@ Building a better future, one line of code at a time.
 
 
 // · 
+@mixin lesli-css-breakpoint-only-fullhd() {
+    @include lesli-css-breakpoint-builder($min:fullhd, $max:fullhd) {
+        @content;
+    }
+}
+
+
+// · 
 @mixin lesli-css-breakpoint($min, $max:false) {
     @include lesli-css-breakpoint-builder($min, $max) {
         @content;
     }
 }
 
+
+// · 
 @mixin lesli-css-breakpoint-builder($min:false, $max:false) {
 
     $min-width: false;
@@ -169,23 +179,32 @@ Building a better future, one line of code at a time.
         $max-width: map-get(map-get($breakpoints, $max), max-width);
     } 
 
+    @if $min-width {
+        $min: $min-width;
+    }
 
-    // print media queries 
-    
-    @if $min-width and not $max-width {
-        @media only screen and (min-width: $min-width) { 
+    @if $max-width {
+        $max: $max-width;
+    }
+
+
+    // 
+    @if $min and not $max {
+        @media only screen and (min-width: $min) { 
             @content;
         }
     }
 
-    @if not $min-width and $max-width {
-        @media only screen and (max-width: $max-width) { 
+    // 
+    @if not $min and $max {
+        @media only screen and (max-width: $max) { 
             @content;
         }
     }
 
-    @if $min-width and $max-width {
-        @media only screen and (min-width: $min-width) and (max-width: $max-width) { 
+    // 
+    @if $min and $max {
+        @media only screen and (min-width: $min) and (max-width: $max) { 
             @content;
         }
     }

@@ -1,8 +1,7 @@
 /*
-
 Lesli
 
-Copyright (c) 2020, Lesli Technologies, S. A.
+Copyright (c) 2024, Lesli Technologies, S. A.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,26 +14,25 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
+along with this program. If not, see http://www.gnu.org/licenses/.
 
-LesliCSS - SCSS Utilities for websites, apps and web applications
+Lesli - SCSS Utilities for websites, apps and web applications
 
-Powered by https://www.lesli.tech
+Made with ♥ by LesliTech
 Building a better future, one line of code at a time.
 
-@contact  <hello@lesli.tech>
-@website  <https://lesli.tech>
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
 @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
 
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
-
 */
 
 
 // · 
 @import "true";
-@import "../../source/mixins/breakpoint.scss";
+@import "./breakpoint.scss";
 
 
 // · 
@@ -60,9 +58,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
 
@@ -85,9 +81,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint for tablet size') {
@@ -109,9 +103,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint for desktop size') {
@@ -133,9 +125,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint above widescreen size') {
@@ -157,9 +147,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint above fullhd size') {
@@ -181,9 +169,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint until tablet ') {
@@ -205,9 +191,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint until desktop ') {
@@ -229,9 +213,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint until widescreen ') {
@@ -253,9 +235,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint only for tablet ') {
@@ -277,9 +257,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint only for desktop ') {
@@ -301,9 +279,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint only for widescreen ') {
@@ -325,9 +301,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint with 10px width min') {
@@ -349,9 +323,7 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 
     @include it('should create a breakpoint with 10px width min and 666px width max') {
@@ -373,8 +345,6 @@ Building a better future, one line of code at a time.
                     }
                 }
             }
-
         }
-
     }
 }

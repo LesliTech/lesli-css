@@ -4,7 +4,7 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "keywords": [
         "css",
         "scss",
@@ -31,14 +31,14 @@
         "./bulma": "./source/vendor/bulma.scss"
     },
     "dependencies": {
-        "sass": "1.77.8",
-        "bulma": "1.0.2"
+        "sass": "1.83.0",
+        "bulma": "1.0.3"
     },
     "devDependencies": {
         "glob": "11.0.0",
-        "vitest": "2.0.5",
-        "sass-true": "8.0.0",
-        "@vitest/coverage-v8":"2.0.5"
+        "vitest": "2.1.8",
+        "sass-true": "8.1.0",
+        "@vitest/coverage-v8":"2.1.8"
     },
     "scripts": {
         "test": "vitest run",

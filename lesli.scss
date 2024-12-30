@@ -1,7 +1,7 @@
 /*
 Lesli
 
-Copyright (c) 2022, Lesli Technologies, S. A.
+Copyright (c) 2024, Lesli Technologies, S. A.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -14,38 +14,43 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
+along with this program. If not, see http://www.gnu.org/licenses/.
 
-LesliCSS - SCSS Utilities for websites, apps and web applications
+Lesli - SCSS Utilities for websites, apps and web applications
 
-Powered by https://www.lesli.tech
+Made with ♥ by LesliTech
 Building a better future, one line of code at a time.
 
-@contact  <hello@lesli.tech>
-@website  <https://lesli.tech>
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
 @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
 
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
 */
 
 
-// · 
-
-
-
 // · include components 
-@import "./source/components/columns.scss";
-@import "./source/components/container.scss";
 @import "./source/components/navigation.scss";
+
+
+// · include elements 
+@import "./source/elements/blockquote/blockquote.scss";
+@import "./source/elements/columns/columns.scss";
 
 
 // · include functions 
 @import "./source/functions/colors";
 
 
-// · include mixins 
-@import "./source/mixins/fonts";
-@import "./source/mixins/breakpoint";
-@import "./source/mixins/scrollbar";
-@import "./source/mixins/flex";
+// · include helpers 
+@import "./source/helpers/breakpoint/breakpoint.scss";
+@import "./source/helpers/flex/flex.scss";
+@import "./source/helpers/fonts/fonts.scss";
+@import "./source/helpers/units/units.scss";
+
+
+// · include layout  
+@import "./source/layout/container/container.scss";
+@import "./source/layout/normalize/normalize.scss";
+@import "./source/layout/scrollbar/scrollbar.scss";

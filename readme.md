@@ -29,28 +29,30 @@ npm install lesli-css --save
 --------
 ```text
 lesli-css  
-├── source/  
-│    ├── components/  
-│    │    ├── blockquote.scss  
-│    │    ├── columns.scss  
-│    │    ├── container.scss  
-│    │    └── navigation.scss  
-│    ├── functions/  
-│    │    └── colors.scss  
-│    ├── helpers/  
-│    │    └── units.scss  
-│    ├── mixins/  
-│    │    ├── breakpoint.scss  
-│    │    ├── flex.scss  
-│    │    ├── fonts.scss  
-│    │    ├── normalize.scss  
-│    │    └── scrollbar.scss  
-│    ├── settings/  
-│    │    └── variables.scss  
-│    └── vendor/  
-│         └── bulma.scss  
-├── tests  
-└── vendor  
+└── source/  
+	├── elements/  
+	│    ├── columns  
+	│    └── blockquote  
+	├── components/  
+	│    ├── boxes  
+	│    └── navigation  
+	├── layout/  
+	│    ├── hero  
+	│    ├── container  
+	│	 ├── normalize   
+	│    └── scrollbar  
+	├── functions/  
+	│    └── color  
+	├── helpers/  
+	│    ├── flex  
+	│    ├── fonts  
+	│	 ├── units  
+	│    ├── spacing  
+	│    └── breakpoint  
+	├── settings/  
+	│    └── variables  
+	└── vendor/  
+		└── bulma  
 ```
 
 

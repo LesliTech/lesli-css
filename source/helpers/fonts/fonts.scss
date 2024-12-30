@@ -30,24 +30,30 @@ Building a better future, one line of code at a time.
 */
 
 
-// · 
-import { describe, it } from "vitest";
-
 
 // · 
-const path = require("path")
-const glob = require("glob")
-const sassTrue = require("sass-true")
+@mixin lesli-css-fonts-standard($title, $body) {
 
+    $baseFonts: "Helvetica Neue", "Helvetica", "Arial", "sans-serif", sans-serif;
 
-// · 
-describe("RUNNING SASS TESTS", () => {
+    $bodyFonts: #{$body}, #{$baseFonts};
 
-    // Find all of the Sass files that end in `*.spec.scss` in any directory of this project.
-    // I use path.resolve because True requires absolute paths to compile test files.
-    const sassTestFiles = glob.sync(path.resolve(process.cwd(), "source/**/**/*.spec.scss"))
+    $titleFonts: #{$title}, #{$bodyFonts};
 
-    // Run True on every file found with the describe and it methods provided
-    sassTestFiles.forEach(file => sassTrue.runSass({ describe, it }, file))
+    // · title font
+    h1, h2, h3 {
+        font-family: $titleFonts
+    }
 
-})
+    // · title font
+    h4, h5, h6 {
+        font-family: $bodyFonts
+    }
+
+    // · body font
+    body,
+    html {
+        font-family: $bodyFonts
+    }
+
+}

@@ -1,0 +1,77 @@
+/*
+Lesli
+
+Copyright (c) 2024, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli - SCSS Utilities for websites, apps and web applications
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+
+
+// · 
+@import "../settings/variables.scss";
+@import "../helpers/breakpoint/breakpoint.scss";
+
+
+// · 
+$container-offset: (2 * $gap) !default;
+$container-max-width: $fullhd !default;
+
+
+// · 
+@mixin lesli-css-container($fluid:false) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    
+    @include lesli-css-breakpoint("fullhd") {
+        max-width: min($fullhd, $container-max-width) - $container-offset;
+    }
+/*
+    @include desktop {
+        max-width: $desktop - $container-offset;
+    }
+    @include until-widescreen {
+        &.is-widescreen:not(.is-max-desktop) {
+            max-width: min($widescreen, $container-max-width) - $container-offset;
+        }
+    }
+    @include until-fullhd {
+        &.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
+            max-width: min($fullhd, $container-max-width) - $container-offset;
+        }
+    }
+    @include widescreen {
+        &:not(.is-max-desktop) {
+            max-width: min($widescreen, $container-max-width) - $container-offset;
+        }
+    }
+    @include fullhd {
+        &:not(.is-max-desktop):not(.is-max-widescreen) {
+            max-width: min($fullhd, $container-max-width) - $container-offset;
+        }
+    }
+*/
+}
