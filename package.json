@@ -42,6 +42,7 @@
     },
     "scripts": {
         "test": "vitest run",
+        "test2": "sass ./lesli.scss",
         "test:report": "vitest run --reporter=verbose",
         "test:coverage": "vitest run --coverage"
     }
