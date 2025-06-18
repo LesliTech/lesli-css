@@ -36,12 +36,14 @@ Building a better future, one line of code at a time.
 $primary: #0D52Bf !default;
 
 
+
 // Override global Sass variables from the /utilities folder
 @use "bulma/sass/utilities" with (
     $primary: $primary,
     $link: $primary,
     $info: $primary
 );
+
 
 
 // · Import Bulma framework
@@ -51,7 +53,6 @@ $primary: #0D52Bf !default;
 
 // · Bulma layout components
 @forward "bulma/sass/layout/container";
-@forward "bulma/sass/layout/section";
 @forward "bulma/sass/layout/hero";
 
 
@@ -60,34 +61,20 @@ $primary: #0D52Bf !default;
 @forward "bulma/sass/elements/icon";
 @forward "bulma/sass/elements/table";
 @forward "bulma/sass/elements/button";
-@forward "bulma/sass/elements/notification.scss";
 
 
 // · Bulma components
-@forward "bulma/sass/components/tabs";
 @forward "bulma/sass/components/navbar";
-@forward "bulma/sass/components/dropdown";
-@forward "bulma/sass/components/pagination";
-
-
-// · Bulma form
-@forward "bulma/sass/form/shared";
-@forward "bulma/sass/form/input-textarea";
-@forward "bulma/sass/form/select";
-@forward "bulma/sass/form/file";
-@forward "bulma/sass/form/tools";
 
 
 // · Bulma columns & grid
-@forward "bulma/sass/grid/columns";
-
-
-// · Layout
-@forward "bulma/sass/layout/level";
+//@forward "bulma/sass/grid/columns";
 
 
 // · Bulma utilities
-@forward "bulma/sass/helpers";
+@forward "bulma/sass/helpers/typography";
+@forward "bulma/sass/helpers/spacing";
+@forward "bulma/sass/helpers/flexbox";
 
 
 // Import the themes so that all CSS variables have a value
@@ -101,11 +88,4 @@ $primary: #0D52Bf !default;
 :root {
     @include light.light-theme;
     @include setup.setup-theme;
-}
-
-
-// · Bulma elements/components overrides
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-.box {
-    --bulma-box-radius: 5px;
 }
