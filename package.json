@@ -4,7 +4,7 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "keywords": [
         "css",
         "scss",
@@ -13,6 +13,7 @@
     "files":[
         "sass",
         "_index.scss",
+        "lesli.scss",
         "lesli.txt",
         "license",
         "readme"
@@ -24,19 +25,15 @@
     "bugs": {
         "url": "https://github.com/LesliTech/lesli-css/issues"
     },
-    "exports": {
-        ".": "./lesli.scss",
-        "./bulma": "./sass/vendor/bulma.scss"
-    },
     "dependencies": {
-        "sass": "1.83.0",
-        "bulma": "1.0.3"
+        "sass": "1.89.2",
+        "bulma": "1.0.4"
     },
     "devDependencies": {
-        "glob": "11.0.0",
-        "vitest": "2.1.8",
-        "sass-true": "8.1.0",
-        "@vitest/coverage-v8":"2.1.8"
+        "glob": "11.0.3",
+        "vitest": "3.2.4",
+        "sass-true": "9.0.0",
+        "@vitest/coverage-v8":"3.2.4"
     },
     "scripts": {
         "test": "vitest run",

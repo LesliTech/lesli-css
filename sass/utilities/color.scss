@@ -34,7 +34,7 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@function lesli-color-palette() {
+@function lesli-color-palette($pallete: false) {
 
     $lesli-css-colors: (
 
@@ -181,7 +181,14 @@ Building a better future, one line of code at a time.
 
 // · retorna una variante de una paleta de colores
 @function lesli-color($pallete, $variant: 500) {
-    @return lesli-color-palette($pallete, $variant);
+
+    // obtiene todos los colores disponibles
+    $lesli-colors: lesli-color-palette($pallete);
+
+    // ovtiene la variante del color solicitado
+    $color: map.get($lesli-colors, $variant);
+
+    @return $color;
 }
 
 
