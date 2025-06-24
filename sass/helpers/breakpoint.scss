@@ -29,10 +29,15 @@ Building a better future, one line of code at a time.
 // · 
 */
 
-
+@use "sass:map";
 
 // · Import default breakpoint sizes
-@import "../../settings/variables.scss";
+@use "../../settings/variables.scss" as variables;
+
+
+@mixin lesli-css-breakpoint-mobile() {
+    
+}
 
 
 // · 
@@ -170,13 +175,13 @@ Building a better future, one line of code at a time.
     $max-width: false;
 
     // Search for a default value for the min width from the requested named breakpoint
-    @if map-has-key($breakpoints, $min) {
-        $min-width: map-get(map-get($breakpoints, $min), min-width);
+    @if map.has-key(variables.$breakpoints, $min) {
+        $min-width: map.get(map.get(variables.$breakpoints, $min), min-width);
     } 
 
     // Search for a default value for the max width from the requested named breakpoint
-    @if map-has-key($breakpoints, $max) {
-        $max-width: map-get(map-get($breakpoints, $max), max-width);
+    @if map.has-key(variables.$breakpoints, $max) {
+        $max-width: map.get(map.get(variables.$breakpoints, $max), max-width);
     } 
 
     @if $min-width {

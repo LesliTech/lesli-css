@@ -30,15 +30,30 @@ Building a better future, one line of code at a time.
 */
 
 
-// · Remove the unit of a length
-// · @param {Number} $number - Number to remove unit from
-// · @return {Number} - Unitless number
-@function strip-unit($number) {
 
-    @if type-of($number) == 'number' and not unitless($number) {
-        @return $number / ($number * 0 + 1);
+// · 
+@mixin lesli-fonts-standard($title, $body) {
+
+    $baseFonts: "Helvetica Neue", "Helvetica", "Arial", "sans-serif", sans-serif;
+
+    $bodyFonts: #{$body}, #{$baseFonts};
+
+    $titleFonts: #{$title}, #{$bodyFonts};
+
+    // · title font
+    h1, h2, h3 {
+        font-family: $titleFonts
     }
 
-    @return $number;
+    // · title font
+    h4, h5, h6 {
+        font-family: $bodyFonts
+    }
+
+    // · body font
+    body,
+    html {
+        font-family: $bodyFonts
+    }
 
 }

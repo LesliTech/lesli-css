@@ -1,11 +1,11 @@
 <div align="center">
-	<img alt="LesliCSS logo" width="200px" src="./docs/lesli-css-logo.svg" />
+	<img alt="LesliCSS logo" width="200px" src="./docs/css-logo.svg" />
 	<h3>SCSS Utilities for websites and web applications</h3>
 </div>
 
 <hr/>
 
-<p align="center" class="is-flex is-justify-content-center">
+<div align="center" class="is-flex is-justify-content-center">
     <a target="blank" href="https://www.npmjs.com/package/lesli-css">
         <img height="22" alt="NPM Version" src="https://img.shields.io/npm/v/lesli-css" />
     </a>
@@ -15,12 +15,15 @@
 	<a href="https://codecov.io/github/LesliTech/lesli-css"> 
         <img height="22" src="https://sonarcloud.io/api/project_badges/measure?project=LesliTech_lesli-css&metric=sqale_rating"/> 
     </a>
-</p>
+</div>
 
+<hr/>
+<br />
+<br />
 
 #### Installation
 --------
-```console
+```bash
 npm install lesli-css --save
 ```
 
@@ -29,30 +32,28 @@ npm install lesli-css --save
 --------
 ```text
 lesli-css  
-└── source/  
-	├── elements/  
-	│    ├── columns  
-	│    └── blockquote  
+└── sass/  
 	├── components/  
-	│    ├── boxes  
 	│    └── navigation  
+	├── elements/  
+	│    ├── blockquote  
+	│    └── columns  
+	├── helpers/  
+	│    ├── animation  
+	│    ├── breakpoint  
+	│    ├── flex  
+	│	 └── fonts  
 	├── layout/  
-	│    ├── hero  
 	│    ├── container  
 	│	 ├── normalize   
 	│    └── scrollbar  
-	├── functions/  
-	│    └── color  
-	├── helpers/  
-	│    ├── flex  
-	│    ├── fonts  
-	│	 ├── units  
-	│    ├── spacing  
-	│    └── breakpoint  
-	├── settings/  
+	├── utilities/  
+	│    ├── color  
 	│    └── variables  
 	└── vendor/  
-		└── bulma  
+	     ├── bulma  
+	     ├── bulma-start  
+		 └── normalize 
 ```
 
 
@@ -61,7 +62,7 @@ lesli-css
 ```scss
 
 // Import the library
-@import "lesli-css";
+@use "lesli-css";
 
 
 // Include your custom fonts for titles and body

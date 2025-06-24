@@ -31,7 +31,7 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@mixin lesli-css-scrollbar($style:normal, $color:#ffffff, $background:#ffffff) {
+@mixin lesli-scrollbar($style:normal, $color:#ffffff, $background:#ffffff) {
     scrollbar-width: thin;
     scrollbar-color: $color $background;
 

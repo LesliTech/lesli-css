@@ -4,17 +4,15 @@
     "homepage": "https://lesli.tech",
     "author": "LesliTech <hello@lesli.tech>",
     "license": "GPLv3",
-    "version": "2.2.0",
+    "version": "3.0.0",
     "keywords": [
         "css",
         "scss",
         "sass"
     ],
     "files":[
-        "bulma",
-        "source",
+        "sass",
         "_index.scss",
-        "lesli.scss",
         "lesli.txt",
         "license",
         "readme"
@@ -28,7 +26,7 @@
     },
     "exports": {
         ".": "./lesli.scss",
-        "./bulma": "./source/vendor/bulma.scss"
+        "./bulma": "./sass/vendor/bulma.scss"
     },
     "dependencies": {
         "sass": "1.83.0",

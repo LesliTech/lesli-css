@@ -31,23 +31,23 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@import "../../settings/variables.scss";
-@import "../../helpers/breakpoint/breakpoint.scss";
+@use "../../settings/variables.scss";
+@use "../../helpers/breakpoint/breakpoint.scss";
 
 
 // · 
-$container-offset: (2 * $gap) !default;
-$container-max-width: $fullhd !default;
+$container-offset: (2 * variables.$gap) !default;
+$container-max-width: variables.$fullhd !default;
 
 
 // · 
-@mixin lesli-css-container($fluid:false) {
+@mixin lesli-container($fluid:false) {
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
     
-    @include lesli-css-breakpoint("fullhd") {
-        max-width: min($fullhd, $container-max-width) - $container-offset;
+    @include lesli-breakpoint("fullhd") {
+        max-width: min(variables.$fullhd, $container-max-width) - $container-offset;
     }
 /*
     @include desktop {

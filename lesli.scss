@@ -31,29 +31,29 @@ Building a better future, one line of code at a time.
 
 
 // · include components 
-@import "./source/components/navigation/navigation.scss";
+@forward "./sass/components/navigation/navigation.scss";
 
 
 // · include elements 
-@import "./source/elements/blockquote/blockquote.scss";
-@import "./source/elements/columns/columns.scss";
+@forward "./sass/elements/blockquote/blockquote.scss";
+@forward "./sass/elements/columns/columns.scss";
 
 
 // · include functions 
-@import "./source/functions/color/colors.scss";
+@forward "./sass/functions/color/color.scss";
 
 
 // · include helpers 
-@import "./source/helpers/breakpoint/breakpoint.scss";
-@import "./source/helpers/flex/flex.scss";
-@import "./source/helpers/fonts/fonts.scss";
-@import "./source/helpers/units/units.scss";
+@forward "./sass/helpers/breakpoint/breakpoint.scss";
+@forward "./sass/helpers/flex/flex.scss";
+@forward "./sass/helpers/fonts/fonts.scss";
+@forward "./sass/helpers/units/units.scss";
 
 
 // · include layout  
-@import "./source/layout/container/container.scss";
-@import "./source/layout/normalize/normalize.scss";
-@import "./source/layout/scrollbar/scrollbar.scss";
+@forward "./sass/layout/container/container.scss";
+@forward "./sass/layout/normalize/normalize.scss";
+@forward "./sass/layout/scrollbar/scrollbar.scss";
 
 
 $lesli-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;

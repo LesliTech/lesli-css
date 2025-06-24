@@ -30,8 +30,11 @@ Building a better future, one line of code at a time.
 */
 
 
+@use "sass:map";
+
+
 // · 
-@function lesli-css-color-palette($pallete: false) {
+@function lesli-color-palette() {
 
     $lesli-css-colors: (
 
@@ -166,7 +169,7 @@ Building a better future, one line of code at a time.
     @if $pallete {
 
         // return a specific palette
-        @return map-get($lesli-css-colors, $pallete);
+        @return map.get($lesli-css-colors, $pallete);
     } @else {
 
         // return all the colors
@@ -176,34 +179,14 @@ Building a better future, one line of code at a time.
 }
 
 
-// · construye un selector de colores para una paleta especifica
-@function lesli-css-color-builder($pallete, $variant: 500, $extracolors: ()) {
-
-    // obtiene todos los colores disponibles
-    $lesli-css-colors: lesli-css-color-palette();
-
-    // incluye colores externos si fueron proporcionados
-    $lesli-css-colors: map-merge($lesli-css-colors, $extracolors);
-
-    // obtiene la paleta de colores solicitada
-    $pallete: map-get($lesli-css-colors, $pallete);
-
-    // ovtiene la variante del color solicitado
-    $color: map-get($pallete, $variant);
-
-    @return $color;
-
-}
-
-
 // · retorna una variante de una paleta de colores
-@function lesli-css-color($pallete, $variant: 500) {
-    @return lesli-css-color-builder($pallete, $variant);
+@function lesli-color($pallete, $variant: 500) {
+    @return lesli-color-palette($pallete, $variant);
 }
 
 
 // · imprime todos los colores disponibles
-@mixin lesli-css-color-print($property: "color", $classs: "lesli-css-color") {
+@mixin lesli-color-print($property: "color", $classs: "lesli-css-color") {
 
     $lesli-css-color-pallete: lesli-css-color-palette();
 

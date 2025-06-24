@@ -1,4 +1,4 @@
-/*
+/**
 Lesli
 
 Copyright (c) 2022, Lesli Technologies, S. A.
@@ -28,30 +28,33 @@ Building a better future, one line of code at a time.
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
 */
-@mixin lesli-css-navigation {
+
+
+// · 
+@use "../../helpers/units/units.scss";
+@use "../../helpers/flex/flex.scss";
+
+
+// · 
+@mixin lesli-columns($column-width: false, $gap:false) {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    &.space-around {
-        justify-content: space-around;
-    }
-
-    &.align-bottom {
-        align-items: flex-end;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-
-        &:first-child {
-            flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around; // Distribute rows vertically when there’s extra space
+  
+    & > * {
+        
+        @if $column-width {
+            flex-basis: $column-width;
+            max-width: $column-width;
+        } 
+        
+        @if not $column-width {
+            flex: 1;
         }
-
-        a {
-            display: block;
+        
+        @if $gap {
+            margin: 0 $gap ($gap * 2);
         }
     }
 }

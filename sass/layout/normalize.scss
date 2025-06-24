@@ -35,11 +35,11 @@ Building a better future, one line of code at a time.
 
 
 // · include vendors
-@import "../../vendor/normalize.scss";
+@use "../../vendor/normalize.scss";
 
 
 // · 
-@mixin lesli-css-normalize($vendors: true) {
+@mixin lesli-normalize($vendors: true) {
 
 
     // · Normalize
