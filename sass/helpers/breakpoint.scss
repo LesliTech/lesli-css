@@ -86,6 +86,12 @@ Building a better future, one line of code at a time.
 }
 
 
+@mixin lesli-breakpoint-from-tablet() {
+    @include lesli-breakpoint-builder($min:tablet) {
+        @content;
+    }
+}
+
 // · 
 @mixin lesli-breakpoint-until-tablet() {
     @include lesli-breakpoint-builder($max:tablet) {
