@@ -36,14 +36,12 @@ Building a better future, one line of code at a time.
 $primary: #0D52Bf !default;
 
 
-
 // Override global Sass variables from the /utilities folder
 @use "bulma/sass/utilities" with (
     $primary: $primary,
     $link: $primary,
     $info: $primary
 );
-
 
 
 // · Import Bulma framework
