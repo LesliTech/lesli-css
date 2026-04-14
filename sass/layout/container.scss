@@ -32,7 +32,7 @@ Building a better future, one line of code at a time.
 
 // · 
 @use "../variables";
-@use "../helpers/breakpoint";
+@use "../helpers/breakpoint" as breakpoint;
 
 
 // · 
@@ -46,7 +46,7 @@ $container-max-width: variables.$fullhd !default;
     margin: 0 auto;
     padding: 1rem;
     
-    @include lesli-breakpoint("fullhd") {
+    @include breakpoint.lesli-breakpoint("fullhd") {
         max-width: min(variables.$fullhd, $container-max-width) - $container-offset;
     }
 /*
