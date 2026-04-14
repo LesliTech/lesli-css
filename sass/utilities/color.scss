@@ -35,10 +35,10 @@ Building a better future, one line of code at a time.
 @use "sass:color";
 
 
-/// Lightens a color by a given percentage.
-/// @param {Color} $color - The color to lighten.
-/// @param {Number} $percentage - The percentage to lighten the color by (0-100).
-/// @return {Color} The lightened color.
+// Lightens a color by a given percentage.
+// @param {Color} $color - The color to lighten.
+// @param {Number} $percentage - The percentage to lighten the color by (0-100).
+// @return {Color} The lightened color.
 @function lesli-color-lighten($color, $percentage) {
     @if $percentage < 0 or $percentage > 100 {
         @error "$percentage must be between 0 and 100 for lighten().";
@@ -46,10 +46,10 @@ Building a better future, one line of code at a time.
     @return color.adjust($color, $lightness: $percentage * 1%);
 }
 
-/// Darkens a color by a given percentage.
-/// @param {Color} $color - The color to darken.
-/// @param {Number} $percentage - The percentage to darken the color by (0-100).
-/// @return {Color} The darkened color.
+// Darkens a color by a given percentage.
+// @param {Color} $color - The color to darken.
+// @param {Number} $percentage - The percentage to darken the color by (0-100).
+// @return {Color} The darkened color.
 @function lesli-color-darken($color, $percentage) {
     @if $percentage < 0 or $percentage > 100 {
         @error "$percentage must be between 0 and 100 for darken().";
@@ -60,156 +60,207 @@ Building a better future, one line of code at a time.
 
 
 // · 
-@function lesli-color-palette($pallete: false) {
+@function lesli-color-palette($palette: false) {
 
     $lesli-css-colors: (
 
         // · lesli official color palette
         lesli: (
-            primary: #0d52bf,
-            dark: #001f66
+            primary: #245F93,
+            light: #E3EEF6,
+            dark: #123553
         ),
 
         // · lesli engine collections
         collection: (
-            administration: #3b6cff,
-            intelligence: #172447,
-            productivity: #ff3c00,
-            integration: #edb78e,
-            analytics: #63ccb5,
-            security: #d3d3d3,
-            finance: #ff2453,
-            sales: #764aff,
-            it: #ffd700
+            dashboard: #245F93,       // Maya Blue
+            administration: #5F6C7D,  // Obsidian Mist
+            productivity: #B2852D,    // Maize
+            finance: #2D7A68,         // Jade
+            analytics: #7562A6,       // Orchid Stone
+            intelligence: #2E6F73,    // Cenote
+            it: #5D7C4D,              // Agave
+            security: #B05A48,        // Clay
+            integration: #2E6F73      // Cenote
         ),
 
-        // · 
-        blue: (
-            100: #8cd5ff,
-            300: #64baff,
-            500: #3689e6,
-            700: #0d52bf,
-            900: #002e99 
+        // · primary palette
+        primary: (
+            50:  #F2F7FB,
+            100: #E3EEF6,
+            200: #C1D8E9,
+            300: #9EC1DC,
+            400: #6F9FC3,
+            500: #4A80AE,
+            600: #245F93,
+            700: #1F527F,
+            800: #19446A,
+            900: #123553
         ),
 
-        // · 
-        bubble: (
-            100: #fe9ab8,
-            300: #f4679d,
-            500: #de3e80,
-            700: #bc245d,
-            900: #910e38
+        // · neutral palette
+        neutral: (
+            50:  #F8FAFC,
+            100: #F1F4F8,
+            200: #E5EAF0,
+            300: #D5DDE6,
+            400: #B7C2CF,
+            500: #8F9BAA,
+            600: #667383,
+            700: #4B5663,
+            800: #34404C,
+            900: #1F2933
         ),
 
-        // · 
-        grape: (
-            100: #e4c6fa,
-            300: #cd9ef7,
-            500: #a56de2,
-            700: #7239b3,
-            900: #452981 
+        // · semantic info
+        info: (
+            50:  #F2F7FB,
+            100: #E3EEF6,
+            200: #C1D8E9,
+            300: #9EC1DC,
+            400: #6F9FC3,
+            500: #4A80AE,
+            600: #245F93,
+            700: #1F527F,
+            800: #19446A,
+            900: #123553
         ),
 
-        // · 
-        lime: (
-            100: #d1ff82,
-            300: #9bdb4d,
-            500: #68b723,
-            700: #3a9104,
-            900: #206b00 
+        // · semantic success
+        success: (
+            50:  #F1FAF7,
+            100: #DDF2EA,
+            200: #B8E2D2,
+            300: #8DD0B8,
+            400: #5FB995,
+            500: #399C77,
+            600: #267E60,
+            700: #1F694F,
+            800: #19543F,
+            900: #123F30
         ),
 
-        // · 
-        orange: (
-            100: #ffc27d,
-            300: #ffa154,
-            500: #f37329,
-            700: #cc3b02,
-            900: #a62100 
+        // · semantic warning
+        warning: (
+            50:  #FFF9ED,
+            100: #FFF1D6,
+            200: #FDE2A8,
+            300: #F8CF74,
+            400: #E9B84A,
+            500: #D29A2E,
+            600: #B67D1F,
+            700: #95651B,
+            800: #775117,
+            900: #5B3D12
         ),
 
-        // · 
-        berry: (
-            100: #ff8c82,
-            300: #ed5353,
-            500: #c6262e,
-            700: #a10705,
-            900: #7a0000 
+        // · semantic danger
+        danger: (
+            50:  #FFF3F1,
+            100: #FFE3DE,
+            200: #F8C1B8,
+            300: #EE9A8E,
+            400: #DF6D5E,
+            500: #C94E3C,
+            600: #A93B2D,
+            700: #8B3126,
+            800: #6F281F,
+            900: #541E18
         ),
 
-        // · 
-        cocoa: (
-            100: #a3907c,
-            300: #8a715e,
-            500: #715344,
-            700: #57392d,
-            900: #3d211b 
+        // · collections palettes
+        maya-blue: (
+            100: #E3EEF6,
+            600: #245F93,
+            800: #19446A
         ),
 
-        // · 
-        banana: (
-            100: #fff394,
-            300: #ffe16b,
-            500: #f9c440,
-            700: #d48e15,
-            900: #ad5f00 
+        jade: (
+            100: #E2F1EC,
+            600: #2D7A68,
+            800: #1E5648
         ),
 
-        // · 
-        slate: (
-            100: #95a3ab,
-            300: #667885,
-            500: #485a6c,
-            700: #273445,
-            900: #0e141f 
+        agave: (
+            100: #ECF2E7,
+            600: #5D7C4D,
+            800: #445A39
         ),
 
-        // · 
-        mint: (
-            100: #89ffdd,
-            300: #43d6b5,
-            500: #28bca3,
-            700: #0e9a83,
-            900: #007367
+        maize: (
+            100: #FBF2DF,
+            600: #B2852D,
+            800: #7C5B1F
         ),
 
-        // · 
-        silver: (
-            100: #fafafa,
-            300: #d4d4d4,
-            500: #abacae,
-            700: #7e8087,
-            900: #555761 
+        clay: (
+            100: #FAE9E4,
+            600: #B05A48,
+            800: #7D4033
         ),
 
-        // · 
+        orchid: (
+            100: #EEEAF7,
+            600: #7562A6,
+            800: #54467A
+        ),
+
+        cenote: (
+            100: #E3F0F1,
+            600: #2E6F73,
+            800: #204F52
+        ),
+
+        obsidian: (
+            100: #EAEEF2,
+            600: #5F6C7D,
+            800: #434D59
+        ),
+
         black: (
-            100: #666666,
-            300: #4d4d4d,
-            500: #333333,
-            700: #1a1a1a,
-            900: #000000 
-        ),
+            50:  #F5F5F5,
+            100: #E0E0E0,
+            200: #C2C2C2,
+            300: #A3A3A3,
+            400: #7A7A7A,
+            500: #525252,
+            600: #333333,
+            700: #1F1F1F,
+            800: #141414,
+            900: #000000
+        )
     );
 
-    @if $pallete {
+    // · compatibility aliases for legacy palette names
+    $lesli-css-colors: map.merge(
+        $lesli-css-colors,
+        (
+            blue: map.get($lesli-css-colors, primary),
+            silver: map.get($lesli-css-colors, neutral),
+            mint: map.get($lesli-css-colors, jade),
+            banana: map.get($lesli-css-colors, maize),
+            berry: map.get($lesli-css-colors, danger),
+            slate: map.get($lesli-css-colors, obsidian)
+        )
+    );
+
+    @if $palette {
 
         // return a specific palette
-        @return map.get($lesli-css-colors, $pallete);
+        @return map.get($lesli-css-colors, $palette);
     } @else {
 
         // return all the colors
         @return $lesli-css-colors;
     }
-
 }
 
 
 // · retorna una variante de una paleta de colores
-@function lesli-color($pallete, $variant: 500) {
+@function lesli-color($palette, $variant: 600) {
 
     // obtiene todos los colores disponibles
-    $lesli-colors: lesli-color-palette($pallete);
+    $lesli-colors: lesli-color-palette($palette);
 
     // ovtiene la variante del color solicitado
     $color: map.get($lesli-colors, $variant);
@@ -219,19 +270,26 @@ Building a better future, one line of code at a time.
 
 
 // · imprime todos los colores disponibles
-@mixin lesli-color-print($property: "color", $classs: "lesli-css-color") {
+@mixin lesli-color-print($property: "background-color", $classs: "lesli-color") {
 
-    $lesli-css-color-pallete: lesli-css-color-palette();
+    // 1. Get the full map of palettes
+    $all-palettes: lesli-color-palette();
 
-    @each $pallete_name, $pallete in $lesli-css-color-pallete {
-
-        @each $variant, $color in $pallete {
-
-            .#{$classs}-#{""+$pallete_name+""}-#{$variant} {
-
-                //background-color: lesli-css-color($pallete_name, $variant);
-                #{$property}: lesli-css-color($pallete_name, $variant);
-
+    @each $palette_name, $variants in $all-palettes {
+        @each $variant, $color in $variants {
+            
+            // 2. Clean modern interpolation
+            // Generates: .lesli-color-blue-500
+            .#{$classs}-#{$palette_name}-#{$variant} {
+                #{$property}: $color;
+            }
+            
+            // 3. Optional: Logic for the "default" color (usually 500)
+            // Generates: .lesli-color-blue
+            @if $variant == 500 or $variant == "primary" {
+                .#{$classs}-#{$palette_name} {
+                    #{$property}: $color;
+                }
             }
         }
     }
