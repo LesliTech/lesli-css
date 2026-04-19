@@ -71,19 +71,6 @@ Building a better future, one line of code at a time.
             dark: #123553
         ),
 
-        // · lesli engine collections
-        collection: (
-            dashboard: #245F93,       // Maya Blue
-            administration: #5F6C7D,  // Obsidian Mist
-            productivity: #B2852D,    // Maize
-            finance: #2D7A68,         // Jade
-            analytics: #7562A6,       // Orchid Stone
-            intelligence: #2E6F73,    // Cenote
-            it: #5D7C4D,              // Agave
-            security: #B05A48,        // Clay
-            integration: #2E6F73      // Cenote
-        ),
-
         // · primary palette
         primary: (
             50:  #F2F7FB,
@@ -244,6 +231,24 @@ Building a better future, one line of code at a time.
             700: #1F1F1F,
             800: #141414,
             900: #000000
+        )
+    );
+
+    // · lesli engine collections
+    $lesli-css-colors: map.merge(
+        $lesli-css-colors,
+        (
+            collection: (
+                administration: map.get(map.get($lesli-css-colors, maya), 500),
+                intelligence: map.get(map.get($lesli-css-colors, obsidian), 500),
+                productivity: map.get(map.get($lesli-css-colors, clay), 500),
+                integration: map.get(map.get($lesli-css-colors, maize), 500),
+                analytics: map.get(map.get($lesli-css-colors, jade), 500),
+                security: map.get(map.get($lesli-css-colors, neutral), 500),
+                finance: map.get(map.get($lesli-css-colors, cenote), 500),
+                sales: map.get(map.get($lesli-css-colors, orchid), 500),
+                it: map.get(map.get($lesli-css-colors, agave), 500)
+            ),
         )
     );
 
