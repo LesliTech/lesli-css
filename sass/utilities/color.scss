@@ -297,14 +297,14 @@ Building a better future, one line of code at a time.
             
             // 2. Clean modern interpolation
             // Generates: .lesli-color-blue-500
-            .#{$classs}-#{$palette_name}-#{$variant} {
+            .#{$classs}-#{"" + $palette_name}-#{$variant} {
                 #{$property}: $color;
             }
             
             // 3. Optional: Logic for the "default" color (usually 500)
             // Generates: .lesli-color-blue
             @if $variant == 500 or $variant == "primary" {
-                .#{$classs}-#{$palette_name} {
+                .#{$classs}-#{"" + $palette_name} {
                     #{$property}: $color;
                 }
             }
