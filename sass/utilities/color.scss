@@ -169,52 +169,68 @@ Building a better future, one line of code at a time.
         ),
 
         // · collections palettes
-        maya-blue: (
+        maya: (
             100: #E3EEF6,
-            600: #245F93,
-            800: #19446A
+            300: #8DAEC9,
+            500: #245F93,
+            700: #1E507C,
+            900: #12324F
         ),
 
         jade: (
             100: #E2F1EC,
-            600: #2D7A68,
-            800: #1E5648
+            300: #91BBB1,
+            500: #2D7A68,
+            700: #256656,
+            900: #143F33
         ),
 
         agave: (
             100: #ECF2E7,
-            600: #5D7C4D,
-            800: #445A39
+            300: #ACBDA2,
+            500: #5D7C4D,
+            700: #4F6942,
+            900: #34442C
         ),
 
         maize: (
             100: #FBF2DF,
-            600: #B2852D,
-            800: #7C5B1F
+            300: #DAC18F,
+            500: #B2852D,
+            700: #946E25,
+            900: #594016
         ),
 
         clay: (
             100: #FAE9E4,
-            600: #B05A48,
-            800: #7D4033
+            300: #D9A99E,
+            500: #B05A48,
+            700: #944C3C,
+            900: #5C2F25
         ),
 
         orchid: (
             100: #EEEAF7,
-            600: #7562A6,
-            800: #54467A
+            300: #B8ADD3,
+            500: #7562A6,
+            700: #63538E,
+            900: #3F345D
         ),
 
         cenote: (
             100: #E3F0F1,
-            600: #2E6F73,
-            800: #204F52
+            300: #92B6B8,
+            500: #2E6F73,
+            700: #265D61,
+            900: #173A3D
         ),
 
         obsidian: (
             100: #EAEEF2,
-            600: #5F6C7D,
-            800: #434D59
+            300: #ABB4BD,
+            500: #5F6C7D,
+            700: #505B69,
+            900: #313942
         ),
 
         black: (
@@ -235,12 +251,13 @@ Building a better future, one line of code at a time.
     $lesli-css-colors: map.merge(
         $lesli-css-colors,
         (
-            blue: map.get($lesli-css-colors, primary),
+            blue: map.get($lesli-css-colors, info),
             silver: map.get($lesli-css-colors, neutral),
             mint: map.get($lesli-css-colors, jade),
             banana: map.get($lesli-css-colors, maize),
             berry: map.get($lesli-css-colors, danger),
-            slate: map.get($lesli-css-colors, obsidian)
+            slate: map.get($lesli-css-colors, obsidian),
+            lime: map.get($lesli-css-colors, success)
         )
     );
 
