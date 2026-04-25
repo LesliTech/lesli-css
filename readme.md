@@ -1,5 +1,5 @@
 <div align="center">
-	<img alt="LesliCSS logo" width="200px" src="./docs/css-logo.svg" />
+	<img alt="LesliCSS logo" width="110px" src="./docs/css-logo.svg" />
 	<h3>SCSS Utilities for websites and web applications</h3>
 </div>
 

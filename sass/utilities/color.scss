@@ -64,13 +64,6 @@ Building a better future, one line of code at a time.
 
     $lesli-css-colors: (
 
-        // · lesli official color palette
-        lesli: (
-            primary: #245F93,
-            light: #E3EEF6,
-            dark: #123553
-        ),
-
         // · primary palette
         primary: (
             50:  #F2F7FB,
@@ -231,6 +224,18 @@ Building a better future, one line of code at a time.
             700: #1F1F1F,
             800: #141414,
             900: #000000
+        )
+    );
+
+    // · lesli official color palette
+    $lesli-css-colors: map.merge(
+        $lesli-css-colors,
+        (
+            lesli: (
+                primary: map.get(map.get($lesli-css-colors, primary), 600),
+                light: map.get(map.get($lesli-css-colors, primary), 100),
+                dark: map.get(map.get($lesli-css-colors, primary), 900)
+            )
         )
     );
 
