@@ -1,0 +1,140 @@
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+
+
+// · tools
+@use "sass:map";
+
+
+// · color palette
+$lesli-color-collections: (
+
+    // · collections palettes
+    ruby: (
+        100: #F6E5E5,
+        300: #D89C9C,
+        500: #B23A3A,
+        700: #8E2E2E,
+        900: #5C1E1E
+    ),
+
+    ember: (
+        100: #F9EBDD,
+        300: #E2B28D,
+        500: #C86A2D,
+        700: #A15625,
+        900: #673617
+    ),
+
+    maize: (
+        100: #FBF2DF,
+        300: #DAC18F,
+        500: #B2852D,
+        700: #926F25,
+        900: #5C4217
+    ),
+
+    agave: (
+        100: #ECF2E7,
+        300: #ACBDA2,
+        500: #5D7C4D,
+        700: #4F6942,
+        900: #34442C
+    ),
+
+    jade: (
+        100: #E2F1EC,
+        300: #91BBB1,
+        500: #2D7A68,
+        700: #256656,
+        900: #143F33
+    ),
+
+    cenote: (
+        100: #E3F0F3,
+        300: #8FB8C4,
+        500: #1F6F8B,
+        700: #195D74,
+        900: #103B4A
+    ),
+
+    quetzal: (
+        100: #E8EBF6,
+        300: #A1AED8,
+        500: #4B5FA8,
+        700: #3E4F8C,
+        900: #283259
+    ),
+
+    bugambilia: (
+        100: #F5E6EE,
+        300: #D49AB5,
+        500: #A83E6F,
+        700: #8A345C,
+        900: #58213B
+    ),
+
+    cacao: (
+        100: #EFE8E3,
+        300: #B9A394,
+        500: #6B4A35,
+        700: #593E2C,
+        900: #38271C
+    ),
+
+    obsidian: (
+        100: #EAEEF2,
+        300: #ABB4BD,
+        500: #5F6C7D,
+        700: #505B69,
+        900: #313942
+    )
+);
+
+
+// · Merge aliases for the lesli engine collection color palette
+$lesli-color-collections: map.merge(
+    $lesli-color-collections,
+    (
+        collection: (
+            administration: map.get(map.get($lesli-color-collections, cenote), 500),
+            intelligence: map.get(map.get($lesli-color-collections, obsidian), 500),
+            productivity: map.get(map.get($lesli-color-collections, ember), 500),
+            integration: map.get(map.get($lesli-color-collections, ruby), 500),
+            analytics: map.get(map.get($lesli-color-collections, jade), 500),
+            security: map.get(map.get($lesli-color-collections, cacao), 500),
+            finance: map.get(map.get($lesli-color-collections, bugambilia), 500),
+            sales: map.get(map.get($lesli-color-collections, quetzal), 500),
+            it: map.get(map.get($lesli-color-collections, maize), 500)
+        ),
+    )
+);

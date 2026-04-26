@@ -1,7 +1,8 @@
-/**
+/*
+
 Lesli
 
-Copyright (c) 2025, Lesli Technologies, S. A.
+Copyright (c) 2026, Lesli Technologies, S. A.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -16,7 +17,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see http://www.gnu.org/licenses/.
 
-Lesli - SCSS Utilities for websites, apps and web applications
+Lesli · SCSS Utilities for websites and web applications.
 
 Made with ♥ by LesliTech
 Building a better future, one line of code at a time.
@@ -28,31 +29,34 @@ Building a better future, one line of code at a time.
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
 */
+@use "sass:map";
 
 
-// · 
-@use "../colors" as color;
+// Primary color palette inspired by maya blue
+$lesli-color-primary: (
 
+    primary: (
+        50:  #F2F7FB,
+        100: #E3EEF6,
+        200: #BDD5E8,
+        300: #8DAEC9,
+        400: #4F83AE,
+        500: #245F93,
+        600: #1F527F,
+        700: #1A466C,
+        800: #153A59,
+        900: #123553
+    )
+);
 
-// · 
-@mixin lesli-blockquote($columns: 0, $margin: 0) {
-
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    background-color: color.lesli-color(silver, 100);
-    border-left: 10px solid color.lesli-color(silver, 300);
-    quotes: "\201C""\201D""\2018""\2019";
-
-    &:before {
-        color: color.lesli-color(silver);
-        vertical-align: -0.4em;
-        margin-right: 0.25em;
-        line-height: 0.1em;
-        font-size: 4em;
-        content: open-quote;
-    }
-
-    p {
-        display: inline;
-    }   
-}
+// lesli official color palette
+$lesli-color-primary: map.merge(
+    $lesli-color-primary,
+    (
+        lesli: (
+            primary: map.get(map.get($lesli-color-primary, primary), 500),
+            light: map.get(map.get($lesli-color-primary, primary), 100),
+            dark: map.get(map.get($lesli-color-primary, primary), 900)
+        )
+    )
+);

@@ -1,0 +1,110 @@
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+
+
+// · tools
+@use "sass:map";
+@use "sass:color";
+
+
+// · palettes
+@use "./primary";
+@use "./semantics";
+@use "./collections";
+
+
+// · color palettes container
+$lesli-css-color-palettes: (
+    // lesli
+    // primary
+    // semantics
+    // collections
+);
+
+
+// · add primary colors to the main palette
+$lesli-css-color-palettes: map.merge(
+    $lesli-css-color-palettes,
+    primary.$lesli-color-primary,
+);
+
+
+// · add semantic colors to the main palette
+$lesli-css-color-palettes: map.merge(
+    $lesli-css-color-palettes,
+    semantics.$lesli-color-semantics
+);
+
+
+// · add collection colors to the main palette
+$lesli-css-color-palettes: map.merge(
+    $lesli-css-color-palettes,
+    collections.$lesli-color-collections
+);
+
+
+// · add compatibility colors to the main palette
+$lesli-css-color-palettes: map.merge(
+    $lesli-css-color-palettes,
+    (
+        blue: map.get($lesli-css-color-palettes, cenote),
+        mint: map.get($lesli-css-color-palettes, jade),
+        lime: map.get($lesli-css-color-palettes, agave),
+        berry: map.get($lesli-css-color-palettes, ruby),
+        slate: map.get($lesli-css-color-palettes, cacao),
+        silver: map.get($lesli-css-color-palettes, obsidian),
+        banana: map.get($lesli-css-color-palettes, maize),
+    )
+);
+
+
+// Return a specific color palette
+@function lesli-color-palette($palette: false) {
+    @if $palette {
+        @return map.get($lesli-css-color-palettes, $palette);
+    }
+
+    @return $lesli-css-color-palettes;
+}
+
+
+// · retorna una variante de una paleta de colores
+@function lesli-color($palette, $variant: 500) {
+
+    // obtiene todos los colores disponibles
+    $lesli-css-color-palette: lesli-color-palette($palette);
+
+    // ovtiene la variante del color solicitado
+    $color: map.get($lesli-css-color-palette, $variant);
+
+    @return $color;
+}

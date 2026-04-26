@@ -1,3 +1,5 @@
+/*
+
 Lesli
 
 Copyright (c) 2026, Lesli Technologies, S. A.
@@ -26,3 +28,35 @@ Building a better future, one line of code at a time.
 
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
+*/
+
+
+// · Lesli color palette
+@use "./color.scss" as color;
+
+
+// · imprime todos los colores disponibles
+@mixin lesli-color-print($property: "background-color", $classs: "lesli-color") {
+
+    // 1. Get the full map of palettes
+    $all-palettes: color.lesli-color-palette();
+
+    @each $palette_name, $variants in $all-palettes {
+        @each $variant, $color in $variants {
+            
+            // 2. Clean modern interpolation
+            // Generates: .lesli-color-blue-500
+            .#{$classs}-#{"" + $palette_name}-#{$variant} {
+                #{$property}: $color;
+            }
+            
+            // 3. Optional: Logic for the "default" color (usually 500)
+            // Generates: .lesli-color-blue
+            @if $variant == 500 or $variant == "primary" {
+                .#{$classs}-#{"" + $palette_name} {
+                    #{$property}: $color;
+                }
+            }
+        }
+    }
+}

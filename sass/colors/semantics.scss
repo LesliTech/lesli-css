@@ -1,0 +1,119 @@
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+
+
+// · Lesli UI color palette
+$lesli-color-semantics: (
+
+    // · neutral palette
+    neutral: (
+        50:  #F8FAFC,
+        100: #F1F4F8,
+        200: #E5EAF0,
+        300: #C7D0DA,
+        400: #8F9BAA,
+        500: #667383,
+        600: #4B5663,
+        700: #34404C,
+        800: #28323D,
+        900: #1F2933
+    ),
+
+    // · semantic info
+    info: (
+        50:  #F2F7FB,
+        100: #E3EEF6,
+        200: #BDD5E8,
+        300: #8DAEC9,
+        400: #4F83AE,
+        500: #245F93,
+        600: #1F527F,
+        700: #1A466C,
+        800: #153A59,
+        900: #123553
+    ),
+
+    // · semantic success
+    success: (
+        50:  #F1FAF7,
+        100: #DDF2EA,
+        200: #B8E2D2,
+        300: #8DD0B8,
+        400: #399C77,
+        500: #267E60,
+        600: #1F694F,
+        700: #19543F,
+        800: #154836,
+        900: #123F30
+    ),
+
+    // · semantic warning
+    warning: (
+        50:  #FFF9ED,
+        100: #FFF1D6,
+        200: #FDE2A8,
+        300: #F8CF74,
+        400: #D29A2E,
+        500: #B67D1F,
+        600: #95651B,
+        700: #775117,
+        800: #684614,
+        900: #5B3D12
+    ),
+
+    // · semantic danger
+    danger: (
+        50:  #FFF3F1,
+        100: #FFE3DE,
+        200: #F8C1B8,
+        300: #EE9A8E,
+        400: #C94E3C,
+        500: #A93B2D,
+        600: #8B3126,
+        700: #6F281F,
+        800: #60231B,
+        900: #541E18
+    ),
+
+    black: (
+        50:  #F5F5F5,
+        100: #E0E0E0,
+        200: #C2C2C2,
+        300: #A3A3A3,
+        400: #525252,
+        500: #333333,
+        600: #1F1F1F,
+        700: #141414,
+        800: #0A0A0A,
+        900: #000000
+    )
+);
