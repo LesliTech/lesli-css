@@ -31,6 +31,7 @@
 # Define source SCSS files and their corresponding CSS output paths
 SASS_FILES = \
 	./lesli.scss:./temp/lesli.css \
+	./scss/colors/css-variables.scss:./css/colors.css
 
 
 # Define common SASS options
@@ -39,4 +40,3 @@ SASS_OPTS = --no-source-map --load-path=node_modules --load-path=../
 # Development
 build.css:
 	npx sass $(SASS_FILES) $(SASS_OPTS)
-

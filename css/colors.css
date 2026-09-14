@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/*
+ * Portable Lesli color tokens.
+ *
+ * This entry point is compiled to css/colors.css for CSS and Tailwind projects.
+ * Sass projects should continue using the lesli-color() function directly.
+ */
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · 
+*/
+:root {
+  --lesli-color-primary-50: #F2F7FB;
+  --lesli-color-primary-100: #E3EEF6;
+  --lesli-color-primary-200: #BDD5E8;
+  --lesli-color-primary-300: #8DAEC9;
+  --lesli-color-primary-400: #4F83AE;
+  --lesli-color-primary-500: #245F93;
+  --lesli-color-primary-600: #1F527F;
+  --lesli-color-primary-700: #1A466C;
+  --lesli-color-primary-800: #153A59;
+  --lesli-color-primary-900: #123553;
+  --lesli-color-lesli-primary: #245F93;
+  --lesli-color-lesli-light: #E3EEF6;
+  --lesli-color-lesli-dark: #123553;
+  --lesli-color-neutral-50: #F8FAFC;
+  --lesli-color-neutral-100: #F1F4F8;
+  --lesli-color-neutral-200: #E5EAF0;
+  --lesli-color-neutral-300: #C7D0DA;
+  --lesli-color-neutral-400: #8F9BAA;
+  --lesli-color-neutral-500: #667383;
+  --lesli-color-neutral-600: #4B5663;
+  --lesli-color-neutral-700: #34404C;
+  --lesli-color-neutral-800: #28323D;
+  --lesli-color-neutral-900: #1F2933;
+  --lesli-color-info-50: #F2F7FB;
+  --lesli-color-info-100: #E3EEF6;
+  --lesli-color-info-200: #BDD5E8;
+  --lesli-color-info-300: #8DAEC9;
+  --lesli-color-info-400: #4F83AE;
+  --lesli-color-info-500: #245F93;
+  --lesli-color-info-600: #1F527F;
+  --lesli-color-info-700: #1A466C;
+  --lesli-color-info-800: #153A59;
+  --lesli-color-info-900: #123553;
+  --lesli-color-success-50: #F1FAF7;
+  --lesli-color-success-100: #DDF2EA;
+  --lesli-color-success-200: #B8E2D2;
+  --lesli-color-success-300: #8DD0B8;
+  --lesli-color-success-400: #399C77;
+  --lesli-color-success-500: #267E60;
+  --lesli-color-success-600: #1F694F;
+  --lesli-color-success-700: #19543F;
+  --lesli-color-success-800: #154836;
+  --lesli-color-success-900: #123F30;
+  --lesli-color-warning-50: #FFF9ED;
+  --lesli-color-warning-100: #FFF1D6;
+  --lesli-color-warning-200: #FDE2A8;
+  --lesli-color-warning-300: #F8CF74;
+  --lesli-color-warning-400: #D29A2E;
+  --lesli-color-warning-500: #B67D1F;
+  --lesli-color-warning-600: #95651B;
+  --lesli-color-warning-700: #775117;
+  --lesli-color-warning-800: #684614;
+  --lesli-color-warning-900: #5B3D12;
+  --lesli-color-danger-50: #FFF3F1;
+  --lesli-color-danger-100: #FFE3DE;
+  --lesli-color-danger-200: #F8C1B8;
+  --lesli-color-danger-300: #EE9A8E;
+  --lesli-color-danger-400: #C94E3C;
+  --lesli-color-danger-500: #A93B2D;
+  --lesli-color-danger-600: #8B3126;
+  --lesli-color-danger-700: #6F281F;
+  --lesli-color-danger-800: #60231B;
+  --lesli-color-danger-900: #541E18;
+  --lesli-color-black-50: #F5F5F5;
+  --lesli-color-black-100: #E0E0E0;
+  --lesli-color-black-200: #C2C2C2;
+  --lesli-color-black-300: #A3A3A3;
+  --lesli-color-black-400: #525252;
+  --lesli-color-black-500: #333333;
+  --lesli-color-black-600: #1F1F1F;
+  --lesli-color-black-700: #141414;
+  --lesli-color-black-800: #0A0A0A;
+  --lesli-color-black-900: #000000;
+  --lesli-color-ruby-100: #F6E5E5;
+  --lesli-color-ruby-300: #D89C9C;
+  --lesli-color-ruby-500: #B23A3A;
+  --lesli-color-ruby-700: #8E2E2E;
+  --lesli-color-ruby-900: #5C1E1E;
+  --lesli-color-ember-100: #F9EBDD;
+  --lesli-color-ember-300: #E2B28D;
+  --lesli-color-ember-500: #C86A2D;
+  --lesli-color-ember-700: #A15625;
+  --lesli-color-ember-900: #673617;
+  --lesli-color-maize-100: #FBF2DF;
+  --lesli-color-maize-300: #DAC18F;
+  --lesli-color-maize-500: #B2852D;
+  --lesli-color-maize-700: #926F25;
+  --lesli-color-maize-900: #5C4217;
+  --lesli-color-agave-100: #ECF2E7;
+  --lesli-color-agave-300: #ACBDA2;
+  --lesli-color-agave-500: #5D7C4D;
+  --lesli-color-agave-700: #4F6942;
+  --lesli-color-agave-900: #34442C;
+  --lesli-color-jade-100: #E2F1EC;
+  --lesli-color-jade-300: #91BBB1;
+  --lesli-color-jade-500: #2D7A68;
+  --lesli-color-jade-700: #256656;
+  --lesli-color-jade-900: #143F33;
+  --lesli-color-cenote-100: #E3F0F3;
+  --lesli-color-cenote-300: #8FB8C4;
+  --lesli-color-cenote-500: #1F6F8B;
+  --lesli-color-cenote-700: #195D74;
+  --lesli-color-cenote-900: #103B4A;
+  --lesli-color-quetzal-100: #E8EBF6;
+  --lesli-color-quetzal-300: #A1AED8;
+  --lesli-color-quetzal-500: #4B5FA8;
+  --lesli-color-quetzal-700: #3E4F8C;
+  --lesli-color-quetzal-900: #283259;
+  --lesli-color-bugambilia-100: #F5E6EE;
+  --lesli-color-bugambilia-300: #D49AB5;
+  --lesli-color-bugambilia-500: #A83E6F;
+  --lesli-color-bugambilia-700: #8A345C;
+  --lesli-color-bugambilia-900: #58213B;
+  --lesli-color-cacao-100: #EFE8E3;
+  --lesli-color-cacao-300: #B9A394;
+  --lesli-color-cacao-500: #6B4A35;
+  --lesli-color-cacao-700: #593E2C;
+  --lesli-color-cacao-900: #38271C;
+  --lesli-color-obsidian-100: #EAEEF2;
+  --lesli-color-obsidian-300: #ABB4BD;
+  --lesli-color-obsidian-500: #5F6C7D;
+  --lesli-color-obsidian-700: #505B69;
+  --lesli-color-obsidian-900: #313942;
+  --lesli-color-collection-administration: #1F6F8B;
+  --lesli-color-collection-intelligence: #5F6C7D;
+  --lesli-color-collection-productivity: #C86A2D;
+  --lesli-color-collection-integration: #B23A3A;
+  --lesli-color-collection-analytics: #2D7A68;
+  --lesli-color-collection-security: #6B4A35;
+  --lesli-color-collection-finance: #A83E6F;
+  --lesli-color-collection-sales: #4B5FA8;
+  --lesli-color-collection-it: #B2852D;
+  --lesli-color-blue-100: #E3F0F3;
+  --lesli-color-blue-300: #8FB8C4;
+  --lesli-color-blue-500: #1F6F8B;
+  --lesli-color-blue-700: #195D74;
+  --lesli-color-blue-900: #103B4A;
+  --lesli-color-mint-100: #E2F1EC;
+  --lesli-color-mint-300: #91BBB1;
+  --lesli-color-mint-500: #2D7A68;
+  --lesli-color-mint-700: #256656;
+  --lesli-color-mint-900: #143F33;
+  --lesli-color-lime-100: #ECF2E7;
+  --lesli-color-lime-300: #ACBDA2;
+  --lesli-color-lime-500: #5D7C4D;
+  --lesli-color-lime-700: #4F6942;
+  --lesli-color-lime-900: #34442C;
+  --lesli-color-berry-100: #F6E5E5;
+  --lesli-color-berry-300: #D89C9C;
+  --lesli-color-berry-500: #B23A3A;
+  --lesli-color-berry-700: #8E2E2E;
+  --lesli-color-berry-900: #5C1E1E;
+  --lesli-color-slate-100: #EFE8E3;
+  --lesli-color-slate-300: #B9A394;
+  --lesli-color-slate-500: #6B4A35;
+  --lesli-color-slate-700: #593E2C;
+  --lesli-color-slate-900: #38271C;
+  --lesli-color-silver-100: #EAEEF2;
+  --lesli-color-silver-300: #ABB4BD;
+  --lesli-color-silver-500: #5F6C7D;
+  --lesli-color-silver-700: #505B69;
+  --lesli-color-silver-900: #313942;
+  --lesli-color-banana-100: #FBF2DF;
+  --lesli-color-banana-300: #DAC18F;
+  --lesli-color-banana-500: #B2852D;
+  --lesli-color-banana-700: #926F25;
+  --lesli-color-banana-900: #5C4217;
+}

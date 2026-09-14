@@ -1,0 +1,11 @@
+/*
+ * Portable Lesli color tokens.
+ *
+ * This entry point is compiled to css/colors.css for CSS and Tailwind projects.
+ * Sass projects should continue using the lesli-color() function directly.
+ */
+@use "./generators" as generators;
+
+:root {
+    @include generators.lesli-color-variables();
+}

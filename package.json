@@ -11,6 +11,8 @@
         "sass"
     ],
     "files":[
+        "css",
+        "scss",
         "sass",
         "_index.scss",
         "lesli.scss",
@@ -36,6 +38,8 @@
         "@vitest/coverage-v8":"3.2.4"
     },
     "scripts": {
+        "build": "sass --no-source-map scss/colors/css-variables.scss css/colors.css",
+        "prepack": "npm run build",
         "test": "vitest run",
         "test2": "sass ./lesli.scss",
         "test:report": "vitest run --reporter=verbose",

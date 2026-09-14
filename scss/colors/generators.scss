@@ -35,6 +35,21 @@ Building a better future, one line of code at a time.
 @use "./color.scss" as color;
 
 
+// · export every Sass palette entry as a portable CSS custom property
+// Generates variables such as --lesli-color-primary-500 and
+// --lesli-color-success-500. Consumers can provide a different prefix.
+@mixin lesli-color-variables($prefix: "--lesli-color") {
+
+    $all-palettes: color.lesli-color-palette();
+
+    @each $palette-name, $variants in $all-palettes {
+        @each $variant, $value in $variants {
+            #{$prefix}-#{"" + $palette-name}-#{$variant}: #{$value};
+        }
+    }
+}
+
+
 // · imprime todos los colores disponibles
 @mixin lesli-color-print($property: "background-color", $classs: "lesli-color") {
 
