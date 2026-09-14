@@ -31,28 +31,28 @@ Building a better future, one line of code at a time.
 
 
 // · include components 
-@forward "./sass/components/navigation.scss";
+@forward "./scss/components/navigation.scss";
 
 
 // · include elements 
-@forward "./sass/elements/blockquote.scss";
-@forward "./sass/elements/columns.scss";
+@forward "./scss/elements/blockquote.scss";
+@forward "./scss/elements/columns.scss";
 
 
 // · include functions 
-@forward "./sass/colors/";
+@forward "./scss/colors/";
 
 
 
 // · include helpers 
-@forward "./sass/helpers/breakpoint.scss";
-@forward "./sass/helpers/shadow.scss";
-@forward "./sass/helpers/fonts.scss";
-@forward "./sass/helpers/flex.scss";
+@forward "./scss/helpers/breakpoint.scss";
+@forward "./scss/helpers/shadow.scss";
+@forward "./scss/helpers/fonts.scss";
+@forward "./scss/helpers/flex.scss";
 
 
 
 // · include layout  
-@forward "./sass/layout/container.scss";
-@forward "./sass/layout/normalize.scss";
-@forward "./sass/layout/scrollbar.scss";
+@forward "./scss/layout/container.scss";
+@forward "./scss/layout/normalize.scss";
+@forward "./scss/layout/scrollbar.scss";
