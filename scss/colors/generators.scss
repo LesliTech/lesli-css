@@ -31,8 +31,14 @@ Building a better future, one line of code at a time.
 */
 
 
+// · tools
+@use "sass:map";
+
+
 // · Lesli color palette
 @use "./color.scss" as color;
+@use "./collections";
+@use "./engines";
 
 
 // · export every Sass palette entry as a portable CSS custom property
@@ -44,7 +50,34 @@ Building a better future, one line of code at a time.
 
     @each $palette-name, $variants in $all-palettes {
         @each $variant, $value in $variants {
-            #{$prefix}-#{"" + $palette-name}-#{$variant}: #{$value};
+            @if map.has-key(engines.$lesli-color-engine-references, $palette-name) {
+                $categorical-name: map.get(
+                    engines.$lesli-color-engine-references,
+                    $palette-name
+                );
+
+                #{$prefix}-#{"" + $palette-name}-#{$variant}: var(
+                    #{$prefix}-#{"" + $categorical-name}-#{$variant}
+                );
+            } @else if map.has-key(
+                collections.$lesli-color-collection-palette-aliases,
+                $palette-name
+            ) {
+                $categorical-name: map.get(
+                    collections.$lesli-color-collection-palette-aliases,
+                    $palette-name
+                );
+
+                #{$prefix}-#{"" + $palette-name}-#{$variant}: var(
+                    #{$prefix}-#{"" + $categorical-name}-#{$variant}
+                );
+            } @else if $palette-name == collection {
+                #{$prefix}-collection-#{$variant}: var(
+                    #{$prefix}-engine-#{$variant}-500
+                );
+            } @else {
+                #{$prefix}-#{"" + $palette-name}-#{$variant}: #{$value};
+            }
         }
     }
 }

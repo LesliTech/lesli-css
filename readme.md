@@ -35,7 +35,7 @@ The Sass color maps are the source of truth. During the package build they are a
 ## Features
 
 - A shared primary and semantic color system
-- Product collection palettes inspired by Guatemala
+- Reusable categorical palettes and decoupled engine identity aliases
 - Portable CSS custom properties generated from the Sass maps
 - Tailwind CSS v4-compatible design tokens
 - Bulma-compatible Sass functions
@@ -101,34 +101,69 @@ color: lesli.lesli-color(success, 500);
 | `danger` | 50–900 | Errors and destructive actions |
 | `black` | 50–900 | Neutral dark tones |
 
-### Collection palettes
+### Categorical colors
 
-Collection palettes provide variants `100`, `300`, `500`, `700`, and `900`:
+Categorical colors are reusable, non-semantic colors for categories, datasets, charts, calendars, avatars, tabs, modules, and other product areas. They provide variants `100`, `300`, `500`, `700`, and `900`:
 
-- `ruby`
-- `ember`
-- `maize`
-- `agave`
-- `jade`
-- `cenote`
-- `quetzal`
-- `bugambilia`
-- `cacao`
-- `obsidian`
+- `categorical-ruby`
+- `categorical-ember`
+- `categorical-maize`
+- `categorical-agave`
+- `categorical-jade`
+- `categorical-cenote`
+- `categorical-quetzal`
+- `categorical-bugambilia`
+- `categorical-cacao`
+- `categorical-obsidian`
 
-Collection aliases are also available for Lesli products:
+Use a categorical token when the color represents a reusable category rather than semantic state or a specific Lesli product:
 
 ```scss
-.analytics-module {
-    color: lesli.lesli-color(collection, analytics);
-}
-
-.finance-module {
-    color: lesli.lesli-color(collection, finance);
+.chart-series {
+    color: lesli.lesli-color(categorical-cenote, 500);
 }
 ```
 
-The available aliases are `administration`, `intelligence`, `productivity`, `integration`, `analytics`, `security`, `finance`, `sales`, and `it`.
+### Engine colors
+
+Engine colors are product identity aliases. Each engine resolves to a categorical palette, so an assignment can change later without changing application markup or components.
+
+| Engine | Categorical palette |
+| --- | --- |
+| `engine-administration` | `categorical-cenote` |
+| `engine-intelligence` | `categorical-obsidian` |
+| `engine-productivity` | `categorical-ember` |
+| `engine-integration` | `categorical-ruby` |
+| `engine-analytics` | `categorical-jade` |
+| `engine-security` | `categorical-cacao` |
+| `engine-finance` | `categorical-bugambilia` |
+| `engine-sales` | `categorical-quetzal` |
+| `engine-it` | `categorical-maize` |
+
+Engine aliases expose the complete five-step scale. The default Sass variant remains `500`:
+
+```scss
+.administration-module {
+    color: lesli.lesli-color(engine-administration);
+}
+
+.finance-module {
+    background-color: lesli.lesli-color(engine-finance, 100);
+    color: lesli.lesli-color(engine-finance, 700);
+}
+```
+
+The palette assignment is an implementation and theme decision. Engine consumers should use `engine-*` tokens instead of depending directly on the assigned categorical family.
+
+### Legacy collection aliases
+
+The previous palette names and `collection` engine aliases remain available for backward compatibility, but new code should use `categorical-*` and `engine-*`:
+
+```scss
+// Legacy compatibility APIs
+color: lesli.lesli-color(cenote, 500);
+color: lesli.lesli-color(collection, administration);
+```
 
 <br />
 
@@ -154,9 +189,11 @@ The package generates variables for every palette entry, including:
 ```css
 --lesli-color-primary-500: #276AD6;
 --lesli-color-success-600: #1D704F;
---lesli-color-cenote-300: #8FB8C4;
---lesli-color-collection-finance: #A83E6F;
+--lesli-color-categorical-cenote-300: #8FB8C4;
+--lesli-color-engine-finance-500: var(--lesli-color-categorical-bugambilia-500);
 ```
+
+Legacy variables such as `--lesli-color-cenote-300` and `--lesli-color-collection-finance` remain as aliases to the canonical tokens.
 
 > [!NOTE]
 > Package imports in CSS must be processed by a bundler or CSS compiler that resolves dependencies from `node_modules`.
@@ -197,8 +234,8 @@ Import the generated variables and map them to Tailwind theme tokens:
     --color-warning-500: var(--lesli-color-warning-500);
     --color-danger-500: var(--lesli-color-danger-500);
 
-    --color-cenote-300: var(--lesli-color-cenote-300);
-    --color-collection-finance: var(--lesli-color-collection-finance);
+    --color-categorical-cenote-300: var(--lesli-color-categorical-cenote-300);
+    --color-engine-finance: var(--lesli-color-engine-finance-500);
 }
 ```
 
@@ -211,7 +248,7 @@ The mapped colors become standard Tailwind utilities:
 
 <p class="text-success-500">Changes saved successfully.</p>
 
-<div class="border border-cenote-300 bg-collection-finance">
+<div class="border border-categorical-cenote-300 bg-engine-finance">
     Finance
 </div>
 ```
@@ -312,7 +349,11 @@ lesli-css/
 ├── css/
 │   └── colors.css             Generated portable color tokens
 ├── scss/
-│   ├── colors/                Color maps, functions, and generators
+│   ├── colors/
+│   │   ├── categorical.scss   Canonical reusable categorical palettes
+│   │   ├── engines.scss       Canonical engine identity assignments
+│   │   ├── collections.scss   Legacy compatibility aliases
+│   │   └── ...                Color functions and generators
 │   ├── components/            Reusable components
 │   ├── elements/              Element styles
 │   ├── helpers/               Breakpoints, fonts, flexbox, and shadows

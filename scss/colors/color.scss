@@ -39,6 +39,8 @@ Building a better future, one line of code at a time.
 // · palettes
 @use "./primary";
 @use "./semantics";
+@use "./categorical";
+@use "./engines";
 @use "./collections";
 
 
@@ -47,7 +49,9 @@ $lesli-css-color-palettes: (
     // lesli
     // primary
     // semantics
-    // collections
+    // categorical
+    // engines
+    // compatibility aliases
 );
 
 
@@ -65,7 +69,21 @@ $lesli-css-color-palettes: map.merge(
 );
 
 
-// · add collection colors to the main palette
+// · add canonical categorical colors to the main palette
+$lesli-css-color-palettes: map.merge(
+    $lesli-css-color-palettes,
+    categorical.$lesli-color-categorical
+);
+
+
+// · add canonical engine identity aliases to the main palette
+$lesli-css-color-palettes: map.merge(
+    $lesli-css-color-palettes,
+    engines.$lesli-color-engines
+);
+
+
+// · add legacy collection colors and engine aliases to the main palette
 $lesli-css-color-palettes: map.merge(
     $lesli-css-color-palettes,
     collections.$lesli-color-collections
@@ -76,13 +94,13 @@ $lesli-css-color-palettes: map.merge(
 $lesli-css-color-palettes: map.merge(
     $lesli-css-color-palettes,
     (
-        blue: map.get($lesli-css-color-palettes, cenote),
-        mint: map.get($lesli-css-color-palettes, jade),
-        lime: map.get($lesli-css-color-palettes, agave),
-        berry: map.get($lesli-css-color-palettes, ruby),
-        slate: map.get($lesli-css-color-palettes, cacao),
-        silver: map.get($lesli-css-color-palettes, obsidian),
-        banana: map.get($lesli-css-color-palettes, maize),
+        blue: map.get($lesli-css-color-palettes, categorical-cenote),
+        mint: map.get($lesli-css-color-palettes, categorical-jade),
+        lime: map.get($lesli-css-color-palettes, categorical-agave),
+        berry: map.get($lesli-css-color-palettes, categorical-ruby),
+        slate: map.get($lesli-css-color-palettes, categorical-cacao),
+        silver: map.get($lesli-css-color-palettes, categorical-obsidian),
+        banana: map.get($lesli-css-color-palettes, categorical-maize),
     )
 );
 

@@ -33,108 +33,55 @@ Building a better future, one line of code at a time.
 
 // · tools
 @use "sass:map";
+@use "sass:string";
 
 
-// · color palette
-$lesli-color-collections: (
+// · canonical color layers
+@use "./categorical";
+@use "./engines";
 
-    // · collections palettes
-    ruby: (
-        100: #F6E5E5,
-        300: #D89C9C,
-        500: #B23A3A,
-        700: #8E2E2E,
-        900: #5C1E1E
-    ),
 
-    ember: (
-        100: #F9EBDD,
-        300: #E2B28D,
-        500: #C86A2D,
-        700: #A15625,
-        900: #673617
-    ),
-
-    maize: (
-        100: #FBF2DF,
-        300: #DAC18F,
-        500: #B2852D,
-        700: #926F25,
-        900: #5C4217
-    ),
-
-    agave: (
-        100: #ECF2E7,
-        300: #ACBDA2,
-        500: #5D7C4D,
-        700: #4F6942,
-        900: #34442C
-    ),
-
-    jade: (
-        100: #E2F1EC,
-        300: #91BBB1,
-        500: #2D7A68,
-        700: #256656,
-        900: #143F33
-    ),
-
-    cenote: (
-        100: #E3F0F3,
-        300: #8FB8C4,
-        500: #1F6F8B,
-        700: #195D74,
-        900: #103B4A
-    ),
-
-    quetzal: (
-        100: #E8EBF6,
-        300: #A1AED8,
-        500: #4B5FA8,
-        700: #3E4F8C,
-        900: #283259
-    ),
-
-    bugambilia: (
-        100: #F5E6EE,
-        300: #D49AB5,
-        500: #A83E6F,
-        700: #8A345C,
-        900: #58213B
-    ),
-
-    cacao: (
-        100: #EFE8E3,
-        300: #B9A394,
-        500: #6B4A35,
-        700: #593E2C,
-        900: #38271C
-    ),
-
-    obsidian: (
-        100: #EAEEF2,
-        300: #ABB4BD,
-        500: #5F6C7D,
-        700: #505B69,
-        900: #313942
-    )
+// · Legacy collection palette names kept for backward compatibility
+$lesli-color-collection-palette-aliases: (
+    ruby: categorical-ruby,
+    ember: categorical-ember,
+    maize: categorical-maize,
+    agave: categorical-agave,
+    jade: categorical-jade,
+    cenote: categorical-cenote,
+    quetzal: categorical-quetzal,
+    bugambilia: categorical-bugambilia,
+    cacao: categorical-cacao,
+    obsidian: categorical-obsidian
 );
 
+$lesli-color-collections: ();
 
-// · Merge aliases for the lesli engine collection color palette
-$lesli-color-collections: map.merge(
+@each $legacy-name, $categorical-name in $lesli-color-collection-palette-aliases {
+    $lesli-color-collections: map.set(
+        $lesli-color-collections,
+        $legacy-name,
+        map.get(categorical.$lesli-color-categorical, $categorical-name)
+    );
+}
+
+
+// · Legacy collection engine aliases resolve through the canonical engine layer
+$lesli-color-collection-engine-aliases: ();
+
+@each $engine-name, $categorical-name in engines.$lesli-color-engine-assignments {
+    $engine-token: string.unquote("engine-#{$engine-name}");
+    $engine-palette: map.get(engines.$lesli-color-engines, $engine-token);
+
+    $lesli-color-collection-engine-aliases: map.set(
+        $lesli-color-collection-engine-aliases,
+        $engine-name,
+        map.get($engine-palette, 500)
+    );
+}
+
+$lesli-color-collections: map.set(
     $lesli-color-collections,
-    (
-        collection: (
-            administration: map.get(map.get($lesli-color-collections, cenote), 500),
-            intelligence: map.get(map.get($lesli-color-collections, obsidian), 500),
-            productivity: map.get(map.get($lesli-color-collections, ember), 500),
-            integration: map.get(map.get($lesli-color-collections, ruby), 500),
-            analytics: map.get(map.get($lesli-color-collections, jade), 500),
-            security: map.get(map.get($lesli-color-collections, cacao), 500),
-            finance: map.get(map.get($lesli-color-collections, bugambilia), 500),
-            sales: map.get(map.get($lesli-color-collections, quetzal), 500),
-            it: map.get(map.get($lesli-color-collections, maize), 500)
-        ),
-    )
+    collection,
+    $lesli-color-collection-engine-aliases
 );

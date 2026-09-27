@@ -158,6 +158,68 @@ Building a better future, one line of code at a time.
 @license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
 
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// ·
+*/
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// ·
+*/
+/*
+
+Lesli
+
+Copyright (c) 2026, Lesli Technologies, S. A.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see http://www.gnu.org/licenses/.
+
+Lesli · SCSS Utilities for websites and web applications.
+
+Made with ♥ by LesliTech
+Building a better future, one line of code at a time.
+
+@contact  hello@lesli.tech
+@website  https://www.lesli.tech
+@license  GPLv3 http://www.gnu.org/licenses/gpl-3.0.en.html
+
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 // · 
 */
 :root {
@@ -234,65 +296,160 @@ Building a better future, one line of code at a time.
   --lesli-color-black-700: #141414;
   --lesli-color-black-800: #0A0A0A;
   --lesli-color-black-900: #000000;
-  --lesli-color-ruby-100: #F6E5E5;
-  --lesli-color-ruby-300: #D89C9C;
-  --lesli-color-ruby-500: #B23A3A;
-  --lesli-color-ruby-700: #8E2E2E;
-  --lesli-color-ruby-900: #5C1E1E;
-  --lesli-color-ember-100: #F9EBDD;
-  --lesli-color-ember-300: #E2B28D;
-  --lesli-color-ember-500: #C86A2D;
-  --lesli-color-ember-700: #A15625;
-  --lesli-color-ember-900: #673617;
-  --lesli-color-maize-100: #FBF2DF;
-  --lesli-color-maize-300: #DAC18F;
-  --lesli-color-maize-500: #B2852D;
-  --lesli-color-maize-700: #926F25;
-  --lesli-color-maize-900: #5C4217;
-  --lesli-color-agave-100: #ECF2E7;
-  --lesli-color-agave-300: #ACBDA2;
-  --lesli-color-agave-500: #5D7C4D;
-  --lesli-color-agave-700: #4F6942;
-  --lesli-color-agave-900: #34442C;
-  --lesli-color-jade-100: #E2F1EC;
-  --lesli-color-jade-300: #91BBB1;
-  --lesli-color-jade-500: #2D7A68;
-  --lesli-color-jade-700: #256656;
-  --lesli-color-jade-900: #143F33;
-  --lesli-color-cenote-100: #E3F0F3;
-  --lesli-color-cenote-300: #8FB8C4;
-  --lesli-color-cenote-500: #1F6F8B;
-  --lesli-color-cenote-700: #195D74;
-  --lesli-color-cenote-900: #103B4A;
-  --lesli-color-quetzal-100: #E8EBF6;
-  --lesli-color-quetzal-300: #A1AED8;
-  --lesli-color-quetzal-500: #4B5FA8;
-  --lesli-color-quetzal-700: #3E4F8C;
-  --lesli-color-quetzal-900: #283259;
-  --lesli-color-bugambilia-100: #F5E6EE;
-  --lesli-color-bugambilia-300: #D49AB5;
-  --lesli-color-bugambilia-500: #A83E6F;
-  --lesli-color-bugambilia-700: #8A345C;
-  --lesli-color-bugambilia-900: #58213B;
-  --lesli-color-cacao-100: #EFE8E3;
-  --lesli-color-cacao-300: #B9A394;
-  --lesli-color-cacao-500: #6B4A35;
-  --lesli-color-cacao-700: #593E2C;
-  --lesli-color-cacao-900: #38271C;
-  --lesli-color-obsidian-100: #EAEEF2;
-  --lesli-color-obsidian-300: #ABB4BD;
-  --lesli-color-obsidian-500: #5F6C7D;
-  --lesli-color-obsidian-700: #505B69;
-  --lesli-color-obsidian-900: #313942;
-  --lesli-color-collection-administration: #1F6F8B;
-  --lesli-color-collection-intelligence: #5F6C7D;
-  --lesli-color-collection-productivity: #C86A2D;
-  --lesli-color-collection-integration: #B23A3A;
-  --lesli-color-collection-analytics: #2D7A68;
-  --lesli-color-collection-security: #6B4A35;
-  --lesli-color-collection-finance: #A83E6F;
-  --lesli-color-collection-sales: #4B5FA8;
-  --lesli-color-collection-it: #B2852D;
+  --lesli-color-categorical-ruby-100: #F6E5E5;
+  --lesli-color-categorical-ruby-300: #D89C9C;
+  --lesli-color-categorical-ruby-500: #B23A3A;
+  --lesli-color-categorical-ruby-700: #8E2E2E;
+  --lesli-color-categorical-ruby-900: #5C1E1E;
+  --lesli-color-categorical-ember-100: #F9EBDD;
+  --lesli-color-categorical-ember-300: #E2B28D;
+  --lesli-color-categorical-ember-500: #C86A2D;
+  --lesli-color-categorical-ember-700: #A15625;
+  --lesli-color-categorical-ember-900: #673617;
+  --lesli-color-categorical-maize-100: #FBF2DF;
+  --lesli-color-categorical-maize-300: #DAC18F;
+  --lesli-color-categorical-maize-500: #B2852D;
+  --lesli-color-categorical-maize-700: #926F25;
+  --lesli-color-categorical-maize-900: #5C4217;
+  --lesli-color-categorical-agave-100: #ECF2E7;
+  --lesli-color-categorical-agave-300: #ACBDA2;
+  --lesli-color-categorical-agave-500: #5D7C4D;
+  --lesli-color-categorical-agave-700: #4F6942;
+  --lesli-color-categorical-agave-900: #34442C;
+  --lesli-color-categorical-jade-100: #E2F1EC;
+  --lesli-color-categorical-jade-300: #91BBB1;
+  --lesli-color-categorical-jade-500: #2D7A68;
+  --lesli-color-categorical-jade-700: #256656;
+  --lesli-color-categorical-jade-900: #143F33;
+  --lesli-color-categorical-cenote-100: #E3F0F3;
+  --lesli-color-categorical-cenote-300: #8FB8C4;
+  --lesli-color-categorical-cenote-500: #1F6F8B;
+  --lesli-color-categorical-cenote-700: #195D74;
+  --lesli-color-categorical-cenote-900: #103B4A;
+  --lesli-color-categorical-quetzal-100: #E8EBF6;
+  --lesli-color-categorical-quetzal-300: #A1AED8;
+  --lesli-color-categorical-quetzal-500: #4B5FA8;
+  --lesli-color-categorical-quetzal-700: #3E4F8C;
+  --lesli-color-categorical-quetzal-900: #283259;
+  --lesli-color-categorical-bugambilia-100: #F5E6EE;
+  --lesli-color-categorical-bugambilia-300: #D49AB5;
+  --lesli-color-categorical-bugambilia-500: #A83E6F;
+  --lesli-color-categorical-bugambilia-700: #8A345C;
+  --lesli-color-categorical-bugambilia-900: #58213B;
+  --lesli-color-categorical-cacao-100: #EFE8E3;
+  --lesli-color-categorical-cacao-300: #B9A394;
+  --lesli-color-categorical-cacao-500: #6B4A35;
+  --lesli-color-categorical-cacao-700: #593E2C;
+  --lesli-color-categorical-cacao-900: #38271C;
+  --lesli-color-categorical-obsidian-100: #EAEEF2;
+  --lesli-color-categorical-obsidian-300: #ABB4BD;
+  --lesli-color-categorical-obsidian-500: #5F6C7D;
+  --lesli-color-categorical-obsidian-700: #505B69;
+  --lesli-color-categorical-obsidian-900: #313942;
+  --lesli-color-engine-administration-100: var(--lesli-color-categorical-cenote-100);
+  --lesli-color-engine-administration-300: var(--lesli-color-categorical-cenote-300);
+  --lesli-color-engine-administration-500: var(--lesli-color-categorical-cenote-500);
+  --lesli-color-engine-administration-700: var(--lesli-color-categorical-cenote-700);
+  --lesli-color-engine-administration-900: var(--lesli-color-categorical-cenote-900);
+  --lesli-color-engine-intelligence-100: var(--lesli-color-categorical-obsidian-100);
+  --lesli-color-engine-intelligence-300: var(--lesli-color-categorical-obsidian-300);
+  --lesli-color-engine-intelligence-500: var(--lesli-color-categorical-obsidian-500);
+  --lesli-color-engine-intelligence-700: var(--lesli-color-categorical-obsidian-700);
+  --lesli-color-engine-intelligence-900: var(--lesli-color-categorical-obsidian-900);
+  --lesli-color-engine-productivity-100: var(--lesli-color-categorical-ember-100);
+  --lesli-color-engine-productivity-300: var(--lesli-color-categorical-ember-300);
+  --lesli-color-engine-productivity-500: var(--lesli-color-categorical-ember-500);
+  --lesli-color-engine-productivity-700: var(--lesli-color-categorical-ember-700);
+  --lesli-color-engine-productivity-900: var(--lesli-color-categorical-ember-900);
+  --lesli-color-engine-integration-100: var(--lesli-color-categorical-ruby-100);
+  --lesli-color-engine-integration-300: var(--lesli-color-categorical-ruby-300);
+  --lesli-color-engine-integration-500: var(--lesli-color-categorical-ruby-500);
+  --lesli-color-engine-integration-700: var(--lesli-color-categorical-ruby-700);
+  --lesli-color-engine-integration-900: var(--lesli-color-categorical-ruby-900);
+  --lesli-color-engine-analytics-100: var(--lesli-color-categorical-jade-100);
+  --lesli-color-engine-analytics-300: var(--lesli-color-categorical-jade-300);
+  --lesli-color-engine-analytics-500: var(--lesli-color-categorical-jade-500);
+  --lesli-color-engine-analytics-700: var(--lesli-color-categorical-jade-700);
+  --lesli-color-engine-analytics-900: var(--lesli-color-categorical-jade-900);
+  --lesli-color-engine-security-100: var(--lesli-color-categorical-cacao-100);
+  --lesli-color-engine-security-300: var(--lesli-color-categorical-cacao-300);
+  --lesli-color-engine-security-500: var(--lesli-color-categorical-cacao-500);
+  --lesli-color-engine-security-700: var(--lesli-color-categorical-cacao-700);
+  --lesli-color-engine-security-900: var(--lesli-color-categorical-cacao-900);
+  --lesli-color-engine-finance-100: var(--lesli-color-categorical-bugambilia-100);
+  --lesli-color-engine-finance-300: var(--lesli-color-categorical-bugambilia-300);
+  --lesli-color-engine-finance-500: var(--lesli-color-categorical-bugambilia-500);
+  --lesli-color-engine-finance-700: var(--lesli-color-categorical-bugambilia-700);
+  --lesli-color-engine-finance-900: var(--lesli-color-categorical-bugambilia-900);
+  --lesli-color-engine-sales-100: var(--lesli-color-categorical-quetzal-100);
+  --lesli-color-engine-sales-300: var(--lesli-color-categorical-quetzal-300);
+  --lesli-color-engine-sales-500: var(--lesli-color-categorical-quetzal-500);
+  --lesli-color-engine-sales-700: var(--lesli-color-categorical-quetzal-700);
+  --lesli-color-engine-sales-900: var(--lesli-color-categorical-quetzal-900);
+  --lesli-color-engine-it-100: var(--lesli-color-categorical-maize-100);
+  --lesli-color-engine-it-300: var(--lesli-color-categorical-maize-300);
+  --lesli-color-engine-it-500: var(--lesli-color-categorical-maize-500);
+  --lesli-color-engine-it-700: var(--lesli-color-categorical-maize-700);
+  --lesli-color-engine-it-900: var(--lesli-color-categorical-maize-900);
+  --lesli-color-ruby-100: var(--lesli-color-categorical-ruby-100);
+  --lesli-color-ruby-300: var(--lesli-color-categorical-ruby-300);
+  --lesli-color-ruby-500: var(--lesli-color-categorical-ruby-500);
+  --lesli-color-ruby-700: var(--lesli-color-categorical-ruby-700);
+  --lesli-color-ruby-900: var(--lesli-color-categorical-ruby-900);
+  --lesli-color-ember-100: var(--lesli-color-categorical-ember-100);
+  --lesli-color-ember-300: var(--lesli-color-categorical-ember-300);
+  --lesli-color-ember-500: var(--lesli-color-categorical-ember-500);
+  --lesli-color-ember-700: var(--lesli-color-categorical-ember-700);
+  --lesli-color-ember-900: var(--lesli-color-categorical-ember-900);
+  --lesli-color-maize-100: var(--lesli-color-categorical-maize-100);
+  --lesli-color-maize-300: var(--lesli-color-categorical-maize-300);
+  --lesli-color-maize-500: var(--lesli-color-categorical-maize-500);
+  --lesli-color-maize-700: var(--lesli-color-categorical-maize-700);
+  --lesli-color-maize-900: var(--lesli-color-categorical-maize-900);
+  --lesli-color-agave-100: var(--lesli-color-categorical-agave-100);
+  --lesli-color-agave-300: var(--lesli-color-categorical-agave-300);
+  --lesli-color-agave-500: var(--lesli-color-categorical-agave-500);
+  --lesli-color-agave-700: var(--lesli-color-categorical-agave-700);
+  --lesli-color-agave-900: var(--lesli-color-categorical-agave-900);
+  --lesli-color-jade-100: var(--lesli-color-categorical-jade-100);
+  --lesli-color-jade-300: var(--lesli-color-categorical-jade-300);
+  --lesli-color-jade-500: var(--lesli-color-categorical-jade-500);
+  --lesli-color-jade-700: var(--lesli-color-categorical-jade-700);
+  --lesli-color-jade-900: var(--lesli-color-categorical-jade-900);
+  --lesli-color-cenote-100: var(--lesli-color-categorical-cenote-100);
+  --lesli-color-cenote-300: var(--lesli-color-categorical-cenote-300);
+  --lesli-color-cenote-500: var(--lesli-color-categorical-cenote-500);
+  --lesli-color-cenote-700: var(--lesli-color-categorical-cenote-700);
+  --lesli-color-cenote-900: var(--lesli-color-categorical-cenote-900);
+  --lesli-color-quetzal-100: var(--lesli-color-categorical-quetzal-100);
+  --lesli-color-quetzal-300: var(--lesli-color-categorical-quetzal-300);
+  --lesli-color-quetzal-500: var(--lesli-color-categorical-quetzal-500);
+  --lesli-color-quetzal-700: var(--lesli-color-categorical-quetzal-700);
+  --lesli-color-quetzal-900: var(--lesli-color-categorical-quetzal-900);
+  --lesli-color-bugambilia-100: var(--lesli-color-categorical-bugambilia-100);
+  --lesli-color-bugambilia-300: var(--lesli-color-categorical-bugambilia-300);
+  --lesli-color-bugambilia-500: var(--lesli-color-categorical-bugambilia-500);
+  --lesli-color-bugambilia-700: var(--lesli-color-categorical-bugambilia-700);
+  --lesli-color-bugambilia-900: var(--lesli-color-categorical-bugambilia-900);
+  --lesli-color-cacao-100: var(--lesli-color-categorical-cacao-100);
+  --lesli-color-cacao-300: var(--lesli-color-categorical-cacao-300);
+  --lesli-color-cacao-500: var(--lesli-color-categorical-cacao-500);
+  --lesli-color-cacao-700: var(--lesli-color-categorical-cacao-700);
+  --lesli-color-cacao-900: var(--lesli-color-categorical-cacao-900);
+  --lesli-color-obsidian-100: var(--lesli-color-categorical-obsidian-100);
+  --lesli-color-obsidian-300: var(--lesli-color-categorical-obsidian-300);
+  --lesli-color-obsidian-500: var(--lesli-color-categorical-obsidian-500);
+  --lesli-color-obsidian-700: var(--lesli-color-categorical-obsidian-700);
+  --lesli-color-obsidian-900: var(--lesli-color-categorical-obsidian-900);
+  --lesli-color-collection-administration: var(--lesli-color-engine-administration-500);
+  --lesli-color-collection-intelligence: var(--lesli-color-engine-intelligence-500);
+  --lesli-color-collection-productivity: var(--lesli-color-engine-productivity-500);
+  --lesli-color-collection-integration: var(--lesli-color-engine-integration-500);
+  --lesli-color-collection-analytics: var(--lesli-color-engine-analytics-500);
+  --lesli-color-collection-security: var(--lesli-color-engine-security-500);
+  --lesli-color-collection-finance: var(--lesli-color-engine-finance-500);
+  --lesli-color-collection-sales: var(--lesli-color-engine-sales-500);
+  --lesli-color-collection-it: var(--lesli-color-engine-it-500);
   --lesli-color-blue-100: #E3F0F3;
   --lesli-color-blue-300: #8FB8C4;
   --lesli-color-blue-500: #1F6F8B;
