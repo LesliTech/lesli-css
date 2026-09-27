@@ -30,21 +30,24 @@ Building a better future, one line of code at a time.
 */
 
 
-// · 
-@import "true";
-@import "./breakpoint.scss";
+// · tools
+@use "true" as *;
+
+
+// · mixins under test
+@use "./breakpoint" as breakpoint;
 
 
 // · 
 // Describe what you're testing
-@include describe('@mixin lesli-css-breakpoint-builder($min, $max)') {
+@include describe('@mixin lesli-breakpoint-builder($min, $max)') {
 
     @include it('should create a breakpoint for small sizes') {
 
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-small {
+                @include breakpoint.lesli-breakpoint-small {
                     .div {
                         color: red;
                     }
@@ -67,7 +70,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-mobile {
+                @include breakpoint.lesli-breakpoint-mobile {
                     .div {
                         color: red;
                     }
@@ -89,7 +92,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-tablet {
+                @include breakpoint.lesli-breakpoint-tablet {
                     .div {
                         color: red;
                     }
@@ -111,7 +114,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-desktop {
+                @include breakpoint.lesli-breakpoint-desktop {
                     .div {
                         color: red;
                     }
@@ -133,7 +136,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-widescreen {
+                @include breakpoint.lesli-breakpoint-widescreen {
                     .div {
                         color: red;
                     }
@@ -155,7 +158,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-fullhd {
+                @include breakpoint.lesli-breakpoint-fullhd {
                     .div {
                         color: red;
                     }
@@ -177,7 +180,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-until-tablet {
+                @include breakpoint.lesli-breakpoint-until-tablet {
                     .div {
                         color: red;
                     }
@@ -199,7 +202,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-until-desktop {
+                @include breakpoint.lesli-breakpoint-until-desktop {
                     .div {
                         color: red;
                     }
@@ -221,7 +224,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-until-widescreen {
+                @include breakpoint.lesli-breakpoint-until-widescreen {
                     .div {
                         color: red;
                     }
@@ -243,7 +246,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-only-tablet {
+                @include breakpoint.lesli-breakpoint-only-tablet {
                     .div {
                         color: red;
                     }
@@ -265,7 +268,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-only-desktop {
+                @include breakpoint.lesli-breakpoint-only-desktop {
                     .div {
                         color: red;
                     }
@@ -287,7 +290,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint-only-widescreen {
+                @include breakpoint.lesli-breakpoint-only-widescreen {
                     .div {
                         color: red;
                     }
@@ -309,7 +312,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint(10px) {
+                @include breakpoint.lesli-breakpoint(10px) {
                     .div {
                         color: red;
                     }
@@ -331,7 +334,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-breakpoint(10px, 666px) {
+                @include breakpoint.lesli-breakpoint(10px, 666px) {
                     .div {
                         color: red;
                     }

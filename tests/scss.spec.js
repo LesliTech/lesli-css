@@ -31,7 +31,7 @@ Building a better future, one line of code at a time.
 
 
 // · 
-import { describe, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
 
 // · 
@@ -45,9 +45,19 @@ describe("RUNNING SASS TESTS", () => {
 
     // Find all of the Sass files that end in `*.spec.scss` in any directory of this project.
     // I use path.resolve because True requires absolute paths to compile test files.
-    const sassTestFiles = glob.sync(path.resolve(process.cwd(), "source/**/**/*.spec.scss"))
+    const sassTestFiles = glob.sync(
+        path.resolve(process.cwd(), "scss/**/*.spec.scss")
+    ).sort()
+
+    it("discovers Sass specs", () => {
+        expect(sassTestFiles.length).toBeGreaterThan(0)
+    })
 
     // Run True on every file found with the describe and it methods provided
-    sassTestFiles.forEach(file => sassTrue.runSass({ describe, it }, file))
+    sassTestFiles.forEach(file => sassTrue.runSass(
+        { describe, it },
+        file,
+        { quietDeps: true }
+    ))
 
 })

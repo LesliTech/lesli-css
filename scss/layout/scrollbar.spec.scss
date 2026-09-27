@@ -32,21 +32,24 @@ Building a better future, one line of code at a time.
 */
 
 
-// · 
-@import "true";
-@import "./scrollbar.scss";
+// · tools
+@use "true" as *;
+
+
+// · mixin under test
+@use "./scrollbar" as scrollbar;
 
 
 // · 
 // Describe what you're testing
-@include describe('@mixin lesli-css-scrollbar($style:normal, $color:false, $background:false)') {
+@include describe('@mixin lesli-scrollbar($style:normal, $color:#ffffff, $background:#ffffff)') {
 
     @include it('should thin scrollbar') {
 
         @include assert {
 
             @include output {
-                @include lesli-css-scrollbar();
+                @include scrollbar.lesli-scrollbar();
             }
 
             @include expect {
@@ -63,7 +66,7 @@ Building a better future, one line of code at a time.
         @include assert {
 
             @include output {
-                @include lesli-css-scrollbar(hide);
+                @include scrollbar.lesli-scrollbar(hide);
             }
 
             @include expect {

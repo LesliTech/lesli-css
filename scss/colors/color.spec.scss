@@ -31,86 +31,95 @@ Building a better future, one line of code at a time.
 */
 
 
-// · 
-@import "true";
-@import "./colors.scss";
+// · tools
+@use "sass:list";
+@use "sass:map";
+@use "true" as *;
 
 
-// · 
-@function lesli-css-color($pallete, $variant: 500) {
-    @return lesli-css-color-builder($pallete, $variant, (
-        lesli: (
-            sea: #2F478D,
-            navy: #112A62,
-            easy: #7E9BF1,
-            brand: #214FBD,
-            faded: #EBF1FF,
-            ocean: #172347,
-            midsky: #edf6ff
-        )
-    ));
+// · public color API
+@use "./color" as color;
+
+
+@include describe("lesli-color() core palettes") {
+
+    @include it("returns the official Lesli brand color by default") {
+        @include assert-equal(color.lesli-color(primary), #276AD6);
+    }
+
+    @include it("keeps the semantic and neutral identities stable") {
+        @include assert-equal(color.lesli-color(info), #167D9A);
+        @include assert-equal(color.lesli-color(success), #23845D);
+        @include assert-equal(color.lesli-color(warning), #C98518);
+        @include assert-equal(color.lesli-color(danger), #C44A42);
+        @include assert-equal(color.lesli-color(neutral), #667383);
+    }
 }
 
 
-// · 
-@include describe('@function lesli-css-color($pallete, $variant: 500)') {
+@include describe("canonical categorical palettes") {
 
-    @include it('should return the color for lesli sea') {
-    @include assert-equal(lesli-css-color(lesli, sea), #2F478D); 
+    @include it("exposes every canonical categorical identity at 500") {
+        @include assert-equal(color.lesli-color(categorical-rose), #D24572);
+        @include assert-equal(color.lesli-color(categorical-orange), #C96E20);
+        @include assert-equal(color.lesli-color(categorical-gold), #B89D2B);
+        @include assert-equal(color.lesli-color(categorical-lime), #83A730);
+        @include assert-equal(color.lesli-color(categorical-teal), #239576);
+        @include assert-equal(color.lesli-color(categorical-cyan), #22909B);
+        @include assert-equal(color.lesli-color(categorical-sky), #2B88C0);
+        @include assert-equal(color.lesli-color(categorical-indigo), #526EE3);
+        @include assert-equal(color.lesli-color(categorical-violet), #9260DA);
+        @include assert-equal(color.lesli-color(categorical-magenta), #BE47B8);
     }
 
-    @include it('should return the color for lesli sea') {
-    @include assert-equal(lesli-css-color(lesli, navy), #112A62); 
-    }
+    @include it("uses only the five supported categorical shades") {
+        $sky: color.lesli-color-palette(categorical-sky);
 
-    @include it('should return the color for lesli sea') {
-    @include assert-equal(lesli-css-color(lesli, easy), #7E9BF1); 
+        @include assert-equal(
+            map.keys($sky),
+            (100, 300, 500, 700, 900)
+        );
+        @include assert-equal(list.length(map.keys($sky)), 5);
     }
-
-    @include it('should return the color for lesli sea') {
-    @include assert-equal(lesli-css-color(lesli, brand), #214FBD); 
-    }
-
-    @include it('should return the color for lesli sea') {
-    @include assert-equal(lesli-css-color(lesli, faded), #EBF1FF); 
-    }
-
-    @include it('should return the color for lesli sea') {
-    @include assert-equal(lesli-css-color(lesli, ocean), #172347); 
-    }
-
-    @include it('should return the color for lesli sea') {
-    @include assert-equal(lesli-css-color(lesli, midsky), #edf6ff); 
-    }
-
 }
 
 
-// · 
-@include describe('@function lesli-css-color-builder($pallete, $variant: 500)') {
+@include describe("Engine identity aliases") {
 
-    @include it('should return the color for blue default') {
-    @include assert-equal(lesli-css-color-builder(blue), #3689e6);
+    @include it("maps every Engine to its categorical identity") {
+        @include assert-equal(color.lesli-color(engine-administration), color.lesli-color(categorical-sky));
+        @include assert-equal(color.lesli-color(engine-intelligence), color.lesli-color(categorical-violet));
+        @include assert-equal(color.lesli-color(engine-productivity), color.lesli-color(categorical-orange));
+        @include assert-equal(color.lesli-color(engine-integration), color.lesli-color(categorical-magenta));
+        @include assert-equal(color.lesli-color(engine-analytics), color.lesli-color(categorical-cyan));
+        @include assert-equal(color.lesli-color(engine-security), color.lesli-color(categorical-indigo));
+        @include assert-equal(color.lesli-color(engine-finance), color.lesli-color(categorical-gold));
+        @include assert-equal(color.lesli-color(engine-sales), color.lesli-color(categorical-rose));
+        @include assert-equal(color.lesli-color(engine-it), color.lesli-color(categorical-teal));
     }
 
-    @include it('should return the color for blue 100') {
-    @include assert-equal(lesli-css-color-builder(blue, 100), #8cd5ff);
+    @include it("aliases the complete Engine scale") {
+        @each $shade in 100, 300, 500, 700, 900 {
+            @include assert-equal(
+                color.lesli-color(engine-administration, $shade),
+                color.lesli-color(categorical-sky, $shade)
+            );
+        }
+    }
+}
+
+
+@include describe("legacy color compatibility") {
+
+    @include it("preserves historical categorical and family tokens") {
+        @include assert-equal(color.lesli-color(categorical-cenote), #1F6F8B);
+        @include assert-equal(color.lesli-color(cenote), #1F6F8B);
     }
 
-    @include it('should return the color for blue 300') {
-    @include assert-equal(lesli-css-color-builder(blue, 300), #64baff);
+    @include it("resolves collection aliases through the current Engine identity") {
+        @include assert-equal(
+            color.lesli-color(collection, administration),
+            color.lesli-color(engine-administration)
+        );
     }
-
-    @include it('should return the color for blue 500') {
-    @include assert-equal(lesli-css-color-builder(blue, 500), #3689e6);
-    }
-
-    @include it('should return the color for blue 700') {
-    @include assert-equal(lesli-css-color-builder(blue, 700), #0d52bf);
-    }
-
-    @include it('should return the color for blue 900') {
-    @include assert-equal(lesli-css-color-builder(blue, 900), #002e99); 
-    }
-
 }
