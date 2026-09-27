@@ -161,19 +161,19 @@ Building a better future, one line of code at a time.
 // · 
 */
 :root {
-  --lesli-color-primary-50: #F2F7FB;
-  --lesli-color-primary-100: #E3EEF6;
-  --lesli-color-primary-200: #BDD5E8;
-  --lesli-color-primary-300: #8DAEC9;
-  --lesli-color-primary-400: #4F83AE;
-  --lesli-color-primary-500: #245F93;
-  --lesli-color-primary-600: #1F527F;
-  --lesli-color-primary-700: #1A466C;
-  --lesli-color-primary-800: #153A59;
-  --lesli-color-primary-900: #123553;
-  --lesli-color-lesli-primary: #245F93;
-  --lesli-color-lesli-light: #E3EEF6;
-  --lesli-color-lesli-dark: #123553;
+  --lesli-color-primary-50: #F2F7FF;
+  --lesli-color-primary-100: #E3EEFF;
+  --lesli-color-primary-200: #C6DCFF;
+  --lesli-color-primary-300: #8FB5F5;
+  --lesli-color-primary-400: #4C83EA;
+  --lesli-color-primary-500: #276AD6;
+  --lesli-color-primary-600: #1F5BBB;
+  --lesli-color-primary-700: #194A99;
+  --lesli-color-primary-800: #133A78;
+  --lesli-color-primary-900: #0C2856;
+  --lesli-color-lesli-primary: #276AD6;
+  --lesli-color-lesli-light: #E3EEFF;
+  --lesli-color-lesli-dark: #0C2856;
   --lesli-color-neutral-50: #F8FAFC;
   --lesli-color-neutral-100: #F1F4F8;
   --lesli-color-neutral-200: #E5EAF0;

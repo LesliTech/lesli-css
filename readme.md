@@ -152,7 +152,7 @@ Projects that do not compile Sass can import the generated color tokens:
 The package generates variables for every palette entry, including:
 
 ```css
---lesli-color-primary-500: #245F93;
+--lesli-color-primary-500: #276AD6;
 --lesli-color-success-600: #1F694F;
 --lesli-color-cenote-300: #8FB8C4;
 --lesli-color-collection-finance: #A83E6F;

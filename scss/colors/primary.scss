@@ -32,20 +32,20 @@ Building a better future, one line of code at a time.
 @use "sass:map";
 
 
-// Primary color palette inspired by maya blue
+// Official Lesli Blue primary color palette
 $lesli-color-primary: (
 
     primary: (
-        50:  #F2F7FB,
-        100: #E3EEF6,
-        200: #BDD5E8,
-        300: #8DAEC9,
-        400: #4F83AE,
-        500: #245F93,
-        600: #1F527F,
-        700: #1A466C,
-        800: #153A59,
-        900: #123553
+        50:  #F2F7FF,
+        100: #E3EEFF,
+        200: #C6DCFF,
+        300: #8FB5F5,
+        400: #4C83EA,
+        500: #276AD6, // primary
+        600: #1F5BBB,
+        700: #194A99,
+        800: #133A78,
+        900: #0C2856
     )
 );
 
