@@ -33,14 +33,23 @@ Building a better future, one line of code at a time.
 
 // · Global Bulma variables
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-$primary: #0D52Bf !default;
+@use "../colors/color" as lesli-colors;
+
+$primary: lesli-colors.lesli-color(primary) !default;
+$info: lesli-colors.lesli-color(info) !default;
+$success: lesli-colors.lesli-color(success) !default;
+$warning: lesli-colors.lesli-color(warning) !default;
+$danger: lesli-colors.lesli-color(danger) !default;
 
 
 // Override global Sass variables from the /utilities folder
 @use "bulma/sass/utilities" with (
     $primary: $primary,
     $link: $primary,
-    $info: $primary
+    $info: $info,
+    $success: $success,
+    $warning: $warning,
+    $danger: $danger
 );
 
 

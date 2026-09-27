@@ -153,7 +153,7 @@ The package generates variables for every palette entry, including:
 
 ```css
 --lesli-color-primary-500: #276AD6;
---lesli-color-success-600: #1F694F;
+--lesli-color-success-600: #1D704F;
 --lesli-color-cenote-300: #8FB8C4;
 --lesli-color-collection-finance: #A83E6F;
 ```
