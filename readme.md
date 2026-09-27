@@ -89,38 +89,60 @@ color: lesli.lesli-color(success, 500);
 
 ## Color System
 
-### Core palettes
+The Lesli color system separates brand, semantic state, foundation, reusable categories, and product identity:
 
-| Palette | Variants | Purpose |
-| --- | --- | --- |
-| `primary` | 50–900 | Lesli brand and primary actions |
-| `neutral` | 50–900 | Text, borders, surfaces, and disabled states |
-| `info` | 50–900 | Informational messages and states |
-| `success` | 50–900 | Successful actions and positive states |
-| `warning` | 50–900 | Warnings and actions that need attention |
-| `danger` | 50–900 | Errors and destructive actions |
-| `black` | 50–900 | Neutral dark tones |
+```text
+Lesli Color System
+├── Brand
+│   └── Primary
+├── Semantic
+│   ├── Info
+│   ├── Success
+│   ├── Warning
+│   └── Danger
+├── Foundation
+│   └── Neutral
+├── Categorical
+│   ├── Rose, Orange, Gold, Lime, Teal
+│   └── Cyan, Sky, Indigo, Violet, Magenta
+└── Engines
+    └── Stable product identities mapped to categorical families
+```
+
+| Layer | Palette | Variants | Purpose |
+| --- | --- | --- | --- |
+| Brand | `primary` | 50–900 | Lesli brand and primary actions |
+| Foundation | `neutral` | 50–900 | Text, borders, surfaces, and disabled states |
+| Semantic | `info` | 50–900 | Informational messages and states |
+| Semantic | `success` | 50–900 | Successful actions and positive states |
+| Semantic | `warning` | 50–900 | Warnings and actions that need attention |
+| Semantic | `danger` | 50–900 | Errors and destructive actions |
+| Foundation | `black` | 50–900 | Neutral dark tones |
 
 ### Categorical colors
 
-Categorical colors are reusable, non-semantic colors for categories, datasets, charts, calendars, avatars, tabs, modules, and other product areas. They provide variants `100`, `300`, `500`, `700`, and `900`:
+Categorical colors are reusable, non-semantic colors for categories, datasets, charts, calendars, avatars, tabs, modules, and other product areas. They do not communicate success, warning, danger, or information. Each family has five intentional roles: `100` for subtle backgrounds, `300` for soft accents, `500` for identity, `700` for strong accents, and `900` for dark surfaces and foregrounds.
 
-- `categorical-ruby`
-- `categorical-ember`
-- `categorical-maize`
-- `categorical-agave`
-- `categorical-jade`
-- `categorical-cenote`
-- `categorical-quetzal`
-- `categorical-bugambilia`
-- `categorical-cacao`
-- `categorical-obsidian`
+![The ten Lesli categorical families, each shown at shades 100, 300, 500, 700, and 900](./docs/categorical-colors.svg)
+
+| Family | 100 | 300 | 500 | 700 | 900 |
+| --- | --- | --- | --- | --- | --- |
+| Rose | `#FEE8EC` | `#F5A3B5` | `#D24572` | `#90314E` | `#501C2B` |
+| Orange | `#FCEBE0` | `#E8B08B` | `#C96E20` | `#834511` | `#49260A` |
+| Gold | `#F6F2E3` | `#D9CB95` | `#B89D2B` | `#715F14` | `#3C320A` |
+| Lime | `#EEF5E4` | `#BED499` | `#83A730` | `#526A1B` | `#2B380E` |
+| Teal | `#E4F3ED` | `#97CBB8` | `#239576` | `#1D6651` | `#12382C` |
+| Cyan | `#E3F2F4` | `#94C9CF` | `#22909B` | `#15636B` | `#0F373B` |
+| Sky | `#E4F1FA` | `#97C4E4` | `#2B88C0` | `#215E83` | `#143448` |
+| Indigo | `#E9EEFE` | `#A6BBFA` | `#526EE3` | `#3D519F` | `#212D58` |
+| Violet | `#F1EBFE` | `#C7AFF4` | `#9260DA` | `#644394` | `#372552` |
+| Magenta | `#FCE7F9` | `#E6A4E0` | `#BE47B8` | `#82337D` | `#481D45` |
 
 Use a categorical token when the color represents a reusable category rather than semantic state or a specific Lesli product:
 
 ```scss
 .chart-series {
-    color: lesli.lesli-color(categorical-cenote, 500);
+    color: lesli.lesli-color(categorical-sky, 500);
 }
 ```
 
@@ -130,15 +152,17 @@ Engine colors are product identity aliases. Each engine resolves to a categorica
 
 | Engine | Categorical palette |
 | --- | --- |
-| `engine-administration` | `categorical-cenote` |
-| `engine-intelligence` | `categorical-obsidian` |
-| `engine-productivity` | `categorical-ember` |
-| `engine-integration` | `categorical-ruby` |
-| `engine-analytics` | `categorical-jade` |
-| `engine-security` | `categorical-cacao` |
-| `engine-finance` | `categorical-bugambilia` |
-| `engine-sales` | `categorical-quetzal` |
-| `engine-it` | `categorical-maize` |
+| `engine-administration` | `categorical-sky` |
+| `engine-intelligence` | `categorical-violet` |
+| `engine-productivity` | `categorical-orange` |
+| `engine-integration` | `categorical-magenta` |
+| `engine-analytics` | `categorical-cyan` |
+| `engine-security` | `categorical-indigo` |
+| `engine-finance` | `categorical-gold` |
+| `engine-sales` | `categorical-rose` |
+| `engine-it` | `categorical-teal` |
+
+`categorical-lime` is intentionally unassigned and remains available for charts, datasets, calendars, modules, and future Engines.
 
 Engine aliases expose the complete five-step scale. The default Sass variant remains `500`:
 
@@ -153,15 +177,18 @@ Engine aliases expose the complete five-step scale. The default Sass variant rem
 }
 ```
 
-The palette assignment is an implementation and theme decision. Engine consumers should use `engine-*` tokens instead of depending directly on the assigned categorical family.
+The palette assignment is an implementation and theme decision. Engine consumers should use `engine-*` tokens instead of depending directly on the assigned categorical family. Assignments can then change centrally without application code changes.
+
+Categorical `500` values are identity colors, not automatic foreground/background pairs. In particular, do not assume white text is accessible on every `500`; use the appropriate existing foreground token or a darker categorical shade for solid surfaces.
 
 ### Legacy collection aliases
 
-The previous palette names and `collection` engine aliases remain available for backward compatibility, but new code should use `categorical-*` and `engine-*`:
+The previous family names, their `categorical-*` forms, and `collection` Engine aliases remain available with their historical values in a deprecated compatibility layer. They are not current categorical colors. New code should use the families listed above and `engine-*` identities:
 
 ```scss
-// Legacy compatibility APIs
+// Deprecated compatibility APIs
 color: lesli.lesli-color(cenote, 500);
+color: lesli.lesli-color(categorical-cenote, 500);
 color: lesli.lesli-color(collection, administration);
 ```
 
@@ -189,11 +216,11 @@ The package generates variables for every palette entry, including:
 ```css
 --lesli-color-primary-500: #276AD6;
 --lesli-color-success-600: #1D704F;
---lesli-color-categorical-cenote-300: #8FB8C4;
---lesli-color-engine-finance-500: var(--lesli-color-categorical-bugambilia-500);
+--lesli-color-categorical-sky-300: #97C4E4;
+--lesli-color-engine-finance-500: var(--lesli-color-categorical-gold-500);
 ```
 
-Legacy variables such as `--lesli-color-cenote-300` and `--lesli-color-collection-finance` remain as aliases to the canonical tokens.
+Deprecated family variables retain their historical values, while aliases such as `--lesli-color-collection-finance` resolve to the current Engine identity.
 
 > [!NOTE]
 > Package imports in CSS must be processed by a bundler or CSS compiler that resolves dependencies from `node_modules`.
@@ -229,12 +256,13 @@ Import the generated variables and map them to Tailwind theme tokens:
     --color-primary-500: var(--lesli-color-primary-500);
     --color-primary-600: var(--lesli-color-primary-600);
     --color-primary-900: var(--lesli-color-primary-900);
+    --color-neutral-900: var(--lesli-color-neutral-900);
 
     --color-success-500: var(--lesli-color-success-500);
     --color-warning-500: var(--lesli-color-warning-500);
     --color-danger-500: var(--lesli-color-danger-500);
 
-    --color-categorical-cenote-300: var(--lesli-color-categorical-cenote-300);
+    --color-categorical-sky-300: var(--lesli-color-categorical-sky-300);
     --color-engine-finance: var(--lesli-color-engine-finance-500);
 }
 ```
@@ -248,7 +276,7 @@ The mapped colors become standard Tailwind utilities:
 
 <p class="text-success-500">Changes saved successfully.</p>
 
-<div class="border border-categorical-cenote-300 bg-engine-finance">
+<div class="border border-categorical-sky-300 bg-engine-finance text-neutral-900">
     Finance
 </div>
 ```

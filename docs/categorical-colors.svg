@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="680" viewBox="0 0 920 680" role="img" aria-labelledby="title description">
+  <title id="title">Lesli categorical color palette</title>
+  <desc id="description">Ten categorical families shown at shades 100, 300, 500, 700, and 900. Engine assignments appear beside their categorical family.</desc>
+  <rect width="920" height="680" rx="16" fill="#F8FAFC"/>
+  <text x="28" y="38" fill="#1F2933" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Lesli categorical colors</text>
+  <text x="28" y="62" fill="#667383" font-family="system-ui, sans-serif" font-size="13">Reusable identity colors · Engine assignments shown below family names</text>
+
+  <g fill="#4B5663" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    <text x="252" y="91">100</text>
+    <text x="390" y="91">300</text>
+    <text x="528" y="91">500</text>
+    <text x="666" y="91">700</text>
+    <text x="804" y="91">900</text>
+  </g>
+
+  <g font-family="system-ui, sans-serif" font-size="13">
+    <text x="28" y="126" fill="#1F2933" font-weight="700">Rose</text>
+    <text x="28" y="144" fill="#667383" font-size="11">Sales</text>
+    <rect x="190" y="104" width="124" height="46" rx="7" fill="#FEE8EC"/>
+    <rect x="328" y="104" width="124" height="46" rx="7" fill="#F5A3B5"/>
+    <rect x="466" y="104" width="124" height="46" rx="7" fill="#D24572"/>
+    <rect x="604" y="104" width="124" height="46" rx="7" fill="#90314E"/>
+    <rect x="742" y="104" width="124" height="46" rx="7" fill="#501C2B"/>
+
+    <text x="28" y="182" fill="#1F2933" font-weight="700">Orange</text>
+    <text x="28" y="200" fill="#667383" font-size="11">Productivity</text>
+    <rect x="190" y="160" width="124" height="46" rx="7" fill="#FCEBE0"/>
+    <rect x="328" y="160" width="124" height="46" rx="7" fill="#E8B08B"/>
+    <rect x="466" y="160" width="124" height="46" rx="7" fill="#C96E20"/>
+    <rect x="604" y="160" width="124" height="46" rx="7" fill="#834511"/>
+    <rect x="742" y="160" width="124" height="46" rx="7" fill="#49260A"/>
+
+    <text x="28" y="238" fill="#1F2933" font-weight="700">Gold</text>
+    <text x="28" y="256" fill="#667383" font-size="11">Finance</text>
+    <rect x="190" y="216" width="124" height="46" rx="7" fill="#F6F2E3"/>
+    <rect x="328" y="216" width="124" height="46" rx="7" fill="#D9CB95"/>
+    <rect x="466" y="216" width="124" height="46" rx="7" fill="#B89D2B"/>
+    <rect x="604" y="216" width="124" height="46" rx="7" fill="#715F14"/>
+    <rect x="742" y="216" width="124" height="46" rx="7" fill="#3C320A"/>
+
+    <text x="28" y="294" fill="#1F2933" font-weight="700">Lime</text>
+    <text x="28" y="312" fill="#667383" font-size="11">Unassigned</text>
+    <rect x="190" y="272" width="124" height="46" rx="7" fill="#EEF5E4"/>
+    <rect x="328" y="272" width="124" height="46" rx="7" fill="#BED499"/>
+    <rect x="466" y="272" width="124" height="46" rx="7" fill="#83A730"/>
+    <rect x="604" y="272" width="124" height="46" rx="7" fill="#526A1B"/>
+    <rect x="742" y="272" width="124" height="46" rx="7" fill="#2B380E"/>
+
+    <text x="28" y="350" fill="#1F2933" font-weight="700">Teal</text>
+    <text x="28" y="368" fill="#667383" font-size="11">IT</text>
+    <rect x="190" y="328" width="124" height="46" rx="7" fill="#E4F3ED"/>
+    <rect x="328" y="328" width="124" height="46" rx="7" fill="#97CBB8"/>
+    <rect x="466" y="328" width="124" height="46" rx="7" fill="#239576"/>
+    <rect x="604" y="328" width="124" height="46" rx="7" fill="#1D6651"/>
+    <rect x="742" y="328" width="124" height="46" rx="7" fill="#12382C"/>
+
+    <text x="28" y="406" fill="#1F2933" font-weight="700">Cyan</text>
+    <text x="28" y="424" fill="#667383" font-size="11">Analytics</text>
+    <rect x="190" y="384" width="124" height="46" rx="7" fill="#E3F2F4"/>
+    <rect x="328" y="384" width="124" height="46" rx="7" fill="#94C9CF"/>
+    <rect x="466" y="384" width="124" height="46" rx="7" fill="#22909B"/>
+    <rect x="604" y="384" width="124" height="46" rx="7" fill="#15636B"/>
+    <rect x="742" y="384" width="124" height="46" rx="7" fill="#0F373B"/>
+
+    <text x="28" y="462" fill="#1F2933" font-weight="700">Sky</text>
+    <text x="28" y="480" fill="#667383" font-size="11">Administration</text>
+    <rect x="190" y="440" width="124" height="46" rx="7" fill="#E4F1FA"/>
+    <rect x="328" y="440" width="124" height="46" rx="7" fill="#97C4E4"/>
+    <rect x="466" y="440" width="124" height="46" rx="7" fill="#2B88C0"/>
+    <rect x="604" y="440" width="124" height="46" rx="7" fill="#215E83"/>
+    <rect x="742" y="440" width="124" height="46" rx="7" fill="#143448"/>
+
+    <text x="28" y="518" fill="#1F2933" font-weight="700">Indigo</text>
+    <text x="28" y="536" fill="#667383" font-size="11">Security</text>
+    <rect x="190" y="496" width="124" height="46" rx="7" fill="#E9EEFE"/>
+    <rect x="328" y="496" width="124" height="46" rx="7" fill="#A6BBFA"/>
+    <rect x="466" y="496" width="124" height="46" rx="7" fill="#526EE3"/>
+    <rect x="604" y="496" width="124" height="46" rx="7" fill="#3D519F"/>
+    <rect x="742" y="496" width="124" height="46" rx="7" fill="#212D58"/>
+
+    <text x="28" y="574" fill="#1F2933" font-weight="700">Violet</text>
+    <text x="28" y="592" fill="#667383" font-size="11">Intelligence</text>
+    <rect x="190" y="552" width="124" height="46" rx="7" fill="#F1EBFE"/>
+    <rect x="328" y="552" width="124" height="46" rx="7" fill="#C7AFF4"/>
+    <rect x="466" y="552" width="124" height="46" rx="7" fill="#9260DA"/>
+    <rect x="604" y="552" width="124" height="46" rx="7" fill="#644394"/>
+    <rect x="742" y="552" width="124" height="46" rx="7" fill="#372552"/>
+
+    <text x="28" y="630" fill="#1F2933" font-weight="700">Magenta</text>
+    <text x="28" y="648" fill="#667383" font-size="11">Integration</text>
+    <rect x="190" y="608" width="124" height="46" rx="7" fill="#FCE7F9"/>
+    <rect x="328" y="608" width="124" height="46" rx="7" fill="#E6A4E0"/>
+    <rect x="466" y="608" width="124" height="46" rx="7" fill="#BE47B8"/>
+    <rect x="604" y="608" width="124" height="46" rx="7" fill="#82337D"/>
+    <rect x="742" y="608" width="124" height="46" rx="7" fill="#481D45"/>
+  </g>
+</svg>
