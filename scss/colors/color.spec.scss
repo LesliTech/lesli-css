@@ -43,7 +43,7 @@ Building a better future, one line of code at a time.
 
 @include describe("lesli-color() core palettes") {
 
-    @include it("returns the official Lesli brand color by default") {
+    @include it("returns Lesli Blue as the official brand color by default") {
         @include assert-equal(color.lesli-color(primary), #276AD6);
     }
 

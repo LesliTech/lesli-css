@@ -26,7 +26,7 @@
 
 ## Introduction
 
-Lesli CSS is the shared styling foundation for Lesli products. It provides reusable Sass functions, mixins, layout helpers, and a centralized color system for applications built with Sass, Bulma, plain CSS, or Tailwind CSS.
+Lesli CSS is the shared styling foundation for Lesli products. It provides reusable Sass functions, mixins, layout helpers, and a centralized color system for applications built with Sass, plain CSS, or Tailwind CSS.
 
 The Sass color maps are the source of truth. During the package build they are also exported as CSS custom properties, allowing Sass and CSS-based tools to use exactly the same palette without copying color values between projects.
 
@@ -38,7 +38,6 @@ The Sass color maps are the source of truth. During the package build they are a
 - Reusable categorical palettes and decoupled engine identity aliases
 - Portable CSS custom properties generated from the Sass maps
 - Tailwind CSS v4-compatible design tokens
-- Bulma-compatible Sass functions
 - Responsive breakpoint helpers
 - Typography, flexbox, shadow, container, and scrollbar mixins
 - Sass modules using the modern `@use` API
@@ -95,6 +94,7 @@ The Lesli color system separates brand, semantic state, foundation, reusable cat
 Lesli Color System
 ├── Brand
 │   └── Primary
+│       └── Lesli Blue (`primary-500`, `#276AD6`)
 ├── Semantic
 │   ├── Info
 │   ├── Success
@@ -111,13 +111,31 @@ Lesli Color System
 
 | Layer | Palette | Variants | Purpose |
 | --- | --- | --- | --- |
-| Brand | `primary` | 50–900 | Lesli brand and primary actions |
+| Brand | `primary` | 50–900 | Lesli Blue, brand identity, and primary actions |
 | Foundation | `neutral` | 50–900 | Text, borders, surfaces, and disabled states |
 | Semantic | `info` | 50–900 | Informational messages and states |
 | Semantic | `success` | 50–900 | Successful actions and positive states |
 | Semantic | `warning` | 50–900 | Warnings and actions that need attention |
 | Semantic | `danger` | 50–900 | Errors and destructive actions |
 | Foundation | `black` | 50–900 | Neutral dark tones |
+
+### Brand color: Lesli Blue
+
+**Lesli Blue** is the official name of the Lesli brand color. Its canonical token is `primary-500` and its value is `#276AD6`.
+
+Use the name **Lesli Blue** when referring to the brand color in design and documentation. Use the `primary` token family in code so applications continue to consume the stable public API:
+
+```scss
+.lesli-brand-surface {
+    background-color: lesli.lesli-color(primary, 500); // Lesli Blue
+}
+```
+
+```css
+.lesli-brand-surface {
+    background-color: var(--lesli-color-primary-500); /* Lesli Blue */
+}
+```
 
 ### Categorical colors
 
@@ -297,24 +315,6 @@ This keeps the Lesli palette stable while allowing an account or application to 
 
 <br />
 
-## Bulma
-
-Use the shared colors when configuring Bulma's Sass variables:
-
-```scss
-@use "lesli-css" as lesli;
-
-@use "bulma/sass" with (
-    $primary: lesli.lesli-color(primary, 500),
-    $info: lesli.lesli-color(info, 500),
-    $success: lesli.lesli-color(success, 500),
-    $warning: lesli.lesli-color(warning, 500),
-    $danger: lesli.lesli-color(danger, 500)
-);
-```
-
-<br />
-
 ## Sass Utilities
 
 ### Responsive breakpoints
@@ -386,7 +386,7 @@ lesli-css/
 │   ├── elements/              Element styles
 │   ├── helpers/               Breakpoints, fonts, flexbox, and shadows
 │   ├── layout/                Containers, normalization, and scrollbars
-│   └── vendor/                Bulma and Normalize integrations
+│   └── vendor/                Vendor styles and Normalize integration
 ├── _index.scss                Package Sass entry point
 └── lesli.scss                 Public Sass module
 ```
