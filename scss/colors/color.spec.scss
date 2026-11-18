@@ -48,18 +48,18 @@ Building a better future, one line of code at a time.
     }
 
     @include it("returns the refreshed semantic identities and the existing neutral color") {
-        @include assert-equal(color.lesli-color(info), #129ACC);
-        @include assert-equal(color.lesli-color(success), #11A575);
+        @include assert-equal(color.lesli-color(info), #087EAE);
+        @include assert-equal(color.lesli-color(success), #09855E);
         @include assert-equal(color.lesli-color(warning), #F0A51B);
-        @include assert-equal(color.lesli-color(danger), #EE466B);
+        @include assert-equal(color.lesli-color(danger), #D73554);
         @include assert-equal(color.lesli-color(neutral), #667383);
     }
 
     @include it("uses the approved solid action tones") {
-        @include assert-equal(color.lesli-color(info, 600), #087EAE);
-        @include assert-equal(color.lesli-color(success, 600), #09855E);
+        @include assert-equal(color.lesli-color(info, 500), #087EAE);
+        @include assert-equal(color.lesli-color(success, 500), #09855E);
         @include assert-equal(color.lesli-color(warning, 500), #F0A51B);
-        @include assert-equal(color.lesli-color(danger, 600), #D73554);
+        @include assert-equal(color.lesli-color(danger, 500), #D73554);
     }
 
     @include it("preserves the complete semantic shade API") {

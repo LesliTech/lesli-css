@@ -145,16 +145,16 @@ backgrounds, `200–300` for borders, and `700–900` for dark text and hover st
 
 | Solid surface | Color | Foreground | Contrast |
 | --- | --- | --- | --- |
-| `info-600` | `#087EAE` | White | 4.56:1 |
-| `success-600` | `#09855E` | White | 4.64:1 |
+| `info-500` | `#087EAE` | White | 4.56:1 |
+| `success-500` | `#09855E` | White | 4.64:1 |
 | `warning-500` | `#F0A51B` | `warning-900` (`#452B08`) | 6.31:1 |
-| `danger-600` | `#D73554` | White | 4.64:1 |
+| `danger-500` | `#D73554` | White | 4.64:1 |
 
 These ratios apply to the listed opaque pairs. Check contrast again when adding
 opacity or using different foregrounds. In particular, warning requires dark
 text; its `600` hover surface also keeps at least 4.5:1 against `warning-900`.
-The default semantic alias still resolves to `500`; choose `600` explicitly
-for info, success and danger buttons with white text.
+The default semantic alias resolves to `500`, the main solid action tone.
+Use `500` for info, success and danger buttons with white text and `600` for hover.
 
 The primary, neutral, categorical and engine identity palettes are unchanged.
 Rebuild `css/colors.css` after modifying the Sass maps before distributing the
@@ -256,7 +256,7 @@ The package generates variables for every palette entry, including:
 
 ```css
 --lesli-color-primary-500: #276AD6;
---lesli-color-success-600: #1D704F;
+--lesli-color-success-500: #09855E;
 --lesli-color-categorical-sky-300: #97C4E4;
 --lesli-color-engine-finance-500: var(--lesli-color-categorical-gold-500);
 ```
@@ -315,7 +315,7 @@ The mapped colors become standard Tailwind utilities:
     Save changes
 </button>
 
-<p class="text-success-500">Changes saved successfully.</p>
+<p class="text-success-700">Changes saved successfully.</p>
 
 <div class="border border-categorical-sky-300 bg-engine-finance text-neutral-900">
     Finance
