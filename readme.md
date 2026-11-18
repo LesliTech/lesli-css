@@ -137,6 +137,29 @@ Use the name **Lesli Blue** when referring to the brand color in design and docu
 }
 ```
 
+### Semantic interface colors
+
+The semantic scales bring Lesli closer to Tailwind's sky, emerald, amber and rose
+tones, with adjusted solid shades for readable button labels. The public names and shades remain unchanged. Use `50–100` for soft
+backgrounds, `200–300` for borders, and `700–900` for dark text and hover states.
+
+| Solid surface | Color | Foreground | Contrast |
+| --- | --- | --- | --- |
+| `info-600` | `#087EAE` | White | 4.56:1 |
+| `success-600` | `#09855E` | White | 4.64:1 |
+| `warning-500` | `#F0A51B` | `warning-900` (`#452B08`) | 6.31:1 |
+| `danger-600` | `#D73554` | White | 4.64:1 |
+
+These ratios apply to the listed opaque pairs. Check contrast again when adding
+opacity or using different foregrounds. In particular, warning requires dark
+text; its `600` hover surface also keeps at least 4.5:1 against `warning-900`.
+The default semantic alias still resolves to `500`; choose `600` explicitly
+for info, success and danger buttons with white text.
+
+The primary, neutral, categorical and engine identity palettes are unchanged.
+Rebuild `css/colors.css` after modifying the Sass maps before distributing the
+updated package.
+
 ### Categorical colors
 
 Categorical colors are reusable, non-semantic colors for categories, datasets, charts, calendars, avatars, tabs, modules, and other product areas. They do not communicate success, warning, danger, or information. Each family has five intentional roles: `100` for subtle backgrounds, `300` for soft accents, `500` for identity, `700` for strong accents, and `900` for dark surfaces and foregrounds.

@@ -32,6 +32,8 @@ Building a better future, one line of code at a time.
 
 
 // · Lesli UI color palette
+// Soft backgrounds at 50–100, borders at 200–300, solid actions at 600.
+// Warning uses 500 with dark text; white text is intended for the other 600 tones.
 $lesli-color-semantics: (
 
     // · neutral palette
@@ -50,58 +52,58 @@ $lesli-color-semantics: (
 
     // · semantic info
     info: (
-        50:  #F0FAFC,
-        100: #DDF3F7,
-        200: #BCE7EF,
-        300: #8AD4E1,
-        400: #4FB5C8,
-        500: #167D9A,
-        600: #126B84,
-        700: #11586D,
-        800: #124957,
-        900: #123D49
+        50:  #F0F9FF,
+        100: #DEF2FC,
+        200: #B6E5FA,
+        300: #80D1F3,
+        400: #3DB6E5,
+        500: #129ACC,
+        600: #087EAE,
+        700: #09658E,
+        800: #105274,
+        900: #14445E
     ),
 
     // · semantic success
     success: (
-        50:  #F1FAF6,
-        100: #DDF4E8,
-        200: #BDE7D2,
-        300: #8CD4B3,
-        400: #52B88D,
-        500: #23845D,
-        600: #1D704F,
-        700: #195C43,
-        800: #174B38,
-        900: #143E30
+        50:  #EDFCF5,
+        100: #D5F7E7,
+        200: #A9EDD0,
+        300: #72DCB4,
+        400: #35C18E,
+        500: #11A575,
+        600: #09855E,
+        700: #0B6D4F,
+        800: #105840,
+        900: #124936
     ),
 
     // · semantic warning
     warning: (
-        50:  #FFF9EB,
-        100: #FEF0C7,
-        200: #FDE19A,
-        300: #F8CB60,
-        400: #EAA934,
-        500: #C98518,
-        600: #AA6C12,
-        700: #8A560F,
-        800: #714611,
-        900: #5E3B12
+        50:  #FFFBED,
+        100: #FFF1C6,
+        200: #FFE397,
+        300: #FBD05B,
+        400: #F6BB2E,
+        500: #F0A51B,
+        600: #D18B10,
+        700: #A66A10,
+        800: #7D4D0F,
+        900: #452B08
     ),
 
     // · semantic danger
     danger: (
-        50:  #FFF4F3,
-        100: #FFE5E2,
-        200: #FDCBC6,
-        300: #F5A69F,
-        400: #E8756C,
-        500: #C44A42,
-        600: #A93D37,
-        700: #8C332F,
-        800: #742D2B,
-        900: #612927
+        50:  #FFF1F4,
+        100: #FFE1E8,
+        200: #FDC1CE,
+        300: #F99AAD,
+        400: #F56B87,
+        500: #EE466B,
+        600: #D73554,
+        700: #B52A46,
+        800: #94273D,
+        900: #792637
     ),
 
     black: (
