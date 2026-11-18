@@ -17,7 +17,11 @@
         "lesli.scss",
         "lesli.txt",
         "license",
-        "readme"
+        "readme",
+        "CHANGELOG.md",
+        "docs/css-logo.svg",
+        "docs/categorical-colors.svg",
+        "docs/mixin-breakpoint.md"
     ],
     "repository": {
         "type": "git",
