@@ -143,6 +143,12 @@ The semantic scales bring Lesli closer to Tailwind's sky, emerald, amber and ros
 tones, with adjusted solid shades for readable button labels. The public names and shades remain unchanged. Use `50–100` for soft
 backgrounds, `200–300` for borders, and `700–900` for dark text and hover states.
 
+The scales use perceptually spaced OKLab transitions around the fixed `500`
+identity colors. Shades `50–100` retain their soft surface colors; `600` is the
+hover tone. Warning also retains its `600` to preserve contrast with dark labels.
+Shades `200–300` are decorative borders, not sufficient on their own to identify
+interactive controls or focus states.
+
 | Solid surface | Color | Foreground | Contrast |
 | --- | --- | --- | --- |
 | `info-500` | `#087EAE` | White | 4.56:1 |
